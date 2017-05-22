@@ -1,0 +1,155 @@
+
+<div class="frame_drag_up frame_bank">
+    <div class="frame-main">
+        <div class="weui_actionsheet_menu">
+            <!--弹出菜单-->
+            <div class="weui_order">
+                <div class="weui_title">
+                    <div>
+                        <div>&#xA0;</div>
+                        <div>&#x9009;&#x62E9;&#x94F6;&#x884C;&#x5361;</div>
+                        <div><img src="../../images/vip/icon-vip-jt.png"></div>
+                    </div>
+                </div>
+                <div style="max-height:241px; overflow:auto;">
+                    <!--银行卡1-->
+                    <div class="weui_bank_imf">
+                        <div onclick="selectBnakCard(this);bankDragUp.stop()">
+                            <div>
+                                <div class="zz">
+                                    <div><img src="../../images/vip/icon-bank-1.png" class="bank_logo"></div>
+                                    <div>
+                                        <div class="bank_name">&#x4E2D;&#x56FD;&#x5EFA;&#x8BBE;&#x94F6;&#x884C;</div>
+                                        <div><span class="card_firstnum card_number">622</span><span>***********</span><span class="card_lastnum card_number">6459</span><p class="vip_name">&#x8C2F;&#x4E39;</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--已选择的银行卡-->
+                            <div class="weui_choose">&#x5DF2;&#x9009;</div>
+                            <div class="weui_cross">&#xD7;</div>
+                        </div>
+                    </div>
+                    <!--银行卡2-->
+                    <div class="weui_bank_imf">
+                        <div onclick="selectBnakCard(this);bankDragUp.stop()">
+                            <div>
+                                <div class="zz">
+                                    <div><img src="../../images/vip/icon-bank-2.png" class="bank_logo"></div>
+                                    <div>
+                                        <div class="bank_name">&#x4E2D;&#x56FD;&#x519C;&#x4E1A;&#x94F6;&#x884C;</div>
+                                        <div><span class="card_firstnum card_number">622</span><span>***********</span><span class="card_lastnum card_number">6862</span><p class="vip_name">&#x8C2F;&#x4E39;</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="weui_cross">&#xD7;</div>
+                        </div>
+                    </div>
+                    <!--银行卡3-->
+                    <div class="weui_bank_imf">
+                        <div onclick="selectBnakCard(this);bankDragUp.stop()">
+                            <div>
+                                <div class="zz">
+                                    <div><img src="../../images/vip/icon-bank-3.png" class="bank_logo"></div>
+                                    <div>
+                                        <div class="bank_name">&#x4E2D;&#x56FD;&#x5DE5;&#x5546;&#x94F6;&#x884C;</div>
+                                        <div><span class="card_firstnum card_number">622</span><span>***********</span><span class="card_lastnum card_number">8889</span><p class="vip_name">&#x8C2F;&#x4E39;</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="weui_cross">&#xD7;</div>
+                        </div>
+                    </div>
+                    <!--银行卡4-->
+                    <div class="weui_bank_imf">
+                        <div onclick="selectBnakCard(this);bankDragUp.stop()">
+                            <div>
+                                <div class="zz">
+                                    <div><img src="../../images/vip/icon-bank-4.png" class="bank_logo"></div>
+                                    <div>
+                                        <div class="bank_name">&#x6D66;&#x4E1C;&#x53D1;&#x5C55;&#x94F6;&#x884C;</div>
+                                        <div><span class="card_firstnum card_number">622</span><span>***********</span><span class="card_lastnum card_number">5555</span><p class="vip_name">&#x8C2F;&#x4E39;</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="weui_cross">&#xD7;</div>
+                        </div>
+                    </div>
+                    <!--银行卡结束-->
+                </div>
+                <!--新卡-->
+                <a href="#">
+                    <div class="weui_add_card" id="weui_add_card">
+                        <div>
+                            <div>&#x4F7F;&#x7528;&#x65B0;&#x5361;</div>
+                            <div><img src="../../images/vip/icon_arrow.png"></div>
+                        </div>
+                    </div>
+                </a></div>
+
+            <!--弹出菜单结束-->
+        </div>
+    </div>
+    <div class="weui_mask_transition mask_drag"></div>
+</div>
+
+
+<script>
+    //银行列表上拉框
+    var bankDragUp=new jfFrameDrag.dragEleshow({
+
+        // "targetButton":"bank_select",//点击的目标元素。ID选择器
+
+        "targetDragName":"frame_bank",//出现的目标元素，calss选择器
+
+        "hideButton":"weui_title"//关闭按钮，class选择器
+
+    });
+
+
+
+    /*选择新的银行卡*/
+    var vipIframeShow=new jfFrameFly.FlyShow({
+
+        "showButton":"weui_add_card",//点击会出现侧拉页面的按钮，ID选择器
+
+        "hideButton":"btn_save",//关闭的按钮,ID选择器
+
+        "flyEleArea":"IframeVip",//侧拉飞入的元素class选择器
+
+        "hasIframe":true,//存在IFrame
+
+        "iframeName":"mainIframeVip",//iframe的class选择器，保持IFrame的name属性与calss值一样
+
+        "InitEleArea":"vipMain"//初始页面，class选择器
+
+    });
+
+
+    $('div.weui_cross').on("click", function (e) {
+
+        var thislist = $(this).parents('.weui_bank_imf');
+
+        var e=event||window.event;
+
+        jfShowTips.dialogShow({
+            "mainText": "确认删除尾号为8070的银行卡？",
+            "minText": " ",
+            "hasCheck": true,
+            "hasCancel": true,
+            "checkFn": function () {
+
+                thislist.addClass('payment_list_hide');
+
+                jfShowTips.dialogRemove();//弹出框消失
+
+                setTimeout(function () {
+                    thislist.css("display", "none");
+                }, 300);
+
+            }
+        });
+
+        e.stopPropagation();
+        e.preventDefault()
+    })
+</script>

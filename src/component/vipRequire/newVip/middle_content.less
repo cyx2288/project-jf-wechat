@@ -1,0 +1,152 @@
+.vipMain {
+  position: relative;
+  z-index: 5;
+}
+
+/*VIP中间输入部分*/
+.vipMain .main_choose_content {
+  padding: 10px 10px;
+  /*最大最小额度*/
+  /*具体输入数值*/
+  /*手续费率*/
+  /*下一步按钮*/
+  /*联系客服*/
+  /*温馨提示*/
+}
+.vipMain .main_choose_content .keybroad {
+  position: relative;
+}
+.vipMain .main_choose_content .keybroad .key_input {
+  border: none;
+  outline: none;
+  display: inline;
+  -webkit-appearance: none;
+  background: transparent;
+  color: transparent;
+  position: absolute;
+  top: 10px;
+  left: 30px;
+}
+.vipMain .main_choose_content .text {
+  text-align: right;
+  font-size: 12px;
+  color: #ababab;
+  padding-right: 10px;
+}
+.vipMain .main_choose_content .last_text_tips:after {
+  content: '';
+  width: 100%;
+  height: 1px;
+  border-top: 1px solid #bbbbbb;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  opacity: .6;
+}
+.vipMain .main_choose_content .text_tips {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  padding: 14px 0;
+  position: relative;
+}
+.vipMain .main_choose_content .text_tips:before {
+  content: '';
+  width: 100%;
+  height: 1px;
+  border-top: 1px solid #bbbbbb;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  opacity: .6;
+}
+.vipMain .main_choose_content .text_tips .tip_info {
+  font-size: 14px;
+  color: #9e9e9e;
+  padding-left: 10px;
+}
+.vipMain .main_choose_content .text_tips .tip_number {
+  font-size: 14px;
+  padding-right: 10px;
+}
+.vipMain .main_choose_content .vip_nextbtn {
+  font-size: 20px;
+  text-align: center;
+  display: block;
+  background: #10A6E2;
+  color: #ffffff;
+  height: 40px;
+  padding: 0 15px;
+  line-height: 40px;
+  border-radius: 5px;
+  margin-top: 30px;
+  width: 100%;
+  border: none;
+  outline: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.vipMain .main_choose_content .vip_nextbtn:active {
+  opacity: .6;
+}
+.vipMain .main_choose_content .vip_nextbtn:disabled {
+  background: #DDDDDD;
+  color: #ABABAB;
+}
+.vipMain .main_choose_content .customer_service {
+  text-align: center;
+  margin-top: 21px;
+  font-size: 12px;
+  color: #9a9a9a;
+}
+.vipMain .main_choose_content .customer_service img {
+  width: 18px;
+  vertical-align: middle;
+}
+.vipMain .main_choose_content .warm_notes ul {
+  padding: 0;
+  color: #9a9a9a;
+  padding: 0 10px;
+}
+.vipMain .main_choose_content .warm_notes ul li {
+  margin-left: 1.5em;
+  font-size: 12px;
+  line-height: 2em;
+}
+.vipMain .main_choose_content .warm_notes ul li:first-child {
+  margin-top: 1.5em;
+}
+
+/*光标*/
+.vipMain .focusing:after {
+  content: '▏';
+  display: inline-block;
+  transform: scaleX(0.5);
+  -webkit-transform: scaleX(0.5);
+  width: 0;
+  font-size: 42px;
+  position: relative;
+  bottom: 4px;
+  color: #10a6e2;
+  animation: fadeInInputKeybroad .6s infinite;
+  -webkit-animation: fadeInInputKeybroad .6s infinite;
+  animation-direction: alternate;
+  -webkit-animation-direction: alternate;
+}
+@-webkit-keyframes fadeInInputKeybroad {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

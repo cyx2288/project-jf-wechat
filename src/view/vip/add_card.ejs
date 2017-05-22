@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>添加银行卡</title>
+    <link rel="stylesheet"  href="../../css/jf_vipRequire.css">
+</head>
+
+<body>
+
+<!--导航-->
+<%- include('../../component/basic/topNav.ejs',{
+"thisrighthref":"",
+"navtitle":"添加银行卡",
+"thislefthref":"#",
+"thisimgsrc":" "
+})%>
+    <!--输入-->
+    <div class="jf_lists">
+
+        <!--名字,不可修改-->
+        <%- include('../../component/vipRequire/addCard/inputNormal.ejs',{
+        "title":"姓名",
+        "placeholder":"",
+        "value":"张士超",
+        "disabled": false,
+        "readonly": true
+        }) %>
+
+        <!--选择银行-->
+        <%- include('../../component/vipRequire/addCard/selectBank.ejs',{
+        "title":"开户银行",
+        "placeholder":"请选择开户银行"
+        }) %>
+
+        <!--输入卡号-->
+        <%- include('../../component/vipRequire/addCard/inputNumber.ejs',{
+        "title":"银行卡号",
+        "placeholder":"请输入银行卡号",
+        "value":""
+        }) %>
+
+        <!--选择城市-->
+        <%- include('../../component/vipRequire/addCard/selectCity.ejs',{
+        "title":"所在地区",
+        "placeholder":"请选择城市",
+        "value":""
+        }) %>
+
+        <!--输入支行，可修改-->
+        <%- include('../../component/vipRequire/addCard/inputNormal.ejs',{
+        "title":"开户支行",
+        "placeholder":"请输入开户支行(选填)",
+        "value":"",
+        "disabled": false,
+        "readonly": false
+        }) %>
+
+    </div>
+
+    <div class="jf_btn_area">
+
+        <%- include('../../component/vipRequire/addCard/buttonBlue.ejs',{
+        "text":"保存",
+        "href":"#"
+        }) %>
+
+
+    </div>
+
+
+
+
+
+
+</body>
+<script src="../../lib/js/LAreaData2.min.js"></script>
+<script src="../../js/jf_vipRequire.js"></script>
+<script>
+    selectAreaBank()
+</script>
+
+</html>

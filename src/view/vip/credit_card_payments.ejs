@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>信用卡还款</title>
+    <link rel="stylesheet"  href="../../css/jf_vipRequire.css">
+
+</head>
+
+<body>
+
+<div id="IframeVip" class="IframeVip" style="display: none">
+    <iframe src="add_card.html" scrolling="auto" id="mainIframeVip" class="mainIframeVip" name="mainIframeVip"></iframe>
+</div>
+<div class="vipMain">
+
+    <!--导航-->
+    <%- include('../../component/basic/topNav.ejs',{
+    "thisrighthref":"jfSwitch.goBack()",
+    "navtitle":"信用卡还款",
+    "thislefthref":"#",
+    "thisimgsrc":"../../images/icon_nav_helpcenter_2.png"
+    })%>
+
+
+    <!--银行卡选项-->
+    <%- include('../../component/vipRequire/newVip/chooseBankCard.ejs')%>
+
+
+    <!--中间输入部分-->
+    <%- include('../../component/vipRequire/newVip/middle_content.ejs')%>
+
+    <!--银行列表上拉框-->
+    <%-include('../../component/vipRequire/newVip/dragDownBank.ejs')%>
+
+
+    <!--确认订单弹出层-->
+    <%-include('../../component/vipRequire/newVip/dragDownOrder.ejs',{
+    "paytitle":"还款金额"
+    })%>
+</div>
+
+</body>
+<script type="text/javascript" src="../../js/jf_vipRequire.js"></script>
+</html>
