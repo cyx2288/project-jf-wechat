@@ -1,0 +1,55 @@
+
+<div class="weui_cells weui_cells_checkbox">
+    <label class="weui_cell weui_check_label weui_cell_zy">
+        <div class="weui_grid_icon"><img src="../../images/pay/icon_pay_jf.png"></div>
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>&#x4F01;&#x4E1A;&#x798F;&#x5229;&#x4F59;&#x989D;&#x652F;&#x4ED8;</p>
+            <p>&#x53EF;&#x7528;&#x4F59;&#x989D;&#xFF1A;100,000,000,000&#x5143;</p>
+        </div>
+        <div class="weui_cell_hd">
+            <input type="checkbox" class="aui-radio" name="checkbox1" checked="ture" id="checkboxJiafu">
+        </div>
+    </label>
+    <label class="weui_cell weui_check_label weui_cell_zy">
+        <div class="weui_grid_icon"><img src="../../images/pay/icon_pay_salary.png"></div>
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>&#x85AA;&#x8D44;&#x4F59;&#x989D;</p>
+            <p>&#x53EF;&#x7528;&#x4F59;&#x989D;&#xFF1A;<span>450,330.00</span></p>
+        </div>
+        <div class="weui_cell_hd">
+            <input type="checkbox" class="aui-radio" name="checkbox2" id="checkboxsalary">
+        </div>
+    </label>
+    <label class="weui_cell weui_check_label weui_cell_zy">
+        <div class="weui_grid_icon"><img src="../../images/pay/icon_pay_wx.png"></div>
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>&#x5FAE;&#x4FE1;&#x652F;&#x4ED8;</p>
+            <p>&#x6E20;&#x9053;&#x670D;&#x52A1;&#x8D39;:<span>0.5%</span></p>
+        </div>
+        <div class="weui_cell_hd">
+            <input type="checkbox" class="aui-radio" name="checkbox3" id="checkboxWechat">
+        </div>
+    </label>
+    <label class="weui_cell weui_check_label weui_cell_zy">
+        <div class="weui_grid_icon"><img src="../../images/pay/icon_pay_zfb.png"></div>
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>&#x652F;&#x4ED8;&#x5B9D;&#x652F;&#x4ED8;</p>
+            <p>&#x6E20;&#x9053;&#x670D;&#x52A1;&#x8D39;:<span>0.55%</span></p>
+        </div>
+        <div class="weui_cell_hd">
+            <input type="checkbox" class="aui-radio" name="checkbox4" id="checkboxZhifubao">
+        </div>
+    </label>
+
+
+</div>
+<!-- 支付方式结束-->
+
+<script>
+    //step 选择
+    $('.zhuangyi_pay_shoppingcart label.weui_cell.weui_check_label.weui_cell_zy').on("click",function(){
+        var ClickBoxId='#'+$(this).children("div:last-child").children("input").attr("id");
+        $(".aui-radio").prop("checked",false);
+        $(ClickBoxId).prop("checked",true);
+    });
+</script>

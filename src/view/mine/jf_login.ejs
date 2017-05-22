@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,minimum-scale=1, maximum-scale=1">
+    <meta content="telephone=no" name="format-detection">
+    <title>WeUI-pay</title>
+    <link rel="stylesheet"  href="../../css/jf_login.css">
+</head>
+<body class="wechat_login_qiao">
+<!--登录logo-->
+<div class="login_logo">
+    <div><img src="../../images/jiafu_logo.png" width="60px" height="60px"></div>
+    <div>&#x5609;&#x798F;&#x5E73;&#x53F0;</div>
+</div>
+
+<!--登录内容-->
+<div class="login_content">
+    <!--登录用户名-->
+    <label class="login_name">
+        <input placeholder="&#x7528;&#x6237;&#x540D;/&#x624B;&#x673A;&#x53F7;" class="login_content_name" type="text">
+        <img src="../../images/login_username.png" class="login_name_pic">
+        <span class="login_wronginfo"></span>
+    </label>
+    <!--登录密码-->
+    <label>
+        <input placeholder="&#x5BC6;&#x7801;" class="login_content_pasd" type="password">
+        <img src="../../images/login_pasd.png" class="login_pasd_pic">
+        <span class="login_wronginfo"></span>
+    </label>
+    <!--验证码-->
+    <label class="valiate-pp">
+        <input placeholder="&#x9A8C;&#x8BC1;&#x7801;" class="login_content_valiate" type="text">
+        <img src="../../images/login_valiate.png" class="login_valiate_pic">
+        <span class="valiate_code">
+        <img src="../../images/login_refresh.png" width="20px" height="20px">
+        <img src="../../images/verifycode.jpg">
+        </span>
+
+    </label>
+
+
+    <!--登录按钮-->
+    <label class="login_btn">
+        <button>&#x767B;&#x5F55;</button>
+    </label>
+    <div class="forget_pasd">
+        <div class="forget_pasd_two">
+
+            <a onclick="jfCustomerService.click()">&#x5728;&#x7EBF;&#x5BA2;&#x670D;</a>
+
+            <a href="">&#x5FD8;&#x8BB0;&#x5BC6;&#x7801;</a>
+        </div>
+
+    </div>
+</div>
+
+<!--登录底部-->
+<div class="login_service">
+    <span>&#x54A8;&#x8BE2;&#x7535;&#x8BDD;</span>
+    <span>400-821-6990</span>
+</div>
+
+
+<script>
+    $('input.login_content_name').on({
+
+        focus:function(){
+            //获得焦点判断,移除报错信息;
+            jfWechatLogin.inputOnFocus(this);//参数一时当前的input
+        },
+
+        blur:function(){
+            //失焦判断
+            jfWechatLogin.inputChange("input.login_content_name");//参数一是被点击的input的当前class选择器，
+        }
+    });
+
+    $('input.login_content_pasd').on({
+
+        focus:function(){
+//获得焦点判断,移除报错信息;
+            jfWechatLogin.inputOnFocus(this);//参数一时当前的input
+        },
+
+        blur:function(){
+//失焦判断
+            jfWechatLogin.inputChange("input.login_content_pasd");//参数一是被点击的input的当前class选择器
+        }
+    });
+
+
+    $('input.login_content_valiate ').on({
+
+        focus:function(){
+            $(this).nextAll('.valiate_code').addClass('valiate_code_show');  //验证码出现
+        },
+
+        blur:function(){
+
+            jfWechatLogin.inputChange('input.login_content_valiate');//参数一是被点击的input的当前class选择器
+        }
+
+    });
+
+    //点击提交的时候，判断信息报错情况
+    $('.login_btn').click(function(){
+
+        jfWechatLogin.wrongTextShow("input.login_content_name",'请输入');
+    });
+
+
+
+
+    jfCustomerService.init(
+            {//用户信息
+                name: '阿陈',// 名字
+                address: '西伯利亚',// 地址
+                email: '1313@qq.com',// 邮箱
+                age: '16',// 年龄
+                tel: '110',// 电话
+                comment: '很帅',// 备注
+                gender: '男',// 性别
+                qq: '1234567',// QQ
+                weibo: '',// 微博
+                weixin: '',// 微信
+                '公司名称': '上海淘略数据有限公司',
+                '公司编号': '123ksuhdaf891274',
+                '员工编号': '1234567890123456'
+            },
+            //指定客服
+            'b040d96757bf55ea302f9fbfb0ecd062'
+    )
+</script>
+
+</body>
+
+
+</html>

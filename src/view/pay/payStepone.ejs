@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>添加银行卡</title>
+</head>
+
+<body>
+
+<!--导航-->
+<%- include('../../component/basic/topNav.ejs',{
+"thisrighthref":"jfSwitch.goBack()",
+"navtitle":"嘉福收银台",
+"thislefthref":"#",
+"thisimgsrc":" "
+})%>
+
+<!--支付方式选择-->
+<div class="zhuangyi_pay_shoppingcart">
+    <!--提示-->
+    <%- include('../../component/pay/payStepone/payTips.ejs',{
+    "payTitle":"订单金额"
+    })%>
+
+    <!--金额-->
+    <%- include('../../component/pay/payStepone/payPrice.ejs',{
+        "payMoney":"￥2289.00"
+    })%>
+
+    <!--提示-->
+    <%- include('../../component/pay/payStepone/payTips.ejs',{
+    "payTitle":"商品信息"
+    })%>
+
+    <!--提示-->
+    <%- include('../../component/pay/payStepone/payinfo.ejs')%>
+
+
+    <div class="Special-List list_0719">
+        <div>支付方式</div>
+    </div>
+    <!--支付方式-->
+    <%- include('../../component/pay/payStepone/payStyleChoose.ejs')%>
+
+    <!--固定底部按钮-->
+
+    <!--支付方式-->
+    <%- include('../../component/basic/bottomBtn.ejs',{
+        "btntext":"确认支付",
+        "thisIdName":"pay_next"
+    })%>
+
+
+</div>
+
+
+<!--短信验证-->
+<div class="zhuangyi_pay_shoppingcart pay_box" id="smsVerification">
+
+    <!--导航-->
+    <nav class="Top_navigation">
+        <div class="weui_tab_bd"></div>
+        <div class="container_tab"> <a>
+                <div class="nav_left" id="getmessage_left"><img src="../../images/icon_pay_return.png"></div>
+            </a>
+            <div class="nav_center">
+                <div>短信验证</div>
+            </div>
+            <a href="#">
+                <div class="nav_right"><img src=" "></div>
+            </a>
+        </div>
+    </nav>
+
+    <div class="pay_mail">
+        <%- include('../../component/pay/messageCheck/messageTips.ejs')%>
+        <%- include('../../component/pay/messageCheck/nextBtn.ejs')%>
+    </div>
+
+</div>
+
+
+</body>
+
+<script>
+
+    //出现短信验证
+    $('#pay_next').on('click',function () {
+        $('#smsVerification').jfFrameFly({
+            hideButton: '#getmessage_left',
+            timeDelay: '300'
+        });
+        $('.weui_input.input_0926').focus();
+        $('body,html').addClass('ovfHiden');
+    });
+
+</script>
+
+
+</html>

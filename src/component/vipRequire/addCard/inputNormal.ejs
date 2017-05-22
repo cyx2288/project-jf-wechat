@@ -1,0 +1,15 @@
+<label class="jf_list jf_list_access">
+    <div class="jf_list_tip">
+        <div class="jf_list_label"><%=title%></div>
+    </div>
+    <div class="jf_list_bd">
+        <input class="jf_input" type="text" placeholder="<%=placeholder%>" value="<%=value%>"
+                <% if (disabled == true) { %>
+               disabled
+                <% }%>
+                <% if (readonly == true) { %>
+               readonly
+                <% }%>
+        />
+    </div>
+</label>
