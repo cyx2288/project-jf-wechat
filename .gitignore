@@ -59,4 +59,6 @@ typings/
 
 # 忽略.idea等文件
 .idea
+build
+dist
 
