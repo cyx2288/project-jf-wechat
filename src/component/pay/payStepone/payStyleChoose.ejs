@@ -44,12 +44,3 @@
 
 </div>
 <!-- 支付方式结束-->
-
-<script>
-    //step 选择
-    $('.zhuangyi_pay_shoppingcart label.weui_cell.weui_check_label.weui_cell_zy').on("click",function(){
-        var ClickBoxId='#'+$(this).children("div:last-child").children("input").attr("id");
-        $(".aui-radio").prop("checked",false);
-        $(ClickBoxId).prop("checked",true);
-    });
-</script>

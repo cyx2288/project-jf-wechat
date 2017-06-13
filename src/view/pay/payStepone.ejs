@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>添加银行卡</title>
+    <title>收银台</title>
+    <link rel="stylesheet"  href="../../css/jf_pay.css">
 </head>
 
 <body>
@@ -80,17 +81,24 @@
 
 
 </body>
-
+<script src="../../js/jf_pay.js"></script>
 <script>
 
     //出现短信验证
     $('#pay_next').on('click',function () {
+
         $('#smsVerification').jfFrameFly({
-            hideButton: '#getmessage_left',
-            timeDelay: '300'
+            hideButton: '#getmessage_left',//关闭的按钮
+
+            timeDelay: '300',// 动过过渡时间
+
+            isHorizonNo:true,//不允许屏幕滑动
+
         });
-        $('.weui_input.input_0926').focus();
-        $('body,html').addClass('ovfHiden');
+
+        $('.weui_input.input_0926').focus();//获取焦点
+
+
     });
 
 </script>
