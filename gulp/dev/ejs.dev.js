@@ -33,7 +33,7 @@ function devEjs(){
 
             addHtml += "<meta name='format-detection' content='telephone=no, email=no' />\n";
 
-            addHtml += "<link rel='stylesheet'  href='../../lib/css/swiper_3.3.1.min.css'/>\n<link rel='stylesheet'  href='../../lib/css/weui.min.css'/>\n";//最基础样式文件
+           // addHtml += "<link rel='stylesheet'  href='../../lib/css/swiper_3.3.1.min.css'/>\n<link rel='stylesheet'  href='../../lib/css/weui.min.css'/>\n";//最基础样式文件
 
             addHtml += "<link rel='stylesheet'  href='../../css/jf_basic.css'/>\n";
 
