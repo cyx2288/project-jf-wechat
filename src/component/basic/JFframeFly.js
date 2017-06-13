@@ -85,7 +85,6 @@ var jfFrameFly={
 
                     thisHideButton=window.frames[ _this.iframeName].document.getElementById(_this.hideButton);
 
-                    console.log(thisOtherHideButton)
 
 
                 }

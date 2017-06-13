@@ -2,6 +2,10 @@
 //收银台页面短信验证以及侧拉页面JS
 //验证码倒计时
 
+
+//增加active事件
+document.addEventListener('touchstart',function(){},false);
+
 void function(){
 
     var InterValObj; //timer变量，控制时间
@@ -79,8 +83,10 @@ void function(){
 
             isHorizonNo: false,
 
-            isFlyIn: false
+            isFlyIn: false,
             //飞入时是不是有平滑过渡（没有飞出）
+
+            showFn:0,
         };
         /*合并默认参数和用户自定义参数*/
 
@@ -101,6 +107,8 @@ void function(){
 
             var isStopTouch = settings.isStopTouch;
             var isHorizonNo = settings.isHorizonNo;
+
+            var showFn=settings.showFn;
 
 
             var xDistance = 0;       //x轴距离
@@ -174,7 +182,21 @@ void function(){
                     });
 
                     if (isHorizonNo) {
-                        $('html', 'body').addClass('ovfHiden_x');
+                        $('html').addClass('ovfHiden');
+
+                        $('body').addClass('ovfHiden');
+
+                    }
+
+                    if(settings.showFn){
+
+                        setTimeout(function(){
+
+                            settings.showFn();
+
+                        },timeDelay)
+
+
                     }
 
                     $thisHideButton.one('click', function () {        //增加一次点击事件监听
@@ -193,7 +215,8 @@ void function(){
                             var thisStyle = this.style;                 //更改style值
 
                             if (isHorizonNo) {
-                                $('html', 'body').removeClass('ovfHiden_x');
+                                $('html').removeClass('ovfHiden');
+                                $('body').removeClass('ovfHiden');
                             }
 
                             $(this).unbind("transitionend", hidethis)
@@ -222,5 +245,14 @@ void function(){
     }
 })(jQuery);
 //滑入模块结束
+
+
+
+//step 选择
+$('.zhuangyi_pay_shoppingcart label.weui_cell.weui_check_label.weui_cell_zy').on("click",function(){
+    var ClickBoxId='#'+$(this).children("div:last-child").children("input").attr("id");
+    $(".aui-radio").prop("checked",false);
+    $(ClickBoxId).prop("checked",true);
+});
 
 //收银台页面JS结束
