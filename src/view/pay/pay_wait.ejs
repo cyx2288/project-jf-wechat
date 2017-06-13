@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>支付完成</title>
+    <link rel="stylesheet"  href="../../css/jf_pay.css">
+</head>
+
+<body>
+
+<div class="zhuangyi_pay_shoppingcart">
+
+    <!--导航-->
+    <%- include('../../component/basic/topNav.ejs',{
+    "thisrighthref":"jfSwitch.goBack()",
+    "navtitle":"订单完成",
+    "thislefthref":"#",
+    "thisimgsrc":"../../images/icon_pay_meau.png"
+    })%>
+
+    <!--支付失败-->
+    <div class="weui_msg">
+        <%- include('../../component/pay/payIcon/icon_wait.ejs')%>
+
+        <div class="weui_text_area" style="padding:0px;">
+            <div class="weui_text01_qiao">&#x4EB2;&#xFF0C;&#x4F60;&#x8FD8;&#x6CA1;&#x6709;&#x4F1A;&#x5458;&#x5361;&#x54E6;</div>
+
+            <div class="weui_text02_qiao"><a>&#x8D2D;&#x4E70;&#x4F1A;&#x5458;&#x5361;&#x610F;&#x60F3;&#x4E0D;&#x5230;&#x7684;&#x4F18;&#x60E0;</a></div>
+            <!--底部按钮-->
+            <div class="weui_opr_area">
+                <p class="weui_btn_area"> <a href="../huikabao/hkb_step_1.html" class="weui_btn btn_blue_0718">&#x67E5;&#x770B;&#x9644;&#x8FD1;&#x4F18;&#x60E0;&#x5546;&#x6237;</a></p>
+            </div>
+            <p class="customer_help">
+                <a onclick="jfCustomerService.click()"><img src="../../images/icon_dialogue_01.png">&#x8054;&#x7CFB;&#x5BA2;&#x670D;</a>
+                <a href="../helpcenter/menu.html"><img src="../../images/icon_nav_helpcenter_3.png">&#x5E2E;&#x52A9;&#x4E2D;&#x5FC3;</a>
+            </p>
+        </div>
+
+
+
+
+    </div>
+
+
+</div>
+
+</body>
+<script src="../../js/jf_pay.js"></script>
+<script>
+    jfCustomerService.init(
+            {//用户信息
+                name: '阿陈',// 名字
+                address: '西伯利亚',// 地址
+                email: '1313@qq.com',// 邮箱
+                age: '16',// 年龄
+                tel: '110',// 电话
+                comment: '很帅',// 备注
+                gender: '男',// 性别
+                qq: '1234567',// QQ
+                weibo: '',// 微博
+                weixin: '',// 微信
+                '公司名称': '上海淘略数据有限公司',
+                '公司编号': '123ksuhdaf891274',
+                '员工编号': '1234567890123456'
+            },
+            //指定客服
+            'b040d96757bf55ea302f9fbfb0ecd062'
+    )
+</script>
+
+
+
+</html>
