@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>福利买入</title>
+    <link rel="stylesheet"  href="../../css/jf_welfare_market.css">
+</head>
+
+<body>
+
+<!--顶部固定导航-->
+
+<!--导航-->
+<%- include('../../component/basic/topNav.ejs',{
+"thisrighthref":"jfSwitch.goBack()",
+"navtitle":"福利买入",
+"thislefthref":"#",
+"thisimgsrc":"../../images/icon_nav_helpcenter_2.png"
+})%>
+
+<!--常见问题内容-->
+
+<div class="market_buy_service_title">福利额度买入服务协议</div>
+<div class="buy_service_section">
+    <div class="service_section_title_sub">1、福利买入订单提交规则</div>
+    <div class="service_section_text">
+        用户确定好需要买入的福利额度、最高买入单价，提交买入申请，薪资账户准备好余额。
+    </div>
+</div>
+
+<div class="buy_service_section">
+    <div class="service_section_title_sub">2、福利买入订单成交规则</div>
+    <div class="service_section_text">
+        求购单价越高、申请时间越早、系统越优先撮合。
+        成交价格以卖出方单份要价为准，但不高于最高求购单价。
+        成交数量以卖方卖出福利额度为准，但累计不高于求购总额。
+    </div>
+</div>
+
+<div class="buy_service_section">
+    <div class="service_section_title_sub">3、福利买入订单结束规则</div>
+    <div class="service_section_text">
+        求购福利额度全部买入或用户中止继续买入时，买入订单结束，系统不再撮合。
+    </div>
+</div>
+
+
+
+</body>
+
+
+<script src="../../js/jf_welfare_market.js"></script>
+
+
+</html>
