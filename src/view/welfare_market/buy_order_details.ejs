@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>福利集市-买入</title>
+    <link rel="stylesheet"  href="../../css/jf_welfare_market.css">
+</head>
+
+<body>
+
+<!--顶部固定导航-->
+
+<!--导航-->
+<%- include('../../component/basic/topNav.ejs',{
+"thisrighthref":"jfSwitch.goBack()",
+"navtitle":"订单详情",
+"thislefthref":"#",
+"thisimgsrc":" ",
+})%>
+
+<div class="market_body_main">
+
+    <!--订单详情-->
+    <div class="market_order_details_bg">
+
+        <div class="order_details">
+            <div class="order_details_text">订单详情</div>
+            <div class="order_details_value">596170327422</div>
+        </div>
+        <div class="order_details">
+            <div class="order_details_text">订单状态</div>
+            <div class="order_details_value blue">已部分买入</div>
+        </div>
+        <div class="order_details">
+            <div class="order_details_text">提交时间</div>
+            <div class="order_details_value">2017-4-25 14:49:23</div>
+        </div>
+
+    </div>
+
+    <div class="market_order_details_bg">
+
+        <div class="order_details">
+            <div class="order_details_text">计划买入福利额度</div>
+            <div class="order_details_value">300.00</div>
+        </div>
+        <div class="order_details">
+            <div class="order_details_text">最高买入单价</div>
+            <div class="order_details_value gray">¥ 0.99</div>
+        </div>
+
+
+    </div>
+
+    <div class="market_order_details_bg">
+
+        <div class="order_details">
+            <div class="order_details_text">成交均价</div>
+            <div class="order_details_value">¥ 0.975</div>
+        </div>
+        <div class="order_details">
+            <div class="order_details_text">薪资账户已扣款金额</div>
+            <div class="order_details_value gray">¥ 197.00</div>
+        </div>
+        <div class="order_details">
+            <div class="order_details_text">已成交福利额度</div>
+            <div class="order_details_value">200.00<img src="../../images/key.png"/> </div>
+        </div>
+
+    </div>
+
+    <!--成交明细-->
+
+    <div class="market_order_turnover">
+        <div class="order_turnover_title">
+            <div class="turnover_title_text">
+                <div>成交时间</div>
+                <div>卖出人</div>
+                <div>卖出额度</div>
+                <div>成交价格</div>
+            </div>
+        </div>
+
+        <div class="order_turnover_value_text">
+            <div class="turnover_value_text_date">2017-4-25 15:04:39</div>
+            <div class="turnover_value_number">徐**</div>
+            <div class="turnover_value_number">100</div>
+            <div class="turnover_value_number">¥ 98</div>
+        </div>
+        <div class="order_turnover_value_text">
+            <div class="turnover_value_text_date">
+                <p>2017-4-25 15:04:39</p>
+            </div>
+            <div class="turnover_value_number">徐**</div>
+            <div class="turnover_value_number">100</div>
+            <div class="turnover_value_number">¥ 98</div>
+        </div>
+    </div>
+
+</div>
+
+
+<!--底部按钮-->
+
+<div class="market_order_bottom">
+
+    <div class="market_order_details_button white">
+        <div class="button_text">中止买入</div>
+    </div>
+
+    <div class="market_order_details_button">
+        <div class="button_text">继续买入</div>
+    </div>
+</div>
+
+</body>
+
+
+<script src="../../js/jf_welfare_market.js"></script>
+
+<script>
+    /*点击出现成交明细*/
+
+    $('.order_details_value').on('click',function () {
+
+        $('.market_order_turnover').toggleClass('show')
+
+
+        $(this).find('img').toggleClass('changeimg')
+    })
+    /*点击按钮中止买入*/
+
+    $('div.market_order_details_button.white').on('click',function (e) {
+
+        jfShowTips.dialogShow({
+            "mainText": "中止继续买入?",
+            "minText": " 中止买入后不影响已经成交的福利额度只是不再继续买入 ",
+            "hasCheck": true,
+            "hasCancel": true,
+           /* "checkFn": function () {
+
+                thislist.addClass('payment_list_hide');
+
+                jfShowTips.dialogRemove();//弹出框消失
+
+                setTimeout(function () {
+                    thislist.css("display", "none");
+                }, 300);
+
+            }*/
+        });
+
+        e.stopPropagation();
+        e.preventDefault()
+
+    })
+
+
+
+</script>
+
+
+
+
+</html>

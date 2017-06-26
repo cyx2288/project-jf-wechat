@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>福利卖出</title>
+    <link rel="stylesheet"  href="../../css/jf_welfare_market.css">
+</head>
+
+<body>
+
+<!--顶部固定导航-->
+
+<!--导航-->
+<%- include('../../component/basic/topNav.ejs',{
+"thisrighthref":"jfSwitch.goBack()",
+"navtitle":"福利卖出",
+"thislefthref":"#",
+"thisimgsrc":"../../images/icon_nav_helpcenter_2.png"
+})%>
+
+<!--常见问题内容-->
+
+<div class="market_sale_service_title">福利额度卖出服务协议</div>
+<div class="sale_service_section">
+    <div class="sale_service_section_title_sub">1、福利卖出订单提交规则</div>
+    <div class="sale_service_section_text">
+        用户确定好需要卖出的福利额度、单价，提交买出申请，扣减福利
+        余额。
+    </div>
+</div>
+
+<div class="sale_service_section">
+    <div class="sale_service_section_title_sub">2、福利卖出订单成交规则</div>
+    <div class="sale_service_section_text">
+        卖出单价越低，申请时间越早，系统越优先撮合。
+        成交价格以卖出方单份要交为准。
+        成交数量以卖方卖出福利额度为准。
+    </div>
+</div>
+
+<div class="sale_service_section">
+    <div class="sale_service_section_title_sub">3、福利卖出订单结束规则</div>
+    <div class="sale_service_section_text">
+        卖出被系统撮合成交或用户取消卖出时，该笔买单结束，系统不再
+        撮合。
+    </div>
+</div>
+
+
+
+
+</body>
+
+
+<script src="../../js/jf_welfare_market.js"></script>
+
+
+</html>
