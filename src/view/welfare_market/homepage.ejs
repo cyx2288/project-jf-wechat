@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>福利集市</title>
+    <link rel="stylesheet"  href="../../css/jf_welfare_market.css">
+</head>
+
+<body>
+
+<!--顶部固定导航-->
+
+<!--导航-->
+<%- include('../../component/basic/topNav.ejs',{
+"thisrighthref":"jfSwitch.goBack()",
+"navtitle":"福利集市",
+"thislefthref":"#",
+"thisimgsrc":" "
+})%>
+
+<div class="market_body_main">
+    <!--banner部分-->
+    <%- include('../../component/welfare_market/homepage/banner.ejs')%>
+
+
+    <!--交易记录-->
+    <%- include('../../component/welfare_market/homepage/record.ejs')%>
+
+</div>
+
+
+
+<!--底部固定按钮-->
+<%- include('../../component/welfare_market/homepage/bottom_btn.ejs')%>
+
+
+
+
+
+
+
+
+
+</body>
+<script src="../../js/jf_welfare_market.js"></script>
+
+
+
+
+</html>
