@@ -156,7 +156,6 @@ var jfNumKeybroad={
             function getALLNum(obj) {
 
                 var thisInnerNum=showNumEle.innerText;//获取当前已经存在的所有值
-
                 /*输入金额判断*/
                 if (thisInnerNum.length < _this.MaxNum) {//设定输入金额的最大位数
 
