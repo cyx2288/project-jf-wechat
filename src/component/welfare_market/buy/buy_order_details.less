@@ -8,7 +8,6 @@
   background: #ffffff;
   margin-top: 5px;
 
-
   .order_details {
     font-size: 14px;
     color: #4a4a4a;
@@ -40,10 +39,16 @@
     .order_details_value {
       font-size: 16px;
       padding: 10px 10px 10px 0;
-      vertical-align: middle;
+
       img{
         width: 18px;
-        padding-left:5px;
+        margin-left:5px;
+        transition: all 0.2s linear;
+
+      }
+      .changeimg{
+        transform:rotate(180deg);
+        vertical-align: middle;
       }
     }
     .order_details_text {
@@ -62,7 +67,9 @@
   margin-top: 1px;
   display: none;
 
-
+  &.show{
+   display: block;
+  }
 
   .order_turnover_title{
     width: 100%;
@@ -81,10 +88,9 @@
   .order_turnover_value_text{
     display: flex;
     /*justify-content: space-between;*/
-    font-size: 16px;
-    padding:10px 10px 10px 10px;
+    font-size: 14px;
+    padding:4px 10px 4px 10px;
     position: relative;
-
     &:after{
       content: " ";
       display: block;
@@ -112,6 +118,9 @@
     .turnover_value_text_date,.turnover_value_number{
       width: 25%;
     }
+    .turnover_value_text_date{
+      padding-top: 3px;
+    }
   }
 }
 
@@ -119,11 +128,7 @@
 .market_order_bottom{
   display: flex;
   justify-content: space-between;
-  padding: 10px 20px 0 20px;
-  position: fixed;
-  width: 100%;
-  box-sizing: border-box;
-  bottom: 10px;
+  padding: 10px 20px 10px 20px;
 
 
   .market_order_details_button{

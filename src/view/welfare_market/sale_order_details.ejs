@@ -14,47 +14,49 @@
 "thisrighthref":"jfSwitch.goBack()",
 "navtitle":"订单详情",
 "thislefthref":"#",
-"thisimgsrc":"../../images/icon_nav_helpcenter_2.png"
+"thisimgsrc":" ",
 })%>
 
-<!--订单详情-->
-<div class="market_sale_order_details">
+<div class="market_body_main">
+    <!--订单详情-->
+    <div class="market_sale_order_details">
 
-    <div class="sale_order_details">
-        <div class="sale_order_text">订单详情</div>
-        <div class="sale_order_value">596170327422</div>
+        <div class="sale_order_details">
+            <div class="sale_order_text">订单详情</div>
+            <div class="sale_order_value">596170327422</div>
+        </div>
+
+        <div class="sale_order_details">
+            <div class="sale_order_text">商品名称</div>
+            <div class="sale_order_value">300福利额度卖出</div>
+        </div>
+
+        <div class="sale_order_details">
+            <div class="sale_order_text">订单状态</div>
+            <div class="sale_order_value blue">待成交</div>
+        </div>
+
+        <div class="sale_order_details">
+            <div class="sale_order_text">卖出价格</div>
+            <div class="sale_order_value">297.00</div>
+        </div>
+
+        <div class="sale_order_details">
+            <div class="sale_order_text">卖出服务费</div>
+            <div class="sale_order_value">3.00</div>
+        </div>
+
+        <div class="sale_order_details">
+            <div class="sale_order_text">福利账户扣减</div>
+            <div class="sale_order_value">300.00</div>
+        </div>
+
+        <div class="sale_order_details">
+            <div class="sale_order_text">成交后薪资账户到账</div>
+            <div class="sale_order_value">294.00</div>
+        </div>
+
     </div>
-
-    <div class="sale_order_details">
-        <div class="sale_order_text">商品名称</div>
-        <div class="sale_order_value">300福利额度卖出</div>
-    </div>
-
-    <div class="sale_order_details">
-        <div class="sale_order_text">订单状态</div>
-        <div class="sale_order_value blue">待成交</div>
-    </div>
-
-    <div class="sale_order_details">
-        <div class="sale_order_text">卖出价格</div>
-        <div class="sale_order_value">297.00</div>
-    </div>
-
-    <div class="sale_order_details">
-        <div class="sale_order_text">卖出服务费</div>
-        <div class="sale_order_value">3.00</div>
-    </div>
-
-    <div class="sale_order_details">
-        <div class="sale_order_text">福利账户扣减</div>
-        <div class="sale_order_value">300.00</div>
-    </div>
-
-    <div class="sale_order_details">
-        <div class="sale_order_text">成交后薪资账户到账</div>
-        <div class="sale_order_value">294.00</div>
-    </div>
-
 </div>
 
 <!--对此单有疑问-->
@@ -67,7 +69,7 @@
     </div>
 
     <div class="sale_order_bottom_button white">
-        <div class="sale_order_button_text">继续卖出</div>
+        <div class="sale_order_button_text">取消订单</div>
     </div>
 
 </div>
@@ -75,5 +77,35 @@
 </body>
 
 <script src="../../js/jf_welfare_market.js"></script>
+
+<script>
+    $('div.sale_order_bottom_button.white').on('click',function (e) {
+
+        jfShowTips.dialogShow({
+            "mainText": "福利卖出订单取消",
+            "minText": " 确认取消300福利额度卖出? ",
+            "hasCheck": true,
+            "hasCancel": true,
+            /* "checkFn": function () {
+
+             thislist.addClass('payment_list_hide');
+
+             jfShowTips.dialogRemove();//弹出框消失
+
+             setTimeout(function () {
+             thislist.css("display", "none");
+             }, 300);
+
+             }*/
+        });
+
+        e.stopPropagation();
+        e.preventDefault()
+
+    })
+
+
+
+</script>
 
 </html>
