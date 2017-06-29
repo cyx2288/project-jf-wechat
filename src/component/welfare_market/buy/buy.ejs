@@ -26,7 +26,7 @@
         <div class="price_num">
             <span class="reduce">—</span>
             <div class="show_price">
-                <input value="1.00" class="inputele" type="number" >
+                <input value="1.00" class="inputele" type="number" maxlength="5">
             </div>
             <span class="add">+</span>
 
@@ -58,7 +58,7 @@
 
             jfkeybroad.run();//页面初始的时候，开启键盘；
 
-
+            //判断下一步按钮是否可以点击（判断输入框里面有没有值，以及协议有没有被选中）
             $('body').on('touchstart',".weui_grid",ValiateNextBtn);
 
             document.getElementsByClassName('agreement_check')[0].addEventListener('click',ValiateNextBtn,false)
@@ -75,10 +75,30 @@
     }
 
 
+    /*判断下一步按钮*/
+    function ValiateNextBtn(){
+        var thisSaveNum=document.getElementById('key_input');//input元素
+
+        var thischeckBox=document.getElementsByClassName('agreement_check')[0];
+
+        var thisNextBtn=document.getElementsByClassName('buy_check_btn')[0];//下一步按钮
+
+        if(!thisSaveNum.value==""&&thischeckBox.checked){
+
+            thisNextBtn.removeAttribute("disabled")
+        }else {
+
+            thisNextBtn.setAttribute("disabled",true)
+        }
+    }
+
+
     /*数字键盘*/
     var jfkeybroad=new jfNumKeybroad.keyBroadShow({
 
         "hideButton":"buy_check_btn",//点击关闭键盘的按钮 class选择器
+
+        "otherHideButton":"inputele",//其他关闭按钮
 
         "showNumEle":"savekeyNum",//点击出现键盘的元素，并且存储数字，ID选择器,与下面变量是同一元素
 
