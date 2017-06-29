@@ -1,11 +1,471 @@
 .market_banner{
   width: 100%;
-  height: calc(25vh);
+  height: 30%;
+  height: calc(30vh);
+  background: linear-gradient(bottom,#076eba,#26b9f8);
+ /* background:red;*/
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-  img{
-    width: 100%;
-    height: 100%;
+
+  .left,.right{
+    color:white;
+
+    p{
+      text-align: center;
+      &:first-child{
+        font-size: 16px;
+      }
+
+      @media screen and(max-width: 350px) {
+        &:last-child{
+          font-size: 12px;
+        }
+        
+      }
+    }
+
   }
+  .left{
+    padding-left: 5px;
+    //z-index: 100;
+    span{
+      display:inline-block;
+      width: 30px;
+      height: 30px;
+      margin-right: 2px;
+      vertical-align: bottom;
+      background: url("../images/zfb/market_icon_welfare2-1.png")center no-repeat;
+      background-size: 100%;
+      transition: background 0.5s linear;
+    }
+  }
+  .right{
+    padding-right: 5px;
+    //z-index: 100;
+    span{
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      margin-right: 2px;
+      vertical-align: bottom;
+      background: url("../images/zfb/market_icon_pay2.png")center no-repeat;
+      background-size: 100%;
+      transition: background 0.5s linear;
+    }
+  }
+  .mid{
+    width: 28%;
+    height: 80%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+   // z-index: 100;
+    .main_pic{
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transition: transform 0.5s linear;
+
+      .bottle_bg{
+        z-index: 100;
+      }
+
+      &>.bottle,.salary_icon,.welfare_icons,.change_salary_icon,.change_welfare_icons,.bottle_bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        img{
+          width: 100%;
+          vertical-align: text-top;
+        }
+      }
+      .change_salary_icon,.change_welfare_icons{
+        opacity: 0;
+        transform: rotate(180deg);
+      }
+
+
+      .salary_move_icon{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        width: 50px;
+        height: 50px;
+        opacity: 1;
+        z-index: 50;
+
+
+        span{
+          display: inline-block;
+          position: absolute;
+          opacity: 0;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          margin: auto;
+          background-size: 100%;
+          animation-play-state:running;
+
+         &:first-child{
+           width: 20px;
+           height: 20px;
+           animation:salarymoveone 3s linear infinite, salarybg 3s linear infinite;
+         }
+          &:last-child{
+            width: 30px;
+            height: 30px;
+            animation:salarymovetwo 3s linear 1.5s infinite,twosalarybg 3s linear 1.5s infinite;
+          }
+
+        }
+
+
+      }
+
+      .welfare_move_icon{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        width: 50px;
+        height: 50px;
+        opacity: 0;
+
+        span{
+          animation-play-state:paused;
+        }
+
+      }
+
+
+
+    }
+
+
+  }
+
+  .progress_bar{
+    position: absolute;
+   // z-index: 5;
+    bottom:0;
+    left: 0;
+    width:100%;
+    height: 10px;
+    background: url("../images/zfb/market_icon_progress_bar1.png")center no-repeat;
+    background-size: 100%;
+
+   img{
+     width: 50%;
+     height: 100%;
+     position: absolute;
+     left:0;
+     top: 0;
+     //z-index: 1;
+   }
+  }
+
+   &.change{
+
+    .mid{
+
+      .main_pic{
+
+        .bottle_bg{
+          transform: rotate(180deg);
+        }
+
+        transform: rotate(180deg);
+
+        .change_salary_icon,.change_welfare_icons{
+          opacity: 1;
+
+        }
+
+        .change_salary_icon{
+          top:4px;
+          left: -2px;
+        }
+        .change_welfare_icons{
+          top:2px;
+          left: -2px;
+        }
+
+        .salary_icon,.welfare_icons{
+          opacity: 0;
+        }
+        .welfare_move_icon{
+          opacity: 1;
+
+          span{
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            background-size: 100%;
+            animation-play-state:running;
+
+            &:first-child{
+              opacity: 0;
+              width: 20px;
+              height: 20px;
+             animation:giftmoveone 3s linear infinite,giftbg 3s linear infinite;
+            }
+            &:last-child{
+              opacity: 0;
+              width: 30px;
+              height: 30px;
+              animation:giftmovetwo 3s linear 1.5s infinite,twogiftbg 3s linear 1.5s infinite;
+            }
+
+          }
+
+        }
+
+        .salary_move_icon{
+          opacity: 0;
+          span{
+            animation-play-state:paused;
+          }
+        }
+
+      }
+
+
+
+  }
+
+    .left{
+      span{
+        background: url("../images/zfb/market_icon_welfare2.png")center no-repeat;
+        background-size: 100%;
+      }
+    }
+    .right{
+      span{
+        background: url("../images/zfb/market_icon_pay2-1.png")center no-repeat;
+        background-size: 100%;
+      }
+    }
+  }
+
+}
+
+
+
+
+@keyframes salarybg {
+
+  0%{
+    background: url("../images/zfb/market_pay1.png")center no-repeat;
+    background-size: 100%;
+  }
+  45%{
+    background: url("../images/zfb/market_pay1.png")center no-repeat;
+    background-size: 100%;
+  }
+  46%{
+    background: url("../images/zfb/market_welfare1.png")center no-repeat;
+    background-size: 100%;
+  }
+  100%{
+    background: url("../images/zfb/market_welfare1.png")center no-repeat;
+    background-size: 100%;
+  }
+
+}
+
+@keyframes salarymoveone {
+
+  0%{
+
+    transform: translateY(0) scale(0.7);
+    opacity: 1;
+
+  }
+
+  25%{
+    transform: translateY(25px) rotate(0deg);
+  }
+
+  46%{
+    transform: translate(10px,35px) rotate(100deg);
+  }
+ 80%{
+    transform:translate(30px,50px) rotate(250deg);
+    opacity: 1;
+  }
+
+  100%{
+    opacity: 0;
+    transform:translate(30px,50px) rotate(250deg) scale(1);
+  }
+
+}
+
+@keyframes twosalarybg {
+
+  0%{
+    background: url("../images/zfb/market_pay4.png")center no-repeat;
+    background-size: 100%;
+  }
+  45%{
+    background: url("../images/zfb/market_pay4.png")center no-repeat;
+    background-size: 100%;
+  }
+  46%{
+    background: url("../images/zfb/market_welfare2.png")center no-repeat;
+    background-size: 100%;
+  }
+  100%{
+    background: url("../images/zfb/market_welfare2.png")center no-repeat;
+    background-size: 100%;
+  }
+
+}
+
+@keyframes salarymovetwo {
+
+  0%{
+
+    transform: translateY(0) scale(0.5);
+    opacity: 1;
+
+  }
+
+  25%{
+
+    transform: translateY(25px) rotate(0deg);
+    opacity: 1;
+  }
+
+  46%{
+
+    transform: translate(-10px,35px) rotate(-100deg);
+  }
+
+  85%{
+    transform:translate(-20px,50px) rotate(-250deg);
+    opacity: 1;
+
+  }
+  100%{
+    opacity: 0;
+    transform:translate(-20px,50px) rotate(-250deg) scale(1);
+  }
+
+}
+
+@keyframes giftbg {
+  0%{
+    background: url("../images/zfb/market_welfare1.png")center no-repeat;
+    background-size: 100%;
+  }
+  45%{
+    background: url("../images/zfb/market_welfare1.png")center no-repeat;
+    background-size: 100%;
+
+  }
+  46%{
+    background: url("../images/zfb/market_pay1.png")center no-repeat;
+    background-size: 100%;
+  }
+  100%{
+    background: url("../images/zfb/market_pay1.png")center no-repeat;
+    background-size: 100%;
+  }
+
+}
+
+@keyframes giftmoveone {
+
+  0%{
+    transform: translateY(0) scale(0.7);
+    opacity: 1;
+
+  }
+
+  25%{
+    transform: translateY(-25px) rotate(0deg);
+
+  }
+
+  46%{
+    transform: translate(-10px,-35px) rotate(100deg);
+  }
+
+  85%{
+    transform:translate(-20px,-55px) rotate(250deg);
+    opacity: 1;
+  }
+  100%{
+    transform:translate(-20px,-55px) rotate(250deg) scale(1);
+    opacity: 0;
+  }
+
+}
+
+@keyframes twogiftbg {
+  0%{
+    background: url("../images/zfb/market_welfare2.png")center no-repeat;
+    background-size: 100%;
+  }
+  45%{
+    background: url("../images/zfb/market_welfare2.png")center no-repeat;
+    background-size: 100%;
+  }
+  46%{
+    background: url("../images/zfb/market_pay4.png")center no-repeat;
+    background-size: 100%;
+  }
+  100%{
+    background: url("../images/zfb/market_pay4.png")center no-repeat;
+    background-size: 100%;
+  }
+
+
+}
+
+@keyframes giftmovetwo {
+
+  0%{
+    transform: translateY(0) scale(0.7);
+    opacity: 1;
+
+  }
+
+  25%{
+    transform: translateY(-25px) rotate(0deg);
+  }
+
+  46%{
+
+    transform: translate(10px,-35px) rotate(100deg);
+
+  }
+  85%{
+    transform:translate(30px,-50px) rotate(200deg);
+    opacity: 1;
+  }
+  100%{
+    transform:translate(30px,-50px) rotate(200deg) scale(1);
+    opacity: 0;
+  }
+
 }
 
 

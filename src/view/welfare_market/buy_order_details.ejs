@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>福利集市-买入</title>
+    <title>福利购买订单详情</title>
     <link rel="stylesheet"  href="../../css/jf_welfare_market.css">
 </head>
 
@@ -98,22 +98,19 @@
 
 </div>
 
-
 <!--底部按钮-->
 
 <div class="market_order_bottom">
-
     <div class="market_order_details_button white">
         <div class="button_text">中止买入</div>
     </div>
 
     <div class="market_order_details_button">
-        <div class="button_text">继续买入</div>
+        <a class="button_text" href="buy.html">继续买入</a>
     </div>
 </div>
 
 </body>
-
 
 <script src="../../js/jf_welfare_market.js"></script>
 
@@ -127,7 +124,7 @@
 
         $(this).find('img').toggleClass('changeimg')
     })
-    /*点击按钮中止买入*/
+    /*点击按钮中止买入-弹出框*/
 
     $('div.market_order_details_button.white').on('click',function (e) {
 
@@ -136,16 +133,8 @@
             "minText": " 中止买入后不影响已经成交的福利额度只是不再继续买入 ",
             "hasCheck": true,
             "hasCancel": true,
-
         });
-
     })
 
-
-
 </script>
-
-
-
-
 </html>

@@ -60,10 +60,23 @@
     background:linear-gradient(left, rgb(14, 167, 233), rgb(7, 110, 186));
     border-radius: 30px;
     color: #FFFFFF;
+    display: block;
+    a{
+      width: 100%;
+      display: block;
+      color: white;
+
+      &:active{
+        background: #06548d;
+        border-radius: 30px;
+      }
+    }
     &.white{
       background: #FFFFFF;
       color: #10a6e2;
+
+      &:active{
+        background:#e9e9e9
+      }
     }
-
-
-}
+  }
