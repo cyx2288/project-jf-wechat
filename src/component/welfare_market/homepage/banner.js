@@ -44,12 +44,12 @@ var handmove={
             var thisWindowWidth=window.innerWidth;
 
             //进度条变化
-            if(thisEleWidth+thisMoveDistance/5<=thisWindowWidth){
+            if(thisEleWidth+thisMoveDistance/4<=thisWindowWidth){
 
 
                 if(Math.abs(delG-this.gamma)<=60){
 
-                    thisProgressBar.style.width=thisEleWidth+thisMoveDistance/5+'px';
+                    thisProgressBar.style.width=thisEleWidth+thisMoveDistance/4+'px';
 
                 }else {
                     thisProgressBar.style.width=thisEleWidth+thisMoveDistance/8+'px';
@@ -62,10 +62,10 @@ var handmove={
 
             if(thisEleWidth<thisWindowWidth/2){
 
-                thisHourGlass.className="market_banner change";
+                thisHourGlass.className="market_banner";
 
             }else {
-                thisHourGlass.className="market_banner"
+                thisHourGlass.className="market_banner change"
             }
 
         }

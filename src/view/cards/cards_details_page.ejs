@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>卡券详情页</title>
+    <link rel="stylesheet"  href="../../css/jf_cards.css">
+</head>
+
+<body>
+
+<!--顶部固定导航-->
+
+<%- include('../../component/basic/topNav.ejs',{
+"thisrighthref":"jfSwitch.goBack()",
+"navtitle":"星巴克代金券",
+"thislefthref":"#",
+"thisimgsrc":" "
+})%>
+
+
+
+<div class="cards_details">
+
+
+    <%- include('../../component/cards/cards_details_top.ejs')%>
+
+    <%- include('../../component/cards/cards_details_bottom.ejs')%>
+
+</div>
+
+
+
+<!--图片详情页弹出部分-->
+<div class="product_show_content">
+    <!--主体内容-->
+    <div class="img_content">
+        <!--图片-->
+        <div class="product_details_autoPlay">
+            <div>
+                <div class="jd_banner_touch">
+                    <img src="">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--遮罩层-->
+    <div class="showimg_shadow"></div>
+</div>
+
+
+
+
+<!--固定底部按钮-->
+<div class="cards_fixed_btn">
+    <div class="bar"></div>
+    <div class="fixed_buy_btn">
+        <div class="price">
+            <span>售价：</span>
+            <span>200.00元</span>
+        </div>
+        <a class="check_buy">立即购买</a>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+</body>
+<script src="../../js/jf_cards.js"></script>
+<script>
+
+    /*页面上下切换*/
+    productTranslatePage.init();
+
+
+
+
+
+</script>
+
+</html>

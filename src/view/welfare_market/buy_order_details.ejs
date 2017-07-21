@@ -19,6 +19,22 @@
 
 <div class="market_body_main">
 
+    <!--通用进度条（2-5个）-->
+    <div class="jf_progress">
+        <div class="progress_bar">
+            <span ></span>
+            <span class="showblue"></span>
+            <span ></span>
+        </div>
+        <div class="progress_text">
+            <span >1、买入提交成功</span>
+            <span  class="showblue">2、交易中（系统撮合）</span>
+            <span>3、买入成功</span>
+
+        </div>
+
+    </div>
+
     <!--订单详情-->
     <div class="market_order_details_bg">
 
@@ -131,8 +147,6 @@
         jfShowTips.dialogShow({
             "mainText": "中止继续买入?",
             "minText": " 中止买入后不影响已经成交的福利额度只是不再继续买入 ",
-            "hasCheck": true,
-            "hasCancel": true,
         });
     })
 
