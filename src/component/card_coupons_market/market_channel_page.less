@@ -1,0 +1,110 @@
+body{
+  font-size: 10px;
+}
+/*卡券频道页*/
+.card_coupons_market{
+
+  .market_channel_page{
+    position: relative;
+    margin-top: 8px;
+
+    .market_channel_page_title{
+      width: 80%;
+      margin: 0 auto;
+      border-radius: 50px;
+      box-shadow: 0 0 16px rgba(171,171,171,.5);
+      text-align: center;
+      z-index: 1;
+      position: absolute;
+      left:0;
+      right: 0;
+      top: -15px;
+      &.orange{
+        background: linear-gradient(left, rgb(250,78,92), rgb(252,145,60));
+      }
+      &.dark_purple{
+        background: linear-gradient(left, rgb(122,89,230), rgb(62,151,246));
+      }
+      &.green{
+        background: linear-gradient(left, rgb(65,180,125), rgb(160,218,99));
+      }
+      &.lilac{
+        background: linear-gradient(left, rgb(166,89,221), rgb(236,141,207));
+      }
+      &.blue{
+        background: linear-gradient(left, rgb(56,150,222), rgb(64,200,221));
+      }
+      &.pink{
+        background: linear-gradient(left, rgb(254,135,155), rgb(248,196,92));
+      }
+
+      .channel_page_title_icon{
+        padding: 2px 0;
+        font-size: 18px;
+        color: white;
+        white-space :nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        img{
+          width: 22px;
+          vertical-align:text-bottom;
+          padding-right: 2px;
+        }
+      }
+      @media screen and (max-width: 350px){
+        .channel_page_title_icon{
+          padding: 2px 0;
+          font-size: 14px;
+          color: white;
+          img{
+            width: 18px;
+            vertical-align:text-bottom;
+            padding-right: 2px;
+          }
+        }
+      }
+    }
+    .market_channel_page_kind{
+      width: 95%;
+      margin:auto;
+      border-radius: 10px;
+      box-shadow: 0 0 16px rgba(171,171,171,.5);
+      background: white;
+      z-index: -1;
+      text-align: center;
+      margin-top: 24px;
+      padding-top: 26px;
+      &:after{
+        content: "";
+        display: block;
+        clear: both;
+      }
+      .channel_page_kind{
+        width:25%;
+        float: left;
+        margin:  0 auto;
+
+        &:after{
+          content: "";
+          display: block;
+          clear: both;
+        }
+        img{
+          margin: 0 auto;
+          flex: none;
+          width:70%;
+          border-radius: 10px;
+          box-shadow:1px 2px 4px rgba(149,151,153, .6);
+        }
+        .page_kind_text{
+          padding: 2px 0 6px 0;
+          white-space :nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          color: #4a4a4a;
+        }
+      }
+    }
+  }
+}
+
