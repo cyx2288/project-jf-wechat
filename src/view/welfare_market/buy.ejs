@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>福利集市</title>
+    <link rel="stylesheet"  href="../../css/jf_welfare_market.css">
+</head>
+
+<body>
+
+<!--顶部固定导航-->
+
+<!--导航-->
+<%- include('../../component/basic/topNav.ejs',{
+"thisrighthref":"jfSwitch.goBack()",
+"navtitle":"福利买入",
+"thislefthref":"buy_FAQ.html",
+"thisimgsrc":"../../images/icon_nav_helpcenter_2.png"
+})%>
+
+<div class="recharge_balance"><img src="../../images/zfb/icon_market_horn.png"><p>充值买福利，成交立减0.5%</p></div>
+<!--福利买入-->
+<div class="market_buy">
+
+    <%- include('../../component/welfare_market/buy/buy.ejs')%>
+
+</div>
+
+<!--确认订单弹出层-->
+<%- include('../../component/welfare_market/buy/check_order.ejs')%>
+
+
+
+
+
+
+
+
+
+</body>
+<script src="../../js/jf_welfare_market.js"></script>
+
+
+
+
+</html>

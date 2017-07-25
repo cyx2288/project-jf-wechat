@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>福利买入常见问题</title>
+    <link rel="stylesheet"  href="../../css/jf_welfare_market.css">
+</head>
+
+<body>
+
+<!--顶部固定导航-->
+
+<!--导航-->
+<%- include('../../component/basic/topNav.ejs',{
+"thisrighthref":"jfSwitch.goBack()",
+"navtitle":"福利买入常见问题",
+"thislefthref":"#",
+"thisimgsrc":" "
+})%>
+
+<!--常见问题内容-->
+
+<div class="market_buy_faq_title">福利买入常见问题</div>
+<div class="buy_faq_section">
+    <div class="faq_section_title_sub">Q: 福利集市是什么？</div>
+    <div class="faq_section_text">
+            福利集市为用户提供福利买卖服务，闲置福利额度可以转让（卖出）到集市，也可以在集市中购买福利额度。
+    </div>
+</div>
+
+<div class="buy_faq_section">
+    <div class="faq_section_title_sub">Q:怎样买入福利额度？</div>
+    <div class="faq_section_text">
+        在福利集市中，通过“我要买入”提交买入委托，系统会撮合买卖双方，自动成交。
+    </div>
+</div>
+
+<div class="buy_faq_section">
+    <div class="faq_section_title_sub">Q: 系统怎样撮合买卖？</div>
+    <div class="faq_section_text">
+        委托的买入单价越高，提交时间越早，系统优先撮合。成交时按卖出方单份要价成交，但数量和单价都不高于买入方需求。
+    </div>
+</div>
+
+<div class="buy_faq_section">
+    <div class="faq_section_title_sub">Q: 买入委托可以终止吗？</div>
+    <div class="faq_section_text">
+        买入申请提交后，还没有全部买入成功时，可以在买入订单中终止委托，终止后不再继续买入，但不影响前面已经成交的买入。
+    </div>
+</div>
+
+</body>
+
+
+<script src="../../js/jf_welfare_market.js"></script>
+
+
+</html>

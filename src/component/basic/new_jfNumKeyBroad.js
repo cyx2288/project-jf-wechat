@@ -18,6 +18,8 @@ var jfNumKeybroad={
 
         _this.hideButton=details.hideButton || 0;//其他的关闭按钮
 
+        _this.otherHideButton=details.otherHideButton||0;//其他的关闭按钮
+
         _this.clearButton=details.clearButton || 'clear_button';//清除数字按钮
 
 
@@ -156,7 +158,6 @@ var jfNumKeybroad={
             function getALLNum(obj) {
 
                 var thisInnerNum=showNumEle.innerText;//获取当前已经存在的所有值
-
                 /*输入金额判断*/
                 if (thisInnerNum.length < _this.MaxNum) {//设定输入金额的最大位数
 
@@ -423,6 +424,15 @@ var jfNumKeybroad={
         if(_this.hideButton){//如果存在其他关闭按钮
 
             document.getElementsByClassName(_this.hideButton)[0].addEventListener("click",function(){
+
+                _this.stop()
+
+            },false)
+        }
+
+        if(_this.otherHideButton){//如果存在其他关闭按钮
+
+            document.getElementsByClassName(_this.otherHideButton)[0].addEventListener("click",function(){
 
                 _this.stop()
 

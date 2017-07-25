@@ -31,5 +31,162 @@
   transition: opacity 0.3s ease-in-out;
   background-color: #000;
   opacity: 0;
-  z-index: 1;
+  z-index: 105;
+}
+
+
+/*下拉框*/
+.frame_drag_down{
+  z-index: 99;
+}
+.frame_drag_down .frame-main {
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  top: 0;
+  background-color: #fff;
+  display: none;
+  -webkit-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
+}
+.frame_drag_down .weui_mask_transition {
+  display: none;
+  background: transparent;
+  -webkit-transition: background .3s;
+  transition: background .3s;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+.frame_drag_down .mask_drag {
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+  background-color: #000;
+  opacity: 0;
+  z-index: 105;
+}
+
+
+/*通用上拉框弹出层样式*/
+.public_popup .weui_actionsheet_menu {
+  overflow: hidden;
+}
+.public_popup .title_top {
+  position: relative;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: space-between;
+  -moz-justify-content: space-between;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-pack: center;
+  -moz-justify-content: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  padding: 14px 15px;
+  overflow: hidden;
+}
+.public_popup .title_top:after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 20px;
+  right: 20px;
+  width: 0;
+  height: 0;
+  content: url(../images/sinopec/icon_close.png);
+  -webkit-transform: scale(0.2, 0.2);
+  transform: scale(0.2, 0.2);
+}
+.public_popup .title_top:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 1px;
+  border-top: 1px solid #d9d9d9;
+  color: #d9d9d9;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(.5);
+  transform: scaleY(.5);
+}
+.public_popup .payment_amount {
+  padding: 15px 15px 5px 15px;
+  text-align: center;
+}
+.public_popup .payment_amount span {
+  font-size: 12px;
+}
+.public_popup .payment_amount p {
+  font-size: 40px;
+  color: #000000;
+}
+.public_popup .list_bottom {
+  max-height: 188px;
+  overflow: auto;
+}
+.public_popup .list_bottom .list_cell {
+  padding: 10px 15px;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: space-between;
+  -moz-justify-content: space-between;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.public_popup .list_bottom .list_cell:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 1px;
+  border-top: 1px solid #d9d9d9;
+  color: #d9d9d9;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(.5);
+  transform: scaleY(.5);
+  left: 15px;
+  right: 15px;
+  width: auto;
+}
+.public_popup .weui_cell_bd p {
+  color: #9C9C9C;
+}
+.public_popup .list_btn {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 14px;
+  padding-right: 14px;
+  box-sizing: border-box;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  line-height: 3;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  overflow: hidden;
+}
+.public_popup .list_btn:active {
+  color: hsla(0,0%,100%,.4);
+  background-color: #0994cc
+}
+.public_popup .btn_color {
+  background-color: #10a6e2;
 }

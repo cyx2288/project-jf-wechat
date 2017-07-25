@@ -1,0 +1,309 @@
+/*福利买入页面*/
+
+.recharge_balance{
+  padding: 8px 15px;
+  font-size: 14px;
+  margin-bottom: 15px;
+  background: rgba(243,152,0,.2);
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -moz-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+.recharge_balance>img{
+  width: 16px;
+  height: 16px;
+}
+.recharge_balance>p{
+  color: #fc6329;
+  padding-left: 8px;
+}
+
+
+.market_buy{
+
+  margin: 5px auto;
+  width: 95%;
+
+  padding-top: 5px;
+
+
+  .market_mian{
+
+    .focusing:after{
+      content: '▏';
+      display: inline-block;
+      transform: scaleX(0.5);
+      -webkit-transform: scaleX(0.5);
+      width: 0;
+      font-size: 40px;
+      font-weight: bold;
+      position: absolute;
+      top: 8px;
+      color: #10a6e2;
+      animation: fadeInInputKeybroad .6s infinite;
+      -webkit-animation: fadeInInputKeybroad .6s infinite;
+      animation-direction: alternate;
+      -webkit-animation-direction: alternate;
+      z-index: 10;
+    }
+
+
+    background: white;
+    margin: 0 auto;
+    padding: 8px 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px #e9e9e9;
+
+    &>div{
+      padding: 10px 0;
+    }
+
+    .market_tips{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 0;
+
+      &>p:last-child{
+        color: #ababab;
+        font-size: 12px;
+      }
+
+    }
+
+    .market_buy_num{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      position: relative;
+      font-size: 24px;
+      padding-top: 0;
+
+      .buy_icon{
+        width: 40px;
+        height: 40px;
+        margin-top: 20px;
+        img{
+          width: 40px;
+        }
+      }
+      .buy_number{
+        width: calc(~"100% - 36px");
+        position: relative;
+
+        .keyNumshow{
+          width: 100%;
+          font-size: 50px;
+          color: #10A6E2;
+          padding-left: 2px;
+          height: 60px;
+          z-index: 10;
+          position: relative;
+        }
+
+        &>input{
+          border: none;
+          position: absolute;
+          left: 10px;
+          top: 0;
+          height: 50px;
+          color: white;
+          z-index: 1;
+          background: transparent;
+        }
+      }
+
+      &:after{
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        border-bottom: solid 1px #DDDDDD;
+        transform: scaleY(0.7);
+
+      }
+    }
+    .markey_buy_price{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      position: relative;
+
+      &:after{
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        border-bottom: solid 1px #DDDDDD;
+
+      }
+
+      .price_num{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &>span{
+          font-size: 20px;
+          width: 20px;
+          height: 20px;
+          display: block;
+          text-align: center;
+          vertical-align: middle;
+          line-height: 20px;
+          background: #DDDDDD;
+          color: white;
+          border-radius: 50%;
+
+          &:active{
+            background: #4A4A4A;
+          }
+
+          &:first-child{
+            margin-right: 15px;
+            font-size: 12px;
+            font-weight: bold;
+            line-height: 18px;
+          }
+          &:last-child{
+            margin-left: 15px;
+          }
+
+        }
+
+        .show_price{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          font-weight: bold;
+          color: #4A4A4A;
+
+          span{
+            font-size: 28px;
+            display: inline-block;
+
+          }
+
+          input{
+            border: none;
+            font-size: 30px;
+            width: 75px;
+            overflow: hidden;
+            text-align: center;
+            font-weight: bold;
+            color: #4A4A4A;
+          }
+        }
+      }
+    }
+
+    .market_buy_agreement{
+      text-align: center;
+      margin-top: 10px;
+      padding-bottom: 10px;
+
+
+      input{
+        -webkit-appearance: none;
+        appearance: none;
+        outline: 0;
+        font-size: 0;
+        border: 1px solid #ddd;
+        background-color: #fff;;
+        border-radius: 3px;
+        width: 13px;
+        height: 13px;
+        position: relative;
+        vertical-align: 0;
+        top: 2px;
+
+        &:checked:before{
+          content: "";
+          position: absolute;
+          display: block;
+          width: 5px;
+          height: 10px;
+          left: 3px;
+          top: -2px;
+          border-bottom: solid 1px #10a6e1;
+          border-right: solid 1px #10a6e1;
+          -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+
+        }
+      }
+
+      a{
+        color: #10a6e1;
+      }
+    }
+
+    .market_buy_btn{
+
+      padding: 8px 0;
+      margin-bottom: 15px;
+
+        button{
+          width: 100%;
+          padding: 10px 0;
+          font-size: 16px;
+          border-radius: 5px;
+          border: none;
+          color: white;
+          background:linear-gradient(left,#0ea6e9,#0773be);
+          transition: all 0.3s linear;
+          outline: none;
+
+          &:active{
+            opacity: 0.7;
+          }
+
+          &:disabled{
+            background: #DDDDDD;
+            color: #ABABAB;
+          }
+        }
+
+
+      .customer_service {
+        text-align: center;
+        margin-top: 15px;
+        font-size: 12px;
+        color: #9a9a9a;
+
+        img {
+          width: 18px;
+          margin-right: 2px;
+          vertical-align: top;
+        }
+      }
+
+
+    }
+
+
+  }
+
+
+}

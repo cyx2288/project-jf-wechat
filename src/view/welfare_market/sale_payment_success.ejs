@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>支付成功</title>
+    <link rel="stylesheet"  href="../../css/jf_pay.css">
+</head>
+
+<body>
+
+<div class="zhuangyi_pay_shoppingcart">
+
+    <!--导航-->
+    <%- include('../../component/basic/topNav.ejs',{
+    "thisrighthref":"jfSwitch.goBack()",
+    "navtitle":"福利卖出",
+    "thislefthref":"sale_FAQ.html",
+    "thisimgsrc":"../../images/icon_nav_helpcenter_2.png"
+    })%>
+
+    <!--支付成功-->
+    <div class="weui_msg">
+        <%- include('../../component/pay/payIcon/icon_success.ejs')%>
+        <div class="weui_text_area" style="padding:0px;">
+            <h2 class="msg_title_0718">卖出提交成功</h2>
+            <div class="weui_text_area">
+                <p class="weui_msg_desc text_area_0718">请等待系统撮合成交，成交详情稍后请在“我的”“查看订单”中查阅，没有撮合成功的卖出，可以在“我的”“查看订单”中取消。</p>
+
+            </div>
+
+
+            <!--通用进度条（2-5个）-->
+            <div class="jf_progress">
+                <div class="progress_bar">
+                    <span class="showblue"></span>
+                    <span ></span>
+                    <span ></span>
+                </div>
+                <div class="progress_text">
+                    <span class="showblue">1、卖出提交成功</span>
+                    <span >2、交易中（系统撮合）</span>
+                    <span>3、卖出成功</span>
+
+                </div>
+
+            </div>
+            <!--底部按钮-->
+            <div class="weui_opr_area">
+                <p class="weui_btn_area">
+                    <a href="sale_order_details.html" class="weui_btn weui_btn_plain_primary btn_white_0718">查看订单</a>
+                    <a href="../../main.html" class="weui_btn btn_blue_0718">返回首页</a>
+                </p>
+                <p class="customer_help">
+                    <a onclick="jfCustomerService.click()"><img src="../../images/icon_dialogue_01.png">联系客服</a>
+                    <a href="../helpcenter/menu.html"><img src="../../images/icon_nav_helpcenter_3.png">帮助中心   </a>
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+<script src="../../js/jf_pay.js"></script>
+<script>
+    jfCustomerService.init(
+        {//用户信息
+            name: '阿陈',// 名字
+            address: '西伯利亚',// 地址
+            email: '1313@qq.com',// 邮箱
+            age: '16',// 年龄
+            tel: '110',// 电话
+            comment: '很帅',// 备注
+            gender: '男',// 性别
+            qq: '1234567',// QQ
+            weibo: '',// 微博
+            weixin: '',// 微信
+            '公司名称': '上海淘略数据有限公司',
+            '公司编号': '123ksuhdaf891274',
+            '员工编号': '1234567890123456'
+        },
+        //指定客服
+        'b040d96757bf55ea302f9fbfb0ecd062'
+    )
+</script>
+</html>

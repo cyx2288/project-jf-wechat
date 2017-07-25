@@ -1,0 +1,140 @@
+
+
+<div class="market_mian">
+    <div class="market_tips">
+
+        <p>计划买入福利额度</p>
+
+        <p>薪资账户余额：<span>300.00</span>元</p>
+
+    </div>
+
+    <div class="market_buy_num">
+
+        <div class="buy_icon"><img src="../../images/zfb/icon_unit.png"></div>
+
+        <div class="buy_number" >
+            <div class="keyNumshow" id="savekeyNum"></div>
+            <input readonly value="" class="key_input" id="key_input">
+        </div>
+
+    </div>
+
+    <div class="markey_buy_price">
+
+        <div>最高买入单价（元）</div>
+
+        <div class="price_num">
+            <span class="reduce">—</span>
+            <div class="show_price">
+                <input value="1.00" class="inputele" type="number" maxlength="5">
+            </div>
+            <span class="add">+</span>
+
+        </div>
+    </div>
+
+    <div class="market_buy_agreement">
+    <span>
+         <input type="checkbox" class="agreement_check" checked>
+        已经阅读并同意<a href="buy_service_agreement.html">《服务委托买入协议》</a>
+    </span>
+    </div>
+
+    <div class="market_buy_btn">
+       <button class="buy_check_btn" id="buy_check_btn"  disabled >买入</button>
+
+        <div class="customer_service" onclick="jfCustomerService.click()"><img src="../../images/icon_dialogue.png">联系客服</div>
+
+    </div>
+</div>
+
+
+
+<script>
+
+    window.onload=function(){
+
+        setTimeout(function(){
+
+            jfkeybroad.run();//页面初始的时候，开启键盘；
+
+            //判断下一步按钮是否可以点击（判断输入框里面有没有值，以及协议有没有被选中）
+            $('body').on('touchstart',".weui_grid",ValiateNextBtn);
+
+            document.getElementsByClassName('agreement_check')[0].addEventListener('click',ValiateNextBtn,false)
+
+
+            //金额加减绑定事件
+
+            document.getElementsByClassName('reduce')[0].addEventListener('click',changeValue,false);//相减
+
+            document.getElementsByClassName('add')[0].addEventListener('click',changeValue,false);//相加
+
+        },300);
+
+    }
+
+
+    /*判断下一步按钮*/
+    function ValiateNextBtn(){
+        var thisSaveNum=document.getElementById('key_input');//input元素
+
+        var thischeckBox=document.getElementsByClassName('agreement_check')[0];
+
+        var thisNextBtn=document.getElementsByClassName('buy_check_btn')[0];//下一步按钮
+
+        if(!thisSaveNum.value==""&&thischeckBox.checked){
+
+            thisNextBtn.removeAttribute("disabled")
+        }else {
+
+            thisNextBtn.setAttribute("disabled",true)
+        }
+    }
+
+
+    /*数字键盘*/
+    var jfkeybroad=new jfNumKeybroad.keyBroadShow({
+
+        "hideButton":"buy_check_btn",//点击关闭键盘的按钮 class选择器
+
+        "otherHideButton":"inputele",//其他关闭按钮
+
+        "showNumEle":"savekeyNum",//点击出现键盘的元素，并且存储数字，ID选择器,与下面变量是同一元素
+
+        "saveNumEle":"keyNumshow",//显示当前金额的值的元素，用于判断光标，class选择器
+
+      //  "clearButton":"delete",//清除金额按钮，class选择器
+
+        "saveInput":"key_input",//存入键盘的值，input元素的class选择器
+
+        "MaxNum":"10"//输入的最大位数
+
+    });
+
+
+    //咨询客服
+    jfCustomerService.init({//用户信息
+        name: '阿陈',// 名字
+        address: '西伯利亚',// 地址
+        email: '1313@qq.com',// 邮箱
+        age: '16',// 年龄
+        tel: '110',// 电话
+        comment: '很帅',// 备注
+        gender: '男',// 性别
+        qq: '1234567',// QQ
+        weibo: '',// 微博
+        weixin: '',// 微信
+        '公司名称':'上海淘略数据有限公司',
+        '公司编号':'123ksuhdaf891274',
+        '员工编号':'1234567890123456'
+    })
+
+
+
+
+
+
+</script>
+
