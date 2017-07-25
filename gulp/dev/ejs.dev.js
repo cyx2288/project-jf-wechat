@@ -40,6 +40,8 @@ function devEjs(){
 
             $('head').prepend(addHtml);
 
+
+
         }))
 
     //顺序增加脚本文件
@@ -84,6 +86,9 @@ function devEjs(){
         .pipe(gulp.dest('build/html'))//输出到bulid文件夹
 
          .pipe(bom())//不乱码
+
+
+
 
         .pipe(connect.reload())
 

@@ -3,7 +3,7 @@
  */
 
 
-
+/*页面上下移动*/
 var productTranslatePage = {
 
     init: function (details) {
@@ -58,7 +58,14 @@ var productTranslatePage = {
 //循环变量
         var thisInterVal;
 
-        var thisMoveHeight = thisWindowHeight - 45;
+        var thisMoveHeight = thisWindowHeight - 100;
+
+        var startScroll=0;
+
+
+        var pastMoveDis
+
+        var getBottom=true;
 
         MainBody.addEventListener('touchstart', moveStart, false);
 
@@ -72,17 +79,23 @@ var productTranslatePage = {
 
             var evt = event ? event : window.event;
 
-            firstTouchesClientY = parseFloat(evt.touches[0].clientY);
+            firstTouchesClientY = parseFloat(evt.touches[0].pageY);
 
             _this.firstScreen.className = "" + _this.topScreen + "";
 
             _this.secondScreen.className = "" + _this.bottomScreen + "";
 
+            getBottom=true;//初始化
+
             if( _this.secondScreen.style.opacity=="1"){
+
+                startScroll= _this.secondScreen.scrollTop;
 
                 if(!thisCanShow){
 
                     clearInterval(thisInterVal);
+
+                    thisCanShow=true;//初始化
 
                 }
 
@@ -94,7 +107,7 @@ var productTranslatePage = {
         function getMoveDis(event) {
             var evt = event ? event : window.event;
 
-            moveTouchesClientY = parseFloat(evt.targetTouches[0].clientY);//末尾位置(Y);
+            moveTouchesClientY = parseFloat(evt.targetTouches[0].pageY);//末尾位置(Y);
 
             _this.moveDistanceY = (moveTouchesClientY - firstTouchesClientY) / 3;//Y軸方向最终移动的距离（第一根手指）;
 
@@ -102,27 +115,51 @@ var productTranslatePage = {
 
             var thisWindowHeight = window.innerHeight;
 
+            var firstDis=_this.firstScreenMain.getBoundingClientRect().bottom;
+
             if (_this.firstScreen.style.opacity == "1") {
 
-                if ((_this.firstScreen.scrollTop + thisWindowHeight) >= firstScreenHeight && _this.moveDistanceY < 0) {//向上滑动(第一屏滚动条已经到达底部)
+                if (firstDis<=thisWindowHeight-55 && _this.moveDistanceY < 0) {//向上滑动(第一屏滚动条已经到达底部)
+
+                    moveTouchesClientY = parseFloat(evt.targetTouches[0].pageY);//末尾位置(Y);
+
+                    if(getBottom){
+
+                        pastMoveDis=  moveTouchesClientY;//缓存到达底部时，手指触摸位置
+
+                        getBottom=false
+                    }
+
+                    _this.moveDistanceY = (moveTouchesClientY - pastMoveDis) / 3;//Y軸方向最终移动的距离（第一根手指）;
 
                     evt.preventDefault();//阻止浏览器的默认行为
 
                     evt.stopPropagation();
 
-                    _this.firstScreen.style.transform = 'translateY(' + _this.moveDistanceY + 'px)';
+                    _this.transformFn( _this.firstScreen,_this.moveDistanceY+'px');
+
                 }
             } else {
 
                 if (_this.secondScreen.scrollTop == "0" && _this.moveDistanceY > 0) {//向下滑动，第二屏的滚动条为0，即到达顶部
 
+
+                    if(getBottom){
+
+                        pastMoveDis=  moveTouchesClientY;//缓存到达底部时，手指触摸位置
+
+                        getBottom=false
+                    }
+
+                    _this.moveDistanceY = (moveTouchesClientY - pastMoveDis) / 3;//Y軸方向最终移动的距离（第一根手指）;
+
                     evt.preventDefault();//阻止浏览器的默认行为
 
                     evt.stopPropagation();
 
-                    var thisMoveDistance = _this.moveDistanceY - thisWindowHeight + 45;
+                    var thisMoveDistance = _this.moveDistanceY - thisWindowHeight+100;
 
-                    _this.secondScreen.style.transform = 'translateY(' + thisMoveDistance + 'px)';
+                    _this.transformFn( _this.secondScreen,thisMoveDistance+'px');
                 }
 
             }
@@ -141,33 +178,34 @@ var productTranslatePage = {
 
                 var lastScrollTop = 0;
 
+                var endTouchesY=evt.changedTouches[0].pageY;
+
                 setTimeout(function(){
 
                     lastScrollTop = _this.secondScreen.scrollTop;
 
+                    var thisDistaceY= _this.secondScreen.getBoundingClientRect().bottom;
+
                     /*本次放开手后的移动速度*/
                     var canShow = Math.abs(lastScrollTop-firstScrollTop);
 
-                    if(canShow<1 &&  _this.secondScreen.style.transform =='translateY(-' + thisMoveHeight + 'px)'){//排除滚动条为0
+                    if(Math.abs(lastScrollTop-startScroll)<1&&canShow<1){//排除滚动条为0,排除滚动条到达底部
 
-                        showScaleEle(thisTargetImg);
+                       if(((_this.secondScreen.scrollTop + thisWindowHeight) >= _this.secondScreenMain.offsetHeight||_this.secondScreen.scrollTop==0)&&Math.abs(endTouchesY-firstTouchesClientY)>20){//排除滚动条到达底部
+                            thisCanShow = false
+                        }
 
-                        if((_this.secondScreen.scrollTop + thisWindowHeight) >= _this.secondScreenMain.offsetHeight){
+                       showScaleEle(thisTargetImg);
+
+                        if((_this.secondScreen.scrollTop + thisWindowHeight) >= _this.secondScreenMain.offsetHeight){//滚动条滑到页面底部
                             thisCanShow = false
                         }else {
+
                             thisCanShow = true
                         }
 
-
                     }
 
-                    /*if(canShow<1){
-
-                        showScaleEle(thisTargetImg);
-
-                        thisCanShow = true
-
-                    }*/
 
                     else {
 
@@ -222,13 +260,17 @@ var productTranslatePage = {
 
                     var thisImgSrc = ele.getAttribute('src');//获取点击图片的SRC
 
-                    thisScaleEle.setAttribute('src', thisImgSrc);
+                    if(thisImgSrc){
+                        thisScaleEle.setAttribute('src', thisImgSrc);
 
-                    document.getElementsByClassName('product_show_content')[0].style.display = "block";
+                        document.getElementsByClassName('product_show_content')[0].style.display = "block";
 
-                    document.getElementsByTagName("body")[0].style.overflow = "hidden";//页面禁止滚动
+                        document.getElementsByTagName("body")[0].style.overflow = "hidden";//页面禁止滚动
 
-                    document.getElementsByTagName("html")[0].style.overflow = "hidden";//页面禁止滚动
+                        document.getElementsByTagName("html")[0].style.overflow = "hidden";//页面禁止滚动
+                    }
+
+
 
                 }
 
@@ -252,48 +294,74 @@ var productTranslatePage = {
 
         var thisWindowHeight = window.innerHeight;
 
-        var thisMoveHeight = thisWindowHeight - 45;
+        var thisMoveHeight = thisWindowHeight-100;
 
         _this.firstScreen.className = "" + _this.topScreen + " change";
 
         _this.secondScreen.className = "" + _this.bottomScreen + " change";
 
-        if ((_this.firstScreen.scrollTop + thisWindowHeight) >= firstScreenHeight && thisDistance < 0) {//如果是在第一屏，触发(第一屏滚动条已经到达底部)
+        if ((_this.firstScreen.scrollTop + thisWindowHeight) >= firstScreenHeight && thisDistance < 0 &&_this.firstScreen.style.opacity=="1") {//如果是在第一屏，触发(第一屏滚动条已经到达底部)
 
             if (Math.abs(thisDistance) > _this.changeDistance) {
 
-                _this.firstScreen.style.transform = 'translateY(-' + thisMoveHeight + 'px)';
+                _this.transformFn(_this.firstScreen,-thisMoveHeight+'px');
 
                 _this.firstScreen.style.opacity = "0";
 
-                _this.secondScreen.style.opacity = "1";
+                setTimeout(function(){
 
-                _this.secondScreen.style.transform = 'translateY(-' + thisMoveHeight + 'px)';
+                    _this.secondScreen.style.opacity = "1";
+
+                    _this.secondScreen.scrollTop=45;
+
+                    _this.transformFn(_this.secondScreen,-thisMoveHeight+'px');
+
+                },100)
+
+
             } else {
-                _this.firstScreen.style.transform = 'translateY(0)';
+
+                _this.transformFn(_this.secondScreen,0);
+
+                _this.transformFn(_this.firstScreen,0);
             }
 
 
-        } else if (_this.secondScreen.scrollTop <= 0 && thisDistance > 0) {//如果是在第二屏触发(第二屏滚动条为0 )
+        } else if (_this.secondScreen.scrollTop <= 0 && thisDistance > 0 && _this.secondScreen.style.opacity=="1") {//如果是在第二屏触发(第二屏滚动条为0 )
 
             if (Math.abs(thisDistance) > _this.changeDistance) {
 
                 _this.secondScreen.style.opacity = "0";
 
-                _this.secondScreen.style.transform = 'translateY(0)';
+                _this.transformFn( _this.secondScreen,0);
 
                 setTimeout(function () {
-                    _this.firstScreen.style.transform = 'translateY(0)';
+
+                    _this.transformFn(_this.firstScreen,0);
 
                     _this.firstScreen.style.opacity = "1";
-                }, 10)
+                }, 100)
 
 
             } else {
-                _this.secondScreen.style.transform = 'translateY(-' + thisMoveHeight + 'px)';
+
+                _this.transformFn(_this.secondScreen,-thisMoveHeight+'px');
+
             }
 
         }
+
+    },
+
+
+    //页面变化
+    transformFn:function(ele,num){
+
+        var _this=this;
+
+       ele.style.transform="translate3d(0,"+num+",0)";
+
+        ele.style.webkitTransform="translate3d(0,"+num+",0)";
 
     }
 
@@ -789,10 +857,4 @@ initBannerTouch({
 
 
 
-$(".tab_value").find("span:not('.nocards')").on("click",function(){
 
-    $(this).siblings('span').removeClass('choosed');
-
-    $(this).addClass('choosed');
-
-})

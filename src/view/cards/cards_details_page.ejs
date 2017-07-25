@@ -76,6 +76,40 @@
     /*页面上下切换*/
     productTranslatePage.init();
 
+    /*点击切换选项*/
+   /* $(".tab_value").find("span:not('.nocards')").on("click",function(e){
+
+        e.stopPropagation();
+
+        e.preventDefault()
+
+        $(this).siblings('span').removeClass('choosed');
+
+        $(this).addClass('choosed');
+
+    })*/
+
+
+    $(".tab_value").on("click",function(event){
+
+        var evt=event||window.event;
+
+        evt.stopPropagation();
+
+        var thisTargetEle=evt.srcElement||evt.target;
+
+        if($(thisTargetEle)[0].className!='nocards'){
+
+            $(thisTargetEle).siblings('span').removeClass('choosed');
+
+            $(thisTargetEle).addClass('choosed');
+        }
+
+
+
+
+    })
+
 
 
 
