@@ -1,0 +1,422 @@
+/*现金余额管理*/
+.balance_title_icon.jf_list_pic img{
+  filter: grayscale(0%);
+
+}
+
+/*银行转账充值*/
+
+.litter_text{
+  color: #ABABAB;
+}
+
+.cash_bank_boot_page{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+}
+
+.cash_bank_boot_page .boot_page_button{
+  width: 26%;
+  border: 1px dotted #FFFFFF;
+  position: absolute;
+  bottom:35px;
+  border-radius: 8px;
+  left:37%;
+  font-size: 14px;
+  text-align: center;
+  line-height:38px;
+  z-index: 5000;
+  color: white;
+}
+.cash_bank_boot_page a:active{
+  background-color: #FFFFFF;
+  color: #10a6e2;
+}
+.cash_bank_boot_page img{
+  width: 100%;
+  position: absolute;
+  bottom:-15px;
+  left: 0;
+  z-index: 1000;
+  overflow:auto;
+}
+.cash_bank_transfer_text{
+  padding-left: 10px;
+}
+.cash_choose_pay_bank .choose_pay_bank{
+  width: 95%;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  line-height: 68px;
+  margin-top: 10px;
+  padding: 5px 0;
+}
+.cash_choose_pay_bank .choose_pay_bank:active{
+  box-shadow: 0 3px 6px rgba(0,0,0,.15);
+
+}
+.cash_choose_pay_bank .choose_pay_bank .pay_bank_arrow img{
+  width: 20px;
+  vertical-align: middle;
+  padding-right: 10px;
+}
+.cash_choose_pay_bank .choose_pay_bank .pay_bank_text{
+  padding-left: 10px;
+}
+.cash_pay_bank_prompt{
+  color:#fc6329;
+}
+.main_choose_content .cash_pay_bank_bg{
+  border-radius: 10px;
+  background-color: #FFFFFF;
+}
+.main_choose_content .cash_pay_bank_bg .cash_pay_bank_section{
+  padding: 15px 0 15px 10px;
+}
+.main_choose_content .cash_pay_bank_button{
+  background-color: #10a6e2;
+  border-radius: 10px;
+}
+
+
+/*账户充值*/
+.vipMain .main_choose_content .text_tips{
+  align-items: center;
+}
+
+.cash_recharge_text{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+
+}
+.cash_recharge_text img{
+  width: 15px;
+  vertical-align: text-top;
+  padding-right: 5px;
+}
+.cash_recharge_text .recharge_text_sub{
+  color: #10a6e2;
+}
+
+.cash_recharge_text .recharge_text_sub:active{
+  color: rgb(13,62,150);
+}
+.cash_choose_pay_bank .recharge_bank_section{
+  width: 95%;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  margin: 0 auto;
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  font-size: 16px;
+  margin-top: 10px;
+  padding: 14px 0;
+}
+.cash_choose_pay_bank .recharge_bank_section:active{
+  box-shadow: 0 3px 6px rgba(0,0,0,.15);
+}
+.cash_choose_pay_bank .recharge_bank_section img{
+  width: 42px;
+  vertical-align: text-top;
+}
+.cash_choose_pay_bank .recharge_bank_section .recharge_bank_value span{
+  padding-left: 20px;
+}
+.main_choose_content .cash_pay_bank_bg .value{
+  justify-content: space-between;
+  margin-top: 18px;
+  display: flex;
+}
+.main_choose_content .cash_pay_bank_bg .recharge_send_icon{
+  color: #10a6e2;
+  padding: 15px 10px;
+}
+
+.main_choose_content .cash_pay_bank_bg .recharge_send_icon:active{
+  color: rgb(13,62,150);
+}
+.main_choose_content .cash_pay_bank_bg .recharge_send_text{
+  padding: 15px 10px;
+}
+.main_choose_content .cash_pay_bank_bg img{
+  width: 20px;
+  vertical-align: text-top;
+  padding-right: 5px;
+}
+.cash_pay_bank_bg .text_tips .recharge_title_button{
+  background-color: white;
+  border: 1px solid #10a6e2;
+  border-radius: 5px;
+  padding: 2px 10px;
+  margin-right: 10px;
+  color: #10a6e2;
+  white-space: nowrap;
+}
+.cash_pay_bank_bg .text_tips .tip_info{
+  white-space: nowrap;
+
+}
+.cash_pay_bank_bg .text_tips .recharge_title_button:active{
+  background-color: #10a6e2;
+  color: white;
+}
+.cash_choose_pay_bank .pay_bank_arrow img {
+  width: 20px;
+  vertical-align: middle;
+  padding-right: 10px;
+}
+
+
+.vipMain {
+  position: relative;
+  z-index: 5;
+}
+.vipMain .main_choose_content {
+  padding: 10px;
+}
+.vipMain .main_choose_content .text_tips {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  padding: 14px 0;
+  position: relative;
+}
+.vipMain .main_choose_content .text_tips:before {
+  display: block;
+  position: absolute;
+  top: 0;
+  -webkit-transform: scaleY(.5);
+  transform: scaleY(.5);
+}
+.vipMain .main_choose_content .last_text_tips:after, .vipMain .main_choose_content .text_tips:before {
+  content: '';
+  opacity: .6;
+  border-top: 1px solid #bbb;
+  left: 0;
+  height: 1px;
+  width: 100%;
+}
+.vipMain .main_choose_content .text_tips .tip_info {
+  font-size: 14px;
+  color: #9e9e9e;
+  padding-left: 10px;
+}
+.vipMain .main_choose_content .text_tips .tip_number {
+  font-size: 14px;
+  padding-right: 10px;
+}
+.vipMain .main_choose_content .vip_nextbtn {
+  font-size: 20px;
+  text-align: center;
+  display: block;
+  background: #10a6e2;
+  color: #fff;
+  height: 40px;
+  padding: 0 15px;
+  line-height: 40px;
+  border-radius: 5px;
+  margin-top: 30px;
+  width: 100%;
+  border: 0;
+  outline: 0;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.vipMain .main_choose_content .vip_nextbtn:active {
+  opacity: .6;
+}
+.vipMain .main_choose_content .customer_service {
+  text-align: center;
+  margin-top: 21px;
+  font-size: 12px;
+  color: #9a9a9a;
+}
+.vipMain .main_choose_content .customer_service img {
+  width: 18px;
+  vertical-align: middle;
+}
+.vipMain .main_choose_content .warm_notes ul {
+  color: #9a9a9a;
+  padding: 0 10px;
+}
+.vipMain .main_choose_content .warm_notes ul li:first-child {
+  margin-top: 1.5em;
+}
+.vipMain .main_choose_content .warm_notes ul li {
+  margin-left: 1.5em;
+  font-size: 12px;
+  line-height: 2em;
+}
+
+
+/*上拉银行卡*/
+
+.weui_actionsheet_menu {
+  background-color: #fff;
+}
+.vipMain .weui_order {
+  background-color: #fff;
+}
+.vipMain .weui_order a {
+  color: #4a4a4a;
+}
+.vipMain .weui_order .weui_title {
+  border-bottom: 1px solid #d9d9d9;
+}
+.vipMain .weui_order .weui_title>div {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  align-items: center;
+  padding: 5px 10px;
+}
+.vipMain .weui_order .weui_title>div div:first-child, .vipMain .weui_order .weui_title>div div:last-child {
+  width: 14px;
+}
+.vipMain .weui_order .weui_title>div div:last-child img {
+  width: 100%;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.vipMain .weui_order .weui_bank_imf {
+  padding: 0px 10px;
+  position: relative;
+}
+.vipMain .weui_order .weui_bank_imf:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 71px;
+  width: 95%;
+  height: 1px;
+  border-top: 1px solid #d9d9d9;
+  color: #d9d9d9;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(.5);
+  transform: scaleY(.5);
+  left: 10px;
+}
+.vipMain .weui_order .weui_bank_imf>div, .weui_add_card>div {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.vipMain .weui_order .weui_cross {
+  -webkit-transform: scale(1.5, 1.5);
+  transform: scale(1.5, 1.5);
+  margin-right: 5px;
+  padding:5px 0px 5px 5px;
+}
+.vipMain .weui_order .zz {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  align-items: center;
+  padding: 5px 0px;
+}
+.vipMain .weui_order .zz>div img {
+  width: 55px;
+  height: 55px;
+}
+.vipMain .weui_order .zz>div+div div+div span {
+  letter-spacing: 2px;
+  vertical-align: sub;
+}
+.vipMain .weui_order .weui_choose {
+  border: 1px solid #10a6e2;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  padding:0px 6px;
+  font-size: 12px;
+  color: #10a6e2;
+  margin-left:50px;
+}
+.vipMain .weui_order .weui_add_card {
+  border-bottom: 1px solid #d9d9d9;
+}
+.vipMain .weui_order .weui_add_card>div {
+  padding: 15px 10px;
+  box-shadow: 0 -1px 3px #e9e9e9;
+  -webkit-box-shadow: 0 -1px 3px #e9e9e9;
+  -moz-box-shadow: 0 -1px 3px #e9e9e9;
+}
+.vipMain .weui_order .weui_add_card>div div:last-child {
+  width: 14px;
+}
+.vipMain .weui_order .weui_add_card>div div:last-child img {
+  width: 100%;
+
+}
+.vipMain .weui_blue{
+  color:#10a6e2;
+}
+
+.vipMain .vip_name {
+  display: inline-block;
+}
+.vipMain .vip_name:before {
+  content: "";
+  border-left: solid 1px #DDDDDD;
+  margin: 0 5px;
+}
+
+
+.vipMain .payment_list_hide {
+  -webkit-transform: translate3d(-110%, 0, 0);
+  transform: translate3d(-110%, 0, 0);
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+.vipMain .frame_bank .weui_bank_imf .card_number {
+  letter-spacing: 0;
+  vertical-align: baseline;
+}
+.vipMain .frame_checkorder .public_popup .list_bottom .list_cell {
+  -webkit-box-pack: justify;
+}
+/*上拉银行卡结束*/
+
+/*iframe*/
+#IframeVip {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  z-index: 6;
+  -webkit-transform: translate3d(375px, 0, 0);
+  transform: translate3d(375px, 0, 0);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  -webkit-transition: transform 0.3s;
+}
+#IframeVip iframe {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
