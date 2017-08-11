@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>我的</title>
+    <link rel="stylesheet"  href="../../css/jf_mine.css">
+</head>
+
+<body>
+
+<div class="zhuangyi_pay_shoppingcart">
+
+    <!--导航-->
+    <%- include('../../component/basic/topNav.ejs',{
+    "thisrighthref":"jfSwitch.goBack()",
+    "navtitle":"个人信息",
+    "thislefthref":"#",
+    "thisimgsrc":"../../images/icon_pay_meau.png"
+    })%>
+
+    <div class="personal_imf">
+        <!--名片-->
+        <div class="business_card">
+            <div class="name">&#x5E84;&#x4E2D;&#x7172;</div>
+            <div class="company">&#x4E0A;&#x6D77;&#x5609;&#x4ED8;&#x5B9D;&#x4FE1;&#x606F;&#x6280;&#x672F;&#x6709;&#x9650;&#x516C;&#x53F8;</div>
+            <hr>
+            <div class="num">&#x5458;&#x5DE5;&#x7F16;&#x53F7;<span>Z000000</span></div>
+            <div class="mail">&#x5458;&#x5DE5;&#x90AE;&#x7BB1;<span>zhuangzhongbao@jia-fu.cn</span></div>
+        </div>
+
+        <div class="jf_lists">
+            <!--信息1-->
+            <%- include('../../component/basic/jf_list.ejs',{
+            "thishref":"../../html/mine/revise_phone.html",
+            "thisSrc":"../../images/mine/icon_mine_imf_1.png",
+            "title":"手机号码",
+            "content":"158*****200"
+            })%>
+
+            <%- include('../../component/basic/jf_lists_red.ejs',{
+
+            "thishref":"../../html/mine/verify_id.html",
+            "thisSrc":"../../images/mine/icon_mine_imf_2.png",
+            "title":"身份证",
+            "content":"310***********2189",
+            "tips":"(已验证)"
+
+            })%>
+
+            <%- include('../../component/basic/jf_list.ejs',{
+            "thishref":"../../html/mine/revise_password.html",
+            "thisSrc":"../../images/mine/icon_mine_imf_3.png",
+            "title":"修改登录密码",
+            "content":"158*****200"
+            })%>
+
+
+        </div>
+
+        <div class="jf_lists">
+
+            <%- include('../../component/basic/jf_list.ejs',{
+            "thishref":"../mine/bank_card_management.html",
+            "thisSrc":"../../images/mine/icon_mine_imf_4.png",
+            "title":"银行卡",
+            "content":"3张"
+            })%>
+
+            <%- include('../../component/basic/jf_list.ejs',{
+            "thishref":"../mine/delivery_address.html",
+            "thisSrc":"../../images/mine/icon_mine_imf_5.png",
+            "title":"管理收货地址",
+            "content":""
+            })%>
+
+            <%- include('../../component/basic/jf_list.ejs',{
+            "thishref":"./pay/pay-set.html",
+            "thisSrc":"../../images/mine/icon_mine_imf_6.png",
+            "title":"支付设置",
+            "content":""
+            })%>
+
+            <!-- list 4 带图标-->
+            <a class="jf_list jf_list_access" href="javascript:;">
+                <div class="jf_list_pic"><img src="../../images/mine/icon_mine_imf_7.png"></div>
+                <label class="jf_list_bd" for="switch_zy">
+                    <p>&#x5FAE;&#x4FE1;&#x901A;&#x77E5;</p>
+                </label>
+                <div class="jf_list_ft"><input type="checkbox" class="switch_zy" id="switch_zy"></div>
+            </a>
+
+        </div>
+
+        <!--意见反馈-->
+        <div class="jf_lists">
+            <a class="jf_list jf_list_access" href="../../html/feedback/feedback-step2.html">
+                <div class="jf_list_pic"><img src="../../images/mine/icon_mine_imf_8.png"></div>
+                <div class="jf_list_bd">
+                    <p>&#x610F;&#x89C1;&#x4E0E;&#x53CD;&#x9988;</p>
+                </div>
+                <div class="jf_list_ft jf_list_arrow"></div>
+            </a>
+        </div>
+
+        <%-include('../../component/basic/jf_normalBtn.ejs',{
+            "title":"退出登录"
+        })%>
+
+        <!-- end-->
+    </div>
+
+
+
+</div>
+
+
+</body>
+
+</html>

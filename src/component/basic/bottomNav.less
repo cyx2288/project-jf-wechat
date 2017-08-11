@@ -1,0 +1,93 @@
+.weui_tab_bd {
+  box-sizing: border-box;
+  height: 100%;
+  padding-bottom: 55px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.weui_tabbar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  position: absolute;
+  z-index: 500;
+  bottom: 0;
+  width: 100%;
+  background-color: #f7f7fa;
+}
+.weui_tabbar {
+  position: fixed;
+  box-shadow: 0 2px 4px #202329;
+  -webkit-box-shadow: 0 2px 4px #202329;
+}
+.weui_tabbar:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  border-top: 1px solid #979797;
+  color: #979797;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(.5);
+  transform: scaleY(.5);
+}
+.weui_tabbar:before {
+  border-top: 0;
+}
+.weui_tabbar_item {
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  padding: 7px 0 0;
+  -webkit-tap-highlight-color: transparent;
+}
+.weui_tabbar_icon {
+  margin: 0 auto;
+  width: 24px;
+  height: 24px;
+}
+.weui_tabbar .weui_tabbar_item.on>.weui_tabbar_icon>img:last-child, .weui_tabbar .weui_tabbar_item>.weui_tabbar_icon>img:first-child {
+  display: block;
+}
+.weui_tabbar_item .weui_tabbar_icon>img, .weui_tabbar_item .weui_tabbar_label {
+  opacity: .85;
+  -webkit-opacity: .85;
+}
+.weui_tabbar_icon img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+a img {
+  border: 0;
+}
+.weui_tabbar .weui_tabbar_item>.weui_tabbar_icon>img:last-child {
+  display: none;
+}
+.weui_tabbar_item .weui_tabbar_icon>img, .weui_tabbar_item .weui_tabbar_label {
+  opacity: .85;
+  -webkit-opacity: .85;
+}
+.weui_tabbar_icon+.weui_tabbar_label {
+  margin-top: 5px;
+}
+.weui_tabbar_label {
+  color: #202329;
+}
+.weui_tabbar_label {
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+}
+.wechat_main_homepage .weui_tabbar .weui_tabbar_item>.weui_tabbar_icon>img:last-child, .weui_tabbar .weui_tabbar_item.on>.weui_tabbar_icon>img:first-child {
+  display: none;
+}
+.weui_tabbar_item.on .weui_tabbar_icon>img, .weui_tabbar_item.on .weui_tabbar_label {
+  color: #10a6e2;
+  opacity: 1;
+  -webkit-opacity: 1;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>我的</title>
+    <link rel="stylesheet"  href="../../css/jf_mine.css">
+</head>
+
+<body>
+
+<div class="zhuangyi_pay_shoppingcart">
+
+    <!--导航-->
+    <%- include('../../component/basic/topNav.ejs',{
+    "thisrighthref":"jfSwitch.goBack()",
+    "navtitle":"个人中心",
+    "thislefthref":"#",
+    "thisimgsrc":"../../images/icon_pay_meau.png"
+    })%>
+
+    <!--中间部分-->
+
+    <%- include('../../component/mine/mine.ejs')%>
+
+
+    <!--固定下部导航-->
+
+    <div class="tabbar">
+        <div class="">
+            <div class="weui_tab_bd"></div>
+            <div class="weui_tabbar">
+                <!--<span class="weui_tabbar_position">22</span>
+                -->
+                <a href="../../main.html" class="weui_tabbar_item ">
+                    <div class="weui_tabbar_icon">
+                        <img src="../../icon/icon_homepage_home_black.png" alt="">
+                        <img src="../../icon/icon_homepage_home_blue.png" alt=""></div>
+                    <p class="weui_tabbar_label">购物</p>
+                </a> <a href="../../html/mine/jf_service.html" class="weui_tabbar_item">
+                    <div class="weui_tabbar_icon">
+                        <img src="../../icon/icon_homepage_service_black.png" alt="">
+                        <img src="../../icon/icon_homepage_service_blue.png" alt="">
+                    </div>
+                    <p class="weui_tabbar_label">服务</p>
+                </a> <a href="../../html/mine/jf_cards.html" class="weui_tabbar_item">
+                    <div class="weui_tabbar_icon" id="endFlyCar">
+                        <img src="../../icon/icon_homepage_card_black.png" alt="">
+                        <img src="../../icon/icon_homepage_card_blue.png" alt="">
+                    </div>
+                    <p class="weui_tabbar_label">卡券</p>
+                </a> <a href="javascript:;" class="weui_tabbar_item on">
+                    <div class="weui_tabbar_icon">
+                        <img src="../../images/icon_nav_person_black.png" alt="">
+                        <img src="../../images/icon_nav_person_blue.png" alt="">
+                    </div>
+                    <p class="weui_tabbar_label">我的</p>
+                </a></div>
+        </div>
+    </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+</html>
