@@ -1,0 +1,3108 @@
+@charset "utf-8";
+/* *author：庄中煲
+   *for:嘉福微信理财项目
+   *data:2016.9.8-9.14
+*/
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;/*链接点击效果 无*/
+  -webkit-appearance: none;/*链接点击效果 无*/
+}
+/*理财类目页*/
+.financial_main {
+  padding-bottom: 10px;
+}
+.financial_main a {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none;
+}
+.financial_main .banner {
+  width: 100%;
+}
+.financial_main .financial_banner {
+  position: relative;
+}
+/*banner*/
+/*利益点*/
+.financial_main .weui_point {
+  padding: 0px 30px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-align: space-between;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  color: #4a4a4a;
+  line-height: 14px;
+}
+.financial_main .weui_point div {
+  text-align: center;
+}
+.financial_main .weui_point img {
+  width: 30px;
+  height: 30px;
+}
+/*活期理财*/
+.financial_main .financial_content+.financial_content:after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 10px;
+  height: 1px;
+  color: #ddd;
+  width: 95%;
+  border-top: 1px solid #ddd;
+  -webkit-transform: scaleY(.5);
+  transform: scaleY(.5);
+}
+.financial_main .container_shadow {
+  box-shadow: 0 2px 3px #e9e9e9;
+  -webkit-box-shadow: 0 2px 3px #e9e9e9;
+  -moz-box-shadow: 0 2px 3px #e9e9e9;
+}
+.financial_main .financial_container {
+  margin: 10px 0px;
+  background-color: #fff;
+}
+.financial_main .financial_title {
+  padding: 5px 15px;
+  border-bottom: 1px solid #EBEBEB;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-align: space-between;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.financial_main .financial_title div {
+  padding-left: 10px;
+}
+.financial_main .financial_title div+div {
+  position: relative;
+  color: #ff4646;
+}
+.financial_main .title_blue {
+  border-left: #10a6e2 3px solid;
+  color: #10a6e2;
+}
+.financial_main .title_red {
+  border-left: #ff4646 3px solid;
+  color: #ff4646;
+}
+.financial_main .title_red img {
+  width: 22px;
+  vertical-align: bottom;
+  margin-left: 5px;
+}
+.financial_main .title_org {
+  border-left: #fc6329 3px solid;
+  color: #fc6329;
+}
+.financial_main .financial_content {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  padding: 10px 15px;
+}
+.financial_main .financial_content:active{
+  background-color:#F3F3F3;
+
+
+}
+.financial_main .financial_content>div:first-child {
+  width: 50px;
+  height: 50px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 60%;
+}
+.financial_main .cricle_red {
+  background-image: url(../images/financial/icon_financial_current.png);
+  border: 2px solid #ffdddd;
+}
+.financial_main .cricle_blue {
+  background-image:url(../images/financial/icon_financial_new.png);
+  border: 2px solid #d5effa;
+}
+.financial_main .cricle_org {
+  background-image: url(../images/financial/icon_financial_new.png);
+  border: 2px solid #fee0d4;
+}
+.financial_main .cricle_regular {
+  background-image: url(../images/financial/icon_financial_regular.png);
+  border: 2px solid #d5effa;
+}
+.financial_main .cricle_notstarted {
+  background-image: url(../images/financial/icon_financial_regular.png);
+  border: 2px solid #10a6e2;
+  opacity: .3;
+}
+.financial_main .cricle_end {
+  background-image: url(../images/financial/icon_financial_regular.png);
+  border: 2px solid #ababab;
+  opacity: .3;
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: gray;
+}
+.financial_main .financial_content p {
+  height: 35px;
+}
+.financial_main .financial_content div+div div:last-child {
+  font-size: 22px;
+  font-weight: 600;
+}
+.financial_main .financial_content div+div div:first-child {
+  color: #ababab;
+  font-size: 12px;
+}
+.financial_main .font_blue {
+  color: #10a6e2;
+}
+.financial_main .font_red {
+  color: #ff4646;
+}
+.financial_main .font_org {
+  color: #fc6329;
+}
+.financial_main .font_gray {
+  color: #ddd;
+}
+.financial_main .financial_content div+div+div div:last-child {
+  font-size: 12px;
+  color: #7a7a7a;
+  height: 35px;
+  line-height: 35px;
+  font-weight: normal;
+}
+.financial_main .financial_content div+div+div div:last-child span {
+  font-size: 20px;
+  color: #4a4a4a;
+}
+.financial_main .financial_btn {
+  width: 78px;
+  height: 29px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  font-size: 12px;
+  text-align: center;
+  line-height: 28px;
+}
+.financial_main .btn_red {
+  border: 1px solid #ff4646;
+  color: #ff4646;
+}
+.financial_main .btn_red:active {
+  opacity: .8;
+}
+.financial_main .btn_blue {
+  border: 1px solid #10A6E2;
+  color: #10a6e2;
+}
+.financial_main .btn_blue:active {
+  opacity: .8;
+}
+.financial_main .btn_org {
+  border: 1px solid #fc6329;
+  color: #fc6329;
+}
+.financial_main .btn_org:active {
+  opacity: .8;
+}
+.financial_main .btn_gray {
+  border: 1px solid #ddd;
+  color: #ddd;
+}
+/*开抢时间*/
+.financial_main i {
+  width: 78px;
+  display: block;
+  font-size: 12px;
+  text-align: center;
+  color: #10a6e2;
+  font-weight: 600;
+  line-height: 14px;
+}
+.financial_main .img_clock {
+  width: 21px;
+  height: 21px;
+  background-image: url(../images/financial/icon_financial_clock.png);
+  background-repeat: no-repeat;
+  margin-left: 30px;
+  background-size: 100%;
+}
+/*仅限首次*/
+.financial_main .financial_title div+div span {
+  z-index: 20;
+  position: relative;
+  color: #fff;
+  font-size: 12px;
+  top: -5px;
+}
+.financial_main .financial_title div+div img {
+  position: absolute;
+  top: -5px;
+  left: 7px;
+  width: 55px;
+  height: 25px;
+}
+/*------------------------------------------我是活期-----------------------------------------------------
+/*活期理财*/
+.financial_management_current .regular_bg {
+  padding: 20px 10px;
+  -webkit-background: linear-gradient(to top, #fe5d5d, #ffa8a8);
+  -moz-background: linear-gradient(to top, #fe5d5d, #ffa8a8);
+  background: linear-gradient(to top, #fe5d5d, #ffa8a8);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  color: #fff;
+}
+.financial_management_current .regular_bg div, .regular_bg div+div+div {
+  text-align: center;
+}
+.financial_management_current .font_big {
+  font-size: 18px;
+}
+.financial_management_current .font_small {
+  font-size: 16px;
+}
+/*同心圆*/
+.financial_management_current .regular_bg .financial_cricle {
+  width: 180px;
+  height: 180px;
+}
+/*.financial_management_current .cricle_3 {
+	width: 160px;
+	height: 160px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	-webkit-background: linear-gradient(165deg, #fdc2c2, #ff7272);
+	-moz-background: linear-gradient(165deg, #fdc2c2, #ff7272);
+	background: linear-gradient(165deg, #fdc2c2, #ff7272);
+	-webkit-box-shadow: 2px 2px 5px #fe7171;
+	-moz-box-shadow: 2px 2px 5px #fe7171;
+	box-shadow: 2px 2px 5px #fe7171;
+	margin: 0px 0 0 0px;
+	-webkit-animation: cricleout 2s infinite ease-in-out;
+	animation: cricleout 2s infinite ease-in-out;
+	-webkit-animation-direction: alternate;
+	animation-direction: alternate;
+}*/
+.financial_management_current .cricle_2 {
+  width: 180px;
+  height: 180px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-background: linear-gradient(165deg, #fec8c8, #ff6c6c);
+  -moz-background: linear-gradient(165deg, #fec8c8, #ff6c6c);
+  background: linear-gradient(165deg, #fec8c8, #ff6c6c);
+  -webkit-box-shadow: 2px 2px 5px #ff8282;
+  -moz-box-shadow: 2px 2px 5px #ff8282;
+  box-shadow: 2px 2px 5px #ff8282;
+  margin: 0px 0 0 0px;
+  -webkit-animation: cricleout 2s infinite ease-in-out;
+  animation: cricleout 2s infinite ease-in-out;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+.financial_management_current .cricle_1 {
+  width: 160px;
+  height: 160px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-background: linear-gradient(165deg, #ffcaca, #f65d5d);
+  -moz-background: linear-gradient(165deg, #ffcaca, #f65d5d);
+  background: linear-gradient(165deg, #ffcaca, #f65d5d);
+  -webkit-box-shadow: 2px 2px 5px #ff6969;
+  -moz-box-shadow: 2px 2px 5px #ff6969;
+  box-shadow: 2px 2px 5px #ff6969;
+  margin: -170px 0 0 10px;
+  -webkit-animation: cricleout 2s infinite ease-in-out;
+  animation: cricleout 2s infinite ease-in-out;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+@-webkit-keyframes cricleout {
+  0% {
+    -webkit-transform: scale(1.0);
+  }
+  100% {
+    -webkit-transform: scale(1.1);
+    opacity: 0.2;
+  }
+}
+@keyframes cricleout {
+  0% {
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+  100% {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    opacity: 0.2;
+  }
+}
+.financial_management_current .cricle_bg {
+  width: 140px;
+  height: 140px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-background: linear-gradient(to right bottom, #fff, #ffb0b0);
+  -moz-background: linear-gradient(to right bottom, #fff, #ffb0b0);
+  background: linear-gradient(to right bottom, #fff, #ffb0b0);
+  -webkit-box-shadow: 2px 2px 5px #c75050;
+  -moz-box-shadow: 2px 2px 5px #c75050;
+  box-shadow: 2px 2px 5px #c75050;
+  margin: -150px 0 0 20px;
+  color: #ff4646;
+  text-align: center;
+  position: relative;
+}
+.financial_management_current .cricle_bg>div {
+  padding: 35px 10px;
+}
+.financial_management_current .cricle_bg>div>p {
+  line-height: 26px;
+  font-size: 16px;
+}
+.financial_management_current .cricle_bg>div>p:first-child {
+  font-size: 45px;
+  font-weight: 500;
+  letter-spacing: -2px;
+}
+.financial_management_current .cricle_bg>div>p:first-child span {
+  font-size: 18px;
+  margin-left: 2px;
+}
+.financial_management_current .cricle_bg>div>p+p+p {
+  width: 70px;
+  margin: auto;
+  font-size: 14px;
+  -webkit-border: 1px solid #FF9595;
+  border: 1px solid #FF9595;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  line-height: 10px;
+  padding: 4px;
+}
+/*小星星*/
+.financial_management_current .cricle_bg .star_1 {
+  position: absolute;
+  top: -20px;
+  left: -5px;
+  width: 2px;
+  height: 2px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #fed8d8;
+  -webkit-box-shadow: 0px 0px 3px 3px #fed8d8;
+  box-shadow: 0px 0px 3px 3px #fed8d8;
+  -webkit-opacity: .5;
+  opacity: .5;
+}
+.financial_management_current .cricle_bg .star_2 {
+  position: absolute;
+  top: 20px;
+  left: 130px;
+  width: 3px;
+  height: 3px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #ffdbdb;
+  -webkit-box-shadow: 0px 0px 3px 3px #ffdbdb;
+  box-shadow: 0px 0px 3px 3px #ffdbdb;
+}
+.financial_management_current .cricle_bg .star_3 {
+  position: absolute;
+  top: 70px;
+  left: 145px;
+  width: 1px;
+  height: 1px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #ffacac;
+  -webkit-box-shadow: 0px 0px 4px 4px #ffacac;
+  box-shadow: 0px 0px 4px 4px #ffacac;
+}
+.financial_management_current .cricle_bg .star_4 {
+  position: absolute;
+  top: 100px;
+  left: -15px;
+  width: 1px;
+  height: 1px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #ffe1e1;
+  -webkit-box-shadow: 0px 0px 3px 4px #ffe1e1;
+  box-shadow: 0px 0px 3px 4px #ffe1e1;
+  -webkit-opacity: .7;
+  opacity: .7;
+}
+.financial_management_current .cricle_bg .star_5 {
+  position: absolute;
+  top: 135px;
+  left: 35px;
+  width: 3px;
+  height: 3px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #fea1a1;
+  -webkit-box-shadow: 0px 0px 3px 3px #fea1a1;
+  box-shadow: 0px 0px 3px 3px #fea1a1;
+}
+/*选项*/
+.financial_management_current .financial_option {
+  height: 42px;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+  overflow: hidden;
+}
+.financial_management_current .financial_option>div {
+  position: relative;
+  float: left;
+  padding: 10px 15px;
+  width: 33.33333333%;
+  box-sizing: border-box;
+  text-align: center;
+}
+/*被选择项*/
+
+.financial_management_current .option_seleted {
+  color: #ff4646;
+}
+.financial_management_current .option_seleted:after {
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 0px;
+  height: 1px;
+  border-top: 2px solid #ff4646;
+  color: #ff4646;
+  width: 100%;
+}
+.financial_management_current .option_seleted:before {
+  content: '▲';
+  position: absolute;
+  top: 29px;
+  left: 46%;
+  color: #ff4646;
+  -webkit-transform: scaleX(1.5);
+  transform: scaleX(1.5);
+}
+/*内容*/
+.financial_management_current .financial_swiper {
+  overflow: hidden;
+}
+.financial_management_current .financial_box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: justify;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  width: 300%;
+}
+.financial_management_current .financial_details {
+  overflow: scroll;
+  padding-bottom: 20px;
+  background-color: #fff;
+  width: 100%;
+}
+.financial_management_current .weui_cell {
+  padding: 15px;
+}
+.financial_management_current .weui_cell:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 95%;
+  height: 1px;
+  border-top: 1px solid #d9d9d9;
+  color: #d9d9d9;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(.5);
+  transform: scaleY(.5);
+  left: 10px;
+}
+.financial_management_current .color_right {
+  color: #9c9c9c;
+}
+.financial_management_current .color_left {
+  color: #4a4a4a;
+}
+.financial_management_current .financial_introduce {
+  padding: 5px;
+}
+.financial_management_current .current_img {
+  width: auto;
+}
+.financial_management_current .current_img img {
+  width: 100%;
+}
+.financial_management_current .financial_record {
+  width: 100%;
+  border-collapse: collapse;
+}
+.financial_management_current .financial_record .record_title {
+  color: #ababab;
+  border-bottom: 1px solid #ddd;
+}
+.financial_management_current .financial_record td {
+  width: 33.3333333%;
+}
+.financial_management_current .financial_record td+td {
+  line-height: 16px;
+}
+.financial_management_current .financial_record tr {
+  width: 100%;
+  height: 45px
+}
+.financial_management_current .financial_record tr:nth-child(2n) {
+  background-color: #fafafa;
+}
+.financial_management_current table tr:last-child {
+  border-bottom: 1px solid #ddd;
+}
+/*按键*/
+.tabbar_current .weui_tabbar {
+  width: 100%;
+  background: #ff4646;
+  position: fixed;
+  color: #fff;
+}
+.tabbar_current .tabbar_shadow {
+  -webkit-box-shadow: 2px 0px 5px #ddd;
+  box-shadow: 2px 0px 5px #ddd;
+}
+.tabbar_current .weui_tabbar:before {
+  content: " ";
+  position: absolute;
+  border-top: none;
+}
+.tabbar_current .weui_actionsheet_cell {
+  background: #ff4646;
+  width: 100%;
+  color: #fff;
+  margin: 0px auto;
+}
+.tabbar_current .color_white {
+  background: #fff;
+  color: #ff4646;
+}
+.tabbar_current .color_white:active {
+  color: ff6060;
+  background-color: #fff;
+}
+.tabbar_current .color_red:active {
+  color: hsla(0,0%,100%,.4);
+  background-color: #ff6060;
+}
+.tabbar_current .weui_tab_bd {
+  padding-bottom: 48px;
+}
+/*-----------------------------------------------------------------------------------------------
+/*活期理财-常见问题*/
+.finacial_current_help {
+  padding: 0px 15px;
+}
+.finacial_current_help .Title_2_160519 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #10a6e2;
+  text-align: center;
+  padding: 10px;
+}
+.finacial_current_help .Q_1 {
+  margin-bottom: 20px;
+}
+.finacial_current_help .Q_2 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #10a6e2;
+}
+.finacial_current_help .A_1 {
+  padding-left: 2em;
+}
+.finacial_current_help span {
+  font-weight: bold;
+}
+/*-----------------------------------------------------------------------------------------------
+/*活期理财-我的记录*/
+.financial_list .content .list1 {
+  font-size: 14px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  z-index: -99;
+  margin-bottom: 0px;
+  position: relative;
+}
+.financial_list .content .list1:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 95%;
+  height: 1px;
+  border-top: 1px solid #d9d9d9;
+  color: #d9d9d9;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(.5);
+  transform: scaleY(.5);
+  left: 10px;
+}
+.financial_list .success {
+  font-size: 18px;
+  font-weight: bold;
+}
+.financial_list .price div+div {
+  line-height: 24px;
+  color: #ababab;
+}
+/*-----------------------------------------------------------------------------------------------
+/*活期理财-转出*/
+.financial_current_step1_out .container_shadow {
+  background-color: #fff;
+}
+/*余额*/
+.financial_current_step1_out .jiafu_balance {
+  padding: 20px 15px;
+  color: #9c9c9c;
+  padding-bottom: 5px;
+}
+.financial_current_step1_out .jiafu_balance>div+div {
+  color: #10a6e2;
+  font-size: 40px;
+  text-align: center;
+}
+/*内容*/
+.financial_current_step1_out .weui_cell {
+  padding: 20px 15px;
+}
+.financial_current_step1_out .weui_cell:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 95%;
+  height: 1px;
+  border-top: 1px solid #d9d9d9;
+  color: #d9d9d9;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(.5);
+  transform: scaleY(.5);
+  left: 10px;
+}
+.financial_current_step1_out .color_right {
+  color: #9c9c9c;
+}
+.financial_current_step1_out .color_left {
+  color: #4a4a4a;
+  width: 200px;
+}
+.financial_current_step1_out .container_shadow {
+  box-shadow: 0 2px 3px #e9e9e9;
+  -webkit-box-shadow: 0 2px 3px #e9e9e9;
+  -moz-box-shadow: 0 2px 3px #e9e9e9;
+}
+.financial_current_step1_out .input_num {
+  text-align: right;
+}
+/*协议*/
+.financial_current_step1_out .agreement {
+  padding: 15px;
+  text-align: center;
+}
+.financial_current_step1_out .agreement a {
+  color: #000;
+}
+.financial_current_step1_out .agreement a:active {
+  color: #10a6e2;
+}
+.financial_current_step1_out .payment_date {
+  padding: 10px 15px;
+  border-top: 1px solid #ddd;
+}
+.financial_current_step1_out .payment_date span {
+  margin-left: 5px;
+  color: #10a6e2;
+}
+.financial_current_step1_out .payment_date img {
+  vertical-align: sub;
+  width: 15px;
+  height: 15px;
+}
+.financial_current_step1_out .finacial_current_more {
+  padding: 10px 15px;
+  border-top: 1px solid #ddd;
+}
+.financial_current_step1_out .finacial_current_more span {
+  color: #10A6E2;
+  margin-left: 5px;
+}
+.financial_current_step1_out .finacial_current_more img {
+  width: 15px;
+  height: 15px;
+  vertical-align: sub;
+}
+/*按键*/
+.weui_tabbar {
+  width: 100%;
+  position: fixed;
+  background: #10a6e2;
+  color: #fff;
+}
+.weui_tabbar:before {
+  content: " ";
+  position: absolute;
+  border-top: none;
+}
+.weui_actionsheet_cell {
+  background: #10a6e2;
+  width: 100%;
+  color: #fff;
+  margin: 0px auto;
+}
+.weui_tabbar:active, .weui_actionsheet_cell:active {
+  color: hsla(0,0%,100%,.4);
+  background-color: #0994CC;
+}
+.weui_tab_bd {
+  padding-bottom: 48px;
+}
+/*-----------------------------------------------------------------------------------------------
+/*活期理财-转入*/
+.financial_current_step1_go{
+  margin:20px 15px;
+}
+/*余额*/
+.financial_current_step1_go .jiafu_balance {
+  padding: 20px 15px;
+  color: #ddd;
+  padding-bottom: 0px;
+}
+.financial_current_step1_go .jiafu_balance div{
+  color: #9c9c9c;
+}
+.financial_current_step1_go .jiafu_balance>div+div {
+  margin: 10px 0px;
+  color: #4a4a4a;
+  font-size: 50px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: justify;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+/*内容*/
+.financial_current_step1_go .weui_cell {
+  padding: 20px 15px;
+}
+.financial_current_step1_go .weui_cell:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 95%;
+  height: 1px;
+  border-top: 1px solid #d9d9d9;
+  color: #d9d9d9;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(.5);
+  transform: scaleY(.5);
+  left: 10px;
+}
+.financial_current_step1_go .color_right {
+  color: #9c9c9c;
+}
+.financial_current_step1_go .color_left {
+  color: #4a4a4a;
+  width: 120px;
+}
+.financial_current_step1_go .container_shadow {
+  background-color: #fff;
+  box-shadow: 0 2px 3px #e9e9e9;
+  -webkit-box-shadow: 0 2px 3px #e9e9e9;
+  -moz-box-shadow: 0 2px 3px #e9e9e9;
+  position: relative;
+}
+.financial_current_step1_go .input_num {
+  text-align: left;
+}
+.financial_current_step1_go .payment_date {
+  padding: 15px;
+  border-top: 1px dashed #ddd;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.financial_current_step1_go .payment_date img {
+  vertical-align: sub;
+  width: 15px;
+  height: 15px;
+}
+.financial_current_step1_go .balance_1020{
+  padding:5px 15px 15px 15px;
+  color:#9c9c9c;
+
+}
+.financial_current_step1_go .font_red{
+  color:#ff4646;
+  font-weight:500;
+
+}
+.financial_current_step1_go .jiafu_balance img{
+  width:50px;
+
+}
+.financial_current_step1_go .font_gray{
+  color:#9c9c9c;
+
+}
+.financial_current_step1_go .input_num::-webkit-input-placeholder{
+  color:#ddd;
+  font-size:30px;
+  line-height:70px
+}
+.financial_current_step1_go .current_checkbox{
+  -webkit-appearance: none;
+  appearance: none;
+  outline: 0;
+  font-size: 0;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 3px;
+  width: 13px;
+  height: 13px;
+  position: relative;
+  vertical-align: 0;
+  top: 2px;
+
+
+}
+.financial_current_step1_go .current_checkbox:checked:before {
+
+  content: "";
+  position: absolute;
+  display: block;
+  width: 5px;
+  height: 10px;
+  left: 3px;
+  top: -2px;
+  border-bottom: solid 1px #FF4646;
+  border-right: solid 1px #FF4646;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.financial_current_step1_go .container_shadow:before{
+  content: '●';
+  position: absolute;
+  -webkit-transform: scale(3,3);
+  transform: scale(3,3);
+  color: #F5F5F9;
+  top: 163px;
+  left: -4px;
+  z-index: 10;
+
+}
+.financial_current_step1_go .container_shadow:after{
+  content: '●';
+  position: absolute;
+  -webkit-transform: scale(3,3);
+  transform: scale(3,3);
+  color: #F5F5F9;
+  top: 163px;
+  right:-4px;
+  z-index: 10;
+
+
+}
+.financial_current_step1_go .out_point{
+  position:relative;
+
+}
+.financial_current_step1_go .out_point:before{
+  content: '●';
+  position: absolute;
+  -webkit-transform: scale(3,3);
+  transform: scale(3,3);
+  color: #F5F5F9;
+  top: 120px;
+  left: -4px;
+  z-index: 10;
+
+}
+.financial_current_step1_go .out_point:after{
+  content: '●';
+  position: absolute;
+  -webkit-transform: scale(3,3);
+  transform: scale(3,3);
+  color: #F5F5F9;
+  top: 120px;
+  right:-4px;
+  z-index: 10;
+
+
+}
+/*协议*/
+.financial_current_step1_go .agreement {
+  padding: 30px 15px;
+  padding-bottom: 0px;
+  text-align: center;
+}
+.financial_current_step1_go .agreement a {
+  color: #FF4646;
+}
+.financial_current_step1_go .agreement a:active {
+  color: #FF7D7D;
+}
+.financial_current_step1_go .btn_red {
+  background-color: #ff4646;
+}
+.financial_current_step1_go .btn_red:active {
+  color: hsla(0,0%,100%,.4);
+  background-color: #FF7d7d;
+}
+.financial_current_step1_go .weui_btn_area {
+  margin-left: auto;
+  margin-right: auto;
+}
+.financial_current_step1_go .weui_opr_area{
+
+  margin: 30px 0px;
+}
+/*------------------------------------------------------------------------
+/*活期理财-协议*/
+
+.finacial_current_agreement {
+  padding: 15px;
+}
+.finacial_current_agreement .title>h1 {
+  text-align: center;
+}
+.finacial_current_agreement .Wenzi_160519 .title {
+  padding-top: 50px;
+}
+.finacial_current_agreement .Wenzi_160519 .title h1 {
+  font-size: 24px;
+  line-height: 44px;
+  text-align: center;
+  font-weight: bold;
+  color: #000000;
+}
+.finacial_current_agreement .Tip_160519 {
+  border: 4px double #d1d1d1;
+  margin: 30px auto;
+}
+.finacial_current_agreement .Tip_160519 div {
+  font-size: 18px;
+  color: #000000;
+  font-weight: bold;
+  line-height: 50px;
+  text-align: center;
+}
+.finacial_current_agreement .Tip_160519 div+div {
+  font-size: 14px;
+  color: #444444;
+  font-weight: normal;
+  line-height: 24px;
+  text-align: left;
+  padding: 5px 20px 0;
+  text-indent: 2em;
+}
+.finacial_current_agreement .Part_1 {
+  height: auto;
+  margin: 0 auto;
+}
+.finacial_current_agreement .Mingxi {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding: 30px 0 30px;
+}
+.finacial_current_agreement .Chapter_1 {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 25px 0 25px;
+}
+.finacial_current_agreement .Duanluo p {
+  padding-bottom: 14px;
+}
+.finacial_current_agreement .Tiao {
+  font-weight: bolder;
+  padding-bottom: 14px;
+}
+.finacial_current_agreement .Special p {
+  padding-bottom: 0px;
+}
+.finacial_current_agreement .Chu {
+  font-weight: bold;
+}
+/*活期理财资产*/
+.financial_asset_current .asset_bg {
+  -webkit-background-image: url(../images/financial/icon_financial_bg.png), linear-gradient(to top, #fe5d5d, #ffa8a8);
+  -moz-background-image: url(../images/financial/icon_financial_bg.png), linear-gradient(to top, #fe5d5d, #ffa8a8);
+  background-image: url(../images/financial/icon_financial_bg.png), linear-gradient(to top, #fe5d5d, #ffa8a8);
+  background-position: bottom center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: auto;
+  overflow: hidden;
+  color: #fff;
+  padding: 30px 15px;
+  padding-top: 20px;
+  padding-bottom: 5px;
+}
+.financial_asset_current .bg>div {
+  position: relative;
+  float: left;
+  width: 50%;
+  box-sizing: border-box;
+}
+.financial_asset_current .bg div:first-child {
+  padding-right: 10px;
+  border-right: 1px solid #fff;
+}
+.financial_asset_current .bg div+div {
+  padding-left: 15px;
+}
+.financial_asset_current .bg p+p {
+  font-size: 24px;
+  font-weight: bold;
+}
+.financial_asset_current .bg {
+  position: relative;
+  overflow: hidden;
+}
+.financial_asset_current .bg div:first-child {
+  padding-right: 10px;
+  border-right: 1px solid #fff;
+}
+.financial_asset_current .bg>div {
+  position: relative;
+  float: left;
+  width: 50%;
+  box-sizing: border-box;
+
+}
+.financial_asset_current .turn_out {
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+  padding-top: 20px;
+}
+.financial_asset_current .turn_out .go {
+  margin-left: 21px;
+}
+.financial_asset_current .turn_out>div {
+  position: relative;
+  float: left;
+  padding: 5px;
+  width: 39%;
+  box-sizing: border-box;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  margin: 5px 14px;
+}
+.financial_asset_current .turn_out>div:active {
+  -webkit-opacity:.5;
+  opacity:.5;
+}
+/*选项*/
+.financial_asset_current .financial_option {
+  height: 42px;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+  color: #ababab;
+}
+.financial_asset_current .financial_option>div {
+  position: relative;
+  float: left;
+  padding: 10px 15px;
+  width: 25%;
+  box-sizing: border-box;
+  text-align: center;
+}
+/*内容*/
+.financial_asset_current .financial_swiper {
+  overflow: hidden;
+}
+.financial_asset_current .financial_box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: justify;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  width: 400%;
+}
+.financial_asset_current .financial_details {
+  min-height: 77px;
+  background-color: #FFF;
+  overflow: scroll;
+  width: 100%
+}
+.financial_asset_current .continer {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: justify;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  padding: 0px 15px;
+  color: #4a4a4a;
+  width: auto;
+}
+.financial_asset_current .continer:before {
+  content: " ";
+  position: absolute;
+  left: 10px;
+  top: 67px;
+  width: 95%;
+  height: 1px;
+  border-top: 1px solid #d9d9d9;
+  color: #d9d9d9;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(.5);
+  transform: scaleY(.5);
+}
+.financial_asset_current .weui_cell {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  width: 100%;
+}
+/*.financial_asset_current .weui_cell:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 95%;
+  height: 1px;
+  border-top: 1px solid #d9d9d9;
+  color: #d9d9d9;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(.5);
+  transform: scaleY(.5);
+  left: 10px;
+}*/
+.financial_asset_current .weui_cell div>p {
+  font-size: 16px;
+}
+.financial_asset_current .weui_cell div>p+p {
+  color: #ababab;
+  font-size: 14px;
+}
+.financial_asset_current .weui_cell .price_0920 {
+  font-size: 18px;
+  color: #4a4a4a;
+  font-weight: bold;
+}
+/*被选择项*/
+.financial_asset_current .option_seleted {
+  color: #ff4646;
+  overflow: hidden;
+}
+.financial_asset_current .option_seleted:after {
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 0px;
+  height: 1px;
+  border-top: 2px solid #ff4646;
+  color: #ff4646;
+  width: 100%;
+}
+.financial_asset_current .option_seleted:before {
+  content: '▲';
+  position: absolute;
+  top: 29px;
+  left: 46%;
+  color: #ff4646;
+  -webkit-transform: scaleY(.8);
+  transform: scaleY(.8);
+}
+/*------------------------------------------我是定期-----------------------------------------------------
+/*定期理财-主页*/
+.financial_management_regular .regular_bg {
+  padding: 20px 10px;
+  -webkit-background: linear-gradient(to top, #10a6e2, #4eccff);
+  -moz-background: linear-gradient(to top, #10a6e2, #4eccff);
+  background: linear-gradient(to top, #10a6e2, #4eccff);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  color: #fff;
+}
+.financial_management_regular .regular_bg div, .regular_bg div+div+div {
+  text-align: center;
+}
+.financial_management_regular .font_big {
+  font-size: 18px;
+}
+.financial_management_regular .font_small {
+  font-size: 16px;
+}
+/*同心圆*/
+.financial_management_regular .regular_bg .financial_cricle {
+  width: 180px;
+  height: 180px;
+}
+.financial_management_regular .cricle_2 {
+  width: 180px;
+  height: 180px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-background: linear-gradient(165deg, #7ad8ffc, #10a6e2);
+  -moz-background: linear-gradient(165deg, #7ad8ff, #10a6e2);
+  background: linear-gradient(165deg, #7ad8ff, #10a6e2);
+  -webkit-box-shadow: 2px 2px 5px #40bbec;
+  -moz-box-shadow: 2px 2px 5px #40bbec;
+  box-shadow: 2px 2px 5px #40bbec;
+  margin: 0px 0 0 0px;
+  -webkit-animation: cricleout 2s infinite ease-in-out;
+  animation: cricleout 2s infinite ease-in-out;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+.financial_management_regular .cricle_1 {
+  width: 160px;
+  height: 160px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-background: linear-gradient(165deg, #98e0fd, #10a6e2);
+  -moz-background: linear-gradient(165deg, #98e0fd, #10a6e2);
+  background: linear-gradient(165deg, #98e0fd, #10a6e2);
+  -webkit-box-shadow: 2px 2px 5px #40bbec;
+  -moz-box-shadow: 2px 2px 5px #40bbec;
+  box-shadow: 2px 2px 5px #40bbec;
+  margin: -170px 0 0 10px;
+  -webkit-animation: cricleout 2s infinite ease-in-out;
+  animation: cricleout 2s infinite ease-in-out;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+@-webkit-keyframes cricleout {
+  0% {
+    -webkit-transform: scale(1.0);
+  }
+  100% {
+    -webkit-transform: scale(1.1);
+    opacity: 0.2s;
+  }
+}
+@keyframes cricleout {
+  0% {
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+  100% {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    opacity: 0.2;
+  }
+}
+.financial_management_regular .cricle_bg {
+  width: 140px;
+  height: 140px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-background: linear-gradient(to right bottom, #fff, #a1ddf4);
+  -moz-background: linear-gradient(to right bottom, #fff, #a1ddf4);
+  background: linear-gradient(to right bottom, #fff, #a1ddf4);
+  -webkit-box-shadow: 2px 2px 5px #147faa;
+  -moz-box-shadow: 2px 2px 5px #147faa;
+  box-shadow: 2px 2px 5px #147faa;
+  margin: -150px 0 0 20px;
+  color: #10a6e2;
+  text-align: center;
+  position: relative;
+}
+.financial_management_regular .cricle_bg>div {
+  padding: 45px 10px;
+}
+.financial_management_regular .cricle_bg>div p {
+  line-height: 26px;
+  font-size: 16px;
+}
+.financial_management_regular .cricle_bg>div p:first-child {
+  font-size: 45px;
+  font-weight: 500px;
+  letter-spacing: -2px;
+}
+.financial_management_regular .cricle_bg>div p:first-child span {
+  font-size: 18px;
+  margin-left: 2px;
+}
+.financial_management_regular .cricle_bg .star_1 {
+  position: absolute;
+  top: -20px;
+  left: -10px;
+  width: 2px;
+  height: 2px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #89ddff;
+  -webkit-box-shadow: 0px 0px 5px 5px #89ddff;
+  box-shadow: 0px 0px 5px 5px #89ddff;
+}
+/*小星星*/
+.financial_management_regular .cricle_bg .star_1 {
+  position: absolute;
+  top: -20px;
+  left: -5px;
+  width: 2px;
+  height: 2px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #92e0ff;
+  -webkit-box-shadow: 0px 0px 3px 3px #89ddff;
+  box-shadow: 0px 0px 3px 3px #89ddff;
+  -webkit-opacity: .5;
+  opacity: .5;
+}
+.financial_management_regular .cricle_bg .star_2 {
+  position: absolute;
+  top: 20px;
+  left: 130px;
+  width: 3px;
+  height: 3px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #d9f3fe;
+  -webkit-box-shadow: 0px 0px 3px 3px #d9f3fe;
+  box-shadow: 0px 0px 3px 3px #d9f3fe;
+}
+.financial_management_regular .cricle_bg .star_3 {
+  position: absolute;
+  top: 70px;
+  left: 145px;
+  width: 1px;
+  height: 1px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #7ad4f8;
+  -webkit-box-shadow: 0px 0px 4px 4px #7ad4f8;
+  box-shadow: 0px 0px 4px 4px #7ad4f8;
+}
+.financial_management_regular .cricle_bg .star_4 {
+  position: absolute;
+  top: 100px;
+  left: -15px;
+  width: 1px;
+  height: 1px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #cfeffc;
+  -webkit-box-shadow: 0px 0px 3px 4px #cfeffc;
+  box-shadow: 0px 0px 3px 4px #cfeffc;
+  -webkit-opacity: .7;
+  opacity: .7;
+}
+.financial_management_regular .cricle_bg .star_5 {
+  position: absolute;
+  top: 135px;
+  left: 35px;
+  width: 3px;
+  height: 3px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #58c3ee;
+  -webkit-box-shadow: 0px 0px 3px 3px #4cbeec;
+  box-shadow: 0px 0px 3px 3px #4cbeec;
+}
+/*选项*/
+.financial_management_regular .financial_option {
+  height: 42px;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+  overflow: hidden;
+}
+.financial_management_regular .financial_option>div {
+  position: relative;
+  float: left;
+  padding: 10px 15px;
+  width: 33.33333333%;
+  box-sizing: border-box;
+  text-align: center;
+}
+/*被选择项*/
+.financial_management_regular .option_seleted {
+  color: #10a6e2;
+}
+.financial_management_regular .option_seleted:after {
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 0px;
+  height: 1px;
+  border-top: 2px solid #10a6e2;
+  color: #10a6e2;
+  width: 100%;
+}
+.financial_management_regular .option_seleted:before {
+  content: '▲';
+  position: absolute;
+  top: 29px;
+  left: 46%;
+  color: #10a6e2;
+  -webkit-transform: scaleX(1.5);
+  transform: scaleX(1.5);
+}
+/*内容*/
+.financial_management_regular .financial_swiper {
+  overflow: hidden;
+}
+.financial_management_regular .financial_box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: justify;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  width: 300%;
+}
+.financial_management_regular .financial_details {
+  overflow: scroll;
+  padding-bottom: 20px;
+  background-color: #fff;
+  width: 100%;
+}
+.financial_management_regular .weui_cell {
+  padding: 15px;
+}
+.financial_management_regular .weui_cell:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 95%;
+  height: 1px;
+  border-top: 1px solid #d9d9d9;
+  color: #d9d9d9;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(.5);
+  transform: scaleY(.5);
+  left: 10px;
+}
+.financial_management_regular .color_right {
+  color: #9c9c9c;
+}
+.financial_management_regular .color_left {
+  color: #4a4a4a;
+}
+.financial_management_regular .financial_introduce {
+  padding: 5px;
+}
+.financial_management_regular .regular_img {
+  width: auto;
+}
+.financial_management_regular .regular_img img {
+  width: 100%;
+}
+.financial_management_regular .financial_record {
+  width: 100%;
+  border-collapse: collapse;
+}
+.financial_management_regular .financial_record .record_title {
+  color: #ababab;
+  border-bottom: 1px solid #ddd;
+}
+.financial_management_regular .financial_record td {
+  width: 33.3333333%;
+}
+.financial_management_regular .financial_record td+td {
+  line-height: 16px;
+}
+.financial_management_regular .financial_record tr {
+  width: 100%;
+  height: 45px
+}
+.financial_management_regular .financial_record tr:nth-child(2n) {
+  background-color: #fafafa;
+}
+.financial_management_regular table tr:last-child {
+  border-bottom: 1px solid #ddd;
+}
+/*按键*/
+.weui_tabbar {
+  width: 100%;
+  background: #10a6e2;
+  position: fixed;
+  color: #fff;
+}
+.weui_tabbar:before {
+  content: " ";
+  position: absolute;
+  border-top: none;
+}
+.weui_actionsheet_cell {
+  background: #10a6e2;
+  width: 100%;
+  color: #fff;
+  margin: 0px auto;
+}
+.weui_tabbar:active, .weui_actionsheet_cell:active {
+  color: hsla(0,0%,100%,.4);
+  background-color: #0994CC;
+}
+.weui_tab_bd {
+  padding-bottom: 48px;
+}
+.weui_tabbar .btn_soldout {
+  background-color: #DDDDDD;
+}
+.weui_tabbar .btn_soldout:active {
+  background-color: #DDDDDD;
+  color: #fff
+}
+/*-----------------------------------------------------------------------------------------------
+/*定期协议*/
+.current_financial_agreement {
+  padding: 15px;
+}
+.current_financial_agreement h2 {
+  text-align: center;
+}
+/*-----------------------------------------------------------------------------------------------
+/*购买成功*/
+.weui_center_0911 {
+  text-align: center;
+  padding-bottom: 0.2rem;
+  font-size: 16px;
+}
+.weui_center_0911 span {
+  color: #10a6e2;
+}
+/*购买失败*/
+.weui_center_0912 {
+  text-align: center;
+  padding-bottom: 0.2rem;
+  font-size: 16px;
+}
+.weui_center_0912 span {
+  color: #10a6e2;
+}
+/*-----------------------------------------------------------------------------------------------
+/*定期理财-订单详情*/
+.financial_regular_order {
+  padding: 0px 15px;
+  font-size: 16px;
+  margin-bottom: 100px;
+}
+.financial_regular_order>div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: justify;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  height: 100px;
+}
+.financial_regular_order .cricle_step1 {
+  width: 15px;
+  height: 15px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #f3f3f3;
+  border: 1px solid #ababab;
+  margin: 10px;
+  position: relative;
+}
+.financial_regular_order .cricle_finish {
+  border-color: #10a6e2;
+  background-color: #10a6e2;
+  border: none;
+  background-image: url(../../images/financial/icon_regular_asset_finish.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  height: 17px;
+  width: 17px;
+}
+.financial_regular_order .cricle_unfinish {
+  background-image: url(../../images/financial/icon_regular_asset_unfinish.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 80%;
+}
+.financial_regular_order .progress_bar {
+  position: absolute;
+  top: 10px;
+  left: 6px;
+  height: 100px;
+  width: 5px;
+  background-color: #10a6e2;
+  z-index: -10;
+}
+.financial_regular_order .date_left {
+  color: #ABABAB;
+  width: 25%;
+  text-align: right;
+  line-height: 22px;
+  font-size: 14px;
+}
+.financial_regular_order .detal {
+  width: 65%;
+}
+.financial_regular_order .detal_finish {
+  color: #10a6e2;
+}
+.financial_regular_order .progress_bar p {
+  line-height: 10px;
+  transform: scale(.7, .7);
+  color: #10a6e2;
+}
+.financial_regular_order .progress_bar p+p+p+p+p+p {
+  color: #ababab;
+}
+.financial_regular_order .bar_sorts {
+  background: #f3f3f5;
+  left: 4px;
+  top: 8px;
+}
+/*返回首页*/
+.btn_blue_0718 {
+  background-color: #10a6e2;
+  color: #fff;
+  border: none
+}
+.btn_blue_0718:visited {
+  color: #fff
+}
+.btn_blue_0718:active {
+  color: hsla(0,0%,100%,.4);
+  background-color: #0994CC
+}
+/*-----------------------------------------------------------------------------------------------
+/*定期理财-总资产*/
+/*资产*/
+.financial_asset_regular .asset_bg {
+  padding: 45px 20px;
+  -webkit-background-image: url(../images/financial/icon_financial_bg.png), linear-gradient(to top, #6fc3e2, #4a99de);
+  -moz-background-image: url(../images/financial/icon_financial_bg.png), linear-gradient(to top, #6fc3e2, #4a99de);
+  background-image: url(../images/financial/icon_financial_bg.png), linear-gradient(to top, #6fc3e2, #4a99de);
+  background-position: bottom center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: auto;
+  overflow: hidden;
+  color: #fff;
+}
+.financial_asset_regular .asset_bg>div {
+  position: relative;
+  float: left;
+  width: 50%;
+  box-sizing: border-box;
+}
+.financial_asset_regular .asset_bg div:first-child {
+  padding-right: 10px;
+  border-right: 1px solid #fff;
+}
+.financial_asset_regular .asset_bg div+div {
+  padding-left: 15px;
+}
+.financial_asset_regular .asset_bg p+p {
+  font-size: 24px;
+  font-weight: bold;
+}
+/*选项*/
+.financial_asset_regular .financial_option {
+  height: 42px;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+  color: #ababab;
+}
+.financial_asset_regular .financial_option>div {
+  position: relative;
+  float: left;
+  padding: 10px 15px;
+  width: 25%;
+  box-sizing: border-box;
+  text-align: center;
+}
+/*内容*/
+.financial_asset_regular .financial_swiper {
+  overflow: hidden;
+}
+.financial_asset_regular .financial_box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: justify;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  width: 400%;
+}
+.financial_asset_regular .financial_details {
+  min-height: 77px;
+  background-color: #FFF;
+  overflow: scroll;
+  width: 100%
+}
+.financial_asset_regular .continer {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: justify;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  padding: 0px 15px;
+  color: #4a4a4a;
+  width: auto;
+}
+.financial_asset_regular .continer:before {
+  content: " ";
+  position: absolute;
+  left: 10px;
+  top: 67px;
+  width: 95%;
+  height: 1px;
+  border-top: 1px solid #d9d9d9;
+  color: #d9d9d9;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(.5);
+  transform: scaleY(.5);
+}
+.financial_asset_regular .weui_cell {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  width: 90%;
+}
+.financial_asset_regular .weui_cell:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 95%;
+  height: 1px;
+  border-top: 1px solid #d9d9d9;
+  color: #d9d9d9;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(.5);
+  transform: scaleY(.5);
+  left: 10px;
+}
+.financial_asset_regular .weui_cell div>p {
+  font-size: 16px;
+}
+.financial_asset_regular .weui_cell div>p+p {
+  color: #ababab;
+  font-size: 14px;
+}
+.financial_asset_regular .financial_return {
+  height: 12px;
+  width: 12Spx;
+}
+.financial_asset_regular .color_org {
+  color: #ff6633;
+}
+.financial_asset_regular .color_blue {
+  color: #10a6e2;
+}
+.financial_asset_regular .color_gray {
+  color: #ababab;
+}
+.financial_asset_regular .color_white {
+  color: #ddd;
+}
+/*被选择项*/
+.financial_asset_regular .option_seleted {
+  color: #10a6e2;
+  overflow: hidden;
+}
+.financial_asset_regular .option_seleted:after {
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 0px;
+  height: 1px;
+  border-top: 2px solid #10a6e2;
+  color: #10a6e2;
+  width: 100%;
+}
+.financial_asset_regular .option_seleted:before {
+  content: '▲';
+  position: absolute;
+  top: 29px;
+  left: 46%;
+  color: #10a6e2;
+  -webkit-transform: scaleY(.8);
+  transform: scaleY(.8);
+}
+/*-----------------------------------------------------------------------------------------------
+/*定期-确认购买*/
+/*活期理财-转入*/
+.financial_regular_step1 {
+  margin:20px 15px;
+}
+/*余额*/
+.financial_regular_step1 .jiafu_balance {
+  padding: 20px 15px;
+  color: #ddd;
+  padding-bottom: 0px;
+}
+.financial_regular_step1 .jiafu_balance div{
+  color:#9c9c9c;
+}
+.financial_regular_step1 .jiafu_balance>div+div {
+  margin: 10px 0px;
+  color: #4a4a4a;
+  font-size: 50px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: justify;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+/*内容*/
+.financial_regular_step1 .weui_cell {
+  padding:15px;
+}
+.financial_regular_step1 .weui_cell:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 92%;
+  height: 1px;
+  border-top: 1px solid #d9d9d9;
+  color: #d9d9d9;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(.5);
+  transform: scaleY(.5);
+  left: 14px;
+}
+.financial_regular_step1 .color_right {
+  color: #9c9c9c;
+}
+.financial_regular_step1 .color_left {
+  color: #4a4a4a;
+  width: 200px;
+}
+.financial_regular_step1 .container_shadow {
+  background-color: #fff;
+  box-shadow: 0 2px 3px #e9e9e9;
+  -webkit-box-shadow: 0 2px 3px #e9e9e9;
+  -moz-box-shadow: 0 2px 3px #e9e9e9;
+  position: relative;
+}
+.financial_regular_step1 .input_num {
+  text-align: left;
+}
+.financial_regular_step1 .payment_date {
+  padding: 15px;
+  border-top: 1px dashed #ddd;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.financial_regular_step1 .payment_date img {
+  vertical-align: sub;
+  width: 15px;
+  height: 15px;
+}
+.financial_regular_step1 .balance_1020{
+  padding:5px 15px 15px 15px;
+  color:#9c9c9c;
+
+}
+.financial_regular_step1 .font_blue{
+  color:#10a6e2;
+  font-weight:500;
+
+}
+.financial_regular_step1 .jiafu_balance img{
+  width:50px;
+
+}
+.financial_regular_step1 .font_gray{
+  color:#9c9c9c;
+
+}
+.financial_regular_step1 .input_num::-webkit-input-placeholder{
+  color:#ddd;
+  font-size:30px;
+  line-height:70px
+}
+.financial_regular_step1 .current_checkbox{
+  -webkit-appearance: none;
+  appearance: none;
+  outline: 0;
+  font-size: 0;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 3px;
+  width: 13px;
+  height: 13px;
+  position: relative;
+  vertical-align: 0;
+  top: 2px;
+
+
+}
+.financial_regular_step1 .current_checkbox:checked:before {
+
+  content: "";
+  position: absolute;
+  display: block;
+  width: 5px;
+  height: 10px;
+  left: 3px;
+  top: -2px;
+  border-bottom: solid 1px #10a6e2;
+  border-right: solid 1px #10a6e2;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.financial_regular_step1 .container_shadow:before{
+  content: '●';
+  position: absolute;
+  -webkit-transform: scale(3,3);
+  transform: scale(3,3);
+  color: #F5F5F9;
+  top: 163px;
+  left: -4px;
+  z-index: 10;
+
+}
+.financial_regular_step1 .container_shadow:after{
+  content: '●';
+  position: absolute;
+  -webkit-transform: scale(3,3);
+  transform: scale(3,3);
+  color: #F5F5F9;
+  top: 163px;
+  right:-4px;
+  z-index: 10;
+
+
+}
+.financial_regular_step1 .out_point{
+  position:relative;
+
+}
+.financial_regular_step1 .out_point:before{
+  content: '●';
+  position: absolute;
+  -webkit-transform: scale(3,3);
+  transform: scale(3,3);
+  color: #F5F5F9;
+  top: 115px;
+  left: -4px;
+  z-index: 10;
+
+}
+.financial_regular_step1 .out_point:after{
+  content: '●';
+  position: absolute;
+  -webkit-transform: scale(3,3);
+  transform: scale(3,3);
+  color: #F5F5F9;
+  top: 115px;
+  right:-4px;
+  z-index: 10;
+
+
+}
+/*协议*/
+.financial_regular_step1 .agreement {
+  padding: 30px 15px;
+  padding-bottom: 0px;
+  text-align: center;
+}
+.financial_regular_step1 .agreement a {
+  color: #10a6e2;
+}
+.financial_regular_step1 .agreement a:active {
+  color: #0994cc;
+}
+.financial_regular_step1 .btn_red {
+  background-color: #ff4646;
+}
+.financial_regular_step1 .btn_red:active {
+  color: hsla(0,0%,100%,.4);
+  background-color: #FF7d7d;
+}
+.financial_regular_step1 .btn_blue {
+  background-color: #10a6e2;
+}
+.financial_regular_step1 .btn_blue:active {
+  color: hsla(0,0%,100%,.4);
+  background-color: #0994cc;
+}
+.financial_regular_step1 .weui_btn_area {
+  margin-left: auto;
+  margin-right: auto;
+}
+.financial_regular_step1 .weui_opr_area{
+
+  margin: 30px 0px;
+}
+.weui_cell {
+  padding: 10px 15px;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.weui_cell_primary {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+.weui_cell_ft {
+  text-align: right;
+  color: #888;
+}
+.weui_input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  -webkit-appearance: none;
+  background-color: transparent;
+  font-size: inherit;
+  color: inherit;
+  height: 1.41176471em;
+  line-height: 1.41176471;
+}
+.weui_btn {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 14px;
+  padding-right: 14px;
+  box-sizing: border-box;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  line-height: 2.33333333;
+  border-radius: 5px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  overflow: hidden;
+}
+
+
+.zhuangyi_pay_shoppingcart {
+  position: relative;
+}
+.zhuangyi_pay_shoppingcart .weui_tab_bd {
+  padding-bottom: 45px;
+}
+.weui_tab_bd {
+  box-sizing: border-box;
+  height: 100%;
+  padding-bottom: 55px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.zhuangyi_pay_shoppingcart .container_tab {
+  width: 100%;
+  position: fixed;
+  z-index: 500;
+  top: 0;
+  background-color: #202329;
+  height: 45px;
+  font-size: 16px;
+  color: #FFF;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.zhuangyi_pay_shoppingcart .container_tab a {
+  color: #fff;
+  width: 15%;
+  padding-left: 5px;
+}
+.zhuangyi_pay_shoppingcart .weui_zz {
+  padding-top: 4px;
+  margin-left: 0;
+  width: 100%;
+  text-align: left;
+}
+.zhuangyi_pay_shoppingcart .weui_zz img {
+  width: 16px;
+}
+.zhuangyi_pay_shoppingcart .tab_select {
+  width: 70%;
+  height: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.zhuangyi_pay_shoppingcart .tab_select div {
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+}
+.zhuangyi_pay_shoppingcart .weui_zz_1 {
+  padding-top: 4px;
+  margin-right: 5px;
+  width: 50px;
+  text-align: center;
+}
+.zhuangyi_pay_shoppingcart .weui_zz_1 img {
+  width: 16px;
+}
+.zhuangyi_pay_shoppingcart .weui_msg {
+  height: 100%;
+  text-align: center;
+  padding-top: 20px;
+}
+
+/*成功钩钩*/
+.zhuangyi_pay_shoppingcart .weui_msg .weui_icon_area{
+  margin-bottom: 0;
+}
+.zhuangyi_pay_shoppingcart .swal2-icon.swal2-success {
+  border-color: #a5dc86
+}
+.zhuangyi_pay_shoppingcart .swal2-content, .swal2-icon {
+  padding: 0;
+  position: relative
+}
+
+.zhuangyi_pay_shoppingcart .swal2-icon.swal2-success::after,
+.zhuangyi_pay_shoppingcart .swal2-icon.swal2-success::before {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 120px;
+  background: #f5f5f9
+}
+
+.zhuangyi_pay_shoppingcart .swal2-icon.swal2-success::before {
+  border-radius: 120px 0 0 120px;
+  top: -7px;
+  left: -33px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transform-origin: 60px 60px;
+  transform-origin: 60px 60px
+}
+
+.zhuangyi_pay_shoppingcart .swal2-icon.swal2-success.animate::after {
+  -webkit-animation: rotatePlaceholder 4.25s ease-in;
+  animation: rotatePlaceholder 4.25s ease-in
+}
+
+.zhuangyi_pay_shoppingcart .swal2-icon.swal2-success::after {
+  border-radius: 0 120px 120px 0;
+  top: -11px;
+  left: 30px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transform-origin: 0 60px;
+  transform-origin: 0 60px
+}
+
+.zhuangyi_pay_shoppingcart .swal2-icon.swal2-success .line.tip {
+  width: 25px;
+  left: 14px;
+  top: 46px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg)
+}
+
+.zhuangyi_pay_shoppingcart .swal2-icon.swal2-success .line {
+  height: 5px;
+  background-color: #a5dc86;
+  display: block;
+  border-radius: 2px;
+  position: absolute;
+  z-index: 2
+}
+
+.zhuangyi_pay_shoppingcart .animate-success-tip {
+  -webkit-animation: animate-success-tip .75s;
+  animation: animate-success-tip .75s
+}
+
+.zhuangyi_pay_shoppingcart .swal2-icon.swal2-success .line.long {
+  width: 47px;
+  right: 8px;
+  top: 38px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg)
+}
+
+.zhuangyi_pay_shoppingcart .swal2-icon.swal2-success .line {
+  height: 5px;
+  background-color: #a5dc86;
+  display: block;
+  border-radius: 2px;
+  position: absolute;
+  z-index: 2
+}
+
+.zhuangyi_pay_shoppingcart .animate-success-long {
+  -webkit-animation: animate-success-long .75s;
+  animation: animate-success-long .75s
+}
+
+.zhuangyi_pay_shoppingcart .swal2-icon.swal2-success .placeholder {
+  width: 80px;
+  height: 80px;
+  border: 4px solid rgba(165, 220, 134, .2);
+  border-radius: 50%;
+  box-sizing: content-box;
+  position: absolute;
+  left: -4px;
+  top: -4px;
+  z-index: 2
+}
+
+.zhuangyi_pay_shoppingcart .swal2-icon.swal2-success .fix {
+  width: 7px;
+  height: 90px;
+  background-color: #f5f5f9;
+  position: absolute;
+  left: 28px;
+  top: 8px;
+  z-index: 1;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg)
+}
+
+@-webkit-keyframes animate-success-tip {
+  0%, 54% {
+    width: 0;
+    left: 1px;
+    top: 19px
+  }
+
+  70% {
+    width: 50px;
+    left: -8px;
+    top: 37px
+  }
+  84% {
+    width: 17px;
+    left: 21px;
+    top: 48px
+  }
+  100% {
+    width: 25px;
+    left: 14px;
+    top: 45px
+  }
+}
+
+@keyframes animate-success-tip {
+  0%, 54% {
+    width: 0;
+    left: 1px;
+    top: 19px
+  }
+
+  70% {
+    width: 50px;
+    left: -8px;
+    top: 37px
+  }
+  84% {
+    width: 17px;
+    left: 21px;
+    top: 48px
+  }
+  100% {
+    width: 25px;
+    left: 14px;
+    top: 45px
+  }
+}
+
+@-webkit-keyframes animate-success-long {
+  0%, 65% {
+    width: 0;
+    right: 46px;
+    top: 54px
+  }
+
+  84% {
+    width: 55px;
+    right: 0;
+    top: 35px
+  }
+  100% {
+    width: 47px;
+    right: 8px;
+    top: 38px
+  }
+}
+
+@keyframes animate-success-long {
+  0%, 65% {
+    width: 0;
+    right: 46px;
+    top: 54px
+  }
+
+  84% {
+    width: 55px;
+    right: 0;
+    top: 35px
+  }
+  100% {
+    width: 47px;
+    right: 8px;
+    top: 38px
+  }
+}
+
+@-webkit-keyframes rotatePlaceholder {
+
+  0%,
+  5% {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg)
+  }
+
+  100%,
+  12% {
+    -webkit-transform: rotate(-405deg);
+    transform: rotate(-405deg)
+  }
+}
+
+@keyframes rotatePlaceholder {
+
+  0%,
+  5% {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg)
+  }
+
+  100%,
+  12% {
+    -webkit-transform: rotate(-405deg);
+    transform: rotate(-405deg)
+  }
+}
+
+.zhuangyi_pay_shoppingcart .swal2-icon {
+  width: 80px;
+  height: 80px;
+  border: 4px solid grey;
+  border-radius: 50%;
+  margin: 20px auto 30px;
+  box-sizing: content-box;
+  cursor: default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/*成功钩钩结束*/
+
+
+.zhuangyi_pay_shoppingcart .weui_text_area {
+  margin-top: .8rem;
+}
+.weui_msg .weui_text_area {
+  margin-bottom: 25px;
+  padding: 0 20px;
+}
+.zhuangyi_pay_shoppingcart .msg_title_0718 {
+  margin-bottom: 10px;
+  font-weight: 1000;
+  font-size: 20px;
+}
+.zhuangyi_pay_shoppingcart .weui_msg_desc {
+  text-align: left;
+}
+.zhuangyi_pay_shoppingcart .text_area_0718 {
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+  text-align: left;
+}
+.weui_msg .weui_msg_desc {
+  font-size: 14px;
+  color: #888;
+}
+.zhuangyi_pay_shoppingcart .weui_opr_area {
+  margin-top: 50px;
+}
+
+.zhuangyi_pay_shoppingcart .swal2-icon.swal2-error {
+  border-color: #f27474
+}
+
+.zhuangyi_pay_shoppingcart .animate-error-icon {
+  -webkit-animation: animate-error-icon .5s;
+  animation: animate-error-icon .5s
+}
+
+.zhuangyi_pay_shoppingcart .swal2-icon {
+  width: 80px;
+  height: 80px;
+  border: 4px solid grey;
+  border-radius: 50%;
+  margin: 20px auto 30px;
+  box-sizing: content-box;
+  cursor: default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none
+}
+
+.zhuangyi_pay_shoppingcart .swal2-content, .swal2-icon {
+  padding: 0;
+  position: relative
+}
+
+.zhuangyi_pay_shoppingcart .swal2-icon.swal2-error .x-mark {
+  position: relative;
+  display: block
+}
+
+.zhuangyi_pay_shoppingcart .animate-x-mark {
+  -webkit-animation: animate-x-mark .5s;
+  animation: animate-x-mark .5s
+}
+
+.zhuangyi_pay_shoppingcart .swal2-icon.swal2-error .line.left {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  left: 17px
+}
+
+.zhuangyi_pay_shoppingcart .swal2-icon.swal2-error .line {
+  position: absolute;
+  height: 5px;
+  width: 47px;
+  background-color: #f27474;
+  display: block;
+  top: 37px;
+  border-radius: 2px
+}
+
+.zhuangyi_pay_shoppingcart .swal2-icon.swal2-error .line.right {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  right: 16px
+}
+
+@-webkit-keyframes animate-error-icon {
+
+  0% {
+    -webkit-transform: rotateX(100deg);
+    transform: rotateX(100deg);
+    opacity: 0
+  }
+
+  100% {
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+    opacity: 1
+  }
+}
+
+@keyframes animate-error-icon {
+
+  0% {
+    -webkit-transform: rotateX(100deg);
+    transform: rotateX(100deg);
+    opacity: 0
+  }
+
+  100% {
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+    opacity: 1
+  }
+}
+
+.zhuangyi_pay_shoppingcart .animate-error-icon {
+  -webkit-animation: animate-error-icon .5s;
+  animation: animate-error-icon .5s
+}
+
+@-webkit-keyframes animate-x-mark {
+
+  0%,
+  50% {
+    -webkit-transform: scale(.4);
+    transform: scale(.4);
+    margin-top: 26px;
+    opacity: 0
+  }
+
+  80% {
+    -webkit-transform: scale(1 .15
+    );
+    transform: scale(1 .15
+    );
+    margin-top: -6px
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    margin-top: 0;
+    opacity: 1
+  }
+}
+
+@keyframes animate-x-mark {
+
+  0%,
+  50% {
+    -webkit-transform: scale(.4);
+    transform: scale(.4);
+    margin-top: 26px;
+    opacity: 0
+  }
+
+  80% {
+    -webkit-transform: scale(1 .15
+    );
+    transform: scale(1 .15
+    );
+    margin-top: -6px
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    margin-top: 0;
+    opacity: 1
+  }
+}
+
+.zhuangyi_pay_shoppingcart .animate-x-mark {
+  -webkit-animation: animate-x-mark .5s;
+  animation: animate-x-mark .5s
+}
+
+.zhuangyi_pay_shoppingcart .btn_white_0728 {
+  border: 1px solid #f27474;
+  color: #f27474;
+}
+.zhuangyi_pay_shoppingcart .btn_red_0718 {
+  background-color: #f27474;
+  color: #fff;
+  border: 0;
+}
+
+.weui_btn + .weui_btn {
+  margin-top: 15px;
+}
+.weui_btn_area {
+  margin: 1.17647059em 15px .3em;
+}
+.Transaction {
+  position: relative;
+}
+.Transaction .bd {
+  box-sizing: border-box;
+  height: 100%;
+  padding-bottom: 45px;
+  overflow: auto;
+}
+.Transaction .navi {
+  height: 45px;
+  width: 100%;
+  background-color: #202329;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 500;
+}
+.Transaction .navi .left {
+  width: 10%;
+  padding-top: 4px;
+  margin-left: 10px;
+}
+.Transaction .navi .left img {
+  width: 16px;
+  text-align: left;
+}
+.Transaction .navi .left a {
+  -webkit-appearance: none;
+  color: #4a4a4a;
+}
+.Transaction .navi .center {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  color: #fff;
+}
+.Transaction .navi .center span {
+  font-size: 18px;
+}
+.Transaction .navi .center .triangle-down {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 7px solid #FFF;
+  margin-left: 3px;
+  margin-top: 2px;
+}
+.triangle-down {
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s,-webkit-transform .3s;
+}
+.Transaction .navi>div:last-child {
+  color: #fff;
+  width: 10%;
+  text-align: right;
+  margin-right: 10px;
+  padding-top: 4px;
+}
+.Transaction .pull-list {
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out,-webkit-transform .3s ease-in-out;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  top: 0;
+  left: 0;
+}
+.Transaction .pull-list .weui_cells {
+  margin-top: 0;
+  height: auto;
+}
+.weui_cells {
+  margin-top: 1.17647059em;
+  background-color: #fff;
+  line-height: 1.41176471;
+  font-size: 17px;
+  overflow: hidden;
+  position: relative;
+}
+.weui_check_label {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.weui_cell {
+  padding: 10px 15px;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.weui_cells_radio .weui_cell_ft {
+  padding-left: .35em;
+}
+.Transaction .weui_cell_bd>div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.Transaction .weui_cell_bd>div>div:first-child {
+  width: 40px;
+  margin-right: 10px;
+}
+.Transaction .weui_cell_bd>div>div img {
+  width: 100%;
+}
+.Transaction .weui_cell_bd>div>div:last-child {
+  font-size: 16px;
+  font-weight: 700;
+}
+.weui_cells_radio .weui_cell_ft {
+  padding-left: .35em;
+}
+.weui_cell_ft {
+  text-align: right;
+  color: #888;
+}
+.weui_check {
+  position: absolute;
+  left: -9999em;
+}
+#mask_0819 {
+  -webkit-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
+  background-color: #000;
+  opacity: 0;
+}
+.weui_mask_transition {
+  display: none;
+  background: transparent;
+  -webkit-transition: background .3s;
+  transition: background .3s;
+}
+.weui_mask, .weui_mask_transition, .weui_mask_transparent {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.Transaction .content {
+  width: 100%;
+}.financial_list .content .list1 {
+   font-size: 14px;
+   box-shadow: none;
+   z-index: -99;
+   margin-bottom: 0;
+   position: relative;
+ }
+.Transaction .content .list1 {
+  height: 60px;
+  padding: 0 20px;
+  margin-bottom: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 3px #e9e9e9;
+  -webkit-box-shadow: 0 2px 3px #e9e9e9;
+  -moz-box-shadow: 0 2px 3px #e9e9e9;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-align-items: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.financial_list .content .list1:before {
+  color: #d9d9d9;
+  transform-origin: 0 0;
+  transform: scaleY(.5);
+}
+.financial_current_step1_go .weui_cell:before, .financial_current_step1_out .weui_cell:before, .financial_list .content .list1:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 10px;
+}
+.financial_current_step1_out .weui_cell:before, .financial_list .content .list1:before {
+  width: 95%;
+  height: 1px;
+  border-top: 1px solid #d9d9d9;
+  -webkit-transform-origin: 0 0;
+  -webkit-transform: scaleY(.5);
+}
+.Transaction .content .list1 .price {
+  width: 50%;
+}
+.Transaction .content .list1 .price>div:first-child {
+  font-size: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.Transaction .content .list1 .price>div:last-child {
+  font-size: 13px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: -4px;
+}
+.financial_list .price div+div {
+  line-height: 24px;
+  color: #ababab;
+}
+.Transaction .content .list1 .time {
+  text-align: right;
+  width: 50%;
+}
+.Transaction .content .list1 .time>div:last-child {
+  font-size: 17px;
+  margin-top: -4px;
+}
+.financial_list .success {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/*优化福利增值转出tab*/
+.financial_transfer_tab{
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+
+  .tab_bar{
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    border-bottom: solid 1px #dddddd;
+    //box-shadow: 0 2px 3px #e9e9e9;
+
+    .show{
+      color: #ff4646;
+    }
+
+    >div{
+      width: 50%;
+      flex: 1;
+      text-align: center;
+      padding: 10px 0;
+      position: relative;
+
+    }
+
+
+  }
+
+  .tab_content{
+    width: 200%;
+    position: relative;
+    transition: transform 0.2s linear;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 8px;
+
+    >div{
+      width:100%;
+      .financial_current_step1_go{
+        margin: 0 15px;
+      }
+    }
+
+  }
+
+  .tab_tips{
+    width: 50%;
+    position: relative;
+    z-index: 10;
+    transition: transform 0.2s linear;
+
+    &:before{
+      content: '▲';
+      position: absolute;
+      bottom: -4px;
+      left: 46%;
+      font-size: 10px;
+      color: #ff4646;
+      transform: scaleX(1.5);
+    }
+    &:after{
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      right: 0;
+      height: 1px;
+      border-top: 2px solid #ff4646;
+      color: #ff4646;
+      width: 85%;
+      margin: 0 auto;
+    }
+  }
+
+
+}
+
+.zhuangyi_pay_shoppingcart .btn_white_0718 {
+  border: 1px solid #10a6e2;
+  color: #10a6e2;
+}
