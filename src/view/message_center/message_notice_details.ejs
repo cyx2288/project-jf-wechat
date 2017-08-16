@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet"  href="../../css/jf_message.css">
+
+</head>
+<body>
+
+<!--顶部固定导航-->
+
+<%- include('../../component/basic/topNav.ejs',{
+"thisrighthref":"jfSwitch.goBack()",
+"navtitle":"消息详情",
+"thislefthref":"#",
+"thisimgsrc":" "
+})%>
+
+
+    <div class="details_background">
+
+    <!--标题-->
+
+        <div>
+            <h2>嘉福平台微信号开通啦！！！</h2>
+
+            <!--时间日期-->
+
+            <p class="details_time">2017-07-13 19:35:15</p>
+
+            <!--文本详情-->
+
+            <div class="text_detailsplace">
+                <div class="text_details text_left">
+                    为了用户更安全使用嘉福服务，推荐通过关注微信号或下载App使用嘉福相关服务，同时嘉福PC端员工功能会逐步迁移，如有问题请咨询客服电话。
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
