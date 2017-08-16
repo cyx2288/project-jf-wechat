@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet"  href="../../css/jf_message.css">
+
+</head>
+<body>
+
+<!--顶部固定导航-->
+
+<%- include('../../component/basic/topNav.ejs',{
+"thisrighthref":"jfSwitch.goBack()",
+"navtitle":"消息详情",
+"thislefthref":"#",
+"thisimgsrc":" "
+})%>
+
+    <div class="details_background">
+
+
+        <!--标题-->
+
+        <h2>关于2017年国庆节放假通知</h2>
+
+        <!--时间日期，范围，发布人-->
+
+        <div class="center_details_place center_details_top">
+            <p><span>发布日期：</span><span>2017-9-25</span></p>
+            <p><span>发布人：</span><span>Jan</span></p>
+            <p><span>发布范围：</span><span>全体员工</span></p>
+        </div>
+
+
+
+
+
+        <!--文本详情-->
+
+        <div class="text_detailsplace">
+            <div class="text_details">
+                根据《国务院办公厅关于2017年部分节假日安排的通知》，结合公司实际情况，现将2017年国庆节放假啊门派如下：<br>
+                国庆节10月1日至10月7日放假，共7天，10月8日（星期天）正常上班。
+            </div>
+        </div>
+
+        <div class="center_detailsright">
+            <p>特此通知</p>
+            <p>祝各位节日快乐！</p>
+            <p>综合管理部</p>
+            <p>2017年9月25日</p>
+        </div>
+
+    </div>
+
+</body>
+</html>

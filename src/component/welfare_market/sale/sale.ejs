@@ -2,37 +2,43 @@
 <div class="market_mian">
     <div class="market_tips">
 
-        <p>卖出福利额度</p>
+        <p>可卖出福利：<span>100-50000</span></p>
 
-        <p>平台服务费：<span>2%</span></p>
+        <p>平台服务费：<span>0%</span></p>
 
     </div>
 
     <div class="market_buy_num">
 
-        <div class="buy_icon"><img src="../../images/zfb/icon_unit.png"></div>
+        <div class="buy_icon"><img src="../../images/zfb/icon_welfare_reduce.png"></div>
 
         <div class="buy_number" >
             <div class="keyNumshow" id="savekeyNum"></div>
-            <input readonly value="" class="key_input" id="key_input">
+            <input readonly value="" class="key_input" id="key_input" placeholder="请输入卖出福利额度、整数">
         </div>
 
     </div>
 
     <div class="markey_buy_price">
 
-        <div>卖出单价（元）</div>
+        <div class="sale_price">卖出单价(元)<img src="../../images/zfb/market_icon_helpcenter.png"></div>
 
         <div class="price_num">
             <span class="reduce">—</span>
             <div class="show_price">
-                <input value="1.00" class="inputele" type="number" maxlength="5">
+                <input value="0.997" class="inputele" type="number" maxlength="5" max-price="0.997">
             </div>
             <span class="add">+</span>
 
         </div>
     </div>
-
+    <div class="market_total_price">
+        <p class="get_cash">获得现金(元)<img src="../../images/zfb/market_icon_helpcenter.png"></p>
+        <div class="total_money">
+            <span>¥</span>
+            <span class="money_box">0.00</span>
+        </div>
+    </div>
     <div class="market_buy_agreement">
     <span>
          <input type="checkbox" class="agreement_check" checked>
@@ -52,47 +58,38 @@
 
 <script>
 
-    window.onload=function(){
+    window.onload=function() {
 
-        setTimeout(function(){
+        setTimeout(function () {
 
             jfkeybroad.run();//页面初始的时候，开启键盘；
 
-
             //判断下一步按钮是否可以点击（判断输入框里面有没有值，以及协议有没有被选中）
-            $('body').on('touchstart',".weui_grid",ValiateNextBtn);
+            $('body').on('touchstart', ".weui_grid", function () {
 
-            document.getElementsByClassName('agreement_check')[0].addEventListener('click',ValiateNextBtn,false)
+                getTotalMoney();//显示金额出现
 
+                ValiateNextBtn();//判断下一步按钮
 
-
-            //金额加减绑定事件
-
-            document.getElementsByClassName('reduce')[0].addEventListener('click',changeValue,false);//相减
-
-            document.getElementsByClassName('add')[0].addEventListener('click',changeValue,false);//相加
+            });
+        }, 300);
 
 
-        },300);
+        document.getElementsByClassName('agreement_check')[0].addEventListener('click', ValiateNextBtn, false)
+
+        //金额加减绑定事件
+        valiateMoney();
+
+        document.getElementsByClassName('inputele')[0].addEventListener('keyup', function () {
+
+            changeValue(this);
+
+            getTotalMoney();//显示金额出现
+        }, false);
+
 
     }
 
-    /*判断下一步按钮*/
-    function ValiateNextBtn(){
-        var thisSaveNum=document.getElementById('key_input');//input元素
-
-        var thischeckBox=document.getElementsByClassName('agreement_check')[0];
-
-        var thisNextBtn=document.getElementsByClassName('buy_check_btn')[0];//下一步按钮
-
-        if(!thisSaveNum.value==""&&thischeckBox.checked){
-
-            thisNextBtn.removeAttribute("disabled")
-        }else {
-
-            thisNextBtn.setAttribute("disabled",true)
-        }
-    }
 
 
     /*数字键盘*/
@@ -134,7 +131,39 @@
 
 
 
+    /*单价说明*/
+    document.getElementsByClassName('sale_price')[0].addEventListener('click',function(){
 
+        jfShowTips.dialogShow({
+            "mainText": "卖出单价",
+            "minText": "卖出一份福利额度成交后获得的现金账户收入",
+            "noCheck": false,
+            "noCancel": true,
+            "checkBtnText":"知道了",
+            "checkFn": function () {
+                jfShowTips.dialogRemove()
+            }
+        });
+
+    },false)
+
+
+
+    /*总价说明*/
+    document.getElementsByClassName('get_cash')[0].addEventListener('click',function(){
+
+        jfShowTips.dialogShow({
+            "mainText": "获得现金",
+            "minText": "卖出的福利额度成交后，现金账户获得的收入",
+            "noCheck": false,
+            "noCancel": true,
+            "checkBtnText":"知道了",
+            "checkFn": function () {
+                jfShowTips.dialogRemove()
+            }
+        });
+
+    },false)
 
 </script>
 

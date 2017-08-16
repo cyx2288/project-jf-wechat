@@ -7,16 +7,25 @@
 
 <body>
 
-<div class="zhuangyi_pay_shoppingcart">
+<div class="message_tips">
 
-    <!--导航-->
-    <%- include('../../component/basic/topNav.ejs',{
-    "thisrighthref":"jfSwitch.goBack()",
-    "navtitle":"个人中心",
-    "thislefthref":"#",
-    "thisimgsrc":"../../images/icon_pay_meau.png"
-    })%>
-
+    <nav class="Top_navigation">
+        <div class="weui_tab_bd"></div>
+        <div class="container_tab"> <a class="messages" href="../message_center/messages.html">
+                <div class="nav_left" id="nav_left">
+                    <img src="../../images/message/icon_news.png">
+                    <span class="message_num">3</span>
+                </div>
+            </a>
+            <div class="nav_center">
+                <div>个人中心</div>
+            </div>
+            <a href="#">
+                <div class="nav_right">交易明细</div>
+            </a>
+        </div>
+    </nav>
+</div>
     <!--中间部分-->
 
     <%- include('../../component/mine/mine.ejs')%>
@@ -51,6 +60,7 @@
                     <div class="weui_tabbar_icon">
                         <img src="../../images/icon_nav_person_black.png" alt="">
                         <img src="../../images/icon_nav_person_blue.png" alt="">
+                        <span class="message_show"></span>
                     </div>
                     <p class="weui_tabbar_label">我的</p>
                 </a></div>
@@ -59,15 +69,30 @@
 
 
 
-</div>
 
 
 
+<!--<script>
+    //取消消息提示数字
 
+    function cancelMessageTips(clickEle,deleteEle){//参数一是点击当前a标签的class值，参数二是提示的消息角标
+        var thisClickEle=document.getElementsByClassName(clickEle)[0];
 
+        var thishref=thisClickEle.getAttribute('data-href');
 
+        if(deleteEle){
+            var thisMessageTips=thisClickEle.getElementsByClassName(deleteEle)[0];
 
+            if(thisMessageTips.parentNode){
 
+                thisMessageTips.parentNode.removeChild(thisMessageTips);//删除该元素
+            }
+        }
+
+        window.location.href=thishref;
+    }
+
+</script>-->
 </body>
 
 
