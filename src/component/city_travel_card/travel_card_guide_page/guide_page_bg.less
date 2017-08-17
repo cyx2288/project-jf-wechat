@@ -1,10 +1,17 @@
 .travel_card_guide_bg{
   width: 100%;
-  height: calc(~"100vh - 45px");
+  height: 100%;
+  position: fixed;
+  bottom: -20px;
+  left: 0;
+  overflow: hidden;
+  img{
+    width: 100%;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    z-index: 1000;
+    overflow: auto;
 
-  background: url(../../../images/travel/icon_travel_guide.jpg)no-repeat;
-  background-attachment:fixed;
-  background-size: 100% 100%;
-
-
+  }
 }
