@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>都市旅游卡</title>
+    <link rel="stylesheet"  href="../../css/jf_city_travel_card.css">
+
+</head>
+<body>
+
+    <!--顶部固定导航-->
+
+    <!--导航-->
+    <%- include('../../component/basic/topNav.ejs',{
+    "thisrighthref":"jfSwitch.goBack()",
+    "navtitle":"帮助中心",
+    "thislefthref":"",
+    "thisimgsrc":" "
+    })%>
+
+    <!--帮助中心-->
+    <%- include('../../component/city_travel_card/travel_help_center/help_center.ejs')%>
+
+</body>
+</html>
