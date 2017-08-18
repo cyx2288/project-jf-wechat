@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>账户充值</title>
+    <link rel="stylesheet"  href="../../css/jf_city_travel_card.css">
+    <link rel="stylesheet" href="../../css/jf_cash_account.css">
+</head>
+
+<body>
+
+<!--顶部固定导航-->
+
+<!--导航-->
+<%- include('../../component/basic/topNav.ejs',{
+"thisrighthref":"jfSwitch.goBack()",
+"navtitle":"账户充值",
+"thislefthref":"",
+"thisimgsrc":" "
+})%>
+<!--黄框提示-->
+<a class="jd_notice">
+    <div class="tab_bd"></div>
+    <div class="recharge_balance">
+        <img src="../../images/cash/icon_voice.png">
+        <span>
+                <p>卡内资金不可超过1000元，账户资金没有上限</p>
+            </span>
+    </div>
+</a>
+
+<!--账户充值-输入框-->
+<%- include('../../component/city_travel_card/travel_card_recharge/account_recharge_import.ejs')%>
+
+<!--账户充值-内容-->
+<%- include('../../component/city_travel_card/travel_card_recharge/account_recharge_section.ejs')%>
+
+
+
+
+
+
+
+
+
+</body>
+<script src="../../js/jf_welfare_market.js"></script>
+
+
+
+
+
+</html>
