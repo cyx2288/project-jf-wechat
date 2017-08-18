@@ -68,6 +68,14 @@ a img {
 .weui_tabbar .weui_tabbar_item>.weui_tabbar_icon>img:last-child {
   display: none;
 }
+.weui_tabbar .weui_tabbar_item > .weui_tabbar_icon>img:last-of-type {
+  display: none;
+}
+
+.weui_tabbar .weui_tabbar_item.on > .weui_tabbar_icon>img:last-of-type {
+  display: block;
+}
+
 .weui_tabbar_item .weui_tabbar_icon>img, .weui_tabbar_item .weui_tabbar_label {
   opacity: .85;
   -webkit-opacity: .85;
