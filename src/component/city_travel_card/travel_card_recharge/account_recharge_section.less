@@ -1,0 +1,87 @@
+.recharge_section{
+  width: 95%;
+  background: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(171,171,171, .4);
+  margin: auto;
+  margin-top: 8px;
+  &:after{
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+ /*切换按钮*/
+  .section_tab{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    padding: 18px 0;
+    .recharge_title{
+      width: 50%;
+      background: #10a6e2;
+      border-radius: 5px 0 0 5px;
+      margin-left: 10px;
+      margin-right: 0;
+      color: white;
+      text-align: center;
+      padding: 5px 0;
+      &:nth-child(2){
+        border-radius: 0 5px 5px 0;
+        border: 1px solid #10a6e2;
+        background: none;
+        color: #10a6e2;
+        margin-right: 10px;
+        margin-left:0;
+
+      }
+    }
+  }
+
+  /*充值内容*/
+  .section_value{
+    width: 100%;
+    float:left;
+    position:relative;
+    left:56%;
+
+    /*&:after{
+      content: "";
+      display: block;
+      clear: both;
+    }*/
+
+    .value_number{
+      width: 26%;
+      border-radius: 5px;
+      background: #fff;
+      border: 1px solid #DDD;
+      font-size: 20px;
+      color: #10a6e2;
+      text-align: center;
+      padding: 10px 5px;
+      float: left;
+      position:relative;
+      right:50%;
+     /* margin: 0 0 10px 10px;*/
+     /* &:after{
+        content: "";
+        display: block;
+        clear: both;
+      }*/
+      &:nth-child(2),&:nth-child(5){
+       margin: 0 10px;
+      }
+
+      .value_text{
+        color: #b8b6b6;
+        font-size: 14px;
+      }
+
+
+    }
+  }
+
+
+}

@@ -1,0 +1,65 @@
+.account_import{
+  width: 95%;
+  height: 64px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(171,171,171, .4);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  .import_text{
+    font-size: 18px;
+    vertical-align: text-top;
+    line-height: 50px;
+    white-space: nowrap;
+    margin: 0 10px;
+    img{
+      width: 16px;
+      padding-left: 5px;
+    }
+  }
+  .import_number{
+    width: 75%;
+    p{
+      margin-top: -14px;
+      color: #ff4646;
+      font-size: 12px;
+    }
+    .number_text{
+      width: 100%;
+      border: 0;
+      outline: 0;
+      appearance: none;
+      background-color: transparent;
+      font-size: 18px;
+      color: #FFFFFF;
+      line-height:50px;
+    }
+  }
+  .import_select{
+    width: 16%;
+    margin-right: 10px;
+    .number_choose{
+      direction: rtl;
+      width: 100%;
+      border: 0;
+      appearance: none;
+      height: 64px;
+    }
+    &.import_arrow:after{
+      content: " ";
+      display: inline-block;
+      height: 12px;
+      width: 12px;
+      border-width: 0 2px 2px 0;
+      border-color: #10a6e2;
+      border-style: solid;
+      transform: rotate(45deg);
+      position: absolute;
+      top:16%;
+      margin-top: -4px;
+      right: 24px;
+    }
+  }
+
+}
