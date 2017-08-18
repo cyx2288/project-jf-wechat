@@ -10,12 +10,20 @@
 <!--顶部固定导航-->
 
 <!--导航-->
-<%- include('../../component/basic/topNav.ejs',{
-"thisrighthref":"jfSwitch.goBack()",
-"navtitle":"福利集市",
-"thislefthref":"#",
-"thisimgsrc":" "
-})%>
+
+<nav class="Top_navigation">
+    <div class="weui_tab_bd"></div>
+    <div class="container_tab"> <a onclick="jfSwitch.goBack()">
+            <div class="nav_left" id="nav_left"><img src="../../images/icon_pay_return.png"></div>
+        </a>
+        <div class="nav_center">
+            <div>福利集市</div>
+        </div>
+        <a href="../mine/my_order_list.html">
+            <div class="nav_right">买卖记录</div>
+        </a>
+    </div>
+</nav>
 
 
     <!--banner部分-->

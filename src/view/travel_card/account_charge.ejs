@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>支付完成</title>
+    <link rel="stylesheet"  href="../../css/jf_travel_card.css">
+</head>
+
+<body>
+
+  <!--导航-->
+    <%- include('../../component/basic/topNav.ejs',{
+    "thisrighthref":"jfSwitch.goBack()",
+    "navtitle":"账户充值",
+    "thislefthref":"#",
+    "thisimgsrc":"../../images/icon_pay_meau.png"
+    })%>
+
+  <!--提示-->
+  <div class="recharge_balance"><img src="../../images/zfb/icon_warning.png"><p>温馨提示：卡内资金不可超过1000元，账户资金没有上限</p></div>
+
+  <!--充值以及输入-->
+<div class="card_panel">
+
+    <div class="title">卡号<img src="../../images/icon_nav_helpcenter_3.png"></div>
+
+    <div class="cards_num">
+        <input class="write_cards" type="tel" pattern="[0-9]" placeholder="请输入卡号">
+        <select class="choose_cards">
+            <option></option>
+            <option>12345678963</option>
+            <option>98745612301</option>
+            <option>74185296332</option>
+            <option>36925814778</option>
+        </select>
+        <span class="wrong_text"></span>
+    </div>
+
+
+
+</div>
+
+
+
+
+</body>
+<!--<script src="../../js/jf_travel_card.js"></script>-->
+<script>
+    jfCustomerService.init(
+            {//用户信息
+                name: '阿陈',// 名字
+                address: '西伯利亚',// 地址
+                email: '1313@qq.com',// 邮箱
+                age: '16',// 年龄
+                tel: '110',// 电话
+                comment: '很帅',// 备注
+                gender: '男',// 性别
+                qq: '1234567',// QQ
+                weibo: '',// 微博
+                weixin: '',// 微信
+                '公司名称': '上海淘略数据有限公司',
+                '公司编号': '123ksuhdaf891274',
+                '员工编号': '1234567890123456'
+            },
+            //指定客服
+            'b040d96757bf55ea302f9fbfb0ecd062'
+    )
+</script>
+
+
+
+</html>

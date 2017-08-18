@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>圈存机地址</title>
+    <link rel="stylesheet"  href="../../css/jf_city_travel_card.css">
+
+</head>
+<body>
+
+    <!--顶部固定导航-->
+
+    <!--导航-->
+    <%- include('../../component/basic/topNav.ejs',{
+    "thisrighthref":"jfSwitch.goBack()",
+    "navtitle":"圈存机地址",
+    "thislefthref":"",
+    "thisimgsrc":" "
+    })%>
+
+    <!--圈存流程-->
+    <%- include('../../component/city_travel_card/travel_help_center/transfer_machine.ejs')%>
+
+</body>
+</html>
