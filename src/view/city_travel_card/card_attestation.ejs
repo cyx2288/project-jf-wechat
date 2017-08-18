@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>卡片认证</title>
+    <link rel="stylesheet"  href="../../css/jf_vipRequire.css">
+</head>
+
+<body>
+
+<!--导航-->
+<%- include('../../component/basic/topNav.ejs',{
+"thisrighthref":"",
+"navtitle":"卡片认证",
+"thislefthref":"#",
+"thisimgsrc":" "
+})%>
+<!--输入-->
+<div class="jf_lists">
+
+    <!--输入姓名-->
+    <%- include('../../component/vipRequire/addCard/inputNumber.ejs',{
+    "title":"姓名",
+    "placeholder":"请填写您的姓名",
+    "value":""
+    }) %>
+
+    <!--输入手机号-->
+    <%- include('../../component/vipRequire/addCard/inputNumber.ejs',{
+    "title":"手机号",
+    "placeholder":"请输入手机号",
+    "value":""
+    }) %>
+
+    <!--输入身份证号-->
+    <%- include('../../component/vipRequire/addCard/inputNumber.ejs',{
+    "title":"身份证号",
+    "placeholder":"请输入身份证号",
+    "value":""
+    }) %>
+</div>
+
+<!--按钮-->
+
+<div class="jf_btn_area">
+
+    <%- include('../../component/vipRequire/addCard/buttonBlue.ejs',{
+    "text":"去认证",
+    "href":"#"
+    }) %>
+
+
+</div>
+
+</body>
+<script src="../../lib/js/LAreaData2.min.js"></script>
+<script src="../../js/jf_vipRequire.js"></script>
+<script>
+    selectAreaBank()
+</script>
+
+</html>
