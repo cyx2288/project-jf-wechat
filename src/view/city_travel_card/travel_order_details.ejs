@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>都市旅游卡充值</title>
+    <link rel="stylesheet"  href="../../css/jf_city_travel_card.css">
+    <link rel="stylesheet"  href="../../css/jf_welfare_market.css">
+
+</head>
+
+<body>
+
+<!--顶部固定导航-->
+
+<!--导航-->
+<%- include('../../component/basic/topNav.ejs',{
+"thisrighthref":"jfSwitch.goBack()",
+"navtitle":"订单详情",
+"thislefthref":"",
+"thisimgsrc":" "
+})%>
+
+<!--充值旅游卡-详情-->
+<%- include('../../component/city_travel_card/travel_card_recharge/travel_recharge_order_details.ejs')%>
+
+<!--充值旅游卡-底部按钮-->
+<%- include('../../component/city_travel_card/travel_card_recharge/travel_recharge_button.ejs')%>
+
+
+
+
+
+
+
+
+
+
+</body>
+<script src="../../js/jf_welfare_market.js"></script>
+
+
+
+
+
+</html>

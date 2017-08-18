@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>都市旅游卡</title>
+    <link rel="stylesheet"  href="../../css/jf_city_travel_card.css">
+</head>
+
+<body>
+
+<!--顶部固定导航-->
+
+<!--导航-->
+<%- include('../../component/basic/topNav.ejs',{
+"thisrighthref":"jfSwitch.goBack()",
+"navtitle":"都市旅游卡",
+"thislefthref":"",
+"thisimgsrc":" "
+})%>
+
+<!--旅游卡-引导页背景-->
+<%- include('../../component/city_travel_card/travel_card_guide_page/guide_page_bg.ejs')%>
+
+<!--旅游卡-引导页按钮-->
+<%- include('../../component/city_travel_card/travel_card_guide_page/guide_page_button.ejs')%>
+
+
+
+
+
+
+
+
+</body>
+<script src="../../js/jf_welfare_market.js"></script>
+
+
+
+
+
+</html>
