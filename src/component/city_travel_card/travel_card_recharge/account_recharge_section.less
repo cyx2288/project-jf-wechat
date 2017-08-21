@@ -138,8 +138,8 @@
       &:nth-child(2),&:nth-child(5){
        margin: 0 10px;
 
-        @media screen and(max-width: 380px) {
-          margin: 0 8px;
+        @media screen and(max-width: 390px) {
+          margin: 0 6px;
         }
 
         @media screen and(max-width: 330px) {
@@ -169,6 +169,10 @@
   color: #10A6E2;
   text-align: center;
   margin-top: 30px;
+  @media screen and(max-width:380px ) {
+    margin-top: 20px;
+  }
+
 }
 
 .bottom_text{
@@ -179,6 +183,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media screen and(max-width:380px ) {
+    bottom: 10px;
+  }
 
   a{
     display: block;
@@ -278,4 +286,9 @@
   .box_gray{
     opacity:0.6
   }
+}
+
+
+#tip_dialog .text_dialog_container .text_big{
+  font-size: 20px;
 }
