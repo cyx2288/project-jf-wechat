@@ -3,15 +3,18 @@
   background: -o-linear-gradient(bottom,rgba(16,166,226,1),rgba(141,212,241,1)); /* Opera 11.1 - 12*/
   background: -moz-linear-gradient(bottom,rgba(16,166,226,1),rgba(141,212,241,1)); /* Firefox 3.6 - 15*/
   width: 100%;
-  height: 100%;
-  padding-top: 30%;
+  height: calc(~"100vh - 45px");
   .public_signal_bgd {
     background-color: #FFFFFF;
     border-radius: 15px;
-    width: 90%;
+    width: 80%;
     padding: 20px 0;
-    box-shadow: 0 2px 0 0 #535353;
+    box-shadow: 0 2px 3px #e9e9e9;
     margin:0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0);
     .public_simg_place{
       position: relative;
       display: flex;
@@ -35,7 +38,16 @@
       color: #10a6e2;
       font-size: 14px;
       text-align: center;
-      margin-top: 20px;
+      margin-top:15px;
+    }
+
+    .card_logo{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate3d(-50%,-50%,0);
+      width: 65px;
+      z-index: 1000;
     }
   }
 }

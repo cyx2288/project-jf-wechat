@@ -3,7 +3,7 @@
  */
 
 /*tab切换*/
-function TravelTabChange(num){
+function TravelTabChange(num,text){
 
     var tabChangeContent=document.getElementsByClassName('section_value')[0];//tab主体内容
 
@@ -18,6 +18,8 @@ function TravelTabChange(num){
     tabChangeContent.style.transform="translate3d("+needTranslateX+"px,0,0)";
 
     tabChangeContent.style.webkitTransform="translate3d("+needTranslateX+"px,0,0)";
+
+    document.getElementsByClassName('tips')[0].innerHTML=""+text+"";
 
     document.getElementsByClassName('show')[0].className="";
 

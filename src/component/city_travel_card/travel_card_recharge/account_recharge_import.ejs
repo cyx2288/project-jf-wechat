@@ -1,6 +1,6 @@
 <!--账户充值-输入框-->
 <div class="account_import">
-    <div class="import_text">卡号<img src="../../../images/travel/icon_news_step1.png"/> </div>
+    <div class="import_text">卡号<img src="../../images/travel/icon_news_step1.png"/> </div>
     <div class="import_number">
         <input class="number_text" type="number" pattern="[0-9]*" placeholder="请输入卡号" maxlength="11">
         <p class="show_error">格式有误</p>
@@ -53,8 +53,8 @@
         if(thiscardNum.length==11){
 
             jfShowTips.dialogShow({
-                "mainText": "提示",
-                "minText": "该卡片未认证",
+                "mainText": "该卡片未认证，请填写认证信息",
+                "minText": " ",
                 "checkFn": function () {
                   window.location.href='card_attestation.html'
                 }
