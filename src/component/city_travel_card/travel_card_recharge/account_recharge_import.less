@@ -7,23 +7,33 @@
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   .import_text{
-    font-size: 18px;
+    font-size: 16px;
     vertical-align: text-top;
-    line-height: 50px;
     white-space: nowrap;
     margin: 0 10px;
+
+    &:active{
+      background: #DDDDDD;
+    }
     img{
       width: 16px;
       padding-left: 5px;
+      vertical-align: inherit;
     }
   }
   .import_number{
     width: 75%;
+    position: relative;
     p{
       margin-top: -14px;
       color: #ff4646;
       font-size: 12px;
+      display: none;
+      position: absolute;
+      top: 38px;
+      left: 0;
     }
     .number_text{
       width: 100%;
@@ -31,20 +41,29 @@
       outline: 0;
       appearance: none;
       background-color: transparent;
-      font-size: 18px;
-      color: #FFFFFF;
-      line-height:50px;
+      font-size: 20px;
+      line-height: 22px;
     }
   }
   .import_select{
-    width: 16%;
-    margin-right: 10px;
+    width: 20%;
+    position: relative;
     .number_choose{
       direction: rtl;
       width: 100%;
       border: 0;
       appearance: none;
       height: 64px;
+      border-radius: 10px;
+      background: transparent;
+      color: transparent;
+      z-index: 100;
+      position: relative;
+
+      &:active{
+        background: #DDDDDD;
+        color: #DDDDDD;
+      }
     }
     &.import_arrow:after{
       content: " ";
@@ -56,9 +75,10 @@
       border-style: solid;
       transform: rotate(45deg);
       position: absolute;
-      top:16%;
+      top: 24px;
       margin-top: -4px;
-      right: 24px;
+      right: 18px;
+      z-index: 1;
     }
   }
 

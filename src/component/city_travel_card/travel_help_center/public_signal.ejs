@@ -4,15 +4,19 @@
 
     <div class="public_signal_bgd">
 
-        <div class="public_simg_place">
-
-            <img class="public_signal_img" src="../../images/travel/icon_travel_qr_code.png">
-
-            <img class="public_signal_logo" src="../../images/travel/icon_travel_logo.png">
-
-        </div>
+        <div class="public_simg_place" id="QR_code"></div>
+        <img src="../../images/travel/icon_travel_logo.png" class="card_logo">
         <p class="public_signal_font">更多服务请关注都市旅游卡官方微信公众号</p>
     </div>
 
 </div>
 
+<script>
+    var qrcode = new QRCode('QR_code',{
+
+        text:'http://www.baidu.com',             //输入二维码解析网址
+        correctLevel : QRCode.CorrectLevel.H     //容错率30%
+
+    })
+
+</script>

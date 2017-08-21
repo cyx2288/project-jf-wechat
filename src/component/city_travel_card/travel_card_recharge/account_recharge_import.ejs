@@ -1,16 +1,68 @@
 <!--账户充值-输入框-->
 <div class="account_import">
-    <div class="import_text">卡号<img src="../../../images/travel/icon_news_step1.png"/> </div>
+    <div class="import_text">卡号<img src="../../images/travel/icon_news_step1.png"/> </div>
     <div class="import_number">
-        <input class="number_text" type="number" pattern="" placeholder="请输入卡号">
-        <p>格式有误</p>
+        <input class="number_text" type="number" pattern="[0-9]*" placeholder="请输入卡号" maxlength="11">
+        <p class="show_error">格式有误</p>
     </div>
     <div class="import_select import_arrow">
         <select class="number_choose">
-            <option></option>
-            <option>6222 8065 623</option>
-            <option>6222 8065 623</option>
-            <option>6222 8065 623</option>
+            <option>29824962455256512</option>
+            <option>6256255255215622</option>
+            <option>4656235965625965</option>
+            <option>16826742652</option>
+            <option>3691455814254112</option>
         </select>
     </div>
 </div>
+<script>
+    //充值步骤弹出框
+    showStepBox()
+
+
+    //选择卡号
+    chooseCard()
+
+    document.getElementsByClassName('number_text')[0].addEventListener('blur',function(){
+        showErrorText(this,'格式错误啦')//参数一元素本身，参数二报错文本
+    },false)
+
+
+
+    //焦点状态，报错信息删除
+    document.getElementsByClassName('number_text')[0].addEventListener('focus',function(){
+
+        var thiscardNum=this.value;
+
+        var showError=document.getElementsByClassName('show_error')[0];
+
+        if(showError.style.display=='block'){
+
+            showError.style.display='none';
+        }
+    },false)
+
+
+
+    document.getElementsByClassName('number_text')[0].addEventListener('keyup',function(){
+
+        var thiscardNum=this.value;
+
+        var showError=document.getElementsByClassName('show_error')[0];
+
+        if(thiscardNum.length==11){
+
+            jfShowTips.dialogShow({
+                "mainText": "该卡片未认证，请填写认证信息",
+                "minText": " ",
+                "checkFn": function () {
+                  window.location.href='card_attestation.html'
+                }
+            });
+        }
+    },false)
+
+
+
+
+</script>

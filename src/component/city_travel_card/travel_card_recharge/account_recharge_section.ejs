@@ -1,39 +1,139 @@
 <!--账户充值-内容-->
 <div class="recharge_section">
     <div class="section_tab">
-        <a class="recharge_title">充值</a>
-        <a class="recharge_title">账户查询</a>
+        <div class="recharge_title show" onclick="TravelTabChange(0,'开内卡内资金不可超过1000元，账户资金没有上限')">充值</div>
+        <div class="recharge_title" onclick="TravelTabChange(1,'由于数据传输到地址存在一定超时，卡内余额仅供参考')">账户查询</div>
     </div>
     <div class="section_value">
-        <div class="value_number">
-            <div>50.00元</div>
-            <div class="value_text">售价：49.75元</div>
+
+        <div class="content_one">
+
+            <div>
+                <div class="value_number" id="value_number">
+                    <div>50.00元</div>
+                    <div class="value_text">售价：49.75元</div>
+                </div>
+                <div class="value_number" onclick="orderDragUp.run()">
+                    <div>50.00元</div>
+                    <div class="value_text">售价：49.75元</div>
+                </div>
+                <div class="value_number" onclick="orderDragUp.run()">
+                    <div>50.00元</div>
+                    <div class="value_text">售价：49.75元</div>
+                </div>
+                <div class="value_number" onclick="orderDragUp.run()">
+                    <div>50.00元</div>
+                    <div class="value_text">售价：49.75元</div>
+                </div>
+                <div class="value_number" onclick="orderDragUp.run()">
+                    <div>50.00元</div>
+                    <div class="value_text">售价：49.75元</div>
+                </div>
+                <div class="value_number" onclick="orderDragUp.run()">
+                    <div>50.00元</div>
+                    <div class="value_text">售价：49.75元</div>
+                </div>
+            </div>
+
         </div>
-        <div class="value_number">
-            <div>50.00元</div>
-            <div class="value_text">售价：49.75元</div>
+
+        <div class="content_two">
+
+            <div class="jf_lists">
+
+                <a class="jf_list jf_list_access">
+                    <div class="jf_list_bd">
+                        <p>圈存密码</p>
+                    </div>
+                    <div class="jf_list_ft blue_text">
+                        忘记密码？请至都市旅游卡官方修改
+                    </div>
+                </a>
+
+                <a class="jf_list jf_list_access">
+                    <div class="jf_list_bd">
+                        <p>余额</p>
+                    </div>
+                    <div class="jf_list_ft">
+                       100
+                    </div>
+                </a>
+
+                <a class="jf_list jf_list_access">
+                    <div class="jf_list_bd">
+                        <p>待圈存</p>
+                    </div>
+                    <div class="jf_list_ft">
+                       100
+                    </div>
+                </a>
+
+            </div>
+
         </div>
-        <div class="value_number">
-            <div>50.00元</div>
-            <div class="value_text">售价：49.75元</div>
-        </div>
-        <div class="value_number">
-            <div>50.00元</div>
-            <div class="value_text">售价：49.75元</div>
-        </div>
-        <div class="value_number">
-            <div>50.00元</div>
-            <div class="value_text">售价：49.75元</div>
-        </div>
-        <div class="value_number">
-            <div>50.00元</div>
-            <div class="value_text">售价：49.75元</div>
-        </div>
+
 
 
 
     </div>
 
+</div>
 
+<a class="travel_agreement" href="travel_card_purchase_notes.html">《上海市旅游卡购买规则》</a>
+
+
+<div class="bottom_text">
+    <a class="help" href="travel_card_help_center.html">帮助中心</a>
+    <a class="customer" onclick="jfCustomerService.click()">联系客服</a>
+</div>
+
+
+<div class="charge_step_box">
+
+    <div class="box_main">
+        <p>请按照以下流程完成充值</p>
+
+        <div>
+            <p>1.输入卡号</p>
+            <div>
+                <img src="../../images/travel/icon_travel_card.jpg">
+            </div>
+            <p>2.选择金额，完成支付</p>
+            <p>3.前往线下圈存机完成圈存 <a href="travel_card_transfer_process.html">圈存流程</a></p>
+        </div>
+
+        <div class="sure">确定</div>
+    </div>
+
+    <div class="box_gray"></div>
 
 </div>
+
+<script>
+
+
+
+    jfCustomerService.init(
+            {//用户信息
+                name: '阿陈',// 名字
+                address: '西伯利亚',// 地址
+                email: '1313@qq.com',// 邮箱
+                age: '16',// 年龄
+                tel: '110',// 电话
+                comment: '很帅',// 备注
+                gender: '男',// 性别
+                qq: '1234567',// QQ
+                weibo: '',// 微博
+                weixin: '',// 微信
+                '公司名称': '上海淘略数据有限公司',
+                '公司编号': '123ksuhdaf891274',
+                '员工编号': '1234567890123456'
+            },
+            //指定客服
+            'b040d96757bf55ea302f9fbfb0ecd062'
+    )
+
+
+
+
+</script>

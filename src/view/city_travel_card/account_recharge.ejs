@@ -3,7 +3,6 @@
 <head>
     <title>账户充值</title>
     <link rel="stylesheet"  href="../../css/jf_city_travel_card.css">
-    <link rel="stylesheet" href="../../css/jf_cash_account.css">
 </head>
 
 <body>
@@ -22,9 +21,7 @@
     <div class="tab_bd"></div>
     <div class="recharge_balance">
         <img src="../../images/cash/icon_voice.png">
-        <span>
-                <p>卡内资金不可超过1000元，账户资金没有上限</p>
-            </span>
+        <span><p class="tips">卡内资金不可超过1000元，账户资金没有上限</p></span>
     </div>
 </a>
 
@@ -33,6 +30,8 @@
 
 <!--账户充值-内容-->
 <%- include('../../component/city_travel_card/travel_card_recharge/account_recharge_section.ejs')%>
+
+<%- include('../../component/city_travel_card/travel_card_recharge/check_order.ejs')%>
 
 
 
@@ -43,7 +42,8 @@
 
 
 </body>
-<script src="../../js/jf_welfare_market.js"></script>
+<script src="../../js/jf_city_travel_card.js"></script>
+
 
 
 
