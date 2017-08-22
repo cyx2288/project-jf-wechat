@@ -21,63 +21,75 @@ function devEjs(){
         .pipe(ejs())
 
     //增加媒体查询，通用样式文件
-        .pipe(cheerio(function ($) {
+        .pipe(cheerio({
+            run:function ($) {
 
-            var addHtml = "\n<meta charset='UTF-8'>\n";
+                var addHtml = "\n<meta charset='UTF-8'>\n";
 
-            addHtml += "<meta name='viewport' content='width=device-width,initial-scale=1,user-scalable=0,minimum-scale=1, maximum-scale=1'>\n";
+                addHtml += "<meta name='viewport' content='width=device-width,initial-scale=1,user-scalable=0,minimum-scale=1, maximum-scale=1'>\n";
 
-            addHtml += "<meta name='apple-mobile-web-app-capable' content='yes' />\n";
+                addHtml += "<meta name='apple-mobile-web-app-capable' content='yes' />\n";
 
-            addHtml += "<meta name='apple-mobile-web-app-status-bar-style' content='black' />\n";
+                addHtml += "<meta name='apple-mobile-web-app-status-bar-style' content='black' />\n";
 
-            addHtml += "<meta name='format-detection' content='telephone=no, email=no' />\n";
+                addHtml += "<meta name='format-detection' content='telephone=no, email=no' />\n";
 
-           // addHtml += "<link rel='stylesheet'  href='../../lib/css/swiper_3.3.1.min.css'/>\n<link rel='stylesheet'  href='../../lib/css/weui.min.css'/>\n";//最基础样式文件
+                // addHtml += "<link rel='stylesheet'  href='../../lib/css/swiper_3.3.1.min.css'/>\n<link rel='stylesheet'  href='../../lib/css/weui.min.css'/>\n";//最基础样式文件
 
-            addHtml += "<link rel='stylesheet'  href='../../css/jf_basic.css'/>\n";
-
-
-            $('head').prepend(addHtml);
+                addHtml += "<link rel='stylesheet'  href='../../css/jf_basic.css'/>\n";
 
 
+                $('head').prepend(addHtml);
+
+            },
+            parserOptions: {
+                // Options here
+                decodeEntities: false
+            }
 
         }))
 
     //顺序增加脚本文件
-    .pipe(cheerio(function($){
-        var addJsMain = '\n<script src="../../lib/js/jquery-3.0.0.min.js"></script>\n<script src="../../lib/js/fastclick.js"></script>\n<script src="../../js/jf_basic.js"></script>\n';//主要的脚本文件
+    .pipe(cheerio({
 
-        var addJsHtml="";//保存用的业务脚本
+        run:function($){
+            var addJsMain = '\n<script src="../../lib/js/jquery-3.0.0.min.js"></script>\n<script src="../../lib/js/fastclick.min.js"></script>\n<script src="../../js/jf_basic.js"></script>\n';//主要的脚本文件
 
-        var addJsRun="<script>\n";//运行的脚本
+            var addJsHtml="";//保存用的业务脚本
 
-        var addJsHtmlHead="<script src='";
+            var addJsRun="<script>\n";//运行的脚本
 
-        var addJSHtmlBottom = "'></script>\n";
+            var addJsHtmlHead="<script src='";
 
-        $('script').each(function(index,ele){
+            var addJSHtmlBottom = "'></script>\n";
 
-            if($(this).attr('src')){
+            $('script').each(function(index,ele){
 
-                addJsHtml+=addJsHtmlHead+$(this).attr('src')+addJSHtmlBottom;
+                if($(this).attr('src')){
 
-            }else {
-                addJsRun += $(this).html() + '\n';
-            }
+                    addJsHtml+=addJsHtmlHead+$(this).attr('src')+addJSHtmlBottom;
 
-        })
+                }else {
+                    addJsRun += $(this).html() + '\n';
+                }
 
-        addJsRun += "\n</script>\n";
+            })
 
-        $('script').remove();
+            addJsRun += "\n</script>\n";
 
-        $('body').append(addJsMain);
+            $('script').remove();
 
-        $('body').append(addJsHtml);
+            $('body').append(addJsMain);
 
-        $('body').append(addJsRun);
+            $('body').append(addJsHtml);
 
+            $('body').append(addJsRun);
+
+        },
+        parserOptions: {
+            // Options here
+            decodeEntities: false
+        }
     }))
 
         .pipe(rename({

@@ -48,7 +48,7 @@ gulp.task('devWatch',function () {
     gulp.watch(['src/icon/*.*','src/images/**/*.*'], ['imageMinDev']);
 
     //html文件修改，重新拼接，刷新
-    gulp.watch(['src/**/*.ejs'], ['fileIncludeDev']);
+    gulp.watch(['src/**/*.{ejs,html}'], ['fileIncludeDev']);
 
     //js文件修改，重新拼接，刷新
     gulp.watch(['src/**/*.js'],['changeJsDev'])

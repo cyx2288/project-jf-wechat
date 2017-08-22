@@ -1,0 +1,382 @@
+/*我的样式--个人中心*/
+
+/*姓名头部样式*/
+.jiafu_mine {
+  padding-bottom: 20px;
+}
+
+.jiafu_mine .mine_bg {
+  padding: 15px 15px 5px;
+  -webkit-background: -webkit-linear-gradient(225deg,#272b32,#3e4551);
+  background: linear-gradient(-135deg,#272b32,#3e4551);
+  color: #fff;
+}
+.jiafu_mine .mine_bg>a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  color: #fff;
+}
+.jiafu_mine .mine_imf {
+  margin-bottom: 15px;
+}
+.jiafu_mine a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.jiafu_mine .mine_imf>div:first-child {
+  width: 90%;
+}
+.jiafu_mine .mine_imf>div {
+  display: flex;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.jiafu_mine .mine_asset>div:first-child, .jiafu_mine .mine_imf>div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  -webkit-box-pack: justify;
+}
+.jiafu_mine .name_cricle {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #10a6e2;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 50px;
+  margin-right: 10px;
+}
+.jiafu_mine .name_cricle span {
+  color: #10a6e2;
+}
+.jiafu_mine .name_imf {
+  width: 80%;
+}
+.jiafu_mine .mine_imf>div p {
+  font-size: 18px;
+  line-height: 28px;
+}
+.jiafu_mine .mine_imf>div p+p {
+  font-size: 14px;
+  max-height: 35px;
+  overflow: hidden;
+  line-height: 18px;
+  -webkit-opacity: .6;
+  opacity: .6;
+}
+
+.jiafu_mine .mine_asset {
+  position: relative;
+  padding: 5px 0 0;
+}
+.jiafu_mine .mine_asset:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1px;
+  color: #5e626a;
+  width: 100%;
+  border-top: 1px solid #5e626a;
+  -webkit-transform: scaleY(.4);
+  transform: scaleY(.4);
+}
+.jiafu_mine .mine_asset>div:first-child {
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  width: 90%;
+}
+.jiafu_mine .mine_money {
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.jiafu_mine .mine_title {
+  font-size: 12px;
+  -webkit-opacity: .6;
+  opacity: .6;
+}
+.jiafu_mine .mine_arrow img {
+  width: 12px;
+  height: 12px;
+  vertical-align: middle;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  -webkit-opacity: .6;
+  opacity: .6;
+}
+.jiafu_mine .mine_bg>a:active {
+  opacity: .6;
+  -webkit-opacity: .6;
+}
+
+/*我的---订单状态样式*/
+.jiafu_mine .mine_order {
+  padding: 15px 5px;
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.jiafu_mine .mine_shadow {
+  box-shadow: 0 2px 3px #e9e9e9;
+  -webkit-box-shadow: 0 2px 3px #e9e9e9;
+  -moz-box-shadow: 0 2px 3px #e9e9e9;
+}
+.jiafu_mine .mine_order>div {
+  position: relative;
+  float: left;
+  width: 20%;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 18px;
+  font-size: 12px;
+}
+.jiafu_mine a {
+  color: #4a4a4a;
+}
+.jiafu_mine .mine_icon {
+  text-align: center;
+  position: relative;
+}
+.jiafu_mine .mine_icon img {
+  width: 25px;
+  height: 25px;
+}
+.jiafu_mine .mine_boom {
+  top: -5px;
+  left: 55%;
+  background-color: #10a6e2;
+  position: absolute;
+  padding: 0 6px;
+  border-radius: 50px;
+  color: #FFF;
+  z-index: 20;
+  font-size: 10px;
+  vertical-align: sub;
+}
+
+.jiafu_mine .mine_order>div {
+  position: relative;
+  float: left;
+  width: 20%;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 18px;
+  font-size: 12px;
+}
+.jiafu_mine .view_order:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50px;
+  border-left: 1px solid #ddd;
+  -webkit-transform: scaleX(.4);
+  transform: scaleX(.4);
+}
+.jiafu_mine .view_order p+p {
+  margin-left: 4px;
+  font-size: 12px;
+}
+.jiafu_mine .view_order p+p img {
+  width: 10px;
+  height: 10px;
+}
+/*我的---订单状态样式结束*/
+
+
+/*我的---嘉福服务入口样式*/
+
+.jiafu_mine .mine_wallet {
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+.jiafu_mine .mine_wallet:before {
+  content: '';
+  position: absolute;
+  top: 64px;
+  left: 10px;
+  height: 1px;
+  color: #ddd;
+  width: 95%;
+  border-top: 1px solid #ddd;
+  -webkit-transform: scaleY(.4);
+  transform: scaleY(.4);
+}
+.jiafu_mine .mine_box, .jiafu_mine .mine_box+.mine_box {
+  padding: 10px 15px;
+}
+.jiafu_mine .mine_box {
+  position: relative;
+  float: left;
+  width: 50%;
+  box-sizing: border-box;
+}
+.jiafu_mine .mine_box:first-child:after, .jiafu_mine .mine_box:nth-child(3n):after {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 100%;
+  height: 40px;
+  border-left: 1px solid #d9d9d9;
+  color: #d9d9d9;
+  -webkit-transform: scaleX(.4);
+  transform: scaleX(.4);
+}
+.jiafu_mine .mine_box a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-box-align: flex-start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+}
+.jiafu_mine .mine_box>div img {
+  width: 28px;
+  height: 28px;
+  padding: 0 5px;
+}
+.jiafu_mine .mine_box>div p+p {
+  font-size: 14px;
+  color: #ababab;
+}
+.jiafu_mine .mine_box:first-child:after, .jiafu_mine .mine_box:nth-child(3n):after {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 100%;
+  height: 40px;
+  border-left: 1px solid #d9d9d9;
+  color: #d9d9d9;
+  -webkit-transform: scaleX(.4);
+  transform: scaleX(.4);
+}
+
+/*我的---增值服务样式*/
+.jiafu_mine .mine_service {
+  background-color: #fff;
+}
+.jiafu_mine .mine_list {
+  padding: 10px 15px;
+}
+.jiafu_mine .mine_contain {
+  position: relative;
+  overflow: hidden;
+}
+.jiafu_mine .mine_contain:before {
+  content: '';
+  position: absolute;
+  box-sizing: border-box;
+  width: 200%;
+  height: 200%;
+  left: 0;
+  top: 0;
+  border: 1px solid #d9d9d9;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scale(.5);
+  transform: scale(.5);
+}
+.jiafu_mine .wallet_box {
+  position: relative;
+  float: left;
+  padding: 10px;
+  width: 25%;
+  box-sizing: border-box;
+}
+.jiafu_mine .wallet_box:before {
+  content: '';
+  position: absolute;
+  box-sizing: border-box;
+  width: 250%;
+  height: 250%;
+  left: 0;
+  top: 0;
+  border-bottom: 1px solid #d9d9d9;
+  border-right: 1px solid #d9d9d9;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scale(.4);
+  transform: scale(.4);
+}
+.jiafu_mine .wallet_box p {
+  text-align: center;
+}
+.jiafu_mine .wallet_box p>img {
+  width: 28px;
+  height: 28px;
+}
+/*增值*/
+.mine_wallet .jf_list_pic img {
+  width: 25px;
+  margin-right: 5px;
+  display: block;
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+}
+.jiafu_mine .jf_lists{
+  margin-bottom: 0;
+
+}
+
+/*消息中心*/
+.message_tips{
+  .Top_navigation .nav_left img, .Top_navigation .nav_right img {
+    width: 22px;
+  }
+  .Top_navigation .nav_left img, .Top_navigation .nav_right{
+    position: relative;
+  }
+  .message_num{
+    position: absolute;
+    top: 2px;
+    left: 12px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #ff4646;
+    font-size: 10px;
+    display: block;
+    line-height: 14px;
+    text-align: center;
+    z-index: 100;
+
+  }
+}
+
+.weui_tabbar_icon{
+  position: relative;
+  .message_show{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    display: block;
+    right: 0;
+    top:0;
+    background: #ff4646;
+    border-radius: 50%;
+  }
+}

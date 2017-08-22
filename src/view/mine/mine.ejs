@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>我的</title>
+    <link rel="stylesheet"  href="../../css/jf_mine.css">
+</head>
+
+<body>
+
+<div class="message_tips">
+
+    <nav class="Top_navigation">
+        <div class="weui_tab_bd"></div>
+        <div class="container_tab"> <a class="messages" href="../message_center/messages.html">
+                <div class="nav_left" id="nav_left">
+                    <img src="../../images/message/icon_news.png">
+                    <span class="message_num">3</span>
+                </div>
+            </a>
+            <div class="nav_center">
+                <div>个人中心</div>
+            </div>
+            <a href="#">
+                <div class="nav_right">交易明细</div>
+            </a>
+        </div>
+    </nav>
+</div>
+    <!--中间部分-->
+
+    <%- include('../../component/mine/mine.ejs')%>
+
+
+    <!--固定下部导航-->
+
+    <div class="tabbar">
+        <div class="">
+            <div class="weui_tab_bd"></div>
+            <div class="weui_tabbar">
+                <!--<span class="weui_tabbar_position">22</span>
+                -->
+                <a href="../../main.html" class="weui_tabbar_item ">
+                    <div class="weui_tabbar_icon">
+                        <img src="../../icon/icon_homepage_home_black.png" alt="">
+                        <img src="../../icon/icon_homepage_home_blue.png" alt=""></div>
+                    <p class="weui_tabbar_label">购物</p>
+                </a> <a href="../service/jf_service.html" class="weui_tabbar_item">
+                    <div class="weui_tabbar_icon">
+                        <img src="../../icon/icon_homepage_service_black.png" alt="">
+                        <img src="../../icon/icon_homepage_service_blue.png" alt="">
+                    </div>
+                    <p class="weui_tabbar_label">服务</p>
+                </a> <a href="../cards/market_channel_page.html" class="weui_tabbar_item">
+                    <div class="weui_tabbar_icon" id="endFlyCar">
+                        <img src="../../icon/icon_homepage_card_black.png" alt="">
+                        <img src="../../icon/icon_homepage_card_blue.png" alt="">
+                    </div>
+                    <p class="weui_tabbar_label">卡券</p>
+                </a> <a href="javascript:;" class="weui_tabbar_item on">
+                    <div class="weui_tabbar_icon">
+                        <img src="../../images/icon_nav_person_black.png" alt="">
+                        <img src="../../images/icon_nav_person_blue.png" alt="">
+                        <span class="message_show"></span>
+                    </div>
+                    <p class="weui_tabbar_label">我的</p>
+                </a></div>
+        </div>
+    </div>
+
+
+
+
+
+
+<!--<script>
+    //取消消息提示数字
+
+    function cancelMessageTips(clickEle,deleteEle){//参数一是点击当前a标签的class值，参数二是提示的消息角标
+        var thisClickEle=document.getElementsByClassName(clickEle)[0];
+
+        var thishref=thisClickEle.getAttribute('data-href');
+
+        if(deleteEle){
+            var thisMessageTips=thisClickEle.getElementsByClassName(deleteEle)[0];
+
+            if(thisMessageTips.parentNode){
+
+                thisMessageTips.parentNode.removeChild(thisMessageTips);//删除该元素
+            }
+        }
+
+        window.location.href=thishref;
+    }
+
+</script>-->
+</body>
+
+
+
+
+
+</html>

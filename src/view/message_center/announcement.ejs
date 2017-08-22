@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet"  href="../../css/jf_message.css">
+
+</head>
+<body>
+
+    <!--顶部固定导航-->
+
+    <nav class="Top_navigation">
+        <div class="weui_tab_bd"></div>
+        <div class="container_tab"> <a>
+                <div class="nav_left" id="nav_left" onclick="jfSwitch.goBack()"><img src="../../images/icon_pay_return.png"></div>
+            </a>
+            <div class="nav_center">
+                <div>企业公告</div>
+            </div>
+            <a>
+                <div class="nav_right edit">编辑</div>
+            </a>
+        </div>
+    </nav>
+
+
+    <!--消息列表-->
+    <div>
+        <div class="message_list">
+            <p class="message_time">2017.09.25</p>
+
+            <div class="message_content" >
+
+                <label class="messagecheck">
+                    <div class="box">
+                        <input class="aui-radio singlecheck" type="checkbox" name="radio" />
+                    </div>
+
+                    <a class="message_text noread" href="message_center_details.html">
+
+                        <p>关于2017年国庆节放假通知</p>
+
+                        <div class="message_main">
+
+                            <div>根据《国务院办公厅关于2017年部分节假日安排的通知》，结合公司实际情况，结合公司实际情况</div>
+
+                            <div class="right_img">
+                                <img src="../../images/message/icon_pay_return_black.png">
+                            </div>
+
+                        </div>
+
+                    </a>
+
+                </label>
+
+
+
+            </div>
+        </div>
+
+        <div class="message_list">
+            <p class="message_time">2017.09.25</p>
+
+            <div class="message_content" >
+
+                <label class="messagecheck">
+
+                    <div class="box">
+                        <input class="aui-radio singlecheck" type="checkbox" name="radio" />
+                    </div>
+
+                    <a class="message_text noread" href="message_center_details.html">
+
+                        <p>关于2017年国庆节放假通知关于2017年国庆节放假通知关于2017年国庆节放假通知关于2017年国庆节放假通知关于2017年国庆节放假通知</p>
+
+                        <div class="message_main">
+                            <div>
+                                根据《国务院办公厅关于2017年部分节假日安排的通知》，结合公司实际情况，现将2017年国庆节放假安排如下：现将2017年国庆节放假安排如下现将2017年国庆节放假安排如下现将2017年国庆节放假安排如下
+                            </div>
+
+                            <div class="right_img">
+                                <img src="../../images/message/icon_pay_return_black.png">
+                            </div>
+
+                        </div>
+
+                    </a>
+                </label>
+            </div>
+        </div>
+
+        <div class="message_list">
+            <p class="message_time">2017.09.25</p>
+
+            <div class=" message_content" >
+
+                <label class="messagecheck">
+                    <div class="box"><input class="aui-radio singlecheck" type="checkbox" name="radio" /></div>
+
+
+                    <a class="message_text" href="message_center_details.html">
+
+                        <p>关于2017年国庆节放假通知</p>
+
+                        <div class="message_main">
+
+                            <div>根据《国务院办公厅关于2017年部分节假日安排的通知》，结合公司实际情况，现将2017年国庆节放假安排如下：</div>
+
+                            <div class="right_img">
+                                <img src="../../images/message/icon_pay_return_black.png">
+                            </div>
+
+                        </div>
+
+                    </a>
+
+                </label>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+    <!---------------------------置底按钮------------------------>
+    <div class="message_bottom_tab">
+        <div class="tab_bar"></div>
+        <div class="tab_content">
+            <label >
+                <input class="aui-radio checkallbox" type="checkbox" name="radio"  />
+                <span>全选</span>
+            </label>
+
+            <div class="delete_btn">删除</div>
+
+        </div>
+    </div>
+
+</body>
+<script type="text/javascript" src="../../js/jf_message.js"></script>
+<script>
+
+    //编辑，完成按钮任意切换
+    document.getElementsByClassName('edit')[0].addEventListener('click',messageCenter.showCheckBox,false)
+
+
+    //全选
+    document.getElementsByClassName('checkallbox')[0].addEventListener('click',messageCenter.checkALL,false);
+
+
+    //单选（反选）
+    messageCenter.singeCheck('messagecheck');
+
+    messageCenter.singeCheck('box')
+
+
+    //删除按钮
+    document.getElementsByClassName('delete_btn')[0].addEventListener("click",messageCenter.deleteMessageList,false)
+
+
+
+    //删除状态a标签无法点击
+    messageCenter.noclick()
+
+
+
+
+
+</script>
+</html>

@@ -1,0 +1,294 @@
+.recharge_section{
+  width: 95%;
+  background: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(171,171,171, .4);
+  margin: auto;
+  margin-top: 15px;
+  overflow: hidden;
+  &:after{
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+ /*切换按钮*/
+  .section_tab{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    padding: 20px 0;
+    >div{
+      width: 50%;
+      background: none;
+      border-radius: 5px 0 0 5px;
+      margin-left: 10px;
+      margin-right: 0;
+      border: 1px solid #10a6e2;
+      color: #10a6e2;
+      text-align: center;
+      padding: 5px 0;
+      &:nth-child(2){
+        border-radius: 0 5px 5px 0;
+        margin-left: 0;
+        margin-right: 10px;
+      }
+    }
+    .show{
+      background: #10a6e2;
+      color: white;
+    }
+
+  }
+
+  /*充值内容*/
+  .section_value{
+    width: 200%;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transform: translate3d(0,0,0);
+    transition: transform 0.2s linear;
+    .content_one{
+      width: 100%;
+      margin-bottom: 15px;
+
+      >div{
+        width:95%;
+        margin: 0 auto;
+
+        &:after{
+          content: "";
+          display: block;
+          clear: both;
+        }
+      }
+    }
+    .content_two{
+      width: 100%;
+      margin-top: -40px;
+      >div{
+        width:95%;
+        margin: 0 auto;
+
+        .jf_list{
+          padding: 18px 2px;
+
+          &:after{
+            left: 0;
+            width: 100%;
+          }
+
+          p{
+            white-space: nowrap;
+          }
+
+          .jf_list_ft{
+            font-size: 14px;
+            color: #4a4a4a;
+          }
+          .jf_list_ft.blue_text{
+            color: #10A6E2;
+
+            @media screen and(max-width: 330px) {
+              font-size: 12px;
+
+            }
+
+          }
+
+         &:first-child:after{
+            top: 0;
+            border-top: none;
+          }
+        }
+      }
+      .jf_lists:after{
+        content: "";
+        top: 0;
+        border-top:0;
+      }
+
+    }
+
+
+
+    .value_number{
+      width: 28%;
+      border-radius: 5px;
+      background: #fff;
+      border: 1px solid #DDD;
+      font-size: 18px;
+      color: #10a6e2;
+      text-align: center;
+      padding: 12px 5px;
+      float: left;
+      margin-bottom: 15px;
+
+      &:active{
+        border: 1px solid #10a6e2;
+        color: #10a6e2;
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+        outline: 0;
+      }
+
+      &:nth-child(2),&:nth-child(5){
+       margin: 0 10px;
+
+        @media screen and(max-width: 390px) {
+          margin: 0 6px;
+        }
+
+        @media screen and(max-width: 330px) {
+          margin: 0 5px;
+        }
+      }
+
+      .value_text{
+        color: #b8b6b6;
+        font-size: 14px;
+        white-space: nowrap;
+
+        @media screen and(max-width: 330px) {
+          font-size: 12px;
+        }
+      }
+
+
+    }
+  }
+
+
+}
+
+.travel_agreement{
+  display: block;
+  color: #10A6E2;
+  text-align: center;
+  margin-top: 30px;
+  @media screen and(max-width:380px ) {
+    margin-top: 20px;
+  }
+
+}
+
+.bottom_text{
+  width: 100%;
+  position: relative;
+  left: 0;
+  top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and(max-width:380px ) {
+    top: 30px;
+  }
+
+  a{
+    display: block;
+    margin: 0 5px;
+    position: relative;
+    color: #10A6E2;
+
+    &:first-child:after{
+      content: "";
+      display: block;
+      position: absolute;
+      right: -5px;
+      top: 0;
+      height:100%;
+      border-right: solid 1px #10A6E2;
+      transform: scale(0.8,0.7);
+
+    }
+  }
+
+}
+
+//弹出框
+.charge_step_box{
+  overflow: hidden;
+  z-index: 99;
+  display: none;
+
+  .box_main{
+    width: 85%;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0) scale(0.8);
+    transition: transform 0.3s linear;
+    z-index: 1000;
+    background: #fff;
+    border-radius: 10px;
+
+
+    >p{
+      width: 100%;
+      text-align: center;
+      font-size: 20px;
+      margin: 20px 0;
+    }
+    >div{
+      width: 90%;
+      margin: 0 auto;
+      font-size: 16px;
+     img{
+       width: 100%;
+     }
+      p{
+        margin: 5px 0;
+
+        a{
+          color: #10A6E2;
+        }
+      }
+    }
+
+    .sure{
+      width: 85%;
+      border: solid 1px #10A6E2;
+      text-align: center;
+      padding: 10px 0;
+      margin: 20px auto;
+      color: #10A6E2;
+      border-radius: 6px;
+     &:active{
+       background: linear-gradient(left,#0ea7e9, #076eba);
+       color: #fff;
+     }
+    }
+  }
+  .box_gray{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    background: #000;
+    opacity: 0;
+  }
+
+
+
+}
+
+.charge_step_box.show{
+  .box_main{
+    transform: translate3d(-50%, -50%, 0) scale(1);
+  }
+  .box_gray{
+    opacity:0.6
+  }
+}
+
+
+#tip_dialog .text_dialog_container .text_big{
+  font-size: 20px;
+}

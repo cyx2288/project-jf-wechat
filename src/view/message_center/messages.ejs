@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>消息中心</title>
+    <link rel="stylesheet"  href="../../css/jf_message.css">
+
+</head>
+<body>
+
+    <!--顶部固定导航-->
+
+    <%- include('../../component/basic/topNav.ejs',{
+    "thisrighthref":"jfSwitch.goBack()",
+    "navtitle":"消息中心",
+    "thislefthref":"#",
+    "thisimgsrc":" "
+    })%>
+
+    <!--企业公告-->
+
+    <a data-href="announcement.html" class="announcement" onclick="messageCenter.cancelMessageTips('announcement','right_red')">
+
+        <div class="announcement_center">
+            <div class="message_center_plate">
+                <div class="blue_box_into">
+                    <div class="red_prompt">
+                        <img class="icon_mail" src="../../images/message/icon_announcement.png">
+                        <div class="right_red">3</div>
+                    </div>
+                    <div class="message_center_font"><p class="top_boxfont">企业公告</p>
+                        <p class="bottom_boxfont">关于2017年国庆放假通知你现在就可以知道什么时候放假了</p>
+                    </div>
+                </div>
+                <div class="first_plateright"><img class="left_icon" src="../../images/message/icon_pay_return_black.png"></div>
+            </div>
+        </div>
+
+    </a>
+
+    <!--通知消息-->
+
+    <a data-href="inform.html" class="inform" onclick="messageCenter.cancelMessageTips('inform','')">
+
+    <div class="announcement_center">
+        <div class="message_center_plate">
+            <div class="blue_box_into">
+                <div class="red_prompt">
+                    <img class="icon_mail" src="../../images/message/icon_inform_news.png">
+                    <div class="right_red">99</div>
+                </div>
+
+                <div class="message_center_font"><p class="top_boxfont">通知消息</p><p class="bottom_boxfont">暂无通知消息</p></div>
+            </div>
+            <div class="first_plateright"><img class="left_icon" src="../../images/message/icon_pay_return_black.png"></div>
+        </div>
+    </div>
+
+    </a>
+    <script type="text/javascript" src="../../js/jf_message.js"></script>
+</body>
+</html>

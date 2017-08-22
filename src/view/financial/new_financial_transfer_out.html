@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WeUI-pay</title>
+    <link rel="stylesheet" href="../../css/jf_financial.css">
+</head>
+<body>
+<!-- 顶部导航 -->
+<nav class="Top_navigation">
+    <div class="weui_tab_bd"></div>
+    <div class="container_tab"> <a onclick="jfSwitch.goBack()">
+        <div class="nav_left"><img src="../../images/icon_pay_return.png"></div>
+    </a>
+        <div class="nav_center">
+            <div>福利增值转出</div>
+        </div>
+        <a href="#">
+            <div class="nav_right"></div>
+        </a> </div>
+</nav>
+<!-- 顶部导航 结束-->
+
+
+<div class="financial_transfer_tab">
+    <div class="tab_bar">
+        <div onclick="finanicalTabChange(0)" class="show">转出到现金账户</div>
+        <div onclick="finanicalTabChange(1)">转出到福利账户</div>
+    </div>
+    <div class="tab_tips"></div>
+    <div class="tab_content">
+        <div class="content_one">
+            <div class="financial_current_step1_go">
+                <div class="container_shadow out_point">
+                    <!--输入金额-->
+                    <div class="jiafu_balance">
+                        <div>转出到现金余额</div>
+                        <div><img src="../../images/financial/icon_curret_sun.png"> <input class="weui_input input_num" type="number" pattern="[0-9]*" placeholder="输入金额"></div>
+                    </div>
+                    <!--输入结束-->
+                    <div class="payment_date">
+                        <div class="font_gray"><img src="../../images/financial/icon_curret_money.png">本次最多可转出<span>123.20</span></div>
+
+                    </div>
+                    <!--阅读协议-->
+                </div>
+
+
+                <!--确认转入-->
+                <div class="weui_opr_area">
+                    <p class="weui_btn_area">
+                        <a href="javascript:" class="weui_btn btn_red">确认转出</a> </p>
+                </div>
+            </div>
+
+    </div>
+
+        <div class="content_two">
+            <div class="financial_current_step1_go">
+                <div class="container_shadow out_point">
+                    <!--输入金额-->
+                    <div class="jiafu_balance">
+                        <div>转出到福利余额</div>
+                        <div><img src="../../images/financial/icon_welfare_out.png"> <input class="weui_input input_num" type="number" pattern="[0-9]*" placeholder="输入金额"></div>
+                    </div>
+                    <!--输入结束-->
+                    <div class="payment_date">
+                        <div class="font_gray"><img src="../../images/financial/icon_cash_out.png">本次最多可转出<span>123.20</span></div>
+
+                    </div>
+                    <!--阅读协议-->
+                </div>
+
+
+                <!--确认转入-->
+                <div class="weui_opr_area">
+                    <p class="weui_btn_area">
+                        <a href="javascript:" class="weui_btn btn_red">确认转出</a> </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    function finanicalTabChange(num){
+
+        var tabChangeContent=document.getElementsByClassName('tab_content')[0];//tab主体内容
+
+        var tabTips=document.getElementsByClassName('tab_tips')[0];//提示箭头
+
+        var tabChangeBar=document.getElementsByClassName('tab_bar')[0].getElementsByTagName('div');//tab选项
+
+        var thisWindowWidth=window.innerWidth;
+
+        var needTranslateX=-parseFloat(num)*thisWindowWidth;
+
+        var tipsTranslateX=parseFloat(num)*tabTips.offsetWidth;
+
+        tabTips.style.transform="translate3d("+tipsTranslateX+"px,0 ,0)";
+
+        tabTips.style.webkitTransform="translate3d("+tipsTranslateX+"px,0 ,0)";
+
+        tabChangeContent.style.transform="translate3d("+needTranslateX+"px,0,0)";
+
+        tabChangeContent.style.webkitTransform="translate3d("+needTranslateX+"px,0,0)";
+
+        document.getElementsByClassName('show')[0].className="";
+
+        tabChangeBar[num].className="show";
+
+    }
+
+</script>
+</body>
+
+
+
+
+</html>

@@ -1,0 +1,51 @@
+/*******时间日期，范围，发布人*******/
+.center_details_place {
+  margin: 0 auto;
+  width: 95%;
+  color: #ababab;
+
+  p{
+    width: 50%;
+    text-align: left;
+    float: left;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: flex-start;
+
+    span{
+      &:first-child{
+        white-space: nowrap;
+      }
+    }
+  }
+
+  &:after{
+    content: "";
+    clear: both;
+    display: block;
+  }
+
+}
+.center_details_top {
+  margin-top: 20px;
+}
+.center_details_next {
+  margin-top: 10px;
+}
+.center_detailsright {
+  color: #4A4A4A;
+  width: 95%;
+  margin: 40px 10px auto;
+  >p{
+
+    &:nth-child(3){
+      text-align: right;
+      margin-top: 10px;
+      padding-right: 10px;
+    }
+    &:nth-child(4){
+      text-align: right;
+    }
+  }
+
+}
