@@ -37,6 +37,13 @@ var messageCenter={
 
             }
 
+            var allCheckBox=document.getElementsByClassName('aui-radio');
+
+            for(var j=0;j<allCheckBox.length;j++){
+
+                allCheckBox[j].checked=false
+            }
+
             document.getElementsByClassName('tab_content')[0].style.transform="translate3d(0,100%,0)";
 
         }
