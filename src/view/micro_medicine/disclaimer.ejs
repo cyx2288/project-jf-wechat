@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>免责声明</title>
+    <link rel="stylesheet" href="../../css/jf_micro_medicine.css">
+
+</head>
+<body>
+
+    <!--顶部固定导航-->
+
+    <!--导航-->
+    <%- include('../../component/basic/topNav.ejs',{
+    "thisrighthref":"jfSwitch.goBack()",
+    "navtitle":"免责声明",
+    "thislefthref":"",
+    "thisimgsrc":" "
+    })%>
+
+    <!--注意-->
+
+    <%- include('../../component/micro_medicine/text/disclaimer_text.ejs')%>
+
+    <!--确认按钮-->
+
+    <%- include('../../component/micro_medicine/button/button.ejs')%>
+
+</body>
+</html>
