@@ -1,0 +1,50 @@
+/*******文本详情******/
+.notes_text {
+  display: flex;
+  justify-content: center;
+  p {
+    width: 95%;
+    margin: 10px 0;
+    text-indent: 2em;
+  }
+}
+/*******复选按钮******/
+.agreen_plate {
+  text-align: center;
+  padding: 5px 0;
+  font-size: 12px;
+  margin-top: 60px;
+  input{
+    -webkit-appearance: none;
+    appearance: none;
+    outline: 0;
+    font-size: 0;
+    border: 1px solid #ddd;
+    background-color: #fff;;
+    border-radius: 3px;
+    width: 13px;
+    height: 13px;
+    position: relative;
+    vertical-align: 0;
+    top: 2px;
+
+    &:checked:before{
+      content: "";
+      position: absolute;
+      display: block;
+      width: 5px;
+      height: 10px;
+      left: 3px;
+      top: -2px;
+      border-bottom: solid 1px #10a6e1;
+      border-right: solid 1px #10a6e1;
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+
+    }
+  }
+
+  a{
+    color: #10a6e1;
+  }
+}
