@@ -58,11 +58,17 @@
 
 <script>
 
+
+
+
     window.onload=function() {
+
+
+        showInitNum('5000');//显示初始卖出福利；参数为当前可以卖出的福利余额数字
+
 
         setTimeout(function () {
 
-            jfkeybroad.run();//页面初始的时候，开启键盘；
 
             //判断下一步按钮是否可以点击（判断输入框里面有没有值，以及协议有没有被选中）
             $('body').on('touchstart', ".weui_grid", function () {
