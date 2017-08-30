@@ -34,7 +34,7 @@ function changeValue(ele) {
 
             ele.style.opacity="0.2";
 
-            jfShowTips.toastShow({"text":"最高限价¥"+thisMaxPrice+""})
+            jfShowTips.toastShow({"text":"最高价¥"+thisMaxPrice+""})
         }else {
             ele.style.opacity="0.7"
         }
@@ -140,7 +140,7 @@ function getTotalMoney(e){
         totalPrice=parseFloat(thisProNum)*parseFloat(thisProPrice);//总价
 
         if(!buyPage){
-            totalPriceBox.style.height="80px"
+            totalPriceBox.style.height="70px"
         }else {
             totalPriceBox.style.height="45px"
         }
@@ -164,7 +164,7 @@ function getTotalMoney(e){
     if(totalPrice.indexOf('.')>-1){//如果存在小数点
         totalPrice=totalPrice.substring(0,totalPrice.indexOf('.')+3);//提取小数点位小数
     }
-    showMoneyBox.innerHTML=parseFloat(totalPrice).toFixed(2);//如果只存在以为小数，默认加一位0
+    showMoneyBox.innerHTML='¥'+parseFloat(totalPrice).toFixed(2);//如果只存在以为小数，默认加一位0
 
 }
 
@@ -239,6 +239,43 @@ function getOrderData(){
     document.getElementsByClassName('buy_price')[0].innerHTML='￥'+thisProPrice;
 
     document.getElementsByClassName('total_cost')[0].innerHTML='￥'+showMoneyBox
+
+}
+
+
+
+function showInitNum(num){
+
+    var thisInitHtml="";
+
+   for(var i=0;i<num.length;i++){
+
+       thisInitHtml+='<span>'+num[i]+'</span>'
+   };
+
+    document.getElementById('savekeyNum').innerHTML=thisInitHtml;
+
+    document.getElementById('key_input').value=num;
+
+    var showMoneyBox=document.getElementsByClassName('money_box')[0];//显示金额
+
+    var totalPrice;
+
+    var thisProPrice=document.getElementsByClassName('inputele')[0].value;//买入单价
+
+    totalPrice=parseFloat(num)*parseFloat(thisProPrice);//总价
+
+    totalPrice=totalPrice.toString();
+
+    if(totalPrice.indexOf('.')>-1){//如果存在小数点
+        totalPrice=totalPrice.substring(0,totalPrice.indexOf('.')+3);//提取小数点位小数
+    }
+    showMoneyBox.innerHTML='¥'+parseFloat(totalPrice).toFixed(2);//如果只存在以为小数，默认加一位0;
+
+
+   document.getElementsByClassName('market_total_price')[0].style.height="70px"
+
+    ValiateNextBtn()
 
 }
 
