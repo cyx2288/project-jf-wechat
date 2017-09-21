@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>WeUI-pay</title>
+    <link rel="stylesheet" href="../../css/jf_cash_transfer.css">
+
+</head>
+<body>
+
+<!-- 顶部导航 -->
+
+<nav class="Top_navigation">
+    <div class="weui_tab_bd"></div>
+    <div class="container_tab"> <a onclick="jfSwitch.goBack()">
+            <div class="nav_left"><img src="../../images/icon_pay_return.png"></div>
+        </a>
+        <div class="nav_center">
+            <div>转账给他人</div>
+        </div>
+        <a href="#">
+            <div class="nav_right"></div>
+        </a> </div>
+</nav>
+
+
+<!-- 输入金额-->
+
+<div class="cash_transfer_input_amount_1 box_shadow">
+
+
+    <div class="input_amount_title_1">
+
+        <a>请再次确认账户信息以避免转错账</a>
+
+    </div>
+
+
+    <div class="input_amount_title_check">
+
+        <div>姓名：黄淮虎</div>
+        <div>账户：huangweixiao@tao-lue.com</div>
+
+    </div>
+
+
+    <div class="input_amount_title_check_2">
+
+        <span class="number_RMB">¥</span>
+
+        <div class="transfer_number">
+
+            <div class="keyNumshow" id="transferSavekeyNum"></div>
+
+            <input readonly value="" placeholder="请输入转账金额" class="input_amount_title_numeral" id="transferKeyInput">
+
+        </div>
+
+    </div>
+
+
+    <textarea class="input_amount_remark_3" placeholder="添加备注" rows="1" cols="80" oninput="this.style.posHeight=this.scrollHeight" onfocus="this.style.posHeight=this.scrollHeight"></textarea>
+
+
+</input>
+
+
+</div>
+
+
+<!-- 下一步-->
+
+<div class="cash_transfer_input_confirm">
+
+    <div class="input_amount_confirm">确认转账</div>
+
+</div>
+</body>
+<script>
+
+
+    window.onload=function() {
+
+        setTimeout(function () {
+
+            transferKeybroad.run()
+
+        },300)
+
+
+        var transferKeybroad=new jfNumKeybroad.keyBroadShow({
+
+            "hideButton":"input_amount_confirm",//点击关闭键盘的按钮 class选择器
+
+            "otherHideButton":"input_amount_remark_3",//其他关闭按钮
+
+            "showNumEle":"transferSavekeyNum",//点击出现键盘的元素，并且存储数字，ID选择器,与下面变量是同一元素
+
+            "saveNumEle":"keyNumshow",//显示当前金额的值的元素，用于判断光标，class选择器
+
+            //  "clearButton":"delete",//清除金额按钮，class选择器
+
+            "saveInput":"transferKeyInput",//存入键盘的值，input元素的class选择器
+
+            "MaxNum":"10"//输入的最大位数
+
+        });
+    }
+
+
+</script>
+</html>
