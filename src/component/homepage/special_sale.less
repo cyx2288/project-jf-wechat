@@ -115,12 +115,18 @@
             font-size: 12px;
             margin-top: -5px;
           }
-
-          img{
-            width: 28px;
-            height: 28px;
-            vertical-align: middle;
+          >p.go{
+            &:after{
+              content: "";
+              display: inline-block;
+              width: 28px;
+              height: 28px;
+              background: url("../images/icon_sale_buy.png")center no-repeat;
+              background-size: 100%;
+              vertical-align: middle;
+            }
           }
+
         }
 
       }
@@ -175,6 +181,17 @@
     color: #fff;
     &:active{
       color: #4A4A4A;
+    }
+    &:after{
+      content: "";
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      background: url(../images/icon_view_more1.png) center no-repeat;
+      background-size: 100%;
+      vertical-align: sub;
+      margin-left: 3px;
+
     }
 
 

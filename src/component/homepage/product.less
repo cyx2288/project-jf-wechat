@@ -24,11 +24,7 @@
          font-size: 16px;
        }
      }
-     >p:last-child{
-       color: #DDDDDD;
-       white-space: nowrap;
-       display: none;
-     }
+
    }
     .commom{
       background: url("../images/homepage/icon_pro_bg26.png") center top no-repeat;
@@ -373,11 +369,17 @@
   right: 10px;
   color: #ABABAB;
   top: 40%;
-  img{
+
+  &:after{
+    content: "";
+    display: inline-block;
     width: 16px;
     height: 16px;
+    background: url(../images/icon_view_more.png) center no-repeat;
+    background-size: 100%;
     vertical-align: sub;
-    margin-left: 5px;
+    margin-left: 3px;
+
   }
 
   &:active{
