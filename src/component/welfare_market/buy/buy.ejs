@@ -79,7 +79,7 @@
             //判断下一步按钮是否可以点击（判断输入框里面有没有值，以及协议有没有被选中）
             $('body').on('touchstart', ".weui_grid", function () {
 
-                getTotalMoney();//显示金额出现
+                getTotalMoney(-0.99);//显示金额出现,参数为优惠金额（负数）或者服务费（正数）
 
                 ValiateNextBtn();//判断下一步按钮
 
@@ -90,15 +90,40 @@
         document.getElementsByClassName('agreement_check')[0].addEventListener('click', ValiateNextBtn, false)
 
         //金额加减绑定事件
-        valiateMoney();
 
-        document.getElementsByClassName('inputele')[0].addEventListener('keyup', function () {
+        var eleAddEvent;
+
+        if(browser.os.iOS){
+
+            eleAddEvent='touchstart';
+        }else {
+            eleAddEvent='click';
+        }
+
+        //金额加减绑定事件
+        document.getElementsByClassName('reduce')[0].addEventListener(eleAddEvent,function(){//相减
 
             changeValue(this);
 
-            getTotalMoney();//显示金额出现
-        }, false);
+            getTotalMoney(-0.99);//显示金额出现,参数为优惠金额（负数）或者服务费（正数）
 
+        },false);
+
+        document.getElementsByClassName('add')[0].addEventListener(eleAddEvent,function(){//相加
+
+            changeValue(this);
+
+            getTotalMoney(-0.99);
+
+        },false);
+
+        document.getElementsByClassName('inputele')[0].addEventListener('input', function () {
+
+            changeValue(this);
+
+            getTotalMoney(-0.99);//显示金额出现，参数为优惠金额（负数）或者服务费（正数）
+
+        }, false);
 
     }
 

@@ -32,9 +32,12 @@
 
             jfkeybroad.run();//页面初始的时候，开启键盘；
 
-
-            $('body').on('touchstart',".weui_grid",ValiateNextBtn);
-
+            //判断下一步是否可以点击
+            if(browser.os.android||browser.os.iOS){
+                $('body').on('touchstart',".weui_grid",ValiateNextBtn);
+            }else {
+                $('body').on('click',".weui_grid",ValiateNextBtn);
+            }
 
             document.getElementsByClassName('delete')[0].onclick=function(){
                 ValiateNextBtn()

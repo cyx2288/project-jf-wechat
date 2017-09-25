@@ -1,0 +1,1443 @@
+.qiao1104 .jf_IOU_Midbody{
+  padding:20px 30px 5px 30px;
+  background:RGB(245,244,249);
+  position: relative;
+}
+.qiao1104 .IOU_circle {
+  width: 80px;
+  height: 80px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  margin:0 auto;
+  top: 30px;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+.qiao1104 .IOU_midconcent {
+  background: #FFFFFF;
+  position: relative;
+  margin-top: 35px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  box-shadow: 2px 3px 4px rgba(193,193,193,0.4);
+  width:calc(~"100% - 20px");
+  border-radius: 5px;
+  padding: 10px;
+  z-index: 20;
+}
+.qiao1104 .IOU_midconcent .IOU_money{
+  width: 100%;
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+  overflow: hidden;
+  padding: 5px 0;
+}
+.qiao1104 .IOU_money span{
+  font-size: 30px;
+  font-weight: bold;
+  vertical-align: text-top;
+  margin-left:  -29px;
+  line-height: 50px;
+}
+.qiao1104 .IOU_money_limit{
+  text-align: center;
+  position: relative;
+}
+.qiao1104 .IOU_money_limit span{
+  color: lightgray;
+}
+.qiao1104 .IOU_money_limit:before{
+  content: "";
+  border-top: 1px solid #DDDDDD;
+  display: block;
+  position: absolute;
+  width: 35%;
+  top: 10px;
+}
+.qiao1104 .IOU_money_limit:after{
+  content: "";
+  border-top: 1px solid #DDDDDD;
+  display: block;
+  position: absolute;
+  width: 35%;
+  top: 10px;
+  right: 0;
+}
+.qiao1104 .IOU_rate{
+  width: 100%;
+  height: 22px;
+  margin-top: 20px;
+  color: lightgray;
+}
+.qiao1104 .IOU_rate>span{
+  width: 50%;
+  float: left;
+  text-align: center;
+}
+.qiao1104 .IOU_rate>span:first-child:after{
+  content: "";
+  border-right: 1px solid #DDDDDD;
+  display: block;
+  position: relative;
+  bottom: 18px;
+  left: 0;
+  height: 14px;
+}
+.qiao1104 .IOU_redbtn{
+  width: 65px;
+  height: 65px;
+  margin: 0 auto;
+  padding-top: 60px;
+  position: relative;
+  padding-bottom: 60px;
+}
+.qiao1104 .IOU_redbtn div{
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background: #ff5959;
+  position: absolute;
+  left: 0;
+  top: 60px;
+}
+.qiao1104 .IOU_redbtn span{
+  position: absolute;
+  left: 0;
+  top: 60px;
+  color: white;
+  width: 65px;
+  height: 65px;
+  display: inline-block;
+  text-align: center;
+  line-height: 65px;
+  font-size: 16px;
+}
+
+
+
+
+.qiao1104 .redbtn1{
+  animation: circlemove 2s infinite linear;
+  animation-delay: 1s;
+  -webkit-animation: circleMove 2s infinite linear;
+  -webkit-animation-delay: 1s;
+}
+.qiao1104 .redbtn2{
+  animation: circleMove 2s infinite linear;
+  animation-delay: 1.4s;
+  -webkit-animation: circleMove 2s infinite linear;
+  -webkit-animation-delay: 1.4s;
+}
+.qiao1104 .redbtn3{
+  animation: circleMove 2s infinite linear;
+  animation-delay: 1.4s;
+  -webkit-animation: circleMove 2s infinite linear;
+  -webkit-animation-delay: 1.8s;
+}
+@keyframes circleMove {
+  0%{
+    opacity:1;
+    transform: scale(1);
+    -webkit-transform: scale(1)
+  }
+  25%{
+    opacity:0.75;
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2)
+  }
+  50%{
+    opacity:0.5;
+    transform: scale(1.4);
+    -webkit-transform: scale(1.4)
+  }
+  75%{
+    opacity:0.25;
+    transform: scale(1.6);
+    -webkit-transform: scale(1.6)
+  }
+  100%{
+    opacity:0;
+    transform: scale(1.8);
+    -webkit-transform: scale(1.8)
+  }
+}
+@-webkit-keyframes circleMove {
+  0%{
+    opacity:1;
+    transform: scale(01);
+    -webkit-transform: scale(1)
+  }
+  25%{
+    opacity:0.75;
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2)
+  }
+  50%{
+    opacity:0.5;
+    transform: scale(1.4);
+    -webkit-transform: scale(1.4)
+  }
+  75%{
+    opacity:0.25;
+    transform: scale(1.6);
+    -webkit-transform: scale(1.6)
+  }
+  100%{
+    opacity:0;
+    transform: scale(1.8);
+    -webkit-transform: scale(1.8)
+  }
+}
+
+.qiao1104 .IOU_Bottom_firstpage{
+  width: 100%;
+  text-align: center;
+  /*height: calc(100vh - 480px);*/
+  height: calc(~"100% - 435px");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.qiao1104 .IOU_return_info{
+  padding: 5px 15px 0px 15px
+}
+.qiao1104 .IOU_return_info a{
+  color: #10a6e1;
+}
+.qiao1104 .IOU_return_info a button{
+  color: #10a6e1;
+  background:none;
+  border: solid 1px  #10a6e1;
+  margin-right: 10px;
+  padding: 2px 5px;
+  border-radius: 4px
+}
+.qiao1104 .IOU_detail_info a{
+  color: #4a4a4a;
+  display: inline-block;
+  height: 20px;
+  padding: 0 5px;
+}
+
+.qiao1104 .IOU_Bottom_firstpage p{
+  color: #DDDDDD;
+}
+.qiao1104 .IOU_detail_info a:nth-child(2):after{
+  content: "";
+  border-right: 1px solid #DDDDDD;
+  border-left: 1px solid #DDDDDD;
+  display: block;
+  position: relative;
+  height: 14px;
+  bottom: 18px;
+  width: 80px;
+}
+.qiao1104 .IOU_detail_info {
+  padding: 10px  0 ;
+}
+
+
+
+/*第二页*/
+.qiao1104 .IOU_money_input{
+  border: solid 1px #DDDDDD;
+  border-radius: 5px;
+  /*margin:10px*/
+  margin: 20px 10px 10px 10px
+
+}
+.qiao1104 .IOU_money_input div p{
+  text-align: center;
+  border-bottom:solid 1px #DDDDDD;
+  width: 100%;
+  vertical-align: middle;
+  line-height: 40px;
+}
+.qiao1104 .IOU_money_input_fade{
+  display: inline-block;
+  min-width: 10%;
+  height: 80px;
+  text-align: center;
+  font-size: 50px;
+  line-height: 80px;
+  font-weight: bold;
+  color: #4a4a4a;
+  overflow-y: hidden;
+  vertical-align: middle;
+}
+.qiao1104 .IOU_money_input div span{
+  font-size: 24px;
+  line-height: 65px;
+  vertical-align: top;
+  font-weight: bold;
+}
+
+.qiao1104 .IOU_money_returninput {
+  border: solid 1px #DDDDDD;
+  border-radius: 5px;
+  margin: 10px
+}
+
+.qiao1104 .IOU_money_returninput div p{
+  color: #DDDDDD;
+  text-align: center;
+  border-bottom:solid 1px #DDDDDD;
+  width: 100%;
+  vertical-align: middle;
+  line-height: 40px;
+}
+.qiao1104 .IOU_money_returninput div span{
+  font-size: 24px;
+  line-height: 65px;
+  vertical-align: top;
+  font-weight: bold;
+}
+.qiao1104 .IOU_interests{
+  height: 22px;
+  margin: 0 10px;
+  padding: 20px 0;
+}
+.qiao1104 .IOU_finish{
+  height:0;
+  transition: height 0.3s ease-in;
+  overflow: hidden;
+}
+.qiao1104 .IOU_finish_show{
+  height: 95px;
+}
+
+.qiao1104 .IOU_interests span{
+  width: 50%;
+  float: left;
+  text-align: center;
+  position: relative;
+}
+.qiao1104 .IOU_interests span:first-child:after{
+  content: "";
+  border-right: 1px solid #4a4a4a;
+  display: block;
+  position: absolute;
+  height: 16px;
+  top: 2px;
+  right: 0;
+}
+
+
+.qiao1104 .IOU_interestshide span:first-child:after{
+  content: "";
+  border:none;
+  display: block;
+  position: absolute;
+  height: 16px;
+  top: 2px;
+  right: 0;
+}
+
+.qiao1104 .IOU_btn_next{
+  height: 40px;
+  padding: 10px 10px 20px 10px;
+  margin: 0 auto;
+}
+.qiao1104 .IOU_btn_next button{
+  transition: border .5s,color .5s;
+  /*border: solid 1px #10a6e1;*/
+  border: solid 1px #DDDDDD;
+  height: 40px;
+  width: 100%;
+  margin: 0 auto;
+  background: white;
+  color:#DDDDDD;
+  /*color: #10a6e1;*/
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.qiao1104 .IOU_borrow_Bottom{
+  width: 100%;
+  text-align: center;
+  margin-top:30px;
+}
+.qiao1104 .IOU_borrow_Bottom span{
+  display: none;
+}
+.qiao1104 .IOU_borrow_Bottom p{
+  color: #DDDDDD;
+}
+.qiao1104 .IOU_borrow_Bottom span a{
+  color: #10a6e1;
+}
+
+/**/
+
+.qiao1104 .IOU_money_input_finish{
+  display: inline-block;
+  height: 80px;
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 80px;
+}
+.qiao1104 .IOU_finish_returnday{
+  width: 100%;
+  margin: 0 auto;
+  padding: 15px 0;
+  height: 22px;
+}
+.qiao1104 .IOU_finish_returnday span{
+  width: 48%;
+  float: left;
+  text-align: center;
+  position: relative;
+}
+.qiao1104 .IOU_finish_returnday span:first-child{
+  color: lightgray;
+}
+.qiao1104 .IOU_borrowcheck{
+  margin: 0 auto;
+  padding: 20px 10px;
+  height: 22px;
+  position: relative;
+}
+.qiao1104 .IOU_borrowcheck:after{
+  content: "";
+  width: 100%;
+  border-bottom: solid 1px #DDDDDD;
+  transform: scale(0.9);
+  position: absolute;
+  left: 0;
+  top: 62px;
+}
+.qiao1104 .IOU_borrowcheck span:first-child{
+  color: gray;
+  float: left;
+  text-align: left;
+  display: inline-block
+}
+.qiao1104 .IOU_borrowcheck span:last-child{
+  float: right;
+  text-align: right;
+  display: inline-block
+}
+.qiao1104 .IOU_borrowcheck_rate{
+  margin: 0 auto;
+  padding: 25px 10px 0px 10px;
+}
+.qiao1104 .IOU_borrowcheck_rate:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+.qiao1104 .IOU_borrowcheck_rate span{
+  color: lightgray;
+  display: inline-block
+}
+.qiao1104 .IOU_borrowcheck_rate span:first-child{
+  float: left;
+}
+.qiao1104 .IOU_borrowcheck_rate span:last-child{
+  float: right;
+}
+
+.qiao1104 .IOU_finish_returninfo{
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px 0 15px 0;
+  height: 22px;
+}
+.qiao1104 .IOU_finish_returninfo span{
+  width: 48%;
+  float: left;
+  text-align: center;
+  position: relative;
+}
+.qiao1104 .IOU_finish_returninfo span:first-child{
+  color: lightgray;
+  /* text-align: right;*/
+}
+.qiao1104 .IOU_finish_returninfo span a{
+  color: #10a6e1
+}
+
+.qiao1104 .IOU_return_day span:last-child{
+  padding-left: 10px;
+}
+.qiao1104 .IOU_finishbtn_next{
+  width: 100%;
+  height: 40px;
+  margin:25px 0;
+}
+.qiao1104 .IOU_finishbtn_next button{
+  border: solid 1px #10a6e1;
+  height: 40px;
+  width: 95%;
+  margin: 0 auto;
+  background: white;
+  color: #10a6e1;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.qiao1104 .IOU_borrowfinish_bottom {
+  width: 100%;
+  text-align: center;
+}
+.qiao1104 .IOU_borrowfinish_bottom p{
+  color: #DDDDDD;
+}
+.qiao1104 .IOU_borrowfinish_bottom span a{
+  color: #10a6e1;
+}
+.qiao1104 .current_checkbox{
+  -webkit-appearance: none;
+  appearance: none;
+  outline: 0;
+  font-size: 0;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 3px;
+  width: 13px;
+  height: 13px;
+  position: relative;
+  vertical-align: 0;
+  top: 2px
+}
+.qiao1104 .current_checkbox:checked:before{
+  /*font-family: "weui";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: inherit;
+  content: "\EA08";
+  color: #10a6e2;
+  font-size: 13px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -48%) scale(0.73);
+  -webkit-transform: translate(-50%, -48%) scale(0.73);*/
+
+
+  content: "";
+  position: absolute;
+  display: block;
+  width: 5px;
+  height: 10px;
+  left: 3px;
+  top: -2px;
+  border-bottom: solid 1px #10a6e1;
+  border-right: solid 1px #10a6e1;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+/**/
+
+.qiao1104 .return_items{
+  position: relative;
+  margin: 0 auto;
+  padding: 10px 40px;
+}
+.qiao1104 .return_itemsfirst{
+  background: white;
+}
+.qiao1104 .return_items:after{
+  content: "";
+  width: 100%;
+  border-bottom: solid 1px #DDDDDD;
+  transform: scale(0.8);
+  position: absolute;
+  left: 0;
+  top: 64px;
+}
+.qiao1104 .return_items span input{
+  text-align: center;
+  line-height: 44px;
+  vertical-align: super;
+}
+.qiao1104 .return_items>span:nth-child(2){
+  display: inline-block;
+  padding:0;
+}
+.qiao1104 .return_items .return_time{
+  color:gray;
+  font-size: 12px;
+}
+.qiao1104 .return_items>span:last-child{
+  display: inline-block;
+  vertical-align: top;
+  line-height: 44px;
+  float: right
+
+}
+.qiao1104 .return_items span label{
+  font-size: 12px;
+  color: red;
+  border: solid 1px red;
+  vertical-align:  middle;
+  border-radius: 3px;
+  padding: 2px;
+}
+.qiao1104 .return_items span img{
+  vertical-align: middle;
+}
+.qiao1104 .jf_IOU_returnMidbody>p{
+  padding: 10px 35px;
+  color:gray;
+  font-size: 14px;
+}
+.qiao1104 .jf_IOU_returnMidbody{
+  height:calc(~"100% - 45px");
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.qiao1104 .IOU_btn_return{
+  width: 100%;
+  padding: 0;
+  height: 57px;
+  overflow-x: hidden;
+  position: fixed;
+  bottom: 0;
+}
+.qiao1104 .IOU_btn_return .btn_return_top{
+  box-sizing: border-box;
+  padding-bottom: 60px;
+}
+.qiao1104 .IOU_btn_return div:last-child{
+  height: 57px;
+  width: 100%;
+}
+.qiao1104 .IOU_btn_return a{
+  border: solid 1px #10a6e1;
+  width: 100%;
+  text-align: center;
+  line-height: 57px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background: #10a6e1;
+  z-index: 200;
+  display: block;
+
+}
+.qiao1104 .IOU_Bottom_info{
+  color: #DDDDDD;
+  text-align: center;
+}
+
+/**/
+
+.qiao1104 .IOU_moneyreturn_fade{
+  display: inline-block;
+  min-width: 10%;
+  height: 80px;
+  text-align: center;
+  font-size: 50px;
+  line-height: 80px;
+  font-weight: bold;
+  color: #4a4a4a;
+  overflow-y: hidden;
+  vertical-align: middle;
+}
+.qiao1104 .IOU_return_money{
+  height: 22px;
+  margin: 0 10px;
+  padding: 10px 0
+}
+.qiao1104 .IOU_return_money span{
+  float: left;
+  text-align: center;
+  position: relative
+}
+.qiao1104 .IOU_return_money span:first-child{
+  color: lightgray;
+  width: 65%;
+}
+
+.qiao1104 .IOU_btn_checkreturn{
+  width: 100%;
+  height: 40px;
+  margin:10px 0;
+}
+.qiao1104 .IOU_btn_checkreturn button{
+  transition: border .5s,color .5s;
+  border: solid 1px #10a6e1;
+  height: 40px;
+  width: 95%;
+  margin: 0 auto;
+  background: white;
+  color: #10a6e1;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.qiao1104 .IOU_returnfinish_bottom{
+  width: 100%;
+  text-align: center;
+  margin-top:60px;
+}
+.qiao1104 .IOU_returnfinish_bottom span{
+  display: none;
+}
+.qiao1104 .IOU_returnfinish_bottom p{
+  color: #DDDDDD;
+}
+.qiao1104 .IOU_returnfinish_bottom span a{
+  color: #10a6e1;
+}
+
+/*账单详情页面*/
+
+.qiao1104 .return_pageonetop{
+  background: white;
+  padding: 0 10px;
+  box-shadow: 0px 3px 4px rgba(193,193,193,0.4)
+}
+.qiao1104 .return_pageonetop .borrow_info{
+  margin: 0 auto;
+  padding: 20px;
+  height: 30px;
+  position: relative;
+
+}
+.qiao1104 .return_pageonetop .borrow_info>span:nth-child(2){
+  float: left;
+  text-align: left;
+  display: inline-block;
+  font-size: 16px;
+}
+.qiao1104 .return_pageonetop .borrow_info>span:first-child{
+  float: left;
+  text-align: left;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 5px 10px 5px 0;
+  background:#10a6e1;
+}
+.qiao1104 .return_pageonetop .borrow_info>span:last-child{
+  float: right;
+  text-align: right;
+  display: inline-block;
+  font-size: 16px;
+}
+.qiao1104 .return_pageonetop .borrow_info:after{
+  content: "";
+  width: 100%;
+  border-bottom: solid 1px #DDDDDD;
+  transform: scale(0.9);
+  position: absolute;
+  left: 0;
+  top: 70px;
+}
+.qiao1104 .choice_nav{
+  width: 100%;
+  padding: 15px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -moz-justify-content: space-between;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -moz-align-items: center;
+  -webkit-align-items: center;
+  align-items: center;
+  border-bottom: 1px solid #9C9C9C;
+}
+.qiao1104 .choice_nav div{
+  width: 50%;
+  text-align: center;
+  color: #9c9c9c;
+  font-size: 14px
+}
+.qiao1104 .choice_nav .option_selected{
+  position: relative;
+  color: #10a6e2
+}
+.qiao1104 .choice_nav .option_selected:before{
+  content: "▲";
+  position: absolute;
+  top: 22px;
+  left: 47%;
+}
+.qiao1104 .choice_nav .option_selected:after{
+  content: "";
+  position: absolute;
+  height: 1px;
+  border-top: 2px solid #10a6e2;
+  width: 100%;
+  left: 0;
+  top: 37px;
+  z-index: 10;
+}
+.qiao1104 .offer_swiper{
+  overflow: hidden
+}
+.qiao1104 .offer_swiper .offer{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: justify;
+  justify-content: flex-start;
+  width: 200%
+}
+.qiao1104 .offer_box{
+  overflow: auto;
+  width: 100%;
+}
+.qiao1104 .IOUinfo_borrow{
+  background: white;
+  padding: 0;
+  box-shadow: 0px 3px 4px rgba(193,193,193,0.4)
+}
+.qiao1104 .borrow_infotab{
+  margin: 0 auto;
+  padding: 20px;
+  height: 22px;
+  position: relative
+}
+.qiao1104 .borrow_infotab.borrow_infotab_finish>span:last-child>label{
+  font-size: 12px;
+  color: gray;
+  border: solid 1px gray;
+  vertical-align: middle;
+  border-radius: 3px;
+  padding: 2px;
+  margin-right: 20px;
+}
+.qiao1104 .IOUinfo_borrow a{
+  color: #4a4a4a;
+}
+.qiao1104 .borrow_infotab>span:first-child{
+  float: left;
+  text-align: left;
+  display: inline-block;
+}
+.qiao1104 .borrow_infotab>span:last-child{
+  float: right;
+  text-align: right;
+  display: inline-block;
+}
+
+.qiao1104 .borrow_infotab>span:last-child>label{
+  font-size: 12px;
+  color: red;
+  border: solid 1px red;
+  vertical-align: middle;
+  border-radius: 3px;
+  padding: 2px;
+  margin-right: 20px;
+}
+.qiao1104 .borrow_infotab:after{
+  content: "";
+  width: 100%;
+  border-bottom: solid 1px #DDDDDD;
+  transform: scale(0.9);
+  position: absolute;
+  left: 0;
+  top: 62px
+}
+.qiao1104 .borrow_infotabtwo{
+  margin: 0 auto;
+  padding: 15px;
+  height: 50px;
+  position: relative
+}
+.qiao1104 .borrow_infotabtwo>span:first-child{
+  float: left;
+  text-align: left;
+  display: inline-block;
+  height: 50px
+}
+.qiao1104 .borrow_infotabtwo>span small{
+  display: block;
+  line-height: 35px;
+}
+.qiao1104 .borrow_infotabtwo>span:last-child{
+  float: right;
+  text-align: right;
+  display: inline-block;
+  height: 52px;
+  vertical-align: middle;
+  line-height: 52px;
+}
+.qiao1104 .borrow_infotabtwo:after{
+  content: "";
+  width: 100%;
+  border-bottom: solid 1px #DDDDDD;
+  transform: scale(0.9);
+  position: absolute;
+  left: 0;
+  top: 80px
+}
+
+
+/*借还记录*/
+.qiao1104 .time_bar{
+  box-sizing: border-box;
+  padding: 10px 20px;
+  font-size: 14px;
+  width: 100%
+}
+/*还款成功记录页面*/
+.title-success{
+  margin: 0 auto;
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 15px
+}
+
+.swal2-content, .swal2-icon {
+  padding: 0;
+  position: relative;
+}
+.swal2-icon.swal2-success {
+  border-color: #a5dc86;
+}
+.swal2-icon {
+  width: 80px;
+  height: 80px;
+  border: 4px solid grey;
+  border-radius: 50%;
+  margin: 20px auto 30px;
+  box-sizing: content-box;
+  cursor: default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.swal2-icon.swal2-success::after, .swal2-icon.swal2-success::before {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 120px;
+  background: #fff;
+}
+.swal2-icon.swal2-success::before {
+  border-radius: 120px 0 0 120px;
+  top: -7px;
+  left: -33px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transform-origin: 60px 60px;
+  transform-origin: 60px 60px;
+}
+.swal2-icon.swal2-success.animate::after {
+  -webkit-animation: rotatePlaceholder 4.25s ease-in;
+  animation: rotatePlaceholder 4.25s ease-in;
+}
+.swal2-icon.swal2-success::after {
+  border-radius: 0 120px 120px 0;
+  top: -11px;
+  left: 30px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transform-origin: 0 60px;
+  transform-origin: 0 60px;
+}
+.swal2-icon.swal2-success .line.tip {
+  width: 25px;
+  left: 14px;
+  top: 46px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.swal2-icon.swal2-success .line {
+  height: 5px;
+  background-color: #a5dc86;
+  display: block;
+  border-radius: 2px;
+  position: absolute;
+  z-index: 2;
+}
+.animate-success-tip {
+  -webkit-animation: animate-success-tip .75s;
+  animation: animate-success-tip .75s;
+}
+.swal2-icon.swal2-success .line.long {
+  width: 47px;
+  right: 8px;
+  top: 38px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.swal2-icon.swal2-success .line {
+  height: 5px;
+  background-color: #a5dc86;
+  display: block;
+  border-radius: 2px;
+  position: absolute;
+  z-index: 2;
+}
+.animate-success-long {
+  -webkit-animation: animate-success-long .75s;
+  animation: animate-success-long .75s;
+}
+.swal2-icon.swal2-success .placeholder {
+  width: 80px;
+  height: 80px;
+  border: 4px solid rgba(165,220,134,.2);
+  border-radius: 50%;
+  box-sizing: content-box;
+  position: absolute;
+  left: -4px;
+  top: -4px;
+  z-index: 2;
+}
+.swal2-icon.swal2-success .fix {
+  width: 7px;
+  height: 90px;
+  background-color: #fff;
+  position: absolute;
+  left: 28px;
+  top: 8px;
+  z-index: 1;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+@-webkit-keyframes animate-success-tip {
+  0%, 54% {
+    width:0;
+    left:1px;
+    top:19px
+  }
+  70% {
+    width:50px;
+    left:-8px;
+    top:37px
+  }
+  84% {
+    width:17px;
+    left:21px;
+    top:48px
+  }
+  100% {
+    width:25px;
+    left:14px;
+    top:45px
+  }
+}
+@keyframes animate-success-tip {
+  0%, 54% {
+    width:0;
+    left:1px;
+    top:19px
+  }
+  70% {
+    width:50px;
+    left:-8px;
+    top:37px
+  }
+  84% {
+    width:17px;
+    left:21px;
+    top:48px
+  }
+  100% {
+    width:25px;
+    left:14px;
+    top:45px
+  }
+}
+@-webkit-keyframes animate-success-long {
+  0%, 65% {
+    width:0;
+    right:46px;
+    top:54px
+  }
+  84% {
+    width:55px;
+    right:0;
+    top:35px
+  }
+  100% {
+    width:47px;
+    right:8px;
+    top:38px
+  }
+}
+@keyframes animate-success-long {
+  0%, 65% {
+    width:0;
+    right:46px;
+    top:54px
+  }
+  84% {
+    width:55px;
+    right:0;
+    top:35px
+  }
+  100% {
+    width:47px;
+    right:8px;
+    top:38px
+  }
+}
+@-webkit-keyframes rotatePlaceholder {
+  0%, 5% {
+    -webkit-transform:rotate(-45deg);
+    transform:rotate(-45deg)
+  }
+  100%, 12% {
+    -webkit-transform:rotate(-405deg);
+    transform:rotate(-405deg)
+  }
+}
+@keyframes rotatePlaceholder {
+  0%, 5% {
+    -webkit-transform:rotate(-45deg);
+    transform:rotate(-45deg)
+  }
+  100%, 12% {
+    -webkit-transform:rotate(-405deg);
+    transform:rotate(-405deg)
+  }
+}
+
+/*针对小屏幕*/
+@media screen and (max-height:570px) {
+  .qiao1104 .IOU_returnfinish_bottom{
+    width: 100%;
+    text-align: center;
+    margin-top:30px;
+    margin-bottom: 209px;
+  }
+  .qiao1104 .IOU_borrow_Bottom{
+    width: 100%;
+    text-align: center;
+    margin-top:30px;
+    margin-bottom: 209px;
+  }
+
+}
+
+
+/*常见问题*/
+
+.IOU_current_help{
+  padding: 0px 15px;
+}
+.IOU_current_help .IOU_help_title{
+  font-size: 20px;
+  font-weight: bold;
+  color: #10a6e2;
+  text-align: center;
+  padding: 10px
+}
+.IOU_current_help .Q_1{
+  margin-bottom: 20px
+}
+.IOU_current_help .Q_2 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #10a6e2;
+}
+.IOU_current_help .A_1 {
+  padding-left: 2em;
+}
+/*嘉福借条合同*/
+.IOU_current_help .title>h1 {
+  text-align: center;
+}
+.IOU_current_help .Tip_160519 {
+  border: 4px double #d1d1d1;
+  margin: 30px auto;
+}
+.IOU_current_help .Tip_160519 div {
+  font-size: 18px;
+  color: #000;
+  font-weight: bold;
+  line-height: 50px;
+  text-align: center;
+}
+.IOU_current_help .Tip_160519 div+div {
+  font-size: 14px;
+  color: #444;
+  font-weight: normal;
+  line-height: 24px;
+  text-align: left;
+  padding: 5px 20px 0;
+  text-indent: 2em;
+}
+.IOU_current_help .Part_1 {
+  height: auto;
+  margin: 0 auto;
+}
+.IOU_current_help .Chapter_1 {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 25px 0 25px;
+}
+.IOU_current_help .Chu {
+  font-weight: bold;
+  display: inline-block;
+  margin:2px 0;
+}
+.IOU_current_help .Tiao {
+  font-weight: bolder;
+  padding-bottom: 14px;
+}
+.IOU_current_help .Duanluo p {
+  padding-bottom: 14px;
+}
+.IOU_current_help .contract_keys{
+  color: #10a6e2;
+  font-weight: bold;
+  display: inline-block;
+  margin:2px 0;
+}
+/*没有额度页面*/
+
+.iou_limit_pic{
+  margin: 0 auto;
+  text-align: center;
+  padding: 15px 0 ;
+  width: 227px;
+  height: 227px;
+  background: url("../images/icon_human.png") no-repeat center;
+}
+.limit_pic_point{
+  display: inline-block;
+  position: relative;
+  top: 45px;
+  right: 13px;
+
+}
+.iou_limit_pic .limit_pic_point>span{
+  display: inline-block;
+  height:12px;
+  width: 12px;
+  border-radius: 50%;
+  background: #10a6e2;
+  margin: 0 5px;
+  -webkit-animation: pointshow 1s ease infinite;
+  opacity: 1;
+}
+.iou_limit_pic .limit_pic_point>span:nth-child(1){
+  -webkit-animation-delay:0.3s;
+}
+.iou_limit_pic .limit_pic_point>span:nth-child(2){
+  -webkit-animation-delay:0.6s;
+}
+.iou_limit_pic .limit_pic_point>span:nth-child(3){
+  -webkit-animation-delay:0.9s;
+}
+
+
+@-webkit-keyframes pointshow{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0.2;
+  }
+}
+.iou_limit_tip{
+  margin: 0 auto;
+
+  padding: 10px 20px;
+}
+.iou_limit_tip .limit_tip_one{
+  color: #10a6e2;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.iou_limit_tip .limit_tip_reason{
+  border-top: 1px solid #ddd;
+  padding-top: 30px;
+  padding-bottom: 20px;
+
+}
+.iou_limit_return{
+  padding: 20px;
+  border-radius: 4px;
+  color: #10a6e2;
+  background: white;
+  box-shadow: 2px 3px 4px rgba(193,193,193,0.4);
+  -webkit-box-shadow:2px 3px 4px rgba(193,193,193,0.4);;
+}
+.iou_limit_return div{
+  display:inline-block;
+  font-size: 16px;
+}
+.iou_limit_return div>img{
+  vertical-align: middle;
+  position: relative;
+  bottom: 2px;
+}
+.iou_limit_return>a>div:first-child{
+  float: left;
+}
+.iou_limit_return>a>div:nth-child(2){
+  float: right;
+}
+.iou_limit_return:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+.iou_limit_return>a{
+  color: #10a6e2;
+}
+.iou_limit_help{
+  text-align: center;
+
+  margin-top: 20px;
+}
+
+.iou_limit_help  a {
+  color: #4a4a4a;
+  display: inline-block;
+  height: 20px;
+  width: 85px;
+
+
+}
+.iou_limit_help  a:first-child:after {
+  content: "";
+  border-right: 1px solid #DDDDDD;
+  display: block;
+  position: relative;
+  height: 14px;
+  bottom: 18px;
+  left: 2px;
+}
+.iou_limit_help  a:nth-child(2):after {
+  content: "";
+  border-right: 1px solid #DDDDDD;
+  display: block;
+  position: relative;
+  height: 14px;
+  bottom: 18px;
+  left: 2px;
+}
+
+/*响应式*/
+/*确认借款页面*/
+@media screen and (max-width: 374px) {
+
+  .qiao1104 .IOU_borrowcheck_rate>span{
+    color: lightgray;
+    display:block;
+    float: none;
+    text-align: left;
+    padding: 5px 0;
+  }
+
+  .qiao1104 .IOU_borrowcheck_rate span:first-child{
+    float: none;
+  }
+  .qiao1104 .IOU_borrowcheck_rate span:last-child{
+    float: none;
+  }
+
+}
+/*借款页面，首页*/
+
+@media screen and ( max-height: 570px) {
+  .qiao1104 .IOU_redbtn {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    padding-top: 25px;
+    position: relative;
+    padding-bottom: 25px;
+  }
+  .qiao1104 .IOU_redbtn div {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #ff5959;
+    position: absolute;
+    left: 0;
+    top: 25px;
+  }
+  .qiao1104 .IOU_redbtn span {
+    position: absolute;
+    left: 0;
+    top: 25px;
+    color: white;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    text-align: center;
+    line-height: 50px;
+    font-size: 14px;
+  }
+
+  .qiao1104 .IOU_Bottom_firstpage {
+    width: 100%;
+    text-align: center;
+    height: calc(~"100% - 335px");
+  }
+  .qiao1104 .jf_IOU_Midbody {
+    padding: 5px 30px 5px 30px;
+  }
+  .qiao1104 .IOU_circle {
+    top: 15px;
+  }
+
+
+  /*确认借款页面*/
+  .qiao1104 .IOU_borrowcheck {
+    margin: 0 auto;
+    padding: 12px 10px;
+    height: 22px;
+    position: relative;
+  }
+  .qiao1104 .IOU_borrowcheck:after {
+    content: "";
+    width: 100%;
+    border-bottom: solid 1px #DDDDDD;
+    transform: scale(0.9);
+    position: absolute;
+    left: 0;
+    top: 46px;
+  }
+  .qiao1104 .IOU_borrowcheck_rate {
+    margin: 0 auto;
+    padding: 5px 10px 0px 10px;
+  }
+  .qiao1104 .IOU_finishbtn_next {
+    width: 100%;
+    height: 40px;
+    margin: 10px 0;
+  }
+  .qiao1104 .IOU_borrowfinish_bottom {
+    width: 100%;
+    text-align: center;
+    height: calc(~"100% - 378px");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+}

@@ -7,7 +7,7 @@ var gulp = require('gulp');
 function distImg() {
     
 
-    gulp.src('build/images/**/*.png')
+    gulp.src('build/images/**/*.{png,jpg,gif,ico}')
 
         .pipe(gulp.dest('dist/images'));
 
