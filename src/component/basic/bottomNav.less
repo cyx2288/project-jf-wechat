@@ -9,6 +9,7 @@
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
+  align-items: flex-end;
   position: absolute;
   z-index: 500;
   bottom: 0;
@@ -45,10 +46,11 @@
   padding: 7px 0 0;
   -webkit-tap-highlight-color: transparent;
 }
+
 .weui_tabbar_icon {
   margin: 0 auto;
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
 }
 .weui_tabbar .weui_tabbar_item.on>.weui_tabbar_icon>img:last-child, .weui_tabbar .weui_tabbar_item>.weui_tabbar_icon>img:first-child {
   display: block;
@@ -86,9 +88,12 @@ a img {
 .weui_tabbar_label {
   color: #202329;
 }
+.jd_red .weui_tabbar_label{
+  color:#ff4646;
+}
 .weui_tabbar_label {
   text-align: center;
-  color: #888;
+  color: #465c76;
   font-size: 12px;
 }
 .wechat_main_homepage .weui_tabbar .weui_tabbar_item>.weui_tabbar_icon>img:last-child, .weui_tabbar .weui_tabbar_item.on>.weui_tabbar_icon>img:first-child {
@@ -98,4 +103,7 @@ a img {
   color: #10a6e2;
   opacity: 1;
   -webkit-opacity: 1;
+}
+.weui_tabbar_item:active {
+ opacity: 0.5;
 }
