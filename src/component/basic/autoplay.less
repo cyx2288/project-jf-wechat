@@ -42,17 +42,12 @@
   -webkit-transform: translateX(0);
   transform: translate3d(0, 0, 0);
   -webkit-transform: translate3d(0, 0, 0);
-  transition: -webkit-transform .3s ease-in-out;
-  transition: transform .3s ease-in-out;
-  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
-  -webkit-transition: transform .3s ease-in-out
+  transition: transform .3s ease-in-out , opacity .1s;
+
 }
 
 .jf_homepage_autoplay .jf_autoplay_images a.delay {
-  transition: -webkit-transform 0s;
-  transition: transform 0s;
-  transition: transform 0s, -webkit-transform 0s;
-  -webkit-transition: transform 0s
+  transition: transform 0s , opacity 0s;
 }
 
 .jf_homepage_autoplay .jf_autoplay_images a.show, .jf_homepage_autoplay .jf_autoplay_images a.show:first-child {
