@@ -79,6 +79,8 @@ var jfAutoPlay = {
 
         if (jfAutoPlay.jfVariable.isTwoEle || jfAutoPlay.jfVariable.isThreeEle) {//两个以上的图片再加点
 
+            thisPaginationEle.innerHTML='';
+
             for (var i = 0; i < thisAllTagA.length; i++) {
 
                 var newSpan = document.createElement('span');                                                           //新建一个span元素
@@ -93,15 +95,15 @@ var jfAutoPlay = {
 
         /*预设图片的显示模式*/
 
-        thisAllTagA[0].className = 'show';                                                                          //第一张为显示
+        thisAllTagA[0].className = 'show delay';                                                                          //第一张为显示
 
         /*增加监听*/
 
         if (jfAutoPlay.jfVariable.isThreeEle) {                                                                              //三张以及以上，此方法通过移动三个子元素
 
-            thisAllTagA[1].className = 'after';                                                                         //第二张为后面一张
+            thisAllTagA[1].className = 'after delay';                                                                         //第二张为后面一张
 
-            thisAllTagA[thisAllTagA.length - 1].className = 'before';                                                   //最后一张为前一张
+            thisAllTagA[thisAllTagA.length - 1].className = 'before delay';                                                   //最后一张为前一张
 
             jfAutoPlay.jfVariable.setInterMove1000 = setInterval(jfAutoPlay.jfAutoPlayRight, jfAutoPlay.jfVariable.timer);//页面读取后开始轮播
 
@@ -180,6 +182,10 @@ var jfAutoPlay = {
 
             thisFatherEle.getElementsByClassName('before')[0].className += ' delay';
 
+
+            //ios bug 关于多个应用开启后异步操作停止的问题
+            jfAutoPlay.iosStopInterVal();
+
         }
         else {//两个元素
 
@@ -188,6 +194,89 @@ var jfAutoPlay = {
             thisFatherEle.style.webkitTransition = '-webkit-transform 0s';
 
         }
+
+
+
+
+
+
+
+    },
+
+    iosStopInterVal:function(){                                                                                           //ios bug 关于多个应用开启后异步操作停止的问题
+
+        var thisFatherEle = document.getElementsByClassName('jf_homepage_autoplay')[0].getElementsByClassName('jf_autoplay_images')[0];//父元素，主要移动该元素
+
+        var thisShowEle = thisFatherEle.getElementsByClassName('show')[0];
+
+
+        if(browser.os.iOS&&thisShowEle.className.indexOf('delay')>-1&&thisShowEle.className.indexOf('move')>-1&&thisShowEle.getAttribute('style').indexOf('translate3d')>-1){
+
+            var thisShowIndex=0;
+
+            var thisAllEle = thisFatherEle.getElementsByTagName('a');
+
+            for(var i=0;i<thisAllEle.length;i++){
+
+                if(thisAllEle[i].className&&thisAllEle[i].getBoundingClientRect().left==0){
+
+                    thisShowIndex=i;
+
+                }
+
+
+            }
+
+            thisAllEle[thisShowIndex].className='show delay';
+
+            if(thisShowIndex==0){
+
+                thisAllEle[thisAllEle.length-1].className='before delay';
+
+                thisAllEle[thisShowIndex+1].className='after delay';
+
+            }
+
+            else if(thisShowIndex==thisAllEle.length-1){
+
+                thisAllEle[0].className='after delay';
+
+                thisAllEle[thisShowIndex-1].className='before delay';
+
+            }
+
+            else{
+
+                thisAllEle[thisShowIndex+1].className='after delay';
+
+                thisAllEle[thisShowIndex-1].className='before delay';
+
+            }
+
+
+
+            for(var i=0;i<thisAllEle.length;i++){
+
+                thisAllEle[i].removeAttribute('style');
+
+            }
+
+
+            thisShowEle.style.opacity=0.1;
+
+            thisShowEle.className=thisShowEle.className.replace('delay','')
+
+            setTimeout(function(){
+
+                thisShowEle.style.opacity='';
+
+            },1);
+
+
+
+
+        }
+
 
     },
 
@@ -390,7 +479,7 @@ var jfAutoPlay = {
             jfAutoPlay.jfVariable.setInterMove1000 = setInterval(jfAutoPlay.jfAutoPlayRight, jfAutoPlay.jfVariable.timer);//加轮播循环
 
         }
-        else {//三个元素以上的情况
+        else {//三个元素以下的情况
             jfAutoPlay.jfVariable.setInterMove1000 = setInterval(jfAutoPlay.jfAutoPlayTwoAll, jfAutoPlay.jfVariable.timer);//开始轮播
         }
 
@@ -544,7 +633,7 @@ var jfAutoPlay = {
 
                     jfAutoPlay.jfAddEvent();                                                                            //再加监听
 
-                }, 100)
+                }, 1)
 
             }
 
@@ -692,7 +781,7 @@ var jfAutoPlay = {
                     jfAutoPlay.jfAddEvent();                                                                            //加监听
 
 
-                }, 100)
+                }, 1)
 
 
             }
