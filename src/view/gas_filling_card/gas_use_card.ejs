@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>加油卡使用</title>
+    <link rel="stylesheet"  href="../../css/jf_gas_filling_card.css">
+    <link rel="stylesheet"  href="../../css/jf_city_travel_card.css">
+</head>
+
+<body>
+
+<!--顶部固定导航-->
+
+<!--导航-->
+<%- include('../../component/basic/topNav.ejs',{
+"thisrighthref":"jfSwitch.goBack()",
+"navtitle":"加油卡使用",
+"thislefthref":"",
+"thisimgsrc":" "
+})%>
+
+
+<!--加油卡使用-->
+<%- include('../../component/gas_filling_card/gas_help_center/gas_use_card.ejs')%>
+
+
+
+</body>
+<script src="../../js/jf_gas_filling_card.js"></script>
+
+</html>
