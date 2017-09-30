@@ -4,11 +4,9 @@
 
 
 /*tab切换*/
-function TravelTabChange(num,text){
+function TravelTabChange(num){
 
-    var tabChangeContent=document.getElementsByClassName('card_recharge_value')[0];//tab主体内容
-
-    var tabTips=document.getElementsByClassName('tab_tips')[0];//提示箭头
+    var tabChangeContent=document.getElementsByClassName('card_tab_all')[0];//tab主体内容
 
     var tabChangeBar=document.getElementsByClassName('navigation_tab')[0].getElementsByTagName('div');//tab选项
 
@@ -20,10 +18,26 @@ function TravelTabChange(num,text){
 
     tabChangeContent.style.webkitTransform="translate3d("+needTranslateX+"px,0,0)";
 
-    document.getElementsByClassName('tips')[0].innerHTML=""+text+"";
-
     document.getElementsByClassName('show')[0].className="";
 
     tabChangeBar[num].className="show";
 
+}
+
+//报错
+function showErrorText(ele,text){
+
+    var patern=/[0-9]/;
+
+    var thiscardNum=ele.value;
+
+    var showError=document.getElementsByClassName('show_error')[0];
+
+    if(thiscardNum){
+
+        showError.style.display="block";
+
+        showError.innerHTML=""+text+""
+
+    }
 }

@@ -42,18 +42,31 @@
   }
 
   .card_section_all{
-    /*overflow: hidden;*/
+    overflow: hidden;
+    width: 100%;
+
+    .card_tab_all{
+      width: 200%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      transition: transform 0.2s ease-in-out;
+
+
+      .tab_one,.tab_two{
+        width: 100%;
+        flex: 1;
+      }
+    }
     /*输入框*/
     .card_input_all{
-      width: 200%;
+      width: 100%;
       position: relative;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      transform: translate3d(0, 0, 0);
-      transition: transform 0.2s linear, -webkit-transform 0.2s linear;
+
       background: #FFFFFF;
-      box-shadow: 0 1px 6px rgba(171,171,171, .4);
 
       .card_input{
         width: 100%;
@@ -93,7 +106,7 @@
             margin-top: -14px;
             color: #ff4646;
             font-size: 12px;
-            /*display: none;*/
+            display: none;
             position: absolute;
             top: 38px;
             left: 0;
@@ -102,9 +115,14 @@
       }
     }
 
+    .card_hint_text.tip_show{
+      height: 55px;
+      opacity: 1;
+    }
+
     /*提示文字*/
     .card_hint_text{
-      padding: 18px 10px 15px 10px;
+      padding: 0 10px;
       font-size: 14px;
       color: #fc6329;
       position: relative;
@@ -112,13 +130,19 @@
       background: #FFFFFF;
       border-radius: 0 0 10px 10px;
       box-shadow: 0 4px 5px rgba(171,171,171, .2);
+      height: 0;
+      opacity: 0;
+      transition: all 0.3s linear;
+      line-height: 55px;
+
+      overflow: hidden;
       &:before{
         content: " ";
         display: block;
         border-bottom: 1px solid #E9E9E9;
         width: 95%;
         position: absolute;
-        top: 6px;
+        top: 0;
         margin: 0 auto;
       }
     }
@@ -128,7 +152,6 @@
       width: 100%;
       background: #FFFFFF;
       border-radius: 10px;
-      box-shadow: 0 1px 6px rgba(171,171,171, .4);
       margin: auto;
       margin-top: 8px;
       &:after{
