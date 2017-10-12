@@ -95,6 +95,8 @@
   position: relative;
   padding-bottom: 60px;
 }
+
+
 .qiao1104 .IOU_redbtn div{
   width: 65px;
   height: 65px;
@@ -103,6 +105,22 @@
   position: absolute;
   left: 0;
   top: 60px;
+}
+.qiao1104 .IOU_redbtn.checking{
+  width: 70px;
+  height: 70px;
+}
+.qiao1104 .IOU_redbtn.checking div{
+  width: 70px;
+  height: 70px;
+
+}
+
+.qiao1104 .IOU_redbtn.checking span{
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+
 }
 .qiao1104 .IOU_redbtn span{
   position: absolute;
@@ -118,25 +136,35 @@
 }
 
 
+.qiao1104 .IOU_redbtn.checking .redbtn1{
+  animation-play-state: paused;
+  opacity: 0.1;
+}
 
+.qiao1104 .IOU_redbtn.checking .redbtn2{
+  animation-play-state: paused;
+  opacity: 0.1;
+}
+
+.qiao1104 .IOU_redbtn.checking .redbtn3{
+  animation-play-state: paused;
+  opacity: 0.1;
+}
 
 .qiao1104 .redbtn1{
-  animation: circlemove 2s infinite linear;
+  animation: circleMove 2s infinite linear;
   animation-delay: 1s;
-  -webkit-animation: circleMove 2s infinite linear;
-  -webkit-animation-delay: 1s;
+
 }
 .qiao1104 .redbtn2{
   animation: circleMove 2s infinite linear;
   animation-delay: 1.4s;
-  -webkit-animation: circleMove 2s infinite linear;
-  -webkit-animation-delay: 1.4s;
+
 }
 .qiao1104 .redbtn3{
   animation: circleMove 2s infinite linear;
-  animation-delay: 1.4s;
-  -webkit-animation: circleMove 2s infinite linear;
-  -webkit-animation-delay: 1.8s;
+  animation-delay: 1.8s;
+
 }
 @keyframes circleMove {
   0%{
@@ -192,6 +220,8 @@
     -webkit-transform: scale(1.8)
   }
 }
+
+
 
 .qiao1104 .IOU_Bottom_firstpage{
   width: 100%;
@@ -1363,6 +1393,23 @@
 /*借款页面，首页*/
 
 @media screen and ( max-height: 570px) {
+
+
+  .qiao1104 .IOU_redbtn.checking{
+    width: 55px;
+    height: 55px;
+  }
+
+  .qiao1104 .IOU_redbtn.checking div {
+    width: 55px;
+    height: 55px;
+  }
+
+  .qiao1104 .IOU_redbtn.checking span {
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+  }
   .qiao1104 .IOU_redbtn {
     width: 50px;
     height: 50px;
