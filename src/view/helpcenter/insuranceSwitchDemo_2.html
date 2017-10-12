@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,minimum-scale=1, maximum-scale=1">
+<meta content="telephone=no" name="format-detection">
+<title>WeUI-pay</title>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="../../lib/css/swiper_3.3.1.min.css">
+<link rel="stylesheet" href="../../lib/css/weui.min.css">
+<link rel="stylesheet" href="../../css/main-Wechat.css">
+<link rel="stylesheet" href="../../css/bk_zwb.css">
+<link rel="stylesheet" href="../../css/carInsuranceZy.css">
+<link rel="stylesheet" href="../../css/catalogPageZy.css">
+<link rel="stylesheet" href="../../css/daily_specials.css">
+<link rel="stylesheet" href="../../css/financialPageZy.css">
+<link rel="stylesheet" href="../../css/help_center_1.css">
+<link rel="stylesheet" href="../../css/huikabaoZy.css">
+<link rel="stylesheet" href="../../css/iou.css">
+<link rel="stylesheet" href="../../css/order_details_list.css">
+<link rel="stylesheet" href="../../css/payProcessZy.css">
+<link rel="stylesheet" href="../../css/pruduct_main.css">
+<link rel="stylesheet" href="../../css/vipMain.css">
+</head>
+<body>
+<!-----------------------------iframe---------------------------------------->
+<div id="IframeAddress_1019" style="display:none;">
+  <iframe src="../carInsurance/test1.html" scrolling="auto" id="mainIframeAddress_1019" name="mainIframeAddress_1019"></iframe>
+</div>
+<!-----------------------------iframe end---------------------------------------->
+<nav class="Top_navigation">
+  <div class="weui_tab_bd"></div>
+  <div class="container_tab change_tab_fa"> 
+    <!--导航1--> 
+    <span class="change_tab show_tab" data-page="1"> <a onclick="jfSwitch.goBack()">
+    <div class="nav_left"><img src="../../images/icon_pay_return.png"></div>
+    </a>
+    <div class="nav_center">
+      <div>&#x8F66;&#x9669;&#x8BA2;&#x5355;</div>
+    </div>
+    <a href="#">
+    <div class="nav_right"></div>
+    </a> </span> 
+    <!--导航2--> 
+    <span class="change_tab hide_tab" data-page="2"> <a href="javascript:jfSwitch.sectionTabBack(1)">
+    <div class="nav_left"><img src="../../images/icon_pay_return.png"></div>
+    </a>
+    <div class="nav_center">
+      <div>&#x8BA2;&#x5355;&#x786E;&#x8BA4;</div>
+    </div>
+    <a href="#">
+    <div class="nav_right"></div>
+    </a> </span> 
+    <!--导航3--> 
+    <span class="change_tab hide_tab" data-page="3"> <a href="#">
+    <div class="nav_left"></div>
+    </a>
+    <div class="nav_center">
+      <div>&#x6838;&#x4FDD;</div>
+    </div>
+    <a href="#">
+    <div class="nav_right"></div>
+    </a> </span> </div>
+</nav>
+<section class="container_section"> 
+  <!----------------------------------------step 6 车险订单-------------------------------------------------------------> 
+  <span class="change_section show_section" data-page="1">
+  <div class="insurance_car_step6"> 
+    <!--选项栏-->
+    <div class="choice_nav">
+      <div class="option_selected" data-num="0">&#x4FDD;&#x9669;&#x8BE6;&#x60C5;</div>
+      <div data-num="1">&#x589E;&#x503C;&#x670D;&#x52A1;</div>
+      <div data-num="2">&#x8D2D;&#x4E70;&#x987B;&#x77E5;</div>
+    </div>
+    <div class="offer_swiper">
+      <div class="offer_7"> 
+        <!--选项1-->
+        <div class="offer_box">
+          <div class="insurance_car"> 
+            <!--第一部分-->
+            <div class="insurance_card border_babao"> 
+              <!--list 1-->
+              <div class="insurance_form">
+                <div>&#x6295;&#x4FDD;&#x516C;&#x53F8;</div>
+                <div>&#x4E2D;&#x56FD;&#x4EBA;&#x5BFF;</div>
+              </div>
+              <!--list 2-->
+              <div class="insurance_form">
+                <div>&#x8F66;&#x8F86;&#x635F;&#x5931;&#x9669;</div>
+                <div>&#xFFE5;124,567.98</div>
+              </div>
+              <!--list 4-->
+              <div class="insurance_form">
+                <div>&#x7B2C;&#x4E09;&#x8005;&#x8D23;&#x4EFB;&#x9669;(100&#x4E07;)</div>
+                <div class="car_select"> &#xFFE5;1,526.11</div>
+              </div>
+              <!--list 5-->
+              <div class="insurance_form">
+                <div>&#x4E3B;&#x9669;&#x4E0D;&#x8BA1;&#x514D;&#x8D54;</div>
+                <div> &#xFFE5;12,688.00 </div>
+              </div>
+              <!--list 6-->
+              <div class="insurance_form">
+                <div>&#x5546;&#x4E1A;&#x9669;&#x603B;&#x8BA1;</div>
+                <div class="total_black"> &#xFFE5;14,256,,372,823.22 </div>
+              </div>
+            </div>
+            <!--第二部分-->
+            <div class="insurance_card_second car_shadow"> 
+              <!--list 1-->
+              <div class="insurance_form">
+                <div>&#x4EA4;&#x5F3A;&#x9669;(&#x542B;&#x8F66;&#x8239;&#x7A0E;&#x4EE3;&#x7F34;)</div>
+                <div class="total_black">&#x6682;&#x65E0;&#x62A5;&#x4EF7;</div>
+              </div>
+            </div>
+          </div>
+          <div class="insurance_card_cost car_shadow"> 
+            <!--list 1-->
+            <div class="car_cost">
+              <div>&#x4FDD;&#x8D39;&#x603B;&#x8BA1;</div>
+              <div>&#xFFE5;12,537,836.99</div>
+            </div>
+            <div class="car_cost">
+              <div>&#x4F18;&#x60E0;&#x91D1;&#x989D;</div>
+              <div class="discount">-&#xFFE5;99.99</div>
+            </div>
+            <div class="car_cost">
+              <div>&#x4ED8;&#x6B3E;&#x91D1;&#x989D;</div>
+              <div class="cost">&#xFFE5;12,537,836.99</div>
+            </div>
+          </div>
+          <!--●--> 
+          <a href="javascript:jfSwitch.sectionTabChange(2)">
+          <div class="car_tabber">
+            <div class="weui_actionsheet_cell">&#x7ACB;&#x5373;&#x6295;&#x4FDD;</div>
+          </div>
+          </a> </div>
+        <!--选项1结束--> 
+        <!--选项2-->
+        <div class="offer_box">
+          <div class="insurance_car">
+            <div class="insurance_card_cost  car_shadow"> </div>
+          </div>
+        </div>
+        <!--选项2结束--> 
+        <!--选项3-->
+        <div class="offer_box">
+          <div class="insurance_car">
+            <div class="insurance_card_cost  car_shadow"> </div>
+          </div>
+        </div>
+        <!--选项3结束--> 
+      </div>
+    </div>
+  </div>
+  </span> 
+  
+  <!----------------------------------------step 7 订单确认-------------------------------------------------------------> 
+  
+  <span class="change_section hide_section" data-page="2">
+  <div class="insurance_car_step7"> 
+    <!--第一部分-->
+    <div class="insurance_card border_babao"> 
+      <!--list 1-->
+      <div class="insurance_form">
+        <div class="left_title">&#x6295;&#x4FDD;&#x516C;&#x53F8;</div>
+        <div>&#x4EBA;&#x5BFF;&#x4FDD;&#x9669;</div>
+      </div>
+      <!--list 2-->
+      <div class="insurance_form">
+        <div class="left_title">&#x88AB;&#x4FDD;&#x8F66;&#x724C;&#x53F7;&#x7801;</div>
+        <div>&#x6CAA;LAM091</div>
+      </div>
+      <!--list 4-->
+      <div class="insurance_form">
+        <div class="left_title">&#x884C;&#x9A76;&#x57CE;&#x5E02;</div>
+        <div class="car_select"> &#x4E0A;&#x6D77;&#x5E02; </div>
+      </div>
+      <!--list 5-->
+      <div class="insurance_form">
+        <div class="left_title">&#x88AB;&#x4FDD;&#x8F66;&#x4E3B;&#x59D3;&#x540D;</div>
+        <div> &#x5E84;&#x4E2D;&#x7172; </div>
+      </div>
+      <!--list 6-->
+      <div class="insurance_form">
+        <div class="left_title">&#x8F66;&#x4E3B;&#x8EAB;&#x4EFD;&#x8BC1;</div>
+        <div> 3101981992837291027 </div>
+      </div>
+      <div class="car_errors"></div>
+    </div>
+    <!--第二部分-->
+    <div class="insurance_card_second  border_babao"> 
+      <!--list 1-->
+      <div class="insurance_form">
+        <div class="title_list">&#x88AB;&#x4FDD;&#x4EBA;&#x4FE1;&#x606F;</div>
+        <div class="car_owner">
+          <label for="square_checkbox">
+            <input type="checkbox" class="car_checkbox" id="square_checkbox">
+            <span>&#x540C;&#x8F66;&#x4E3B;</span> </label>
+        </div>
+      </div>
+      <!--list 2-->
+      <div class="insurance_form">
+        <div class="left_title">&#x88AB;&#x4FDD;&#x4EBA;&#x59D3;&#x540D;</div>
+        <div>
+          <input class="car_input" placeholder="&#x8BF7;&#x586B;&#x5199;&#x5B8C;&#x6574;&#x7684;&#x54C1;&#x724C;&#x578B;&#x53F7;" value="">
+        </div>
+      </div>
+      <!--list 3-->
+      <div class="insurance_form">
+        <div class="left_title">&#x8EAB;&#x4EFD;&#x8BC1;&#x53F7;&#x7801;</div>
+        <div>
+          <input class="car_input" placeholder="&#x8BF7;&#x586B;&#x5199;&#x8F66;&#x8F86;&#x8BC6;&#x522B;&#x4EE3;&#x53F7;" value="" onchange="carProductAlertError(&apos;&#x60A8;&#x8F93;&#x5165;&#x7684;&#x6570;&#x5B57;&#x4E0D;&#x6B63;&#x786E;&apos;,this)">
+        </div>
+      </div>
+      <!--list 4-->
+      <div class="insurance_form">
+        <div class="left_title">&#x624B;&#x673A;&#x53F7;&#x7801;</div>
+        <div>
+          <input class="car_input" placeholder="&#x8BF7;&#x586B;&#x5199;&#x624B;&#x673A;&#x53F7;&#x7801;">
+        </div>
+      </div>
+      <!--报错-->
+      <div class="car_errors"></div>
+    </div>
+    <!--第三部分地址-->
+    <div class="insurance_card_third car_shadow"> 
+      <!--list 1-->
+      <div class="insurance_form">
+        <div class="title_list">&#x4FDD;&#x5355;&#x914D;&#x9001;&#x4FE1;&#x606F;</div>
+      </div>
+      <a class="insurance_address">
+      <div class="car_name">
+        <div>&#x6536;&#x8D27;&#x4EBA;&#xFF1A;&#x5E84;&#x4E2D;&#x7172;</div>
+        <div>15801766298</div>
+      </div>
+      <div>
+        <div class="weui_address">&#x6536;&#x8D27;&#x5730;&#x5740;&#xFF1A;&#x4E0A;&#x6D77;&#x5E02;&#x5F90;&#x6C47;&#x533A;&#x8679;&#x6865;&#x8DEF;808&#x53F7;&#x52A0;&#x534E;&#x5546;&#x52A1;&#x4E2D;&#x5FC3;D5&#x680B;3&#x697C;&#x4E0A;&#x6D77;&#x6DD8;&#x7565;&#x6570;&#x636E;&#x6709;&#x9650;&#x516C;&#x53F8;&#x5730;&#x5740;&#x5730;&#x5740;&#x5730;&#x5740;&#x5730;&#x6709;&#x9650;&#x516C;&#x53F8;&#x5730;&#x5740;&#x5730;&#x5740;&#x5730;&#x5740;&#x5730;</div>
+        <div class="weui_arrow"><img src="../../images/car/icon_car_arrow.png"></div>
+      </div>
+      </a> </div>
+    <!--第三部分地址-->
+    <div class="insurance_card_cost car_shadow"> 
+      <!--list 1-->
+      <div class="car_cost">
+        <div>&#x4FDD;&#x8D39;&#x603B;&#x8BA1;</div>
+        <div>&#xFFE5;12,537,836.99</div>
+      </div>
+      <div class="car_cost">
+        <div>&#x4F18;&#x60E0;&#x91D1;&#x989D;</div>
+        <div class="discount">-&#xFFE5;99.99</div>
+      </div>
+      <div class="car_cost">
+        <div>&#x4ED8;&#x6B3E;&#x91D1;&#x989D;</div>
+        <div class="cost">&#xFFE5;12,537,836.99</div>
+      </div>
+    </div>
+    <!--服务条款-->
+    <div class="agreement">
+      <label for="car_agreement">
+        <input type="checkbox" id="car_agreement" class="agreement_checkbox" checked>
+        &#x6211;&#x5DF2;&#x9605;&#x8BFB;&#x5E76;&#x540C;&#x610F; </label>
+      <a href="#">&#x300A;&#x6295;&#x4FDD;&#x58F0;&#x660E;&#x53CA;&#x670D;&#x52A1;&#x6761;&#x6B3E;&#x300B;</a> </div>
+    
+    <!--下一步--> 
+    <!--●--> 
+    <a href="javascript:jfSwitch.sectionTabChange(3)">
+    <div class="car_tabber">
+      <div class="weui_actionsheet_cell">&#x786E;&#x5B9A;&#x6295;&#x4FDD;</div>
+    </div>
+    </a> </div>
+  </span> 
+  
+  <!----------------------------------------step 8 核保-------------------------------------------------------------> 
+  <span class="change_section hide_section" data-page="3">
+  <div class="insurance_car_step8">
+    <div class="animation_top">
+      <div class="animation"> <img src="../../images/car/car_icon_7.png" class="font"> <img src="../../images/car/car_icon_8.png" class="big_car"> </div>
+      <p>&#x4FDD;&#x9669;&#x516C;&#x53F8;&#x5BA1;&#x6838;&#x4E2D;...</p>
+    </div>
+    <div class="words_bottom">
+      <p>&#x82E5;&#x5BA1;&#x6838;&#x65F6;&#x95F4;&#x8F83;&#x957F;&#xFF0C;&#x53EF;&#x6682;&#x65F6;&#x79BB;&#x5F00;&#x6216;<a href="../../main.html">&#x8FD4;&#x56DE;&#x9996;&#x9875;</a></p>
+      <p>&#x5BA1;&#x6838;&#x7ED3;&#x679C;&#x4F1A;&#x4EE5;&#x77ED;&#x4FE1;&#x5F62;&#x5F0F;&#x901A;&#x77E5;&#x60A8;!</p>
+    </div>
+  </div>
+  </span> </section>
+
+<!------------------订单确认 上拉地址---------------------->
+<div class="container_1019">
+  <div class="weui_mask_transition" id="mask_1017" style="display: none;"></div>
+  <div class="weui_actionsheet" id="weui_actionsheet_address_1017" style="display:none; z-index:1000;">
+    <div class="weui_actionsheet_menu_0811"> 
+      <!--上拉地址-->
+      <div class="weui_address_0811">
+        <div class="weui_title">
+          <div id="actionsheet_cancel2">
+            <div>&#xA0;</div>
+            <div>&#x9009;&#x62E9;&#x6536;&#x8D27;&#x5730;&#x5740;</div>
+            <div id="actionsheet_cancel2" class="weui_xiala"><img src="../../images/vip/icon-vip-jt.png"></div>
+          </div>
+        </div>
+        <div class="weui_azhuang_0811"> 
+          <!--地址1-->
+          <div class="weui_address_imf">
+            <div class="weui_vip_address">
+              <div>
+                <div>&#x5E84;&#x4E2D;&#x7172;&#xA0;&#xA0;15801766209</div>
+                <div>
+                  <div class="weui_edit">
+                    <div class="weui_img"><img src="../../images/address/icon-address-ediot.png"></div>
+                    <div>&#x7F16;&#x8F91;</div>
+                  </div>
+                  <div class="weui_del">
+                    <div class="weui_img"><img src="../../images/address/icon-address-del.png"></div>
+                    <div>&#x5220;&#x9664;</div>
+                  </div>
+                </div>
+              </div>
+              <div><span>(&#x9ED8;&#x8BA4;&#x5730;&#x5740;)</span>&#x4E0A;&#x6D77;&#x5E02;&#x5F90;&#x6C47;&#x533A;&#x8679;&#x6865;&#x8DEF;808&#x53F7;&#x52A0;&#x534E;&#x5546;&#x52A1;&#x4E2D;&#x5FC3;D5&#x680B;3&#x697C;</div>
+            </div>
+          </div>
+          <!--地址1结束--> 
+          <!--地址2-->
+          <div class="weui_address_imf">
+            <div class="weui_vip_address">
+              <div>
+                <div>&#x5E84;&#x4E2D;&#x7172;&#xA0;&#xA0;15801766209</div>
+                <div>
+                  <div class="weui_edit">
+                    <div class="weui_img"><img src="../../images/address/icon-address-ediot.png"></div>
+                    <div>&#x7F16;&#x8F91;</div>
+                  </div>
+                  <div class="weui_del">
+                    <div class="weui_img"><img src="../../images/address/icon-address-del.png"></div>
+                    <div>&#x5220;&#x9664;</div>
+                  </div>
+                </div>
+              </div>
+              <div>&#x4E0A;&#x6D77;&#x5E02;&#x5F90;&#x6C47;&#x533A;&#x8679;&#x6865;&#x8DEF;808&#x53F7;&#x52A0;&#x534E;&#x5546;&#x52A1;&#x4E2D;&#x5FC3;D5&#x680B;&#x4E0A;&#x6D77;&#x5E02;&#x5F90;&#x6C47;&#x533A;&#x8679;&#x6865;&#x8DEF;808&#x53F7;&#x52A0;&#x534E;&#x5546;&#x52A1;&#x4E2D;&#x5FC3;D5&#x680B;3&#x697C;&#x4E0A;&#x6D77;&#x5E02;&#x5F90;&#x6C47;&#x533A;&#x8679;&#x5B8C;&#x6210;&#x4E0A;&#x6D77;&#x5E02;&#x5F90;&#x6C47;&#x533A;&#x8679;&#x6865;&#x8DEF;808&#x53F7;&#x52A0;&#x534E;&#x5546;&#x52A1;&#x4E2D;&#x5FC3;D5&#x680B;&#x4E0A;&#x6D77;&#x5E02;&#x5F90;&#x6C47;&#x533A;&#x8679;&#x6865;&#x8DEF;808&#x53F7;&#x52A0;&#x534E;&#x5546;&#x52A1;&#x4E2D;&#x5FC3;D5&#x680B;3&#x697C;&#x4E0A;&#x6D77;&#x5E02;&#x5F90;&#x6C47;&#x533A;&#x8679;&#x5B8C;&#x6210;</div>
+            </div>
+          </div>
+          <!--地址2结束--> 
+          <!--地址3-->
+          <div class="weui_address_imf">
+            <div class="weui_vip_address">
+              <div>
+                <div>&#x5E84;&#x4E2D;&#x7172;&#xA0;&#xA0;15801766209</div>
+                <div>
+                  <div class="weui_edit">
+                    <div class="weui_img"><img src="../../images/address/icon-address-ediot.png"></div>
+                    <div>&#x7F16;&#x8F91;</div>
+                  </div>
+                  <div class="weui_del">
+                    <div class="weui_img"><img src="../../images/address/icon-address-del.png"></div>
+                    <div>&#x5220;&#x9664;</div>
+                  </div>
+                </div>
+              </div>
+              <div>&#x4E0A;&#x6D77;&#x5E02;&#x5F90;&#x6C47;&#x533A;&#x8679;&#x6865;&#x8DEF;808&#x53F7;&#x52A0;&#x534E;&#x5546;&#x52A1;&#x4E2D;&#x5FC3;D5&#x680B;&#x4E0A;&#x6D77;&#x5E02;&#x5F90;&#x6C47;&#x533A;&#x8679;&#x6865;&#x8DEF;808&#x53F7;&#x52A0;&#x534E;&#x5546;&#x52A1;&#x4E2D;&#x5FC3;D5&#x680B;3&#x697C;&#x4E0A;&#x6D77;&#x5E02;&#x5F90;&#x6C47;&#x533A;&#x8679;&#x5B8C;&#x6210;&#x4E0A;&#x6D77;&#x5E02;&#x5F90;&#x6C47;&#x533A;&#x8679;&#x6865;&#x8DEF;808&#x53F7;&#x52A0;&#x534E;&#x5546;&#x52A1;&#x4E2D;&#x5FC3;D5&#x680B;&#x4E0A;&#x6D77;&#x5E02;&#x5F90;&#x6C47;&#x533A;&#x8679;&#x6865;&#x8DEF;808&#x53F7;&#x52A0;&#x534E;&#x5546;&#x52A1;&#x4E2D;&#x5FC3;D5&#x680B;3&#x697C;&#x4E0A;&#x6D77;&#x5E02;&#x5F90;&#x6C47;&#x533A;&#x8679;&#x5B8C;&#x6210;</div>
+            </div>
+          </div>
+          <!--地址3结束--> 
+          <!--地址4-->
+          <div class="weui_address_imf">
+            <div class="weui_vip_address">
+              <div>
+                <div>&#x5E84;&#x4E2D;&#x7172;&#xA0;&#xA0;15801766209</div>
+                <div>
+                  <div class="weui_edit">
+                    <div class="weui_img"><img src="../../images/address/icon-address-ediot.png"></div>
+                    <div>&#x7F16;&#x8F91;</div>
+                  </div>
+                  <div class="weui_del">
+                    <div class="weui_img"><img src="../../images/address/icon-address-del.png"></div>
+                    <div>&#x5220;&#x9664;</div>
+                  </div>
+                </div>
+              </div>
+              <div>&#x4E0A;&#x6D77;&#x5E02;&#x5F90;&#x6C47;&#x533A;&#x8679;&#x6865;&#x8DEF;808&#x53F7;&#x52A0;&#x534E;&#x5546;&#x52A1;&#x4E2D;&#x5FC3;D5&#x680B;&#x4E0A;&#x6D77;&#x5E02;&#x5F90;&#x6C47;&#x533A;&#x8679;&#x6865;&#x8DEF;808&#x53F7;&#x52A0;&#x534E;&#x5546;&#x52A1;&#x4E2D;&#x5FC3;D5&#x680B;3&#x697C;&#x4E0A;&#x6D77;&#x5E02;&#x5F90;&#x6C47;&#x533A;&#x8679;&#x5B8C;&#x6210;&#x4E0A;&#x6D77;&#x5E02;&#x5F90;&#x6C47;&#x533A;&#x8679;&#x6865;&#x8DEF;808&#x53F7;&#x52A0;&#x534E;&#x5546;&#x52A1;&#x4E2D;&#x5FC3;D5&#x680B;&#x4E0A;&#x6D77;&#x5E02;&#x5F90;&#x6C47;&#x533A;&#x8679;&#x6865;&#x8DEF;808&#x53F7;&#x52A0;&#x534E;&#x5546;&#x52A1;&#x4E2D;&#x5FC3;D5&#x680B;3&#x697C;&#x4E0A;&#x6D77;&#x5E02;&#x5F90;&#x6C47;&#x533A;&#x8679;&#x5B8C;&#x6210;</div>
+            </div>
+          </div>
+          <!--地址4结束--> 
+        </div>
+        <!--新地址--> 
+        <a href="#">
+        <div class="weui_add_address" id="weui_add_address_1019">
+          <div>&#x6DFB;&#x52A0;&#x65B0;&#x5730;&#x5740;</div>
+          <!--<div><img src="../../images/vip/icon-vip-jt.png"></div>--> 
+        </div>
+        </a> 
+        <!--新地址结束--> 
+      </div>
+      
+      <!--end --> 
+    </div>
+  </div>
+</div>
+<!--------------------------------------模态框 确认是否删除-------------------------------------------------------------->
+<div class="weui_dialog_confirm" id="DeletdialogAddress_1017" style="display:none;">
+  <div class="weui_mask" style="z-index:2000;"></div>
+  <div class="weui_dialog">
+    <div class="weui_dialog_hd"><strong class="weui_dialog_title">&#x786E;&#x8BA4;&#x8981;&#x5220;&#x9664;&#x8BE5;&#x5730;&#x5740;&#x5417;&#xFF1F;</strong></div>
+    <div class="weui_dialog_ft"> <a href="javascript:;" class="weui_btn_dialog default">&#x53D6;&#x6D88;</a> <a href="javascript:;" class="weui_blue" style="color:#10a6e2;">&#x786E;&#x5B9A;</a> </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="../../lib/js/jquery-3.0.0.min.js"></script>
+<script src="../../lib/js/swiper-3.3.1.jquery.min.js"></script>
+<script src="../../js/main-Wechat.js"></script>
+<script src="../../js/IOU.js"></script>
+<script src="../../js/jquery.carInsuranceZy.js"></script>
+<script src="../../js/jquery.catalogPageZy.js"></script>
+<script src="../../js/jquery.feedBack.js"></script>
+<script src="../../js/jquery.huikabaoZy.js"></script>
+<script src="../../js/jquery.payProcessZy.js"></script>
+<script src="../../js/jquery.shoppingBagZy.js"></script>
+<script src="../../js/jquery.TransactionList.js"></script>
+<script src="../../js/pruduct-main.js"></script>
+<script src="../../js/qd-Wechat.js"></script>
+<script src="../../js/vipMainJs.js"></script>
+<script src="../../js/fastclick.js"></script>
+</body>
+
+
+
+
+</html>
