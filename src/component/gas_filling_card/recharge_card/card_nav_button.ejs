@@ -1,0 +1,132 @@
+<!--加油卡切换按钮-->
+
+<div class="recharge_nav_button">
+    <div class="navigation_tab">
+        <div class="nav_title show" onclick="TravelTabChange(0)">中国石化</div>
+        <div class="nav_title" onclick="TravelTabChange(1)">中国石油</div>
+    </div>
+
+    <div class="card_section_all">
+
+        <div class="card_tab_all">
+            <div class="tab_one">
+                <!--加油卡输入框-->
+                <div class="card_input_all">
+                    <div class="card_input">
+                        <div class="card_input_title">油卡卡号：</div>
+                        <div class="card_input_number">
+                            <input class="card_text" type="tel" pattern="" placeholder="请输入19位中石化卡号" maxlength="19">
+                            <p class="show_error">格式有误</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!--提示文字-->
+                <div class="card_hint_text">注：请确认卡号填写正确,误充值后金额将无法追回</div>
+
+                <!--加油卡充值内容-->
+                <div class="card_content">
+                    <div class="card_title_text">选择面额：</div>
+                    <div class="card_recharge_value">
+                        <div class="value_one">
+                                <div class="card_number" id="card_number">
+                                    <div>100元</div>
+                                    <div class="number_value_text">售价：90.00元</div>
+                                </div>
+                                <div class="card_number" onclick="orderDragUp.run()">
+                                    <div>200元</div>
+                                    <div class="number_value_text">售价：200.00元</div>
+                                </div>
+                                <div class="card_number" onclick="orderDragUp.run()">
+                                    <div>500元</div>
+                                    <div class="number_value_text">售价：500.00元</div>
+                                </div>
+                                <div class="card_number" onclick="orderDragUp.run()">
+                                    <div>1000元</div>
+                                    <div class="number_value_text">售价：1000.00元</div>
+                                </div>
+                            </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="tab_two">
+                <!--加油卡输入框-->
+                <div class="card_input_all">
+                    <div class="card_input">
+                        <div class="card_input_title">油卡卡号：</div>
+                        <div class="card_input_number">
+                            <input class="card_text" type="tel" pattern="" placeholder="请输入16位中石油卡号" maxlength="16">
+                            <p class="show_error">格式有误</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!--提示文字-->
+                <div class="card_hint_text">注：请确认卡号填写正确,误充值后金额将无法追回</div>
+
+                <!--加油卡充值内容-->
+                <div class="card_content">
+                    <div class="card_title_text">选择面额：</div>
+                    <div class="card_recharge_value">
+                        <div class="value_one">
+                                <div class="card_number" id="card_number">
+                                    <div>100元</div>
+                                    <div class="number_value_text">售价：90.00元</div>
+                                </div>
+                                <div class="card_number" onclick="orderDragUp.run()">
+                                    <div>200元</div>
+                                    <div class="number_value_text">售价：200.00元</div>
+                                </div>
+                                <div class="card_number" onclick="orderDragUp.run()">
+                                    <div>500元</div>
+                                    <div class="number_value_text">售价：500.00元</div>
+                                </div>
+                                <div class="card_number" onclick="orderDragUp.run()">
+                                    <div>1000元</div>
+                                    <div class="number_value_text">售价：1000.00元</div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<script>
+
+    document.getElementsByClassName('card_text')[0].addEventListener('blur',function(){
+        showErrorText(this,'格式错误啦')//参数一元素本身，参数二报错文本
+
+        var warmTips=document.getElementsByClassName('card_hint_text')[0];
+
+        if(warmTips.className.indexOf('tip_show')>-1){
+
+            warmTips.className=warmTips.className.replace('tip_show','')
+        }
+    },false)
+
+
+    //焦点状态，报错信息删除
+    document.getElementsByClassName('card_text')[0].addEventListener('focus',function(){
+
+        var thiscardNum=this.value;
+
+        var showError=document.getElementsByClassName('show_error')[0];
+
+        if(showError.style.display=='block'){
+
+            showError.style.display='none';
+        }
+
+        var warmTips=document.getElementsByClassName('card_hint_text')[0];//输入提示
+
+        warmTips.className=warmTips.className+' tip_show';
+
+    },false)
+</script>

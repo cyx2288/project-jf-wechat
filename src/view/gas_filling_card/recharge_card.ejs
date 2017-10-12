@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>加油卡充值</title>
+    <link rel="stylesheet"  href="../../css/jf_gas_filling_card.css">
+
+</head>
+
+<body>
+
+<!--顶部固定导航-->
+
+<!--导航-->
+<%- include('../../component/basic/topNav.ejs',{
+"thisrighthref":"jfSwitch.goBack()",
+"navtitle":"加油卡充值",
+"thislefthref":"",
+"thisimgsrc":" "
+})%>
+
+
+<!--加油卡充值-按钮和输入框充值内容-->
+<%- include('../../component/gas_filling_card/recharge_card/card_nav_button.ejs')%>
+
+<!--加油卡联系客服-->
+<%- include('../../component/gas_filling_card/recharge_card/card_service.ejs')%>
+
+<!--弹出框-->
+<%- include('../../component/gas_filling_card/recharge_card/pop_box.ejs')%>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+<script src="../../js/jf_gas_filling_card.js"></script>
+
+
+
+
+
+
+
+</html>

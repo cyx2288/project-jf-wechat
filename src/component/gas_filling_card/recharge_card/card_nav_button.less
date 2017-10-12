@@ -1,0 +1,231 @@
+/*加油卡切换按钮*/
+.recharge_nav_button{
+  width: 95%;
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 15px;
+  /*box-shadow: 0 1px 6px rgba(171,171,171, .4);*/
+ /* overflow: hidden;*/
+
+
+  /*切换按钮*/
+  .navigation_tab{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    padding: 20px 0;
+    background: #FFFFFF;
+    box-shadow: 0 1px 6px rgba(171,171,171, .4);
+    border-radius: 10px 10px 0 0;
+
+    >div{
+      width: 50%;
+      background: none;
+      border-radius: 5px 0 0 5px;
+      margin-left: 10px;
+      margin-right: 0;
+      border: 1px solid #10a6e2;
+      color: #10a6e2;
+      text-align: center;
+      padding: 5px 0;
+      &:nth-child(2){
+        border-radius: 0 5px 5px 0;
+        margin-left: 0;
+        margin-right: 10px;
+      }
+    }
+    .show{
+      background: #10a6e2;
+      color: white;
+    }
+  }
+
+  .card_section_all{
+    overflow: hidden;
+    width: 100%;
+
+    .card_tab_all{
+      width: 200%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      transition: transform 0.2s ease-in-out;
+
+      .tab_one,.tab_two{
+        width: 100%;
+        flex: 1;
+      }
+    }
+    /*输入框*/
+    .card_input_all{
+      width: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      background: #FFFFFF;
+
+      .card_input{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 20px;
+        &:nth-child(2){
+          width: 100%;
+          margin-left: 20px;
+        }
+
+
+        .card_input_title{
+          font-size: 18px;
+          vertical-align: text-top;
+          white-space: nowrap;
+          margin: 0 10px;
+
+          &:active{
+            background: #DDDDDD;
+          }
+        }
+        .card_input_number{
+          width: 75%;
+          position: relative;
+
+          .card_text{
+            width: 100%;
+            border: 0;
+            outline: 0;
+            background-color: transparent;
+            font-size: 16px;
+            line-height: 22px;
+          }
+          p{
+            margin-top: -14px;
+            color: #ff4646;
+            font-size: 12px;
+            display: none;
+            position: absolute;
+            top: 38px;
+            left: 0;
+          }
+        }
+      }
+    }
+
+    .card_hint_text.tip_show{
+      height: 55px;
+      opacity: 1;
+    }
+
+    /*提示文字*/
+    .card_hint_text{
+      padding: 0 10px;
+      font-size: 12px;
+      color: #fc6329;
+      position: relative;
+      background: #FFFFFF;
+      border-radius: 0 0 10px 10px;
+      box-shadow: 0 4px 5px rgba(171,171,171, .2);
+      height: 0;
+      opacity: 0;
+      transition: all 0.3s linear;
+      line-height: 55px;
+      overflow: hidden;
+      &:before{
+        content: " ";
+        display: block;
+        border-bottom: 1px solid #E9E9E9;
+        width: 95%;
+        position: absolute;
+        top: 0;
+        margin: 0 auto;
+      }
+    }
+
+    /*充值内容*/
+    .card_content{
+      width: 100%;
+      background: #FFFFFF;
+      border-radius: 10px;
+      margin: auto;
+      margin-top: 8px;
+      &:after{
+        content: "";
+        display: block;
+        clear: both;
+      }
+      .card_title_text{
+        padding: 15px 0 15px 10px;
+        font-size: 18px;
+      }
+
+      /*充值内容*/
+      .card_recharge_value{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transform: translate3d(0,0,0);
+        transition: transform 0.2s linear;
+        .value_one{
+          margin-bottom: 8px;
+          width:95%;
+          margin: 0 auto;
+          &:after{
+            content: "";
+            display: block;
+            clear: both;
+          }
+        }
+        .card_number{
+          width: 28%;
+          border-radius: 5px;
+          background: #fff;
+          border: 1px solid #DDD;
+          font-size: 18px;
+          color: #10a6e2;
+          text-align: center;
+          padding: 12px 5px;
+          float: left;
+          margin-bottom: 7px;
+          @media screen and(max-width: 330px){
+            font-size: 14px;
+          }
+
+          &:active{
+            border: 1px solid #10a6e2;
+            color: #10a6e2;
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+            outline: 0;
+          }
+
+          &:nth-child(2),&:nth-child(5){
+            margin: 0 10px;
+
+            @media screen and(max-width: 390px) {
+              margin: 0 6px;
+            }
+
+            @media screen and(max-width: 330px) {
+              margin: 0 5px;
+            }
+          }
+
+          .number_value_text{
+            color: #b8b6b6;
+            font-size: 12px;
+            white-space: nowrap;
+
+            @media screen and(max-width: 390px) {
+              font-size: 12px;
+            }
+          }
+
+
+        }
+      }
+    }
+  }
+}
