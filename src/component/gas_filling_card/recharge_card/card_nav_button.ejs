@@ -154,22 +154,20 @@
         }
     },false)
 
+    document.getElementsByClassName('card_text')[1].addEventListener('blur',function(){
+        showErrorText(this,'格式错误啦')//参数一元素本身，参数二报错文本
 
-    //焦点状态，报错信息删除
-    document.getElementsByClassName('card_text')[0].addEventListener('focus',function(){
+        var warmTips=document.getElementsByClassName('card_hint_text')[1];
 
-        var thiscardNum=this.value;
+        if(warmTips.className.indexOf('tip_show')>-1){
 
-        var showError=document.getElementsByClassName('show_error')[0];
-
-        if(showError.style.display=='block'){
-
-            showError.style.display='none';
+            warmTips.className=warmTips.className.replace('tip_show','')
         }
-
-        var warmTips=document.getElementsByClassName('card_hint_text')[0];//输入提示
-
-        warmTips.className=warmTips.className+' tip_show';
-
     },false)
+
+
+
+    showWarmTips();//出现温馨提示
+
+
 </script>
