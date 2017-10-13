@@ -25,13 +25,13 @@ function TravelTabChange(num){
 }
 
 //报错
-function showErrorText(ele,text){
+function showErrorText(ele,text,num){
 
     var patern=/[0-9]/;
 
     var thiscardNum=ele.value;
 
-    var showError=document.getElementsByClassName('show_error')[0];
+    var showError=ele.nextElementSibling;
 
     if(thiscardNum){
 
@@ -40,4 +40,49 @@ function showErrorText(ele,text){
         showError.innerHTML=""+text+""
 
     }
+}
+
+
+
+
+//出现温馨提示
+function showWarmTips(){
+
+    //焦点状态，报错信息删除
+    document.getElementsByClassName('card_text')[0].addEventListener('focus',function(){
+
+        var thiscardNum=this.value;
+
+        var showError=document.getElementsByClassName('show_error')[0];
+
+        if(showError.style.display=='block'){
+
+            showError.style.display='none';
+        }
+
+        var warmTips=document.getElementsByClassName('card_hint_text')[0];//输入提示
+
+        warmTips.className=warmTips.className+' tip_show';
+
+    },false)
+
+
+
+    //焦点状态，报错信息删除
+    document.getElementsByClassName('card_text')[1].addEventListener('focus',function(){
+
+        var thiscardNum=this.value;
+
+        var showError=document.getElementsByClassName('show_error')[1];
+
+        if(showError.style.display=='block'){
+
+            showError.style.display='none';
+        }
+
+        var warmTips=document.getElementsByClassName('card_hint_text')[1];//输入提示
+
+        warmTips.className=warmTips.className+' tip_show';
+
+    },false)
 }
