@@ -50,6 +50,18 @@
                     </div>
 
                 </div>
+
+                <!--加油卡联系客服-->
+                <div class="card_customer_service" onclick="jfCustomerService.click()"><img src="../../images/icon_dialogue.png">联系客服</div>
+                <div class="card_warm_notes">
+                    <ul>
+                        温馨提示
+                        <li>充值成功后可至中石化网站：http://www.sinopecsales.com/查询充值情况</li>
+                        <li>中石化加油卡充值建议不超过10次/天；单日充值不超过1,0000元</li>
+                        <li>卡内余额无限制</li>
+                        <li>充值完成后须至加油站完成 <a href="../../html/helpcenter/menu.html">圈存>></a></li>
+                    </ul>
+                </div>
             </div>
 
             <div class="tab_two">
@@ -72,7 +84,7 @@
                     <div class="card_title_text">选择面额：</div>
                     <div class="card_recharge_value">
                         <div class="value_one">
-                                <div class="card_number" id="card_number">
+                                <div class="card_number"  onclick="orderDragUp.run()" id="card_number">
                                     <div>100元</div>
                                     <div class="number_value_text">售价：90.00元</div>
                                 </div>
@@ -91,6 +103,18 @@
                             </div>
                     </div>
                 </div>
+
+                <!--加油卡联系客服-->
+                <div class="card_customer_service" onclick="jfCustomerService.click()"><img src="../../images/icon_dialogue.png">联系客服</div>
+                <div class="card_warm_notes">
+                    <ul>
+                        温馨提示
+                        <li>充值成功后可至中石油网站：http://www.card.petrochina.com.cn/查询充值情况</li>
+                        <li>中石油加油卡充充值无次数、额度限制</li>
+                        <li>卡内余额无限制</li>
+                        <li>充值完成后须至加油站完成 <a href="../../html/helpcenter/menu.html">圈存>></a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -99,6 +123,25 @@
 </div>
 
 <script>
+    jfCustomerService.init(
+        {//用户信息
+            name: '阿陈',// 名字
+            address: '西伯利亚',// 地址
+            email: '1313@qq.com',// 邮箱
+            age: '16',// 年龄
+            tel: '110',// 电话
+            comment: '很帅',// 备注
+            gender: '男',// 性别
+            qq: '1234567',// QQ
+            weibo: '',// 微博
+            weixin: '',// 微信
+            '公司名称': '上海淘略数据有限公司',
+            '公司编号': '123ksuhdaf891274',
+            '员工编号': '1234567890123456'
+        },
+        //指定客服
+        'b040d96757bf55ea302f9fbfb0ecd062'
+    );
 
     document.getElementsByClassName('card_text')[0].addEventListener('blur',function(){
         showErrorText(this,'格式错误啦')//参数一元素本身，参数二报错文本
