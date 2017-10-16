@@ -82,9 +82,15 @@ var jfNumKeybroad={
 
 
                 }
-
                 /*删除事件*/
-                document.getElementById('actionsheet_delete').addEventListener("touchstart",DeleteThisEle,false);//键盘上的删除键
+                if(browser.os.android||browser.os.iOS){
+
+                    document.getElementById('actionsheet_delete').addEventListener("touchstart",DeleteThisEle,false);//键盘上的删除键
+                }else {
+                    document.getElementById('actionsheet_delete').addEventListener("click",DeleteThisEle,false);//键盘上的删除键
+                }
+
+
 
                 /*一键清空数值*/
                 if(clearButton){
@@ -223,8 +229,13 @@ var jfNumKeybroad={
                         thisFocusingEle.className=""
                     }
 
-                    /*插入数字后，绑定光标位置切换事件*/
-                    spanEle.addEventListener("touchstart",changeFocusing,false);//点击切换光标位置
+
+                    if(browser.os.android||browser.os.iOS){
+
+                        spanEle.addEventListener("touchstart",changeFocusing,false);//点击切换光标位置
+                    }else {
+                        spanEle.addEventListener("click",changeFocusing,false);//点击切换光标位置
+                    }
 
                 }
 
@@ -239,10 +250,17 @@ var jfNumKeybroad={
 
                 var srcclickspan = evt.target || evt.srcElement;
 
+                var thisTouchesClientX;//当前点击事件距离左边屏幕的距离
 
                 var thisOffsetLeft=srcclickspan.getBoundingClientRect().left;//当前元素距离左边屏幕的距离
 
-                var thisTouchesClientX=parseInt(evt.touches[0].clientX);//当前点击事件距离左边屏幕的距离
+
+                if(browser.os.android||browser.os.iOS){
+
+                    thisTouchesClientX=parseInt(evt.touches[0].clientX);
+                }else {
+                    thisTouchesClientX=parseInt(evt.clientX);
+                }
 
                 var thistouchX=thisTouchesClientX-thisOffsetLeft;//当前点击点在元素中的的位置
 

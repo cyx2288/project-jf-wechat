@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="../../css/jf_iou.css">
+    <title>WeUI-pay</title>
+    
+
+</head>
+
+<body class="ovfHiden qiao1104">
+<nav class="Top_navigation">
+    <div class="weui_tab_bd"></div>
+    <div class="container_tab"> <a onclick="jfSwitch.goBack()">
+        <div class="nav_left"><img src="../../images/icon_pay_return.png"></div>
+    </a>
+        <div class="nav_center">
+            <div>&#x8FD8;&#x6B3E;</div>
+        </div>
+        <a href="#">
+            <div class="nav_right"></div>
+        </a> </div>
+</nav>
+   <div class="jf_IOU_main">
+
+       <!--中间内容部分-->
+       <div class="jf_IOU_Midbody">
+           <div class="IOU_circle"></div>
+
+           <div class="IOU_midconcent IOU_midconcentnumkey">
+               <div class="IOU_money_returninput">
+                   <div><p>&#x8FD8;&#x6B3E;&#x91D1;&#x989D;</p></div>
+                   <div><div id="IOU_moneyreturn_show"><span>&#xFFE5;</span><div class="IOU_moneyreturn_fade jf_num_input_keyboard">5000</div></div></div>
+               </div>
+               <div class="IOU_return_money">
+                   <span style="color:#4a4a4a">&#xA0;&#xA0;&#xA0;&#x5F85;&#x8FD8;&#x91D1;&#x989D;&#xFF08;&#x5143;&#xFF09;&#xFF1A;</span>
+                   <span>8000.00</span>
+               </div>
+               <div class="IOU_return_money">
+                   <span>* &#x5176;&#x4E2D;&#x672C;&#x91D1;&#xFF08;&#x5143;&#xFF09;&#xFF1A;</span>
+                   <span>8000.00</span>
+               </div>
+               <div class="IOU_return_money">
+                   <span>* &#x903E;&#x671F;&#x5229;&#x606F;&#xFF08;&#x5143;&#xFF09;&#xFF1A;</span>
+                   <span> 0.00</span>
+               </div>
+               <div class="IOU_btn_checkreturn">
+                   <a href="#"><button type="button" id="IOU_moneyreturn_hidden" class="btn_close">&#x786E;&#x8BA4;&#x8FD8;&#x6B3E;</button></a>
+               </div>
+           </div>
+           <!--页面底部-->
+           <div class="IOU_returnfinish_bottom">
+               <p class="returnfinish_bottom_info">&#x672C;&#x670D;&#x52A1;&#x7531;&#x5609;&#x798F;&#x5E73;&#x53F0;&#x63D0;&#x4F9B;</p>
+           </div>
+       </div>
+
+   </div>
+<!--虚拟键盘-->
+
+<div class="jf_num_keybroad container container_key">
+    <div class="weui_actionsheet" id="weui_actionsheet_keyboard">
+        <div class="weui_grids weui_grids_kj">
+            <a class="weui_grid" data-value="1">
+                <p class="weui_grid_label"> 1 </p>
+            </a> <a class="weui_grid" data-value="2">
+            <p class="weui_grid_label"> 2 </p>
+        </a> <a class="weui_grid" data-value="3">
+            <p class="weui_grid_label"> 3 </p>
+        </a> <a class="weui_grid" data-value="4">
+            <p class="weui_grid_label"> 4 </p>
+        </a> <a class="weui_grid" data-value="5">
+            <p class="weui_grid_label"> 5 </p>
+        </a> <a class="weui_grid" data-value="6">
+            <p class="weui_grid_label"> 6 </p>
+        </a> <a class="weui_grid" data-value="7">
+            <p class="weui_grid_label"> 7 </p>
+        </a> <a class="weui_grid" data-value="8">
+            <p class="weui_grid_label"> 8 </p>
+        </a> <a class="weui_grid" data-value="9">
+            <p class="weui_grid_label"> 9 </p>
+        </a> <a class="weui_grid" data-value=".">
+            <p class="weui_grid_label"> .</p>
+        </a> <a class="weui_grid weui_grid_0" data-value="0">
+            <p class="weui_grid_label"> 0 </p>
+        </a></div>
+
+        <div class="weui_actionsheet_check">
+            <div class="weui_grids">
+                <a class="weui_grid" id="actionsheet_delete">
+                    <p class="weui_grid_label"><img src="../../images/bank/deleteVIP.png"></p>
+                </a> <a class="weui_grid" id="actionsheet_cancel">
+                <p class="weui_grid_label"><img src="../../images/bank/keyboardVIP.png"></p>
+            </a> <a class="weui_grid weui_grid_labelCheckAll" id="actionsheet_check">
+                <p class="weui_grid_label weui_grid_labelCheck"> &#x786E;&#x8BA4; </p>
+            </a></div>
+        </div>
+    </div>
+</div>
+<!--虚拟键盘结束-->
+
+
+<script type="text/javascript" src="../../js/jf_iou.js"></script>
+</body>
+
+
+
+<script>
+    //固定下部高度
+    jfSwitch.sectionSet();
+
+    //输入金额键盘
+
+    $('#IOU_moneyreturn_show').jfNumKeybroad({
+        hideButton: '#IOU_moneyreturn_hidden',
+        //关闭按钮
+        maxNum: 7
+        //最大输入位数
+    })
+
+    //滑动点击整个页面，关闭键盘
+    $("div.jf_IOU_main ").on("touchmove",hideActionSheet);
+
+    //返回页面的同时，关闭键盘
+    $("div.nav_left").click(hideActionSheet);
+
+
+    //输入金额，实现激活确认还款按钮
+    $('#weui_actionsheet_keyboard .weui_grid').on('touchstart', function(){
+
+        MoneyRule("div .IOU_moneyreturn_fade","#IOU_moneyreturn_hidden","0","999999999");//参数一是输入金额的div选择器,参数二是激活按钮的ID选择器，参数三输入最小金额，参数四是最大金额
+    });
+    //安卓端 物理退格键关闭键盘
+    window.addEventListener('load',hideKeyBoard,false);
+
+</script>
+
+
+</html>
