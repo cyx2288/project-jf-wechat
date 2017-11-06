@@ -73,9 +73,9 @@ function changeValue(ele) {
 
 
 /*禁止输入小数点*/
-function forbidZero(event){
+function forbidZero(e){
 
-    var evt=event||window.event;
+    var evt=e||window.event;
 
     var thisTargetEle=evt.srcElement||evt.target;
 
@@ -119,9 +119,9 @@ function forbidZero(event){
 }
 
 /*获取显示金额总价*/
-function getTotalMoney(e){
+function getTotalMoney(num){
 
-    forbidZero(e);//禁止输入0
+    forbidZero();//禁止输入0
 
     var totalPriceBox=document.getElementsByClassName('market_total_price')[0];
 
@@ -137,14 +137,13 @@ function getTotalMoney(e){
 
     if(thisProNum&&thisProPrice){
 
-        totalPrice=parseFloat(thisProNum)*parseFloat(thisProPrice);//总价
+        totalPrice=parseFloat(thisProNum)*parseFloat(thisProPrice)+parseFloat(num);//总价
 
         if(!buyPage){
             totalPriceBox.style.height="70px"
         }else {
             totalPriceBox.style.height="45px"
         }
-
 
 
     }else {
@@ -159,11 +158,12 @@ function getTotalMoney(e){
 
     }
 
-    totalPrice=totalPrice.toString();
+    totalPrice=totalPrice.toFixed(3).toString();
 
     if(totalPrice.indexOf('.')>-1){//如果存在小数点
         totalPrice=totalPrice.substring(0,totalPrice.indexOf('.')+3);//提取小数点位小数
     }
+
     showMoneyBox.innerHTML='¥'+parseFloat(totalPrice).toFixed(2);//如果只存在以为小数，默认加一位0
 
 }
@@ -188,9 +188,10 @@ function ValiateNextBtn(){
 };
 
 
+/*
+/!*加减判断*!/
+function valiateMoney(num){
 
-/*加减判断*/
-function valiateMoney(){
 
     var eleAddEvent;
 
@@ -201,13 +202,12 @@ function valiateMoney(){
         eleAddEvent='click';
     }
 
-
     //金额加减绑定事件
     document.getElementsByClassName('reduce')[0].addEventListener(eleAddEvent,function(){//相减
 
         changeValue(this);
 
-        getTotalMoney();
+        getTotalMoney(num);
 
     },false);
 
@@ -215,13 +215,14 @@ function valiateMoney(){
 
         changeValue(this);
 
-        getTotalMoney();
+        getTotalMoney(num);
 
     },false);
 
 
 
-}
+}*/
+
 
 
 /*获取订单数据显示*/
@@ -244,36 +245,36 @@ function getOrderData(){
 
 
 
-function showInitNum(num){
+function showInitNum(num,rate){
 
-    var thisInitHtml="";
+        var thisInitHtml="";
 
-   for(var i=0;i<num.length;i++){
+        for(var i=0;i<num.length;i++){
 
-       thisInitHtml+='<span>'+num[i]+'</span>'
-   };
+            thisInitHtml+='<span>'+num[i]+'</span>'
+        };
 
-    document.getElementById('savekeyNum').innerHTML=thisInitHtml;
+        document.getElementById('savekeyNum').innerHTML=thisInitHtml;
 
-    document.getElementById('key_input').value=num;
+        document.getElementById('key_input').value=num;
 
-    var showMoneyBox=document.getElementsByClassName('money_box')[0];//显示金额
+        var showMoneyBox=document.getElementsByClassName('money_box')[0];//显示金额
 
-    var totalPrice;
+        var totalPrice;
 
-    var thisProPrice=document.getElementsByClassName('inputele')[0].value;//买入单价
+        var thisProPrice=document.getElementsByClassName('inputele')[0].value;//买入单价
 
-    totalPrice=parseFloat(num)*parseFloat(thisProPrice);//总价
+        totalPrice=parseFloat(num)*parseFloat(thisProPrice)+rate;//总价
 
-    totalPrice=totalPrice.toString();
+        totalPrice=totalPrice.toFixed(3).toString();
 
-    if(totalPrice.indexOf('.')>-1){//如果存在小数点
-        totalPrice=totalPrice.substring(0,totalPrice.indexOf('.')+3);//提取小数点位小数
-    }
-    showMoneyBox.innerHTML='¥'+parseFloat(totalPrice).toFixed(2);//如果只存在以为小数，默认加一位0;
+        if(totalPrice.indexOf('.')>-1){//如果存在小数点
+            totalPrice=totalPrice.substring(0,totalPrice.indexOf('.')+3);//提取小数点位小数
+        }
 
+        showMoneyBox.innerHTML='¥'+parseFloat(totalPrice).toFixed(2);//如果只存在以为小数，默认加一位0;
 
-   document.getElementsByClassName('market_total_price')[0].style.height="70px"
+        document.getElementsByClassName('market_total_price')[0].style.height="70px";
 
     ValiateNextBtn()
 

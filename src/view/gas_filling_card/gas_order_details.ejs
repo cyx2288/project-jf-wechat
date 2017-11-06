@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>加油卡充值订单</title>
+    <link rel="stylesheet"  href="../../css/jf_gas_filling_card.css">
+
+</head>
+
+<body>
+
+<!--顶部固定导航-->
+
+<!--导航-->
+<%- include('../../component/basic/topNav.ejs',{
+"thisrighthref":"jfSwitch.goBack()",
+"navtitle":"加油卡充值订单",
+"thislefthref":"",
+"thisimgsrc":" "
+})%>
+
+
+<!--加油卡充值-详情-->
+<%- include('../../component/gas_filling_card/gas_order_details/gas_details.ejs')%>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+<script src="../../js/jf_gas_filling_card.js"></script>
+
+</html>

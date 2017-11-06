@@ -26,7 +26,7 @@
         <div class="price_num">
             <span class="reduce">—</span>
             <div class="show_price">
-                <input value="0.997" class="inputele" type="number" maxlength="5" max-price="0.997">
+                <input value="0.998" class="inputele" type="number" maxlength="5" max-price="0.998">
             </div>
             <span class="add">+</span>
 
@@ -64,16 +64,17 @@
     window.onload=function() {
 
 
-        showInitNum('5000');//显示初始卖出福利；参数为当前可以卖出的福利余额数字
+        showInitNum('5000',0);//显示初始卖出福利；参数一为当前可以卖出的福利余额数字,若没有就可以不用调用此方法。参数二为优惠金额（负数）或者服务费（正数）
 
 
         setTimeout(function () {
 
+            jfkeybroad.run();//页面初始的时候，开启键盘；
 
             //判断下一步按钮是否可以点击（判断输入框里面有没有值，以及协议有没有被选中）
             $('body').on('touchstart', ".weui_grid", function () {
 
-                getTotalMoney();//显示金额出现
+                getTotalMoney(10);//显示金额出现,参数为优惠金额（负数）或者服务费（正数）
 
                 ValiateNextBtn();//判断下一步按钮
 
@@ -84,15 +85,40 @@
         document.getElementsByClassName('agreement_check')[0].addEventListener('click', ValiateNextBtn, false)
 
         //金额加减绑定事件
-        valiateMoney();
 
-        document.getElementsByClassName('inputele')[0].addEventListener('keyup', function () {
+        var eleAddEvent;
+
+        if(browser.os.iOS){
+
+            eleAddEvent='touchstart';
+        }else {
+            eleAddEvent='click';
+        }
+
+        //金额加减绑定事件
+        document.getElementsByClassName('reduce')[0].addEventListener(eleAddEvent,function(){//相减
 
             changeValue(this);
 
-            getTotalMoney();//显示金额出现
-        }, false);
+            getTotalMoney(10);//显示金额出现,参数为优惠金额（负数）或者服务费（正数）
 
+        },false);
+
+        document.getElementsByClassName('add')[0].addEventListener(eleAddEvent,function(){//相加
+
+            changeValue(this);
+
+            getTotalMoney(10);
+
+        },false);
+
+        document.getElementsByClassName('inputele')[0].addEventListener('input', function () {
+
+            changeValue(this);
+
+            getTotalMoney(10);//显示金额出现,参数为优惠金额（负数）或者服务费（正数）
+
+        }, false);
 
     }
 

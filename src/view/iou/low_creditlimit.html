@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../../css/jf_iou.css">
+    <title>WeUI-pay</title>
+</head>
+
+<body class="qiao1104">
+<!--顶部导航-->
+<nav class="Top_navigation">
+    <div class="weui_tab_bd"></div>
+    <div class="container_tab"> <a onclick="jfSwitch.goBack()">
+        <div class="nav_left"><img src="../../images/icon_pay_return.png"></div>
+    </a>
+        <div class="nav_center">
+            <div>&#x85AA;&#x8D44;&#x9884;&#x652F;</div>
+        </div>
+        <a>
+            <div class="nav_right"></div>
+        </a> </div>
+</nav>
+<!--顶部导航结束-->
+<!--中间内容部分-->
+<div>
+    <!--顶部图片-->
+    <div class="iou_limit_pic">
+        <div class="limit_pic_point">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <!--中间文字-->
+    <div class="iou_limit_tip">
+        <div class="limit_tip_one">&#x554A;&#x5440;&#xFF0C;&#x6682;&#x65E0;&#x4FE1;&#x7528;&#x989D;&#x5EA6;</div>
+        <div class="limit_tip_reason">&#x53EF;&#x80FD;&#x539F;&#x56E0;&#xFF1A;&#x4E2A;&#x4EBA;&#x798F;&#x5229;&#x8D26;&#x6237;&#x5145;&#x503C;&#x8F83;&#x5C11;&#x6216;&#x65F6;&#x65AD;&#x65F6;&#x7EED;&#xFF0C;&#x5177;&#x4F53;&#x53EF;&#x54A8;&#x8BE2;&#x5BA2;&#x670D;: <span>400-821-6990</span>&#x3002;</div>
+    </div>
+    <div class="iou_limit_return" onclick="location=&apos;IOU_overtime.html&apos;">
+        <a>
+            <div>&#x5F85;&#x8FD8;&#x6B3E;</div>
+            <div>
+                <div>&#x5171;<span>1</span>&#x7B14;&#xFF0C;&#x903E;&#x671F;<span>1</span>&#x7B14;</div>
+                <div><img src="../../images/huikabao/icon_arrow.png" width="20px" height="20px"></div>
+            </div>
+        </a>
+    </div>
+
+        <div class="iou_limit_help">
+            <a href="IOU_notice.html">&#x501F;&#x6B3E;&#x987B;&#x77E5;</a>
+            <a href="IOU_help.html">&#x5E38;&#x89C1;&#x95EE;&#x9898;</a>
+            <a onclick="jfCustomerService.click()">&#x5728;&#x7EBF;&#x5BA2;&#x670D;</a>
+        </div>
+
+
+
+</div>
+
+
+<script type="text/javascript" src="../../js/jf_iou.js"></script>
+</body>
+
+
+
+<script>
+    //客服模块
+
+    jfCustomerService.init({//用户信息
+        name: '阿陈',// 名字
+        address: '西伯利亚',// 地址
+        email: '1313@qq.com',// 邮箱
+        age: '16',// 年龄
+        tel: '110',// 电话
+        comment: '很帅',// 备注
+        gender: '男',// 性别
+        qq: '1234567',// QQ
+        weibo: '',// 微博
+        weixin: '',// 微信
+        '公司名称':'上海淘略数据有限公司',
+        '公司编号':'123ksuhdaf891274',
+        '员工编号':'1234567890123456'
+    })
+
+</script>
+
+
+</html>
