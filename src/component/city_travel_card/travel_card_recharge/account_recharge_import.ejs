@@ -7,6 +7,7 @@
     </div>
     <div class="import_select import_arrow">
         <select class="number_choose">
+            <option disabled selected>请选择</option>
             <option>29824962455256512</option>
             <option>6256255255215622</option>
             <option>4656235965625965</option>
@@ -49,6 +50,10 @@
         var thiscardNum=this.value;
 
         var showError=document.getElementsByClassName('show_error')[0];
+
+        var thisSelectEle=document.getElementsByClassName('number_choose')[0];
+
+        thisSelectEle.value="";
 
         if(thiscardNum.length==11){
 

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>&#x5609;&#x798F;&#x5E73;&#x53F0;</title>
+    <link rel="stylesheet" href="../../css/jf_iou.css">
+
+</head>
+
+<body class="qiao1104">
+<!--顶部导航-->
+<nav class="Top_navigation">
+    <div class="weui_tab_bd"></div>
+    <div class="container_tab"> <a onclick="jfSwitch.goBack()">
+        <div class="nav_left"><img src="../../images/icon_pay_return.png"></div>
+    </a>
+        <div class="nav_center">
+            <div>&#x8D26;&#x5355;&#x8BE6;&#x60C5;</div>
+        </div>
+        <a href="#">
+            <div class="nav_right"></div>
+        </a> </div>
+</nav>
+<!--顶部导航结束-->
+<!--中间内容部分-->
+<div class="IOU_return_pageone">
+    <!--页面顶部-->
+    <div class="return_pageonetop">
+        <div class="borrow_info">
+            <span></span>
+            <span>&#x672A;&#x8FD8;&#x91D1;&#x989D;<small style="font-size: 10px">&#xFF08;&#x5176;&#x4E2D;&#x5229;&#x606F;<span>50.00</span>&#x5143;&#xFF09;</small></span>
+            <span>20.00&#x5143;</span>
+        </div>
+        <div class="borrow_info">
+            <span></span>
+            <span>&#x8FD8;&#x6B3E;&#x65E5;</span>
+            <span>2016&#x5E74;09&#x6708;26&#x65E5;</span>
+        </div>
+    </div>
+    <!-- 中间-->
+    <div class="return_pageonemid">
+        <!--选项栏-->
+        <div class="choice_nav">
+            <div class="option_selected" data-num="0">&#x501F;&#x6B3E;&#x8BE6;&#x60C5;</div>
+            <div data-num="1">&#x8FD8;&#x6B3E;&#x8BE6;&#x60C5;</div>
+        </div>
+
+        <div class="offer_swiper">
+            <div class="offer">
+                <!---------------------------------------借款详情--------------------------------------------------------------------------------------->
+                <div class="offer_box">
+                    <div class="return_pageonetop">
+                        <div class="borrow_infotab">
+                            <span>&#x501F;&#x6B3E;&#x65F6;&#x95F4;</span>
+                            <span>2016&#x5E74;12&#x6708;15&#x65E5;17:00:00</span>
+                        </div>
+                        <div class="borrow_infotab">
+                            <span>&#x501F;&#x6B3E;&#x91D1;&#x989D;</span>
+                            <span>200.00&#x5143;</span>
+                        </div>
+                        <div class="borrow_infotab">
+                            <span>&#x624B;&#x7EED;&#x8D39;</span>
+                            <span>3.00&#x5143;</span>
+                        </div>
+                        <div class="borrow_infotab">
+                            <span>&#x5230;&#x8D26;&#x91D1;&#x989D;</span>
+                            <span>197.00&#x5143;</span>
+                        </div>
+                    </div>
+                </div>
+                <!--选项结束-->
+                <!-------------------------------------------------------------还款详情---------------------------------------------------->
+                <div class="offer_box">
+                    <div class="return_pageonetop">
+                        <div class="borrow_infotab">
+                            <span>&#x8FD8;&#x6B3E;&#x65F6;&#x95F4;</span>
+                            <span>2016&#x5E74;9&#x6708;15&#x65E5;17:00:00</span>
+                        </div>
+                        <div class="borrow_infotab">
+                            <span>&#x8FD8;&#x6B3E;&#x91D1;&#x989D;</span>
+                            <span>100.00&#x5143;</span>
+                        </div>
+                        <div class="borrow_infotab">
+                            <span>&#x8FD8;&#x6B3E;&#x65F6;&#x95F4;</span>
+                            <span>2016&#x5E74;10&#x6708;15&#x65E5;17:00:00</span>
+                        </div>
+                        <div class="borrow_infotab">
+                            <span>&#x8FD8;&#x6B3E;&#x91D1;&#x989D;</span>
+                            <span>100.00&#x5143;</span>
+                        </div>
+                        <div class="borrow_infotab">
+                            <span></span>
+                            <span>&#x5DF2;&#x8FD8;&#x603B;&#x8BA1;&#xFF1A;<span>150.00&#x5143;</span><small style="font-size: 10px">&#xFF08;&#x672C;&#x91D1;<span>120.00</span>&#x5143;&#xFF0C;&#x5229;&#x606F;<span>30.00</span>&#x5143;&#xFF09;</small></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--页面底部-->
+    <div class="IOU_btn_return">
+        <div>
+            <a class="return_money_btn" onclick="location=&apos;IOU_return.html&apos;">&#x8FD8;&#x6B3E;</a>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="../../js/jf_iou.js"></script>
+</body>
+
+
+
+
+<script type="text/javascript">
+
+    //读取页面高度
+    $('.qiao1104 .offer').windowHeight({
+
+        fixHeight:'308',
+    });
+    //水平滑动
+    $('.qiao1104 .choice_nav>div').moveBoxHorizontal({
+        changeEle: '.qiao1104 .offer',
+        changeColor: 'option_selected',
+
+    });
+
+   // $("div.nav_left").click(returnpage)
+
+</script>
+</html>

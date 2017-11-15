@@ -1,0 +1,152 @@
+/*单页应用*/
+.Top_navigation .container_tab.change_tab_fa {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.Top_navigation .change_tab {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+
+  transition: opacity .25s, transform .35s;
+  -webkit-transition: opacity .25s, transform .35s;
+
+}
+
+.Top_navigation .change_tab.hide_tab {
+
+  display: none;
+  opacity: 0;
+
+  -webkit-opacity: 0;
+
+}
+
+.Top_navigation .change_tab.transtion_tab {
+
+  opacity: 0;
+
+  -webkit-opacity: 0;
+
+  transform: translateX(50%);
+
+  -webkit-transform: translateX(50%);
+
+  transform: translate3d(50%, 0, 0);
+
+  -webkit-transform: translate3d(50%, 0, 0);
+
+}
+
+.Top_navigation .change_tab.transtion_other_tab {
+
+  opacity: 0;
+  -webkit-opacity: 0;
+
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+
+  transform: translate3d(-50%, 0, 0);
+  -webkit-transform: translate3d(-50%, 0, 0);
+}
+
+.Top_navigation .change_tab.show_tab {
+
+  opacity: 1;
+  -webkit-opacity: 1;
+}
+
+.Top_navigation a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.container_section {
+
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  height: calc(100% - 45px);
+  height: -webkit-calc(100% - 45px);
+
+}
+
+.container_section .change_section {
+  background-color: #f5f5f9;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+
+  transition: transform .4s;
+  -webkit-transition: transform .4s;
+
+  z-index: 5;
+  box-shadow: 0 0 10px #000;
+  -webkit-box-shadow: 0 0 10px #000;
+
+}
+
+.container_section .change_section.hide_section {
+  display: none;
+}
+
+.container_section .change_section.show_section {
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+
+.container_section .change_section.transtion_section {
+
+  transform: translateX(103%);
+
+  -webkit-transform: translateX(103%);
+
+  transform: translate3d(103%, 0, 0);
+
+  -webkit-transform: translate3d(103%, 0, 0);
+
+  z-index: 10;
+
+}
+
+.container_section .change_section.transtion_other_section {
+
+  transform: translateX(0);
+
+  -webkit-transform: translateX(0);
+
+  transform: translate3d(0, 0, 0);
+
+  -webkit-transform: translate3d(0, 0, 0);
+
+  z-index: 1;
+}
+
+/*单页应用结束*/
