@@ -220,6 +220,7 @@ a {
 }
 
 #tip_dialog .text_dialog_container {
+  width: 80%;
   width: calc(80vw);
   position: fixed;
   z-index: 1001;
@@ -275,15 +276,17 @@ a {
   width: 100%;
   border-radius: 0 0 10px 10px;
   overflow: hidden;
+
 }
 #tip_dialog .text_dialog_container .dialog_button a {
-  width: 100%;
+  width: 50%;
+  flex: 1;
   text-decoration: none;
   text-align: center;
   font-size: 16px;
   padding: 10px 0;
   margin-top: 20px;
-  display: inline-block;
+  display: block;
 }
 #tip_dialog .text_dialog_container .dialog_button a:active {
   opacity: .6;

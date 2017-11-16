@@ -1,0 +1,105 @@
+
+<div class="market_mian">
+    <div class="market_tips">
+
+        <p></p>
+
+        <p>平台服务费：<span>0%</span></p>
+
+    </div>
+
+    <div class="market_buy_num">
+
+        <div class="buy_icon"><img src="../../images/zfb/icon_welfare_reduce.png"></div>
+
+        <div class="buy_number" >
+            <div class="keyNumshow" id="savekeyNum"></div>
+            <input readonly value="" class="key_input" id="key_input" placeholder="请输入卖出福利额度、整数">
+        </div>
+
+    </div>
+
+
+    <div class="market_buy_btn">
+        <button class="buy_check_btn" id="buy_check_btn"  disabled >卖出</button>
+
+        <div class="customer_service" onclick="jfCustomerService.click()"><img src="../../images/icon_dialogue.png">联系客服</div>
+
+    </div>
+</div>
+
+
+
+<script>
+
+
+
+
+    window.onload=function() {
+
+
+        newMarketFn.showInitNum('5000');//显示初始卖出福利；参数一为当前可以卖出的福利余额数字,若没有就可以不用调用此方法
+
+
+        setTimeout(function () {
+
+            jfkeybroad.run();//页面初始的时候，开启键盘；
+
+
+            //判断下一步按钮是否可以点击（判断输入框里面有没有值，以及协议有没有被选中）
+            $('body').on('touchstart', ".weui_grid", function () {
+
+
+                newMarketFn.valiateNextBtn();//判断下一步按钮
+
+                newMarketFn.forbidZero();//禁止输入点
+
+            });
+
+        }, 300);
+
+    }
+
+
+
+
+    /*数字键盘*/
+    var jfkeybroad=new jfNumKeybroad.keyBroadShow({
+
+        "hideButton":"buy_check_btn",//点击关闭键盘的按钮 class选择器
+
+        //"otherHideButton":"inputele",//其他关闭按钮
+
+        "showNumEle":"savekeyNum",//点击出现键盘的元素，并且存储数字，ID选择器,与下面变量是同一元素
+
+        "saveNumEle":"keyNumshow",//显示当前金额的值的元素，用于判断光标，class选择器
+
+        //  "clearButton":"delete",//清除金额按钮，class选择器
+
+        "saveInput":"key_input",//存入键盘的值，input元素的class选择器
+
+        "MaxNum":"10"//输入的最大位数
+
+    });
+
+
+    //咨询客服
+    jfCustomerService.init({//用户信息
+        name: '阿陈',// 名字
+        address: '西伯利亚',// 地址
+        email: '1313@qq.com',// 邮箱
+        age: '16',// 年龄
+        tel: '110',// 电话
+        comment: '很帅',// 备注
+        gender: '男',// 性别
+        qq: '1234567',// QQ
+        weibo: '',// 微博
+        weixin: '',// 微信
+        '公司名称':'上海淘略数据有限公司',
+        '公司编号':'123ksuhdaf891274',
+        '员工编号':'1234567890123456'
+    })
+
+
+</script>
+

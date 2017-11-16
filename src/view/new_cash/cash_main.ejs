@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>提现</title>
+    <link rel="stylesheet"  href="../../css/jf_new_cash.css">
+</head>
+
+<body>
+
+<!--顶部固定导航-->
+
+<!--导航-->
+<%- include('../../component/basic/topNav.ejs',{
+"thisrighthref":"jfSwitch.goBack()",
+"navtitle":"提现",
+"thislefthref":" ",
+"thisimgsrc":" "
+})%>
+
+<div id="IframeVip" class="IframeVip" style="display: none">
+    <iframe src="../vip/add_card.html" scrolling="auto" id="mainIframeVip" class="mainIframeVip" name="mainIframeVip"></iframe>
+</div>
+
+<div class="vipMain">
+<!--提现-->
+<div class="market_buy">
+
+    <%- include('../../component/new_cash/cash.ejs')%>
+</div>
+
+<!--银行列表上拉框-->
+<%-include('../../component/new_cash/dragDownBank.ejs')%>
+
+    <!---->
+    <%- include('../../component/new_cash/check_order.ejs')%>
+
+
+</div>
+
+
+
+
+
+</body>
+<script src="../../js/jf_new_cash.js"></script>
+
+
+
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>福利集市</title>
+    <link rel="stylesheet"  href="../../css/jf_welfare_market_new.css">
+</head>
+
+<body>
+
+<!--顶部固定导航-->
+
+<!--导航-->
+
+<nav class="Top_navigation">
+    <div class="weui_tab_bd"></div>
+    <div class="container_tab"> <a onclick="jfSwitch.goBack()">
+            <div class="nav_left" id="nav_left"><img src="../../images/icon_pay_return.png"></div>
+        </a>
+        <div class="nav_center">
+            <div>福利集市</div>
+        </div>
+        <a>
+            <div class="nav_right"></div>
+        </a>
+    </div>
+</nav>
+
+
+    <!--交易记录-->
+    <%- include('../../component/welfare_market_new/homepage/record.ejs')%>
+
+
+<!--底部固定按钮-->
+<%- include('../../component/welfare_market_new/homepage/bottom_btn.ejs')%>
+
+
+
+
+
+
+
+
+
+</body>
+<script src="../../js/jf_welfare_market_new.js"></script>
+
+
+
+
+</html>
