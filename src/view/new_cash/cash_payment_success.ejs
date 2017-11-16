@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>支付成功</title>
+    <link rel="stylesheet"  href="../../css/jf_pay.css">
+    <link rel="stylesheet"  href="../../css/jf_new_cash.css">
+</head>
+
+<body>
+
+<div class="zhuangyi_pay_shoppingcart">
+
+    <!--导航-->
+    <%- include('../../component/basic/topNav.ejs',{
+    "thisrighthref":"jfSwitch.goBack()",
+    "navtitle":"支付成功",
+    "thislefthref":"",
+    "thisimgsrc":" "
+    })%>
+
+    <!--支付成功-->
+    <div class="weui_msg">
+        <%- include('../../component/pay/payIcon/icon_success.ejs')%>
+        <div class="weui_text_area" style="padding:0px;">
+            <h2 class="msg_title_0718">支付成功</h2>
+            <div class="weui_grids_kj">
+                <div class="weui_grid_0718">订单编号：</div>
+                <div class="weui_grid_zy">1000000874</div>
+            </div>
+
+
+
+            <!--底部按钮-->
+            <div class="weui_opr_area">
+                <p class="new_success_btn">
+                    <a class="to_crash" href="cash_main.html">继续体现</a>
+                    <a class="to_sale" href="my_account.html">我的账户</a>
+                </p>
+                <p class="my_account_btn"><a>返回</a></p>
+
+
+
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+<script src="../../js/jf_pay.js"></script>
+<script>
+    jfCustomerService.init(
+        {//用户信息
+            name: '阿陈',// 名字
+            address: '西伯利亚',// 地址
+            email: '1313@qq.com',// 邮箱
+            age: '16',// 年龄
+            tel: '110',// 电话
+            comment: '很帅',// 备注
+            gender: '男',// 性别
+            qq: '1234567',// QQ
+            weibo: '',// 微博
+            weixin: '',// 微信
+            '公司名称': '上海淘略数据有限公司',
+            '公司编号': '123ksuhdaf891274',
+            '员工编号': '1234567890123456'
+        },
+        //指定客服
+        'b040d96757bf55ea302f9fbfb0ecd062'
+    )
+</script>
+</html>

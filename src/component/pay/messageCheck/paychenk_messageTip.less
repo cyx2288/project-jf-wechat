@@ -134,3 +134,60 @@
 .btn_blue_0718:visited {
   color: #fff;
 }
+
+
+.new_success_btn{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+  font-size: 16px;
+  .to_crash{
+    width: 50%;
+    display: inline-block;
+    padding: 8px 0;
+    border-radius: 5px;
+    margin-right: 10px;
+    flex: 1;
+    color: #10a6e2;
+    border: solid 1px #10a6e2;
+
+    &:active{
+      color: #ffffff;
+      background: #10a6e2;
+    }
+  }
+  .to_sale{
+    width: 50%;
+    display: inline-block;
+    padding: 8px 0;
+
+    border-radius: 5px;
+    flex: 1;
+    color: #10a6e2;
+    border: solid 1px #10a6e2;
+    &:active{
+      color: #ffffff;
+      background: #10a6e2;
+    }
+  }
+
+  &+.my_account_btn{
+    padding: 10px 15px;
+    font-size: 16px;
+    a{
+      color: #ffffff;
+      background: #10a6e2;
+      display: inline-block;
+      border-radius: 5px;
+      width: 100%;
+      padding: 10px 0;
+      &:active{
+        opacity: 0.5;
+      }
+    }
+
+
+
+  }
+}
