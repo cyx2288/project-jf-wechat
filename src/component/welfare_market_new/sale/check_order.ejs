@@ -34,7 +34,7 @@
                     </div>
                 </div>
                 <!--按钮-->
-                <a href="sale_payment_success.html" class="list_btn btn_color">确认卖出</a> </div>
+                <a class="list_btn btn_color">确认卖出</a> </div>
         </div>
     </div>
     <div class="weui_mask_transition mask_drag"></div>
@@ -56,5 +56,27 @@
 
     });
 
-   // document.getElementById('buy_check_btn').addEventListener('click',getOrderData,false)
+    //快捷支付
+
+    document.getElementsByClassName('list_btn')[0].addEventListener('click',function(){
+
+        orderDragUp.stop();//关闭弹出框
+
+
+        //支付动画
+        jfShowTips.loadingShow({
+            'text':'支付中'
+        });
+
+        setTimeout(function(){
+
+            window.location.href='sale_payment_success.html'
+        },5000)
+
+
+
+    },false)
+
+
+
 </script>
