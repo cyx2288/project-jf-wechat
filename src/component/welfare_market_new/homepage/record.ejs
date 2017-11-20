@@ -176,3 +176,23 @@
         <p>没有更多了，只能帮你到这里了</p>
     </div>
 </div>
+
+<div class="fixed_side_btn">
+    <div class="content">
+
+        <a href="../new_cash/my_account.html"><img src="../../images/zfb/market_my_account.png"></a>
+
+        <a href="../new_cash/cash_main.html"><img src="../../images/zfb/market_my_order.png"></a>
+
+    </div>
+    <a class="origin_btn" ><img src="../../images/zfb/market_show_more.png"></a>
+</div>
+
+
+<script>
+    //点击按钮扩展/关闭
+    document.getElementsByClassName('origin_btn')[0].addEventListener("click", marketMoreFn.showFn,false)
+
+    //页面滚动，关闭
+    addEventListener('scroll', marketMoreFn.hideFn,false)
+</script>

@@ -2,74 +2,32 @@
  * Created by Qiaodan on 2017/6/21.
  */
 
-var handmove={
 
-    canmove:{
 
-        'move':true
+var marketMoreFn={
 
-    },
-    init:function(){
-        //判断是否是手机晃动事件
-        if (window.DeviceOrientationEvent) {
+    showFn:function(){
+        var allBar=document.getElementsByClassName('fixed_side_btn')[0];
 
-            window.addEventListener('deviceorientation', this.mobileMove.bind(this), false);
+        if(allBar.className.indexOf('showMore')>-1){
 
+            allBar.className=allBar.className.replace('showMore','')
+
+        }else {
+            allBar.className='fixed_side_btn showMore';
         }
     },
-    mobileMove:function(event){
 
-        var event=event||window.event;
 
-        var delG = event.gamma;    // gamma轴偏转角(绕y轴旋转的角度)(x的移动距离)
+    hideFn:function(){
+        var allBar=document.getElementsByClassName('fixed_side_btn')[0];
 
-        if(delG&&this.canmove.move){
+        if(allBar.className.indexOf('showMore')>-1){
 
-            this.gamma=event.gamma;
-
-            this.canmove.move=false
+            allBar.className=allBar.className.replace('showMore','')
 
         }
 
-        if(delG!=null){
+    }
 
-            var thisProgressBar=document.getElementsByClassName('change_bar')[0];//进度条
-
-            var thisHourGlass=document.getElementsByClassName('market_banner')[0];
-
-            var thisMoveDistance=(delG-this.gamma)/3;//获取移动距离；
-
-            var thisEleWidth=thisProgressBar.offsetWidth;
-
-            var thisWindowWidth=window.innerWidth;
-
-            //进度条变化
-            if(thisEleWidth+thisMoveDistance/4<=thisWindowWidth){
-
-
-                if(Math.abs(delG-this.gamma)<=60){
-
-                    thisProgressBar.style.width=thisEleWidth+thisMoveDistance/4+'px';
-
-                }else {
-                    thisProgressBar.style.width=thisEleWidth+thisMoveDistance/8+'px';
-
-                }
-
-            }
-
-            //沙漏变化
-
-            if(thisEleWidth<thisWindowWidth/2){
-
-                thisHourGlass.className="market_banner";
-
-            }else {
-                thisHourGlass.className="market_banner change"
-            }
-
-        }
-
-    },
-
-}
+};

@@ -9,13 +9,19 @@
 
 <!--顶部固定导航-->
 
-<!--导航-->
-<%- include('../../component/basic/topNav.ejs',{
-"thisrighthref":"jfSwitch.goBack()",
-"navtitle":"提现",
-"thislefthref":" ",
-"thisimgsrc":" "
-})%>
+<nav class="Top_navigation">
+    <div class="weui_tab_bd"></div>
+    <div class="container_tab"> <a onclick="jfSwitch.goBack()">
+            <div class="nav_left" id="nav_left"><img src="../../images/icon_pay_return.png"></div>
+        </a>
+        <div class="nav_center">
+            <div>提现</div>
+        </div>
+        <a>
+            <div class="nav_right"></div>
+        </a>
+    </div>
+</nav>
 
 <div id="IframeVip" class="IframeVip" style="display: none">
     <iframe src="../vip/add_card.html" scrolling="auto" id="mainIframeVip" class="mainIframeVip" name="mainIframeVip"></iframe>

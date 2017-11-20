@@ -20,8 +20,6 @@ var newCashFn={
 
         document.getElementById('key_input').value=num;
 
-        _this.valiateNextBtn()
-
     },
 
     valiateNextBtn:function(){

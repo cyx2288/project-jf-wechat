@@ -1,5 +1,12 @@
 
 <div class="market_mian">
+    <div class="market_tips">
+
+        <p></p>
+
+        <p class="all_to_cash"><span>全部提现</span></p>
+
+    </div>
 
     <div class="market_buy_num">
 
@@ -22,7 +29,7 @@
     <label class="cash_list" id="bankNum_select">
 
         <div>银行卡号</div>
-
+        <!--当前存在历史记录时，设置input select为readonly-->
         <div><input type="number" pattern="[0-9]*" placeholder="请输入银行卡号"></div>
     </label>
 
@@ -83,18 +90,23 @@
 
     window.onload=function() {
 
+        jfkeybroad.run();//页面初始的时候，开启键盘；
 
-        newCashFn.showInitNum('1000');//显示初始卖出福利；参数一为当前可以卖出的福利余额数字,若没有就可以不用调用此方法
+
+        document.getElementsByClassName('all_to_cash')[0].addEventListener('click',function(){
+             newCashFn.showInitNum('1000');//显示提现金额；参数一为当前可以提现的全部金额,若没有就可以不用调用此方法
+
+            newCashFn.valiateNextBtn();//判断下一步按钮
+
+            jfkeybroad.stop();//关闭键盘；
+
+        },false)
 
 
         setTimeout(function () {
 
-            jfkeybroad.run();//页面初始的时候，开启键盘；
-
-
-            //判断下一步按钮是否可以点击（判断输入框里面有没有值，以及协议有没有被选中）
+            //判断下一步按钮是否可以点击（判断输入框里面有没有值）
             $('body').on('touchstart', ".weui_grid", function () {
-
 
                 newCashFn.valiateNextBtn();//判断下一步按钮
 
