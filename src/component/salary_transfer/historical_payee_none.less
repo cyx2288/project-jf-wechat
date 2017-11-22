@@ -1,0 +1,67 @@
+
+/*----css style:{
+                 ----<historical_list_tittle>
+                 ----<historical_list_tittle_icon>
+                 ----<historical_list_tittle_txt>
+                 }
+                 ----for! historical_payee.less !-----*/
+
+
+  .historical_none_background {
+    width: 100%;
+    height: 50%;
+    padding-top: 20px;
+
+
+    .historical_none_icon{
+      width: 80px;
+      height: 80px;
+      border: 4px solid #3fc3ee;
+      border-radius: 50%;
+      color: #3fc3ee;
+      text-align: center;
+      margin: 40px auto 30px;
+      display: block;
+
+
+      .historical_none_icon_roll {
+        font-size: 50px;
+        transform: rotate(0deg);
+      }
+
+      /*感叹号旋转*/
+
+      .historical_none_icon_roll{
+        -webkit-animation: historical_none_icon_roll 1s;
+        animation: historical_none_icon_roll 1s;
+      }
+
+
+      @-webkit-keyframes historical_none_icon_roll {
+        0%{
+          -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+          opacity: 0;
+        }
+        100%{
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+          opacity: 1;
+        }
+      }
+
+      /*end*/
+
+    }
+
+
+    .historical_none_icon_text{
+      color: #a1a1a1;
+      font-size: 18px;
+      text-align: center;
+      padding-top: 30px;
+      padding-left: 18px;
+    }
+
+  }
+
