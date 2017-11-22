@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>历史收款人</title>
+    <link rel="stylesheet"  href="../../css/jf_salary_transfer.css">
+</head>
+
+<body>
+
+<!--顶部固定导航-->
+
+<!--导航-->
+<%- include('../../component/basic/topNav.ejs',{
+"thisrighthref":"jfSwitch.goBack()",
+"navtitle":"历史收款人",
+"thislefthref":"#",
+"thisimgsrc":" "
+})%>
+
+<%- include('../../component/salary_transfer/historical_payee.ejs')%>
+
+</body>
