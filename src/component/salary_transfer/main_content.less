@@ -1,0 +1,419 @@
+/*顶部通用黄色提示*/
+
+/*员工多账户改造
+福利充值--到福利余额
+2017/5/16*/
+.recharge_balance{
+  padding: 8px 15px;
+  font-size: 14px;
+  margin-bottom: 15px;
+  background: rgba(243,152,0,.2);
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -moz-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+.recharge_balance>img{
+  width: 16px;
+  height: 16px;
+}
+.recharge_balance>p{
+  color: #fc6329;
+  padding-left: 8px;
+}
+
+
+
+/*福利转账
+  周文彬 2016.12.23*/
+.weui_cell {
+  padding: 10px 15px;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.zfb_direct_recharge .welfare_list {
+  position: relative;
+  background-color: #fff;
+  margin: 15px;
+  border-radius: 5px;
+}
+.zfb_direct_recharge .box_shadow {
+  -webkit-box-shadow: 0 2px 3px #e9e9e9;
+  -moz-box-shadow: 0 2px 3px #e9e9e9;
+  box-shadow: 0 2px 3px #e9e9e9;
+}
+.zfb_direct_recharge .welfare_list:after {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: 46px;
+  height: 46px;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  background-color: #f5f5f9;
+}
+.zfb_direct_recharge .welfare_list:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -2px;
+  background-image: url(../images/zfb/icon_flzr1.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 27px;
+  height: 27px;
+  z-index: 1;
+}
+
+.zfb_direct_recharge .zfb_cell:first-child {
+  padding-top: 35px;
+  /* line-height: 25px; */
+}
+.zfb_direct_recharge .weui_cell_hd {
+  width: 25%;
+  color: #ababab;
+  min-width: 75px;
+}
+.weui_label {
+  display: block;
+  width: 105px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+/*2017.11.7 -add 账户工资历史收款人列表入口*/
+.weui_lest_in{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 10px;
+  bottom: 8px;
+}
+.lest_icon_p{
+  width: 25px;
+  float: right;
+  padding-top: 14px;
+  padding-right: 10px;
+  background-color:white;
+}
+/*-add end*/
+.zfb_direct_recharge .weui_cell_bd {
+  font-size: 16px;
+}
+.weui_input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  -webkit-appearance: none;
+  background-color: transparent;
+  font-size: inherit;
+  color: inherit;
+  height: 1.41176471em;
+  line-height: 1.41176471;
+}
+.zfb_direct_recharge .error_text {
+  text-align: right;
+  font-size: 12px;
+  left: 25%;
+  bottom: 0;
+  width: 70%;
+  position: absolute;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: 19px;
+}
+.zfb_direct_recharge .error_text2 {
+  text-align: right;
+  font-size: 12px;
+  left: 25%;
+  bottom: 0;
+  width: 70%;
+  position: absolute;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: 19px;
+}
+.zfb_direct_recharge .zfb_cell {
+  padding: 15px;
+  /* line-height: 25px; */
+}
+
+.zfb_direct_recharge .zfb_cell:first-child:before{
+  content: " ";
+  border-top: none;
+}
+.zfb_direct_recharge .zfb_cell:before {
+  content: " ";
+  position: absolute;
+  left: 15px;
+  top: 0px;
+  width: 90%;
+  height: 1px;
+  border-top: 1px solid #d9d9d9;
+  color: #ddd;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(.6);
+  transform: scaleY(.6);
+}
+.zfb_direct_recharge .input_amount {
+  padding: 15px;
+}
+.zfb_direct_recharge .welfare_list:after {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: 46px;
+  height: 46px;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  background-color: #f5f5f9;
+}
+.zfb_direct_recharge .container {
+  padding-top: 10px;
+  padding-bottom: 15px;
+  width: 100%;
+}
+.zfb_direct_recharge .input_amount div > i {
+  width: 6%;
+  font-size: 30px;
+  font-style: normal;
+}
+
+.zfb_direct_recharge hr {
+  background-color: #ddd;
+  height: 1px;
+  border: none;
+  -webkit-transform: scaleY(.4);
+  transform: scaleY(.4);
+}
+.zfb_direct_recharge .remarks {
+  position: relative;
+  background-color: #fff;
+  margin: 15px;
+  border-radius: 5px;
+}
+.zfb_direct_recharge .remarks_cell {
+  padding: 15px;
+}
+.zfb_direct_recharge .weui_cell_bd {
+  font-size: 16px;
+}
+.zfb_direct_recharge .weui_opr_area {
+  padding: 5px 0px;
+}
+.weui_btn_area {
+  margin: 1.17647059em 15px .3em;
+}
+.zfb_direct_recharge .btn_dark {
+  background-color: #DDDDDD;
+  color: #ABABAB;
+  border: 0;
+}
+button.weui_btn, input.weui_btn {
+  width: 100%;
+  border-width: 0;
+  outline: 0;
+  -webkit-appearance: none;
+}
+.weui_btn {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 14px;
+  padding-right: 14px;
+  box-sizing: border-box;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  line-height: 2.33333333;
+  border-radius: 5px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  overflow: hidden;
+}
+.weui_btn:after {
+  content: " ";
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid rgba(0,0,0,.2);
+  -webkit-transform: scale(.5);
+  transform: scale(.5);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+.zfb_direct_recharge .weui_btn:after {
+  border: none;
+}
+.zfb_direct_recharge .weui_src {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: center;
+  -ms-flex-pack: justify;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  font-size: 12px;
+  color: #9c9c9c;
+  margin-top: 15px;
+}
+.zfb_direct_recharge #dialogue {
+  width: 20px;
+}
+.zfb_direct_recharge .btn_blue {
+  background-color: #10a6e2;
+  color: #fff;
+}
+
+
+/*确认订单弹出框*/
+
+.public_popup .weui_actionsheet_menu {
+  overflow: hidden;
+}
+.weui_actionsheet_menu {
+  background-color: #fff;
+}
+.public_popup .title_top {
+  position: relative;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: space-between;
+  -moz-justify-content: space-between;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-pack: center;
+  -moz-justify-content: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  padding: 14px 15px;
+  overflow: hidden;
+}
+.public_popup .title_top:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 1px;
+  border-top: 1px solid #d9d9d9;
+  color: #d9d9d9;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(.5);
+  transform: scaleY(.5);
+}
+.public_popup .title_top:after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 20px;
+  right: 20px;
+  width: 0;
+  height: 0;
+  content: url(../../images/sinopec/icon_close.png);
+  -webkit-transform: scale(0.2, 0.2);
+  transform: scale(0.2, 0.2);
+}
+.public_popup .payment_amount {
+  padding: 15px 15px 5px 15px;
+  text-align: center;
+}
+.public_popup .payment_amount span {
+  font-size: 12px;
+}
+.public_popup .payment_amount p {
+  font-size: 40px;
+  color: #000000;
+}
+.public_popup .list_bottom {
+  max-height: 188px;
+  overflow: auto;
+}
+.public_popup .list_bottom .list_cell {
+  padding: 10px 15px;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: space-between;
+  -moz-justify-content: space-between;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.public_popup .list_bottom .list_cell:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 1px;
+  border-top: 1px solid #d9d9d9;
+  color: #d9d9d9;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(.5);
+  transform: scaleY(.5);
+  left: 15px;
+  right: 15px;
+  width: auto;
+}
+.public_popup .weui_cell_bd p {
+  color: #9C9C9C;
+}
+.public_popup .btn_color {
+  background-color: #10a6e2;
+}
+.public_popup .list_btn {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 14px;
+  padding-right: 14px;
+  box-sizing: border-box;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  line-height: 3;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  overflow: hidden;
+}
+/*福利转账结束*/

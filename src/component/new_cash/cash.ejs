@@ -1,0 +1,161 @@
+
+<div class="market_mian">
+    <div class="market_tips">
+
+        <p></p>
+
+        <p class="all_to_cash"><span>全部提现</span></p>
+
+    </div>
+
+    <div class="market_buy_num">
+
+        <div class="buy_icon"><img src="../../images/cash/icon_withdraw_cash.png"></div>
+
+        <div class="buy_number" >
+            <div class="keyNumshow" id="savekeyNum"></div>
+            <input readonly value="" class="key_input" id="key_input" placeholder="可提现1000元">
+        </div>
+
+    </div>
+
+    <div class="cash_list">
+
+        <div>姓名</div>
+
+        <div>张三</div>
+    </div>
+
+    <label class="cash_list" id="bankNum_select">
+
+        <div>银行卡号</div>
+        <!--当前存在历史记录时，设置input select为readonly-->
+        <div><input type="number" pattern="[0-9]*" placeholder="请输入银行卡号"></div>
+    </label>
+
+    <label class="cash_list">
+
+        <div>开户银行</div>
+
+        <div class="more_arrow">
+            <select >
+                <option selected disabled>请选择银行</option>
+                <option >中国工商银行</option>
+                <option >中国建设银行中国建设银行中国建设银行</option>
+                <option >中国交通银行</option>
+                <option >中国农业银行</option>
+                <option >中国招商银行</option>
+                <option >浦发银行</option>
+
+            </select>
+        </div>
+    </label>
+
+    <label class="cash_list">
+
+        <div>所在地区</div>
+
+        <div>
+          <textarea placeholder="请输入地区" type="text" cols="1"></textarea>
+        </div>
+    </label>
+
+
+    <div class="market_buy_btn">
+        <button class="buy_check_btn" id="buy_check_btn"  disabled >立即提现</button>
+
+        <div class="customer_service" onclick="jfCustomerService.click()"><img src="../../images/icon_dialogue.png">联系客服</div>
+
+    </div>
+
+
+
+</div>
+
+<div class="warm_notes">
+    <ul>
+        温馨提示
+        <li>订单提交后一般1-2小时内处理，如出款失败T+1日额度退还至嘉福账户，具体原因可咨询在线客服。</li>
+        <li>建议选择中国银联标识的全国性国有银行卡,由于各地区银行限制规则不同到账时间可能有所不同，具体以银行为准。
+        </li>
+    </ul>
+</div>
+
+
+
+<script>
+
+
+
+
+    window.onload=function() {
+
+        jfkeybroad.run();//页面初始的时候，开启键盘；
+
+
+        document.getElementsByClassName('all_to_cash')[0].addEventListener('click',function(){
+             newCashFn.showInitNum('1000');//显示提现金额；参数一为当前可以提现的全部金额,若没有就可以不用调用此方法
+
+            newCashFn.valiateNextBtn();//判断下一步按钮
+
+            jfkeybroad.stop();//关闭键盘；
+
+        },false)
+
+
+        setTimeout(function () {
+
+            //判断下一步按钮是否可以点击（判断输入框里面有没有值）
+            $('body').on('touchstart', ".weui_grid", function () {
+
+                newCashFn.valiateNextBtn();//判断下一步按钮
+
+            });
+
+        }, 300);
+
+    }
+
+
+
+
+    /*数字键盘*/
+    var jfkeybroad=new jfNumKeybroad.keyBroadShow({
+
+        "hideButton":"buy_check_btn",//点击关闭键盘的按钮 class选择器
+
+        "otherHideButton":"cash_list",//其他关闭按钮 class选择器
+
+        "showNumEle":"savekeyNum",//点击出现键盘的元素，并且存储数字，ID选择器,与下面变量是同一元素
+
+        "saveNumEle":"keyNumshow",//显示当前金额的值的元素，用于判断光标，class选择器
+
+        //  "clearButton":"delete",//清除金额按钮，class选择器
+
+        "saveInput":"key_input",//存入键盘的值，input元素的class选择器
+
+        "MaxNum":"10"//输入的最大位数
+
+    });
+
+
+    //咨询客服
+    jfCustomerService.init({//用户信息
+        name: '阿陈',// 名字
+        address: '西伯利亚',// 地址
+        email: '1313@qq.com',// 邮箱
+        age: '16',// 年龄
+        tel: '110',// 电话
+        comment: '很帅',// 备注
+        gender: '男',// 性别
+        qq: '1234567',// QQ
+        weibo: '',// 微博
+        weixin: '',// 微信
+        '公司名称':'上海淘略数据有限公司',
+        '公司编号':'123ksuhdaf891274',
+        '员工编号':'1234567890123456'
+    })
+
+
+</script>
+

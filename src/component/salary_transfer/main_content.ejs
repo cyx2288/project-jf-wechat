@@ -1,0 +1,155 @@
+
+
+<div class="zfb_direct_recharge">
+    <div class="welfare_list box_shadow">
+        <!--收款人账号-->
+        <label class="weui_cell zfb_cell">
+            <div class="weui_cell_hd"><label class="weui_label">对方账号</label></div>
+            <div class="weui_cell_bd">
+                <input class="weui_input" type="text" placeholder="请输入对方账号" id="account_input">
+            </div>
+            <a href="../salary_transfer/historical_payee.html" class="weui_lest_in">
+                <!--add 账户工资历史收款人列表入口 2017.11.7 -->
+                <!-- link( historical_payee.html 有列表 )  link( historical_payee_none.html 空表 ) -->
+                <img src="../../icon/payee in_wage-transfer.png" alt="" class="lest_icon_p">
+            </a>
+            <div class="error_text"></div>
+
+        </label>
+        <!--收款人姓名-->
+        <label class="weui_cell zfb_cell">
+            <div class="weui_cell_hd"><label class="weui_label">对方姓名</label></div>
+            <div class="weui_cell_bd">
+                <input class="weui_input" type="text" placeholder="请输入对方姓名" id="name_input">
+            </div>
+            <div class="error_text2"></div>
+        </label>
+        <!--输入金额-->
+        <div class="weui_cell zfb_cell input_amount" id="zfb_show">
+            <div class="container">
+                <div class="weui_cell_hd"><label class="weui_label">转让额度</label></div>
+                <div><i class="icon_unit">¥</i> <span class="jf_num_input_keyboard" style="font-size:40px;" id="money_amount"></span></div>
+                <hr>
+            </div>
+        </div>
+    </div>
+    <!--备注-->
+    <div class="remarks box_shadow">
+        <!--支付宝账号-->
+        <label class="weui_cell remarks_cell">
+            <div class="weui_cell_bd">
+                <input class="weui_input" type="text" placeholder="&#x6DFB;&#x52A0;&#x5907;&#x6CE8;">
+            </div>
+        </label>
+    </div>
+
+    <!--下一步-->
+    <div class="weui_opr_area">
+        <p class="weui_btn_area">
+            <button class="weui_btn btn_dark" id="zfb_close" disabled="disabled" ;="">&#x4E0B;&#x4E00;&#x6B65;</button></p>
+    </div>
+    <p class="weui_src" onclick="jfCustomerService.click()"><img src="../../images/icon_dialogue.png" id="dialogue">&#x8054;&#x7CFB;&#x5BA2;&#x670D;</p>
+
+    <!--告示
+    <div class="zfb_attention">
+        <div>注意事项：</div>
+        <div>1、 转账支付宝账号须支付宝实名认证才能到账</div>
+        <div>2、 到账处理时间为工作日（9:00-15:00）充值后2-3小时，非工作时间充值处理顺延至下个工作日</div>
+        <div>3、单笔充值最低1.00元起,最高10000.00元</div>
+        <div>4、 当日最高充值次数3次，最大金额10000.00元</div>
+    </div>
+     -->
+</div>
+
+
+<!--弹出层-->
+<div class="frame_drag_up frame_one">
+    <div class="frame-main">
+        <div class="public_popup">
+            <div class="weui_actionsheet">
+                <!--弹出窗口-->
+                <div class="weui_actionsheet_menu">
+                    <div class="title_top">
+                        <div>&#x786E;&#x8BA4;&#x8BA2;&#x5355;</div>
+                    </div>
+                    <!--付款金额-->
+                    <div class="payment_amount"> <span>&#x8F6C;&#x8D26;&#x91D1;&#x989D;</span>
+                        <p>&#xFFE5;4990.23</p>
+                    </div>
+                    <!--列表-->
+                    <div class="list_bottom">
+                        <div class="list_cell" style="padding: 15px;">
+                            <div>
+                                <label>&#x6536;&#x6B3E;&#x4EBA;&#x8D26;&#x53F7;</label>
+                            </div>
+                            <div class="weui_cell_bd">
+                                <p>13652256952@qq.com</p>
+                            </div>
+                        </div>
+                        <!--列表-->
+                        <div class="list_cell" style="padding: 15px">
+                            <div>
+                                <label>&#x6536;&#x6B3E;&#x4EBA;&#x59D3;&#x540D;</label>
+                            </div>
+                            <div class="weui_cell_bd">
+                                <p>&#x5C0F;&#x660E;</p>
+                            </div>
+                        </div>
+                        <!--列表-->
+                        <div class="list_cell" style="padding: 15px">
+                            <div>
+                                <label>&#x8F6C;&#x8D26;&#x91D1;&#x989D;</label>
+                            </div>
+                            <div class="weui_cell_bd">
+                                <p>4990.23</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--按钮-->
+                    <a href="../pay/payStepone.html" class="list_btn btn_color">&#x786E;&#x8BA4;&#x8F6C;&#x8D26;</a> </div>
+            </div>
+        </div>
+    </div>
+    <div class="weui_mask_transition mask_drag"></div>
+</div>
+
+
+<!--虚拟键盘-->
+<div class="jf_num_keybroad">
+    <div class="weui_actionsheet" id="weui_actionsheet_keyboard">
+        <div class="weui_grids weui_grids_kj">
+            <a class="weui_grid" data-value="1">
+                <p class="weui_grid_label"> 1 </p>
+            </a> <a class="weui_grid" data-value="2">
+                <p class="weui_grid_label"> 2 </p>
+            </a> <a class="weui_grid" data-value="3">
+                <p class="weui_grid_label"> 3 </p>
+            </a> <a class="weui_grid" data-value="4">
+                <p class="weui_grid_label"> 4 </p>
+            </a> <a class="weui_grid" data-value="5">
+                <p class="weui_grid_label"> 5 </p>
+            </a> <a class="weui_grid" data-value="6">
+                <p class="weui_grid_label"> 6 </p>
+            </a> <a class="weui_grid" data-value="7">
+                <p class="weui_grid_label"> 7 </p>
+            </a> <a class="weui_grid" data-value="8">
+                <p class="weui_grid_label"> 8 </p>
+            </a> <a class="weui_grid" data-value="9">
+                <p class="weui_grid_label"> 9 </p>
+            </a> <a class="weui_grid" data-value=".">
+                <p class="weui_grid_label"> .</p>
+            </a> <a class="weui_grid weui_grid_0" data-value="0">
+                <p class="weui_grid_label"> 0 </p>
+            </a></div>
+        <div class="weui_actionsheet_check">
+            <div class="weui_grids">
+                <a class="weui_grid" id="actionsheet_delete">
+                    <p class="weui_grid_label"><img src="../../images/bank/deleteVIP.png"></p>
+                </a> <a class="weui_grid" id="actionsheet_cancel">
+                    <p class="weui_grid_label"><img src="../../images/bank/keyboardVIP.png"></p>
+                </a> <a class="weui_grid weui_grid_labelCheckAll" id="actionsheet_check">
+                    <p class="weui_grid_label weui_grid_labelCheck"> &#x786E;&#x8BA4; </p>
+                </a></div>
+        </div>
+    </div>
+</div>

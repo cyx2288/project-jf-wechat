@@ -60,17 +60,19 @@ a {
 #tip_loading {
   background-color: white;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+  width: 30%;
+  height: 25%;
   width: calc(36vw);
   height: calc(36vw);
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   margin: auto;
   border-radius: 10px;
-  -webkit-animation: showLoading 5s both;
-  animation: showLoading 5s both;
+  -webkit-animation: showLoading 10s both;
+  animation: showLoading 10s both;
   opacity: 1;
   z-index: 1000;
 }
@@ -132,7 +134,7 @@ a {
   height: 100%;
   width: 6px;
   border-radius: 15px;
-  display: inline-block;
+  display: block;
   -webkit-animation: stretchdelay 1.2s infinite ease-in-out;
   animation: stretchdelay 1.2s infinite ease-in-out;
 }
@@ -220,6 +222,7 @@ a {
 }
 
 #tip_dialog .text_dialog_container {
+  width: 80%;
   width: calc(80vw);
   position: fixed;
   z-index: 1001;
@@ -275,15 +278,17 @@ a {
   width: 100%;
   border-radius: 0 0 10px 10px;
   overflow: hidden;
+
 }
 #tip_dialog .text_dialog_container .dialog_button a {
-  width: 100%;
+  width: 50%;
+  flex: 1;
   text-decoration: none;
   text-align: center;
   font-size: 16px;
   padding: 10px 0;
   margin-top: 20px;
-  display: inline-block;
+  display: block;
 }
 #tip_dialog .text_dialog_container .dialog_button a:active {
   opacity: .6;

@@ -1,0 +1,82 @@
+<!--确认订单弹出层-->
+<div class="frame_drag_up frame_checkorder">
+    <div class="frame-main">
+        <div class="public_popup">
+            <!--弹出窗口-->
+            <div class="weui_actionsheet_menu">
+                <div class="title_top">
+                    <div>确认订单</div>
+                </div>
+                <!--付款金额-->
+                <div class="payment_amount"> <span>支付福利额度</span>
+                    <p class="welfare_num">500</p>
+                </div>
+                <!--列表-->
+                <div class="list_bottom">
+                    <!--列表-->
+                    <div class="list_cell" style="padding: 15px">
+                        <div>
+                            <label>预计到账</label>
+                        </div>
+                        <div class="weui_cell_bd">
+                            <p style="color: #4a4a4a">¥500.00</p>
+                        </div>
+                    </div>
+
+                    <!--列表-->
+                    <div class="list_cell" style="padding: 15px">
+                        <div>
+                            <label>平台服务费</label>
+                        </div>
+                        <div class="weui_cell_bd">
+                            <p style="color: #4a4a4a">¥5.00</p>
+                        </div>
+                    </div>
+                </div>
+                <!--按钮-->
+                <a class="list_btn btn_color">确认卖出</a> </div>
+        </div>
+    </div>
+    <div class="weui_mask_transition mask_drag"></div>
+</div>
+
+
+
+<script>
+
+    //确认订单上拉框
+
+    var orderDragUp=new jfFrameDrag.dragEleshow({
+
+          "targetButton":"buy_check_btn",//点击的目标元素。ID选择器
+
+        "targetDragName":"frame_checkorder",//出现的目标元素，calss选择器
+
+        "hideButton":"title_top"//关闭按钮，class选择器
+
+    });
+
+    //快捷支付
+
+    document.getElementsByClassName('list_btn')[0].addEventListener('click',function(){
+
+        orderDragUp.stop();//关闭弹出框
+
+
+        //支付动画
+        jfShowTips.loadingShow({
+            'text':'支付中'
+        });
+
+        setTimeout(function(){
+
+            window.location.href='sale_payment_success.html'
+        },5000)
+
+
+
+    },false)
+
+
+
+</script>
