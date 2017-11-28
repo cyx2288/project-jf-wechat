@@ -55,9 +55,12 @@
 
         <div>所在地区</div>
 
-        <div>
-          <textarea placeholder="请输入地区" type="text" cols="1"></textarea>
-        </div>
+
+        <div class="city_select_fa more_arrow">
+            <div class="city_pc_select" id="city_pc_select"></div>
+            <input id="input_city_touch" type="text" class="jf_input" readonly="" placeholder="请选择地区" value="">
+            </div>
+
     </label>
 
 
@@ -113,6 +116,9 @@
             });
 
         }, 300);
+
+
+        selectAreaBank();//选择地址
 
     }
 
