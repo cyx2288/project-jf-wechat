@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>提现</title>
+    <link rel="stylesheet"  href="../../css/jf_new_cash.css">
+</head>
+
+<body>
+
+<!--顶部固定导航-->
+
+<nav class="Top_navigation">
+    <div class="weui_tab_bd"></div>
+    <div class="container_tab"> <a onclick="jfSwitch.goBack()">
+            <div class="nav_left" id="nav_left"><img src="../../images/icon_pay_return.png"></div>
+        </a>
+        <div class="nav_center">
+            <div>提现</div>
+        </div>
+        <a>
+            <div class="nav_right"></div>
+        </a>
+    </div>
+</nav>
+
+<div id="IframeVip" class="IframeVip" style="display: none">
+    <iframe src="../vip/add_card.html" scrolling="auto" id="mainIframeVip" class="mainIframeVip" name="mainIframeVip"></iframe>
+</div>
+
+<div class="vipMain">
+<!--提现-->
+<div class="market_buy">
+
+    <%- include('../../component/new_cash/cash.ejs')%>
+</div>
+
+<!--银行列表上拉框-->
+<%-include('../../component/new_cash/dragDownBank.ejs')%>
+
+    <!---->
+    <%- include('../../component/new_cash/check_order.ejs')%>
+
+
+</div>
+
+
+
+
+
+</body>
+<script src="../../lib/js/LAreaData2.min.js"></script>
+<script src="../../js/jf_new_cash.js"></script>
+
+
+
+
+
+</html>

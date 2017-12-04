@@ -450,11 +450,16 @@ var jfNumKeybroad={
 
         if(_this.otherHideButton){//如果存在其他关闭按钮
 
-            document.getElementsByClassName(_this.otherHideButton)[0].addEventListener("click",function(){
+            for(var i=0;i<document.getElementsByClassName(_this.otherHideButton).length;i++){
 
-                _this.stop()
+                document.getElementsByClassName(_this.otherHideButton)[i].addEventListener("click",function(){
 
-            },false)
+                    _this.stop()
+
+                },false)
+            }
+
+
         }
 
 

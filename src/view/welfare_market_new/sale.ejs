@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>福利集市</title>
+    <link rel="stylesheet"  href="../../css/jf_welfare_market_new.css">
+</head>
+
+<body>
+
+<!--顶部固定导航-->
+
+<!--导航-->
+<%- include('../../component/basic/topNav.ejs',{
+"thisrighthref":"jfSwitch.goBack()",
+"navtitle":"卖出福利",
+"thislefthref":"sale_FAQ.html",
+"thisimgsrc":"../../images/icon_nav_helpcenter_2.png"
+})%>
+
+<!--福利买入-->
+<div class="market_buy">
+
+    <%- include('../../component/welfare_market_new/sale/sale.ejs')%>
+
+</div>
+
+<!--确认订单弹出层-->
+<%- include('../../component/welfare_market_new/sale/check_order.ejs')%>
+
+
+
+
+
+
+
+
+
+</body>
+<script src="../../js/jf_welfare_market_new.js"></script>
+
+
+
+
+</html>

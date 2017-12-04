@@ -168,7 +168,9 @@ var jfAutoPlay = {
 
             var thisFatherEle = document.getElementsByClassName('jf_homepage_autoplay')[0].getElementsByClassName('jf_autoplay_images')[0];//父元素，主要移动该元素
 
-            event.preventDefault();                                                                                     //禁止页面滚动
+            if(browser.os.iOS){
+                event.preventDefault();
+            }                                                                                     //禁止页面滚动
 
             clearInterval(setInterMove1000);                                                      //触摸开始时，停下循环轮播
 
@@ -278,7 +280,9 @@ var jfAutoPlay = {
 
             var screenWidth = document.body.clientWidth;                                                               //屏幕宽度
 
-            event.preventDefault();                                                                                     //禁止页面滚动
+            if(browser.os.iOS){
+                event.preventDefault();
+            }                                                                                    //禁止页面滚动
 
             windowBanEvent.bundling();                                                                                  //触摸时禁止其他页面事件
 
@@ -380,7 +384,9 @@ var jfAutoPlay = {
         /*触摸结束事件*/
         function jfAutoEnd(event) {        //当图片上触摸事件结束时，继续轮播
 
-            event.preventDefault();                                                                                     //禁止浏览器事件
+            if(browser.os.iOS){
+                event.preventDefault();
+            }                                                                                //禁止浏览器事件
 
             var thisFatherEle = document.getElementsByClassName('jf_homepage_autoplay')[0].getElementsByClassName('jf_autoplay_images')[0];//父元素，主要移动该元素
 

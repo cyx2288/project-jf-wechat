@@ -1,0 +1,126 @@
+
+
+    <div class="historical_list_tittle">
+
+        <div class="historical_list_tittle_icon"></div>
+        <div class="historical_list_tittle_txt">
+        历史收款人
+        </div>
+    </div>
+
+
+
+    <!--background-->
+    <div class="historical_list_background" >
+
+        <!--text-->
+        <a class="historical_text_list" href="salary_transfer.html">
+            <div class="historical_text_name">
+            余亚琪
+            </div>
+            <div class="historical_e_mail_number">
+                <p class="historical_number">
+                    18312345678
+                </p>
+                <p class="historical_e_mail">
+                    yuyaqi@tao-lue.com
+                </p>
+            </div>
+        </a>
+
+        <!--delete-->
+        <div class="historical_list_delete_bg">
+
+            <img class="historical_list_delete" src="../../images/cash/payee_hs-transfer.png">
+
+        </div>
+    </div>
+
+
+
+    <!--background-->
+    <div class="historical_list_background" >
+
+        <!--text-->
+        <a class="historical_text_list" href="salary_transfer.html">
+            <div class="historical_text_name">
+                京晶婧
+            </div>
+            <div class="historical_e_mail_number">
+                <p class="historical_number">
+                    18312345678
+                </p>
+                <p class="historical_e_mail">
+                    jingjingjing@tao-lue.com
+                </p>
+            </div>
+        </a>
+
+        <!--delete-->
+        <div class="historical_list_delete_bg">
+
+
+            <img class="historical_list_delete" src="../../images/cash/payee_hs-transfer.png">
+
+        </div>
+    </div>
+
+
+
+    <!--background-->
+    <div class="historical_list_background" >
+
+        <!--text-->
+        <a class="historical_text_list" href="salary_transfer.html">
+            <div class="historical_text_name">
+                黄婧婧
+            </div>
+            <div class="historical_e_mail_number">
+                <p class="historical_number">
+                    18312345678
+                </p>
+                <p class="historical_e_mail">
+                    huangjingjing@tao-lue.com
+                </p>
+            </div>
+        </a>
+
+        <!--delete-->
+        <div class="historical_list_delete_bg">
+
+
+            <img class="historical_list_delete" src="../../images/cash/payee_hs-transfer.png">
+
+        </div>
+    </div>
+
+
+    <script>
+        $('div.historical_list_delete_bg').on("click", function (e) {
+
+            var thislist = $(this).parents('.historical_list_background');
+
+            var e=event||window.event;
+
+            jfShowTips.dialogShow({
+                "mainText": "确认删除此条信息？",
+                "minText": " ",
+                "hasCheck": true,
+                "hasCancel": true,
+                "checkFn": function () {
+
+                    thislist.addClass('payment_list_hide');
+
+                    jfShowTips.dialogRemove();//弹出框消失
+
+                    setTimeout(function () {
+                        thislist.css("display", "none");
+                    }, 300);
+
+                }
+            });
+
+            e.stopPropagation();
+            e.preventDefault()
+        })
+    </script>
