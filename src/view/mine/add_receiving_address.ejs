@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>我的</title>
+    <link rel="stylesheet"  href="../../css/jf_mine.css">
+</head>
+
+<body>
+
+<div class="zhuangyi_pay_shoppingcart">
+
+    <!--导航-->
+    <%- include('../../component/basic/topNav.ejs',{
+    "thisrighthref":"jfSwitch.goBack()",
+    "navtitle":"添加收货地址",
+    "thislefthref":"#",
+    "thisimgsrc":"",
+    })%>
+
+    <%- include('../../component/mine/add_receiving_address.ejs')%>
+
+    <!--地址选择弹出框-->
+
+    <%- include('../../component/mine/address_popup.ejs')%>
+
+
+    <!--按钮-->
+
+    <%-include('../../component/basic/jf_normalBtn.ejs',{
+    "title":"保存"
+    })%>
+
+
+
+
+</div>
+
+
+</body>
+
+<script src="../../js/jf_mine.js"></script>
+
+</html>
