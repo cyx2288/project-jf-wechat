@@ -1,0 +1,79 @@
+<!--嘉福平台添加收货地址-->
+<div class="jf_lists">
+    <!-- list 1 输入-->
+    <div class="jf_list jf_list_access">
+        <div class="jf_list_tip">
+            <label class="jf_list_label">收货人</label>
+        </div>
+        <div class="jf_list_bd">
+            <input class="jf_input" type="text" placeholder="请输入收货人姓名">
+        </div>
+    </div>
+
+    <!-- list 2 选地址 -->
+    <div class="jf_list jf_list_access" onclick="productAddress.show({fn:
+
+function(){
+
+     shoppingCart.run({
+     api: '../../api/address.json',
+     type: 'get',
+     targetDom:document.getElementById('product_address_show'),
+     fn:function() {
+
+       productAddress.hide();
+        console.log(chooseAdressId);//当前选择地址ID
+     }
+
+     })
+}
+
+})">
+        <div class="jf_list_tip">
+            <label class="jf_list_label">所在地区</label>
+        </div>
+        <div class="jf_list_bd">
+            <span id="product_address_show">北京市，朝阳区，四环以内</span>
+        </div>
+        <div class="jf_list_ft jf_list_arrow"></div>
+    </div>
+
+    <!-- list 3 输入详细地址-->
+    <div class="jf_list jf_list_access">
+        <div class="jf_list_tip">
+            <label class="jf_list_label">详细地址</label>
+        </div>
+        <div class="jf_list_bd">
+            <input class="jf_input" type="text" placeholder="街道、楼牌号等">
+        </div>
+    </div>
+
+    <!-- list 4 输入手机号码-->
+    <div class="jf_list jf_list_access">
+        <div class="jf_list_tip">
+            <label class="jf_list_label">手机号码</label>
+        </div>
+        <div class="jf_list_bd">
+            <input class="jf_input" type="number" pattern="[0-9]*" placeholder="请输入手机号" maxlength="13">
+        </div>
+    </div>
+
+    <!-- list 5 带图标-->
+    <a class="jf_list jf_list_access">
+        <div class="jf_list_pic"></div>
+        <label class="jf_list_bd" for="switch_mine">
+            <p>默认地址</p>
+        </label>
+        <div class="jf_list_ft"><input type="checkbox" class="switch_zy" id="switch_mine"></div>
+    </a>
+</div>
+
+<script>
+
+    productAddress = new jfShowPop({
+
+        'ele': 'product_address'
+
+    })
+
+</script>
