@@ -601,7 +601,7 @@ var jfAutoPlay = {
                 /*thisShowEle.style.transform = 'translate3d(-100%, 0, 0)';
                 thisShowEle.style.webkitTransform = 'translate3d(-100%, 0, 0)';*/
 
-                thisAfterEle.className = thisAfterEle.className.replace(' delay', ' move');                                     //下个元素向后平滑过渡
+               thisAfterEle.className = thisAfterEle.className.replace(' delay', ' move');                                     //下个元素向后平滑过渡
 
                 setTransform(thisAfterEle,'-100%');
                 /*thisAfterEle.style.transform = 'translate3d(-100%, 0, 0)';
