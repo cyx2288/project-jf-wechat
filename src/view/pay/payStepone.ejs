@@ -7,99 +7,79 @@
 
 <body>
 
-<!--导航-->
-<%- include('../../component/basic/topNav.ejs',{
-"thisrighthref":"jfSwitch.goBack()",
-"navtitle":"嘉福收银台",
-"thislefthref":"#",
-"thisimgsrc":" "
-})%>
+<div class="jf_pay_page">
+    <!--收银台-->
+    <div class="section_container section_show" data-href="0">
 
-<!--支付方式选择-->
-<div class="zhuangyi_pay_shoppingcart">
-    <!--提示-->
-    <%- include('../../component/pay/payStepone/payTips.ejs',{
-    "payTitle":"订单金额"
-    })%>
+        <!--支付方式选择-->
+        <div class="zhuangyi_pay_shoppingcart container_main">
 
-    <!--金额-->
-    <%- include('../../component/pay/payStepone/payPrice.ejs',{
-        "payMoney":"￥2289.00"
-    })%>
+            <%- include('../../component/pay/payStepone/payTips.ejs',{
+            "payTitle":"商品信息"
+            })%>
+            <%- include('../../component/pay/payStepone/payinfo.ejs')%>
 
-    <!--提示-->
-    <%- include('../../component/pay/payStepone/payTips.ejs',{
-    "payTitle":"商品信息"
-    })%>
+            <%- include('../../component/pay/payStepone/payPrice.ejs')%>
 
-    <!--提示-->
-    <%- include('../../component/pay/payStepone/payinfo.ejs')%>
-
-
-    <div class="Special-List list_0719">
-        <div>支付方式</div>
-    </div>
-    <!--支付方式-->
-    <%- include('../../component/pay/payStepone/payStyleChoose.ejs')%>
-
-    <!--固定底部按钮-->
-
-    <!--支付方式-->
-    <%- include('../../component/basic/bottomBtn.ejs',{
-        "btntext":"确认支付",
-        "thisIdName":"pay_next"
-    })%>
-
-
-</div>
-
-
-<!--短信验证-->
-<div class="zhuangyi_pay_shoppingcart pay_box" id="smsVerification">
-
-    <!--导航-->
-    <nav class="Top_navigation">
-        <div class="weui_tab_bd"></div>
-        <div class="container_tab"> <a>
-                <div class="nav_left" id="getmessage_left"><img src="../../images/icon_pay_return.png"></div>
-            </a>
-            <div class="nav_center">
-                <div>短信验证</div>
-            </div>
-            <a href="#">
-                <div class="nav_right"><img src=" "></div>
-            </a>
+                <div class="Special-List list_0719">
+                    <div>支付方式</div>
+                </div>
+                <!--支付方式-->
+                <%- include('../../component/pay/payStepone/payStyleChoose.ejs')%>
         </div>
-    </nav>
 
-    <div class="pay_mail">
-        <%- include('../../component/pay/messageCheck/messageTips.ejs')%>
-        <%- include('../../component/pay/messageCheck/nextBtn.ejs')%>
+        <%- include('../../component/pay/payStepone/bottom_btn.ejs')%>
+
     </div>
 
+
+    <!--优惠券-->
+    <div class="section_container " data-href="1">
+
+        <%- include('../../component/pay/payStepone/coupons.ejs')%>
+    </div>
+
+
+    <!--短信验证-->
+    <div class="section_container" data-href="2">
+
+        <div class="zhuangyi_pay_shoppingcart" id="smsVerification">
+
+            <div class="pay_mail">
+                <%- include('../../component/pay/messageCheck/messageTips.ejs')%>
+                <%- include('../../component/pay/messageCheck/nextBtn.ejs')%>
+            </div>
+
+        </div>
+
+    </div>
 </div>
+
+
+
+
+
+
+
+
 
 
 </body>
 <script src="../../js/jf_pay.js"></script>
 <script>
 
-    //出现短信验证
-    $('#pay_next').on('click',function () {
+    document.getElementsByClassName('pay_bottom_btn')[0].addEventListener('click',function () {
 
-        $('#smsVerification').jfFrameFly({
-            hideButton: '#getmessage_left',//关闭的按钮
+        document.getElementsByClassName('section_container')[2].style.display='block';
 
-            timeDelay: '300',// 动过过渡时间
+        sendMessage(); //出现短信验证
 
-            isHorizonNo:true,//不允许屏幕滑动
+        document.getElementsByClassName('payCodeInput')[0].focus();//获取焦点
 
-        });
-
-        $('.weui_input.input_0926').focus();//获取焦点
+    },false)
 
 
-    });
+    pageChange.init();//单页切换
 
 </script>
 
