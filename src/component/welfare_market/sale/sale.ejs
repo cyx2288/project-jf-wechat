@@ -2,7 +2,10 @@
 <div class="market_mian">
     <div class="market_tips">
 
-        <p>可卖出福利：<span>100-50000</span></p>
+        <div class="sale_tips">
+            <p>可卖出福利：<span>100-50000</span></p>
+            <img src="../../images/icon_nav_helpcenter_3.png">
+        </div>
 
         <p>平台服务费：<span>0%</span></p>
 
@@ -160,6 +163,56 @@
         '公司编号':'123ksuhdaf891274',
         '员工编号':'1234567890123456'
     })
+
+
+
+    /*当月转出额度超限*/
+    document.getElementsByClassName('buy_check_btn')[0].addEventListener('click',function(){
+
+        jfShowTips.dialogShow({
+            "mainText": "当月可转出额度超限",
+            "minText": "当月最高转出额度：10000.00元。已转出：9990.00元",
+            "noCheck": false,
+            "noCancel": false,
+            "checkBtnText":"查看限额说明",
+            "checkFn": function () {
+                jfShowTips.dialogRemove()
+
+                /*本月最高限额*/
+                jfShowTips.dialogShow({
+                "mainText": "本月最高转出额度：1000.00",
+                "minText": "福利集市最高转出额度，是根据您在平台上所积累的充值记录评估的，每月1号会更新额度，建议您及时关注",
+                "noCheck": false,
+                "noCancel": true,
+                "checkBtnText":"确定",
+                "checkFn": function () {
+                        jfShowTips.dialogRemove()
+                    }
+                });
+
+            }
+        });
+
+    },false)
+
+
+
+    /*本月最高限额*/
+    document.getElementsByClassName('sale_tips')[0].addEventListener('click',function(){
+
+        jfShowTips.dialogShow({
+            "mainText": "本月最高转出额度：1000.00",
+            "minText": "福利集市最高转出额度，是根据您在平台上所积累的充值记录评估的，每月1号会更新额度，建议您及时关注",
+            "noCheck": false,
+            "noCancel": true,
+            "checkBtnText":"确定",
+            "checkFn": function () {
+                jfShowTips.dialogRemove()
+
+            }
+        });
+
+    },false)
 
 
 
