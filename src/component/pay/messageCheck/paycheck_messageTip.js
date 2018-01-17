@@ -13,62 +13,114 @@ document.addEventListener('touchstart',function(){},false);
 
     function sendMessage() {
 
-
-
         curCount = count;
 
         //设置button效果，开始计
-        $("#btnSendCode").attr("disabled", "true");
-        $("#btnSendCode").css({'color':'#ababab','border':"solid 1px #ddd"}).val("重新发送" + curCount + "s");
+
+        var thisMessageBtn= document.getElementById('btnSendCode');
+
+        //thisMessageBtn.setAttribute('disabled','disabled');
+        thisMessageBtn.disabled=true;
+
+        thisMessageBtn.style.color='#ababab';
+
+        thisMessageBtn.style.border='solid 1px #ddd';
+
+        thisMessageBtn.innerHTML='重新发送'+curCount+'s';
+
         InterValObj = window.setInterval(SetRemainTime, 1000); //启动计时器，1秒执行一次
     };
 //timer处理函数
     function SetRemainTime() {
+
+        var thisMessageBtn= document.getElementById('btnSendCode');
+
         if (curCount == 0) {
             window.clearInterval(InterValObj);//停止计时器
-            $("#btnSendCode").removeAttr("disabled");//启用按钮
-            $("#btnSendCode").css('color','#10A6E2').val("获取验证码");//结束后重心获取验证码
+
+            //thisMessageBtn.setAttribute('disabled',false);
+            thisMessageBtn.disabled=false;
+
+            thisMessageBtn.style.color='#10A6E2';
+
+            thisMessageBtn.innerHTML="获取验证码";
+
         }
         else {
             curCount--;
-            $("#btnSendCode").val("重新发送" + curCount + "s");
+
+            thisMessageBtn.innerHTML='重新发送'+curCount+'s';
+
+
         }
     }
 
+document.getElementById('btnSendCode').addEventListener('click',function () {
+
+    sendMessage();
+
+},false);
 
 
-    $('#btnSendCode').on('click',sendMessage)
+    function maxlengthFn(i) {
 
+        var thisInputEle = document.getElementsByClassName('input_0926')[0]
 
-    function x1(i){
+        thisInputEle.setAttribute('maxlength', i);
 
-        $('.input_0926').attr('maxlength',i);//取到input组件输入最长字符
+        thisInputEle.addEventListener('keyup', function () {
 
-        $('.input_0926').on('keyup',function(){
-            var numLength=$('.input_0926').val().length;//读取数字长度
-            if(numLength==i){//如果i等于最长字数，激活确认支付
-                $('.zhuangyi_pay_shoppingcart .weui_btn').removeClass('btn_gray_0926').addClass('btn_blue_0718');
+            var numLength = thisInputEle.value.length;
+
+            console.log(numLength)
+
+            if (numLength == i) {
+
+               // document.getElementsByClassName('weui_btn')[0].className = document.getElementsByClassName('weui_btn')[0].className.replace('btn_gray_0926', '');
+
+                document.getElementsByClassName('weui_btn')[0].className = 'weui_btn btn_blue_0718';
+
+            } else {
+
+               // document.getElementsByClassName('weui_btn')[0].className = document.getElementsByClassName('weui_btn')[0].className.replace('btn_blue_0718', '');
+
+                document.getElementsByClassName('weui_btn')[0].className = 'weui_btn btn_gray_0926'
             }
-            else{//如果没有到则按钮变灰色
 
-                $('.zhuangyi_pay_shoppingcart .weui_btn').removeClass('btn_blue_0718').addClass('btn_gray_0926');
-            }
-        });
 
+        }, false)
 
     }
 
-
     //输入六位验证码激活确认支付按钮
 
-    x1(6);//可修改maxlength数值
+        maxlengthFn(6);//可修改maxlength数值
 
 
-//step 选择
-$('.zhuangyi_pay_shoppingcart label.weui_cell.weui_check_label.weui_cell_zy').on("click",function(){
-    var ClickBoxId='#'+$(this).children("div:last-child").children("input").attr("id");
-    $(".aui-radio").prop("checked",false);
-    $(ClickBoxId).prop("checked",true);
-});
+var allPayCheck=document.getElementsByClassName('weui_cells_checkbox')[0].getElementsByClassName('weui_check_label');
+
+for(var i=0;i<allPayCheck.length;i++){
+
+    allPayCheck[i].addEventListener('click',function (e) {
+
+
+        var allInputEle=document.getElementsByClassName('aui-radio');
+
+        for(var i=0;i<allInputEle.length;i++){
+
+            allInputEle[i].checked=false
+        }
+
+
+        this.getElementsByTagName('input')[0].checked=true;
+
+
+
+    },false)
+}
+
+
+
+
 
 //收银台页面JS结束
