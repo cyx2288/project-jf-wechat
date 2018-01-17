@@ -1,3 +1,90 @@
+//判断浏览器和设备
+var browser = {
+    os: function () {
+        var u = navigator.userAgent;
+        return {// 操作系统
+            linux: !!u.match(/\(X11;( U;)? Linux/i), // Linux
+            windows: !!u.match(/Windows/i), // Windows
+            android: !!u.match(/Android/i), // Android
+            iOS: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), // iOS
+        };
+    }(),
+    device: function () {
+        var u = navigator.userAgent;
+        return {// 设备
+            mobile: !!u.match(/AppleWebKit/i), // mobile
+            iPhone: !!u.match(/iPhone/i), // iPhone
+            iPad: !!u.match(/iPad/i), // iPad
+        };
+    }(),
+    supplier: function () {
+        var u = navigator.userAgent;
+        return {// 浏览器类型
+            qq: !!u.match(/QQ\/\d+/i), // QQ
+            wechat: !!u.match(/MicroMessenger/i), // WeChat
+            weixin: u.match(/MicroMessenger/i) == 'MicroMessenger',
+            ios: u.indexOf('_JFiOS') > -1,
+            android: u.indexOf('_jfAndroid') > -1,
+            mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+        };
+
+    }(),
+    language: (navigator.browserLanguage || navigator.language).toLowerCase(),
+
+    androidVersion: function () {//判断安卓版本
+        var userAgent = navigator.userAgent;
+        var index = userAgent.indexOf("Android")
+        if (index >= 0) {
+            return parseFloat(userAgent.slice(index + 8));
+
+        }
+    }(),
+
+    IosVersion:function () {//ios版本
+        var str= navigator.userAgent.toLowerCase();
+        var ver=str.match(/cpu iphone os (.*?) like mac os/);
+        if(!ver){
+
+            return -1;
+
+        }else{
+
+            return ver[1].replace(/_/g,".");
+        }
+    }()
+    //browser.supplier.wechat
+};
+//判断结束
+
+
+//禁用默认浏览器事件
+//禁止所有事件
+var windowBanEvent = {
+
+    bundling: function () {
+        var _self = this;
+        $(window).bind('click touchstart touchmove touchend ', _self.Canceling);//绑定禁止事件
+    },
+
+    unbundling: function () {
+        var _self = this;
+        $(window).unbind('click touchstart touchmove touchend ', _self.Canceling);//解除绑定事件
+
+    },
+
+    Canceling: function (evt) {
+
+        var evt = evt || window.event; //阻止事件
+        if (evt.preventDefault) {
+            evt.preventDefault();
+            evt.stopPropagation();
+        } else {
+            evt.returnValue = false;
+            evt.cancelBubble = true;
+        }
+    },
+
+};
 
 var pageChange={
 
@@ -188,16 +275,21 @@ function couponChoose() {
 
         var allChooseTickets = document.getElementsByClassName('choosed');
 
-        if (thisTargetEle.className.indexOf('no_use') > -1&&allChooseTickets.length>0) {//点击不使用优惠券，且当前已经有优惠券被选中
+        if (thisTargetEle.className.indexOf('no_use') > -1) {//点击不使用优惠券，且当前已经有优惠券被选中
 
-            /*  console.log(allChooseTickets.length)
+            if(allChooseTickets.length>0){
 
-             for (var j = 0; j <allChooseTickets.length; j++) {
+                var allLength=allChooseTickets.length;
 
-                  allChooseTickets[j].className = allChooseTickets[j].className.replace('choosed', '')
-              }*/
+                for (var j = 0; j <allLength; j++) {
 
-            $('.choosed').removeClass('choosed');
+                    allChooseTickets[0].className = allChooseTickets[0].className.replace('choosed', '')
+                }
+
+
+            }
+
+
 
 
         } else {//点击优惠券
