@@ -72,7 +72,6 @@ document.getElementById('btnSendCode').addEventListener('click',function () {
 
             var numLength = thisInputEle.value.length;
 
-            console.log(numLength)
 
             if (numLength == i) {
 

@@ -277,6 +277,8 @@ function couponChoose() {
 
         if (thisTargetEle.className.indexOf('no_use') > -1) {//点击不使用优惠券，且当前已经有优惠券被选中
 
+            thisTargetEle.className='no_use cancle_choosed';
+
             if(allChooseTickets.length>0){
 
                 var allLength=allChooseTickets.length;
@@ -293,6 +295,8 @@ function couponChoose() {
 
 
         } else {//点击优惠券
+
+            allTickets.getElementsByClassName('no_use')[0].className='no_use';
 
             var thisClickEle = thisTargetEle.parentNode;
 
