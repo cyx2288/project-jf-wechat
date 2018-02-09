@@ -157,5 +157,35 @@
     padding: 10px;
     box-sizing: border-box;
     background: #fff;
+    position: relative;
+  }
+
+  .no_use.cancle_choosed{
+    &:after{
+      content: '';
+      position: absolute;
+      top: 5px;
+      right: 6px;
+      width: 6px;
+      height: 10px;
+      border-right: solid 2px #fff;
+      border-bottom: solid 2px #fff;
+      z-index: 100;
+      transform: rotate(45deg);
+    }
+
+    &:before{
+      content: '';
+      position: absolute;
+      top: -4px;
+      right: -16px;
+      width: 1px;
+      height: 1px;
+      border-width: 0 25px 25px;
+      border-style: solid;
+      border-color: transparent transparent #10a6e2;
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
   }
 }

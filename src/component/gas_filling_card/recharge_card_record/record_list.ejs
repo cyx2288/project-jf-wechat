@@ -1,0 +1,85 @@
+<div class="recharge_card_record">
+
+    <div class="recharge_card_heard">历史充值记录</div>
+
+    <div class="record_list">
+        <a class="list_left_font" href="recharge_card.html">1234567890123456789</a>
+
+        <button class="close_icon">
+            <img src="../../images/recharge_card_icon.png">
+        </button>
+    </div>
+
+    <div class="record_list">
+        <a class="list_left_font" href="recharge_card.html">2664567890123456789</a>
+
+        <button class="close_icon">
+            <img src="../../images/recharge_card_icon.png">
+        </button>
+    </div>
+
+    <div class="record_list">
+        <a class="list_left_font" href="recharge_card.html">3244567890123456789</a>
+
+        <button class="close_icon">
+            <img src="../../images/recharge_card_icon.png">
+        </button>
+    </div>
+
+    <div class="record_list">
+        <a class="list_left_font" href="recharge_card.html">5643567890123456789</a>
+
+        <button class="close_icon">
+            <img src="../../images/recharge_card_icon.png">
+        </button>
+    </div>
+
+</div>
+
+
+
+
+<script>
+
+    window.onload=function () {
+
+        var deletetBtn=document.getElementsByClassName('close_icon');
+
+        for (var i=0;i<deletetBtn.length;i++) {
+
+            deletetBtn[i].addEventListener('click',function () {
+
+                var parentDiv=this.parentNode;
+
+                jfShowTips.dialogShow({
+                    "mainText": "确定删除当前历史充值记录？",
+                    "minText": ' ',
+                    "noCheck": false,
+                    "noCancel": false,
+                    "checkBtnText":"确定",
+                    "checkFn": function () {
+                        jfShowTips.dialogRemove()
+
+                        document.getElementsByClassName('recharge_card_record')[0].removeChild(parentDiv);
+
+                    }
+                });
+
+            },false)
+
+        }
+
+    }
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
