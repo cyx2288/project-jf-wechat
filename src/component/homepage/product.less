@@ -397,3 +397,49 @@
 
 }
 
+
+
+/*******生活缴费H5遮罩层*******/
+.living_payment_popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+  width: 100%;
+  height: 100%;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .ikonw_button {
+    z-index: 1002;
+    position: absolute;
+    top: 75%;
+    width: 100%;
+    text-align: center;
+
+    .h5_button {
+      font-size: 20px;
+      color: #FFFFFF;
+      padding: 6px 25px;
+      border-radius: 50px;
+      border: 2px solid #FFFFFF;
+      background: none;
+    }
+
+  }
+
+}
+
+.living_payment_none {
+
+  .living_payment_popup {
+    display: none;
+  }
+
+}
+
+
+
