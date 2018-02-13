@@ -1,0 +1,188 @@
+/*背景颜色*/
+#lawson_bg{
+  background:#0e8bf9;
+}
+/*点击更多*/
+.more{
+  font-size: 16px;
+  color: #fff;
+  text-align: right;
+  padding: 10px 20px;
+  img{
+    width: 12px;
+    height: 12px;
+  }
+}
+
+/*扫码支付*/
+.lawson_code{
+  position: relative;
+  margin: 0 15px;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 10px;
+  line-height: 0.8;
+  overflow: hidden;
+  box-shadow:0 6px 10px #1965a9;/*opera或ie9*/
+
+  #QR_code {
+    position: relative;
+    width: 10rem;
+    height: 10rem;
+    margin: 0 calc(~'(100% - 10rem)/2') .5rem;
+    background: #f5f5f5;
+    @media screen and (max-width: 360px) {
+      width: 9.5rem;
+      height: 9.5rem;
+      margin: 0 calc(~'(100% - 9.5rem)/2') .2rem;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  #QR_code[title]{
+    background: transparent;
+  }
+
+  #QR_code[title] + .jf_QR_loading {
+    display: none;
+  }
+  .jf_QR_loading {
+    position: absolute;
+    top: calc(~'(100% - 55px)/2');
+    left: calc(~'(100% - 45px)/2');
+
+    .k-spinner {
+      position: relative;
+      width: 45px;
+      height: 45px;
+      margin: 0 auto;
+
+      animation: k-loadingI 2s linear infinite;
+      @keyframes k-loadingI {
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .k-bubble-1,.k-bubble-2 {
+        position: absolute;
+        top: 0;
+        width: 25px;
+        height: 25px;
+        border-radius: 100%;
+        animation: k-loadingIb 2s ease-in-out infinite;
+        background-color: #10a6e2;
+      }
+      .k-bubble-2{
+        top: auto;
+        bottom: 0;
+        animation-delay: -1.0s;
+      }
+      @keyframes k-loadingIb{
+
+        0%,100%{
+          transform: scale(0);
+        }
+        50%{
+          transform: scale(1);
+        }
+      }
+    }
+  }
+}
+.lawson_shape_code{
+  canvas{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+}
+
+/*刷新*/
+.refresh{
+  margin: 10px;
+  img{
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+  }
+  p{
+    color: #999999;
+    display: inline;
+  }
+}
+
+.remaining_sum{
+  padding: 15px 0;
+  background-color: #eeeeee;
+  margin-top: 10px;
+  @media screen and (max-width: 360px){
+    margin-top:0;
+  }
+  img{
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+  }
+  a{
+    color: #000000;
+  }
+  .pay_arrow{
+    width: 12px;
+    height: 12px;
+    margin-left: 5px;
+    vertical-align: middle;
+  }
+}
+
+
+/*商户区域*/
+.market_area{
+  margin-top: 20px;
+  text-align: center;
+  @media screen and (max-width: 360px){
+    margin-top:0;
+  }
+  .title{
+    margin: 30px 0 0;
+    font-size: 16px;
+    color: #fff;
+    @media screen and (max-width: 360px){
+      margin-top:10px;
+    }
+  }
+  .market_img{
+    margin-top: 10px;
+    @media screen and (max-width: 360px){
+      margin-top:0;
+    }
+    >div{
+      display: inline-block;
+      float: left;
+      width: 28%;
+      text-align: center;
+      background: #FFFFFF;
+      height: 34px;
+      border-radius: 4px;
+      padding: 5px 0 0;
+      box-shadow: 0 3px 10px #1965a9;
+      margin: 10px 0 0 15px;
+      @media screen and (max-width: 360px){
+        margin-top:0;
+      }
+      &:active{
+        opacity: .6;
+      }
+    }
+    img{
+      width: 80%;
+      vertical-align: middle;
+    }
+    &:after{
+      content: "";
+      display: block;
+      clear: both;
+    }
+  }
+}
