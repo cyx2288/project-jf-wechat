@@ -1,0 +1,81 @@
+<div class="lawson_order_detail">
+    <!--商店名称-->
+    <div class="title">
+            <p>罗森便利店</p>
+        <img src="../../images/lawson_card/lawson_logo.png">
+    </div>
+    <!--订单信息-->
+    <div class="order_info info">
+        <div class="info_title">
+            <span>订单信息</span>
+        </div>
+        <div class="order_num order">
+            <p class="left">订单号</p>
+            <p class="right">1234567890</p>
+        </div>
+        <div class="order_state order">
+            <p class="left">订单状态</p>
+            <p class="right">交易成功</p>
+        </div>
+        <div class="order_sum order">
+            <p class="left">订单金额</p>
+            <p class="right">¥32.00</p>
+        </div>
+
+    </div>
+    <!--支付信息-->
+    <div class="pay_info info">
+        <div class="info_title">
+            <span>支付信息</span>
+        </div>
+        <div class="pay_num order">
+            <p class="left">支付金额</p>
+            <p class="right">¥32.00</p>
+        </div>
+        <div class="pay_state order">
+            <p class="left">支付方式</p>
+            <p class="right">福利余额</p>
+        </div>
+        <div class="pay_sum order">
+            <p class="left">商户订单号</p>
+            <p class="right">商户可扫码付款</p>
+        </div>
+
+        <canvas id="oneCodeDetail"></canvas>
+
+       </div>
+
+    </div>
+
+</div>
+
+<script>
+    //一维码
+   JsBarcode('#oneCodeDetail','1234 5678 9012 3456 78',{//输入18位数字
+       font:"Microsoft Yahei",//设置文本的字体
+       height:'120',//高度
+       fontSize:32,//设置文本的大小
+       margin:15//设置条形码周围的空白边距
+
+    });
+
+
+/*    JsBarcode("#imgcode", "123", {
+        format: "CODE39",//选择要使用的条形码类型
+        width:3,//设置条之间的宽度
+        height:100,//高度
+        displayValue:true,//是否在条形码下方显示文字
+        text:"456",//覆盖显示的文本
+        fontOptions:"bold italic",//使文字加粗体或变斜体
+        font:"fantasy",//设置文本的字体
+        textAlign:"left",//设置文本的水平对齐方式
+        textPosition:"top",//设置文本的垂直位置
+        textMargin:5,//设置条形码和文本之间的间距
+        fontSize:15,//设置文本的大小
+        background:"#eee",//设置条形码的背景
+        lineColor:"#2196f3",//设置条和文本的颜色。
+        margin:15//设置条形码周围的空白边距
+    });*/
+
+
+</script>
