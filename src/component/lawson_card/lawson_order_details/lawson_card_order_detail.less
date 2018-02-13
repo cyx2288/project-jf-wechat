@@ -1,0 +1,109 @@
+.lawson_order_detail{
+  height: 100%;
+  text-align: center;
+  .title{
+    background: url("../images/lawson_card/order_detail.png") center;
+    width: 346px;
+    height: 56px;
+    background-size: 100%;
+    margin: 0 auto;
+    img{
+      width: 72px;
+    }
+  }
+}
+
+.lawson_order_detail .title p{
+  font-size:18px;
+  color: #fff;
+}
+.lawson_order_detail .title_bg{
+
+}
+.lawson_order_detail .title .logo{
+  width: 50%;
+  margin-top: 10px;
+}
+/*订单信息  支付信息*/
+
+.lawson_order_detail .info{
+  position: relative;
+  margin: 10px 0;
+  background: #FFFFFF;
+  color: #8a8a8a;
+  font-size: 14px;
+  width: 80%;
+  padding: 0 5%;
+  display: inline-block;
+  line-height: 3;
+  box-shadow:0 4px 5px #ddd;/*opera或ie9*/;
+  border-radius: 8px;
+  @media screen and (max-width: 350px){
+    line-height: 2.5;
+  }
+}
+ .info_title{
+   position: relative;
+  text-align: left;
+   &:after{
+     position: absolute;
+     content: "";
+     display: block;
+     width: 100%;
+     border-bottom: solid 1px #e9e9e9;
+     right: 0;
+     bottom: 0;
+     transform-origin: 0 0;
+   }
+
+}
+.lawson_order_detail .text_line{
+  width: 3px;
+  position: absolute;
+  top: 14px;
+}
+.lawson_order_detail span{
+  color: #10a6e2;
+  font-size: 16px;
+  border-left: 5px solid #10a6e2;
+  padding-left: 10px;
+
+}
+.lawson_order_detail .right{
+  color: #4a4a4a;
+}
+.lawson_order_detail .order{
+  position: relative;
+  padding: 5px 0;
+  display: flex;
+  justify-content: space-between;
+  &:last-of-type:after{
+    border-bottom: none;
+  }
+  &:after{
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    border-bottom: solid 1px #e9e9e9;
+    right: 0;
+    bottom: 0;
+    transform-origin: 0 0;
+    transform: scaleY(.6);
+  }
+
+}
+.order_state .right{
+  color: #10a6e2;
+}
+.lawson_order_detail .order_sum{
+  border-bottom: none;
+}
+.pay_info .code{
+  width: 90%;
+  margin-top: 20px;
+}
+#oneCodeDetail{
+  margin-top: 10px;
+  width: 100%;
+}

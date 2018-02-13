@@ -1,0 +1,143 @@
+
+<div class="more" id="lawsonShowMore">
+    <span>更多</span>
+    <img src="../../../images/lawson_card/icon_more.png">
+</div>
+
+<!--扫码支付-->
+
+<div class="lawson_code">
+
+    <!-- 条形码-->
+    <div class="lawson_shape_code">
+        <canvas id="oneCode"></canvas>
+    </div>
+    <!-- 二维码-->
+    <div class="codes_card" id="QR_code"></div>
+
+    <!-- 二维码未出现时动画-->
+    <div class="jf_QR_loading">
+        <div class="k-spinner">
+            <div class="k-bubble-1"></div>
+            <div class="k-bubble-2"></div>
+        </div>
+
+    </div>
+
+
+    <!-- 刷新 -->
+    <div class="refresh">
+        <img src="../../images/lawson_card/icon_refresh.png">
+        <p>每分钟自动刷新</p>
+    </div>
+    <div class="remaining_sum" id="lawsonPay">
+        <img src="../../images/mine/icon_mine_welfare.png">
+        <a>福利积分余额 500.00元<img class="pay_arrow" src="../../images/icon_pay_return_black.png"></a>
+    </div>
+
+</div>
+
+<!--使用区域-->
+
+<div class="market_area">
+
+    <p class="title">—  您可以在以下区域的商户使用付款码  —</p>
+    <p style="color: #fff">（点击查看更多使用区域）</p>
+    <div class="market_img">
+        <!-- 罗森 -->
+        <div class="lawson">
+            <img src="../../images/lawson_card/icon_lawson.png">
+        </div>
+        <!-- 全家-->
+        <div class="family_mart">
+            <img src="../../images/lawson_card/icon_familymart.png">
+        </div>
+        <div class="seven_eleven">
+            <img src="../../images/lawson_card/icon_eleven.png">
+        </div>
+    </div>
+
+</div>
+
+<script>
+
+    //一维码
+
+    JsBarcode('#oneCode','1234 5678 9012 3456 78',{
+        font:"Microsoft Yahei",//设置文本的字体
+        height:'120',
+        fontSize:32,//设置文本的大小
+        margin:15
+
+    });//输入18位数字
+
+    /*    JsBarcode("#imgcode", "123", {
+     format: "CODE39",//选择要使用的条形码类型
+     width:3,//设置条之间的宽度
+     height:100,//高度
+     displayValue:true,//是否在条形码下方显示文字
+     text:"456",//覆盖显示的文本
+     fontOptions:"bold italic",//使文字加粗体或变斜体
+     font:"fantasy",//设置文本的字体
+     textAlign:"left",//设置文本的水平对齐方式
+     textPosition:"top",//设置文本的垂直位置
+     textMargin:5,//设置条形码和文本之间的间距
+     fontSize:15,//设置文本的大小
+     background:"#eee",//设置条形码的背景
+     lineColor:"#2196f3",//设置条和文本的颜色。
+     margin:15//设置条形码周围的空白边距
+     });*/
+
+
+
+    //二维码
+    var qrcode = new QRCode('QR_code',{
+
+        text:'http://www.baidu.com',             //输入二维码解析网址
+        correctLevel : QRCode.CorrectLevel.H     //容错率30%
+
+    })
+    //注意
+
+    //使用API
+    //qrcode.clear()                    //二维码清除方法
+    //qrcode.makeCode('new_content')    //添加新的解析地址
+
+
+
+    //罗森门店地址
+    document.getElementsByClassName('lawson')[0].addEventListener('click',function () {
+
+        jfShowTips.dialogShow({
+            'mainText':'罗森便利店',
+            'minText':'上海、杭州、宁波、嘉兴、慈溪、绍兴、苏州、无锡、江阴、常州、南京、张家港、镇江、常熟、海宁',
+            'noCancel':true,
+            'checkFn':function () {
+                jfShowTips.dialogRemove();
+            }
+
+        })
+
+    },false)
+
+    //全家门店地址
+    document.getElementsByClassName('family_mart')[0].addEventListener('click',function () {
+
+        jfShowTips.dialogShow({
+            'mainText':'全家便利店',
+            'minText':'上海、杭州、宁波、嘉兴、慈溪、绍兴、苏州、无锡、江阴、常州、南京、张家港、镇江、常熟、海宁',
+            'noCancel':true,
+            'checkFn':function () {
+                jfShowTips.dialogRemove();
+            }
+
+        })
+
+    },false)
+
+
+
+
+</script>
+
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>加油卡充值订单</title>
+    <link rel="stylesheet"  href="../../css/jf_gas_filling_card.css">
+    <link rel="stylesheet"  href="../../css/jf_living_payment_order.css">
+    <link rel="stylesheet"  href="../../css/jf_welfare_market.css">
+
+</head>
+
+<body>
+
+<!--顶部固定导航-->
+
+<!--导航-->
+<%- include('../../component/basic/topNav.ejs',{
+"thisrighthref":"jfSwitch.goBack()",
+"navtitle":"生活缴费",
+"thislefthref":"",
+"thisimgsrc":" "
+})%>
+
+
+<!--加油卡充值-详情-->
+<%- include('../../component/living_payment_order/living_payment_order.ejs')%>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+<script src="../../js/jf_gas_filling_card.js"></script>
+
+</html>
