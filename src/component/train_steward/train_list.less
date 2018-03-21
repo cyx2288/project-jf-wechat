@@ -1,0 +1,157 @@
+
+.train_list {
+
+  /*列表详情*/
+  .train_list_details{
+
+    background-color: #FFFFFF;
+    width: 92%;
+    border-radius: 5px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+
+    .train_list_details_1{
+      padding: 15px 15px 15px 10px;
+
+      div{
+        font-size: 16px;
+        color: #4a4a4a;
+        font-weight: bold;
+
+      }
+
+      div+div{
+        font-size: 18px;
+        color: #10a6e2;
+        margin-top: 10px;
+        font-weight: bold;
+      }
+
+  }
+
+    .train_list_details_2{
+      text-align: center;
+      margin: auto;
+
+      .train_class_name{
+
+        font-size: 18px;
+        color: #10a6e2;
+        font-weight: bold;
+        margin-bottom: -10px;
+
+      }
+
+      img{
+        width:70px;
+      }
+
+      div+div{
+        font-size: 14px;
+        color: #4a4a4a;
+
+      }
+
+    }
+
+    .train_list_details_3{
+      padding: 15px 10px 15px 15px;
+      text-align: right;
+
+      div{
+        font-size: 16px;
+        color: #4a4a4a;
+        font-weight: bold;
+      }
+
+      div+div{
+        font-size: 18px;
+        color: #10a6e2;
+        margin-top: 10px;
+        font-weight: bold;
+      }
+
+    }
+
+    }
+
+  .train_list_details_first{
+
+    background-color: #FFFFFF;
+    width: 92%;
+    margin: 15px auto;
+    border-radius: 5px;
+
+    .train_name{
+      padding: 10px 10px;
+      position: relative;
+      &:after{
+        content: " ";
+        position: absolute;
+        left: 8px;
+        top: 40px;
+        width: 96%;
+        height: 1px;
+        border-top: 1px solid #dddddd;
+        color: #dddddd;
+        transform-origin: 0 0;
+        transform: scaleY(0.5);
+      }
+    }
+
+    .train_list_text{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 10px;
+      .orange{
+        color: #ff8a17;
+      }
+      .blue{
+        color: #10a6e2;
+      }
+      .gray{
+        color: #4a4a4a;
+      }
+
+    }
+
+  }
+
+  /*按钮*/
+  a {
+    .disclaimer_button {
+      text-align: center;
+      margin-top: 20px;
+      button {
+        width: 95%;
+        padding: 10px 0;
+        font-size: 16px;
+        border-radius: 5px;
+        border: none;
+        color: white;
+        background: linear-gradient(left, #0ea6e9, #0773be);
+        &:active {
+          background: #0773be;
+        }
+      }
+
+    }
+
+  }
+
+  /*订单疑问*/
+  .train_doubt {
+    text-align: center;
+    margin: 20px 0 ;
+    p {
+      color: #ababab;
+      font-size: 12px;
+    }
+  }
+
+
+}
