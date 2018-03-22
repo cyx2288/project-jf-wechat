@@ -1,0 +1,331 @@
+
+
+
+.inf_tittle{
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  border-bottom: 1px solid #e5e5e5;
+
+  padding:0 8px 10px 8px;
+
+  a{
+
+    color: #4a4a4a;
+
+  }
+
+  span{
+
+      font-size: 12px;
+
+    }
+
+  span:first-child{
+
+    font-size: 16px;
+
+  }
+
+}
+
+.di_step{
+
+  display: flex;
+
+  justify-content: space-around;
+
+  align-items: center;
+
+
+}
+
+
+
+.didi_step{
+
+  display: flex;
+
+  justify-content:space-between;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+
+  width: 20%;
+
+  position: relative;
+
+  &:first-child:after{
+
+    content: '';
+
+    border:none;
+
+    display: none;
+
+  }
+
+  &:after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #10a6e2;
+    position: absolute;
+    right: 50%;
+    top: 14%;
+
+
+  }
+
+  .didi_now_step {
+    position: relative;
+    width: 14px;
+    height: 14px;
+    background-color: #10a6e2;
+    border: 1px solid #10a6e2;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    z-index: 6;
+    &:before {
+      content: '';
+      width: .3rem;
+      height: .2rem;
+      position: absolute;
+      top: 62%;
+      left: 60%;
+      margin-left: -0.25rem;
+      margin-top: -0.25rem;
+      background: 0 0;
+      border: 1px solid #fff;
+      border-top: 0;
+      border-right: 0;
+      z-index: 2;
+      border-radius: 0;
+      transform: rotate(-45deg);
+    }
+
+  }
+
+  span{
+
+    font-size: 12px;
+
+  }
+
+}
+
+.now_didi_step+.didi_step+.didi_step+.didi_step+.didi_step,
+
+.now_didi_step+.didi_step+.didi_step+.didi_step,
+
+.now_didi_step+.didi_step+.didi_step,
+
+.now_didi_step+.didi_step{
+
+  position: relative;
+
+  .didi_now_step {
+    position: relative;
+    width: 14px;
+    height: 14px;
+    background-color: #ddd;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    &:before {
+      content: '';
+      width: .3rem;
+      height: .2rem;
+      position: absolute;
+      top: 62%;
+      left: 60%;
+      margin-left: -0.25rem;
+      margin-top: -0.25rem;
+      background: 0 0;
+      border: 1px solid #ddd;
+      border-top: 0;
+      border-right: 0;
+      z-index: 2;
+      border-radius: 0;
+      transform: rotate(-45deg);
+    }
+
+  }
+
+  &:first-child:after{
+
+    content: '';
+
+    border:none;
+
+    display: none;
+
+  }
+
+
+  &:after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #ddd;
+    position: absolute;
+    right: 50%;
+    top: 14%;
+
+
+  }
+
+
+}
+
+
+/**/
+
+.up_inf {
+
+  padding: 10px 8px 10px 8px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  .didi_inf_left{
+
+    display: flex;
+
+    align-items: center;
+
+    .didi_line_tit{
+
+      margin-right: 10px;
+
+    }
+
+  }
+
+}
+
+.order_inf_text{
+
+  border-bottom: 1px solid #e5e5e5;
+
+}
+
+
+.order_inf {
+
+  margin: 20px 5% 30px 5%;
+
+  width: 86%;
+
+  padding: 15px 2% 15px 2%;
+
+  background-color: #FFFFFF;
+
+  border: 6px;
+
+  border-radius: 8px;
+
+  box-shadow: 3px 3px 8px #e5e5e5;
+
+}
+
+.didi_clock {
+
+      width: 30px;
+
+      height: 30px;
+
+      padding: 1px 0 ;
+}
+
+.didi_car {
+
+  width: 30px;
+
+  height: 30px;
+}
+
+
+.didi_inf_buttom{
+
+  padding: 0 20px;
+
+}
+.none_box{
+
+  width: 100px;
+
+  height: 30px;
+
+}
+
+
+
+/*滴滴出行信息颜色*/
+
+
+.didi_blue{
+
+  width: 26px;
+  height: 26px;
+
+  border: 2px solid #10a6e2;
+  border-radius: 40px;
+  color: #10A6E2;
+  font-size: 16px;
+  text-align: center;
+  line-height: 26px;
+
+}
+
+
+
+.didi_orange{
+
+  width: 26px;
+  height: 26px;
+
+  border: 2px solid #ff8a17;
+  border-radius: 40px;
+  color: #ff8a17;
+  font-size: 16px;
+  text-align: center;
+  line-height: 28px;
+
+}
+
+/*滴滴订单信息颜色*/
+
+.inf_orange{
+
+  color: #ff8a17;
+
+}
+
+.inf_blue{
+
+  color: #10a6e2;
+
+}
+
+.inf_gray{
+
+  color: #888888;
+
+}
+
+.inf_red{
+
+  color: #ff5105;
+
+}
