@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>滴滴出行</title>
+    <link rel="stylesheet" href="../../css/jf_didi_out.css">
+    <link rel="stylesheet"  href="../../css/jf_pay.css">
+
+</head>
+<body>
+
+<div class="zhuangyi_pay_shoppingcart didi_pay_shoppingcart">
+
+    <!--导航-->
+    <%- include('../../component/basic/topNav.ejs',{
+    "thisrighthref":"jfSwitch.goBack()",
+    "navtitle":"账户余额不足",
+    "thislefthref":"#",
+    "thisimgsrc":" "
+    })%>
+
+    <!--支付失败-->
+    <%- include('../../component/didi_out/insufficient_account_balance.ejs')%>
+
+
+</div>
+
+
+</body>
+</html>
