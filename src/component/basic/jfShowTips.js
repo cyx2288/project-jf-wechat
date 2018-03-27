@@ -248,7 +248,9 @@ var jfShowTips = {
 
         var cancleBtnText=details.cancleBtnText ||'取消';
 
-        var thisUrl=details.thisUrl||'javascript:void(0)';
+        var checkthisUrl=details.thisUrl||'javascript:void(0)';
+
+        var canclethisUrl=details.cancelUrl||'javascript:void(0)';
 
 
         var _this=this;
@@ -261,13 +263,13 @@ var jfShowTips = {
 
         if(!hasCheck){
 
-            thisInnerHtml+='<a class="dialog_check" href='+thisUrl+'>'+checkBtnText+'</a>'
+            thisInnerHtml+='<a class="dialog_check" href='+ checkthisUrl+'>'+checkBtnText+'</a>'
 
         }
 
         if(!hasCancel){
 
-            thisInnerHtml+='<a class="dialog_cancel" href="javascript:void(0)">'+cancleBtnText+'</a>'
+            thisInnerHtml+='<a class="dialog_cancel" href='+canclethisUrl+'>'+cancleBtnText+'</a>'
 
         }
 
