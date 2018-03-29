@@ -1,0 +1,157 @@
+
+
+
+
+
+
+.enterprise_information{
+
+  width: 100%;
+
+  background-color: #FFF;
+
+  padding:5px 0;
+
+  margin-bottom: 20px;
+
+  box-shadow: 0 2px 10px rgba(171, 171, 171, .5);
+
+  .en_inf:last-child{
+
+    border-bottom: none;
+
+  }
+
+  .en_right{
+
+    display: flex;
+
+    flex-direction: column;
+
+    flex-wrap: wrap;
+
+    select:first-child{
+
+      margin-bottom: 10px;
+
+    }
+
+
+  }
+
+  .en_inf{
+
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 10px 10px;
+
+    margin: 0 15px;
+
+    border-bottom: 1px solid #dddddd;
+
+
+
+    p{
+
+      font-size: 14px;
+
+
+    }
+
+    input::-webkit-input-placeholder{
+
+      color: #808080;
+
+    }
+
+    input{
+
+      width: 50%;
+
+      border: none;
+
+      outline:medium;
+
+      font-size: 14px;
+
+      text-align: right;
+
+
+    }
+
+  }
+
+  /*下拉选择*/
+
+  .se_find{
+
+    position: relative;
+
+    &:after {
+      position: absolute;
+      content: '▼';
+      font-size: 12px;
+      opacity: .8;
+      right: 0;
+      top: 2px;
+      background-color: #FFFFFF;
+    }
+
+  }
+
+}
+
+.en_bottom{
+
+  width: 85%;
+
+  position:fixed;
+
+  bottom: 0;
+
+  height: 44px;
+
+  background-color: #fff;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 0 25px;
+
+  p{
+
+    font-size: 16px;
+
+    line-height: 44px;
+
+    text-align: left;
+
+  }
+
+
+}
+
+.in_bottom{
+
+  height: 33px;
+
+  width: 100px;
+
+  color: #fff;
+
+  font-size: 16px;
+
+  line-height: 33px;
+
+  border-radius: 50px;
+
+  text-align: center;
+
+  background: linear-gradient(left,#23b2ec,#1181c7);
+
+}
