@@ -1,0 +1,138 @@
+.guarantee_detaile_form {
+  width: 100%;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.1);
+  margin-top: 10px;
+  background-color: #FFFFFF;
+
+  .detaile_list_line {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+
+    &:first-child {
+      background-color: #f2f2f2;
+
+      .detaile_line_left {
+        font-size: 16px;
+        color: #4A4A4A;
+      }
+
+      .detaile_line_center {
+        font-size: 16px;
+        color: #4A4A4A;
+      }
+
+      &:after {
+        display: none;
+      }
+
+    }
+
+    &:after {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 1px;
+      right: 0;
+      top: 0;
+      border-top: 1px #DDDDDD solid;
+      transform: scaley(.3);
+    }
+
+    .detaile_line_left {
+      width: 37.5%;
+      padding: 5px 0;
+      text-align: center;
+      font-size: 14px;
+      color: #797979;
+      position: relative;
+
+      &:after {
+        position: absolute;
+        content: '';
+        width: 1px;
+        height: 100%;
+        right: 0;
+        top: 0;
+        border-right: 1px #DDDDDD solid;
+        transform: scalex(.3);
+      }
+
+    }
+
+    .detaile_line_center {
+      width: 25%;
+      padding: 5px 0;
+      text-align: center;
+      font-size: 14px;
+      color: #797979;
+      position: relative;
+
+      &:after {
+        position: absolute;
+        content: '';
+        width: 1px;
+        height: 100%;
+        right: 0;
+        top: 0;
+        border-right: 1px #DDDDDD solid;
+        transform: scalex(.3);
+      }
+
+    }
+
+  }
+
+  /**tr {
+    width: 100%;
+    position: relative;
+
+    &:after {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 1px;
+      left: 0;
+      border-bottom: 1px #DDDDDD solid;
+      transform: scaley(.3);
+    }
+
+    &:first-child {
+      background-color: #f2f2f2;
+
+      &:after {
+        display: none;
+      }
+
+    }
+
+    td {
+      text-align: center;
+      position: relative;
+
+      &:after {
+        position: absolute;
+        content: '';
+        width: 1px;
+        height: 101%;
+        right: 0;
+        top: 2px;
+        border-right: 1px #DDDDDD solid;
+        transform: scalex(.3);
+      }
+
+      &:last-child {
+
+        &:after {
+          display: none;
+        }
+
+      }
+
+    }
+
+  }**/
+
+}
