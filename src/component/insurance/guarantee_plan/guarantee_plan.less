@@ -65,6 +65,7 @@
   .plan_things_tips {
     color: #10a6e2;
     font-size: 12px;
+    opacity: .6;
   }
 
 }
@@ -93,6 +94,7 @@
     flex-grow: 1;
     font-size: 16px;
     color: #808080;
+    display: block;
 
     &:nth-child(2) {
       text-align: center;
@@ -112,10 +114,21 @@
   background-color: #FFFFFF;
   position: relative;
 
+  .block_things_detail {
+
+    .plan_things_detail {
+      height: 96px;
+      transition: all .5s linear;
+    }
+
+  }
+
   /***保障类型展开详情***/
   .plan_things_detail {
-    padding: 5px 15px;
+    height: 0;
+    transition: all .5s linear;
     position: relative;
+    overflow: hidden;
 
     &:after {
       position: absolute;
@@ -140,15 +153,22 @@
     }
 
     .things_detail_font {
-      font-size: 14px;
+      font-size: 12px;
       color: #4A4A4A;
-      margin: 5px 0;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 15px;
+      padding-right: 15px;
       line-height: 16px;
       overflow:hidden;
       text-overflow:ellipsis;
       display: -webkit-box;
       -webkit-line-clamp:3;
       -webkit-box-orient: vertical;
+
+      &:last-child {
+        padding-top: 0;
+      }
 
     }
 
@@ -192,18 +212,11 @@
     padding-top: 10px;
     padding-bottom: 10px;
 
-    &:first-child {
-      padding-top: 0;
-    }
-
-    &:last-child {
-      padding-bottom: 0;
-    }
-
     span {
       flex-grow: 1;
       color: #4A4A4A;
       font-size: 14px;
+      display: block;
 
       &:nth-child(2) {
         text-align: center;
@@ -227,14 +240,13 @@
 
     }
 
+    .left_width {
+      width: 40%;
+    }
+
   }
 
   /***下拉选框***/
-  select {
-    outline: none;
-    appearance:none;
-  }
-
   .money_select {
     color: #4A4A4A;
     border: none;
@@ -245,14 +257,21 @@
 
 }
 
+select {
+  outline: none;
+  appearance:none;
+}
+
 /***保障计划底部按钮***/
 .plan_bottom_plate {
   width: 100%;
   background: linear-gradient(to bottom, rgba(242,242,242,.5), rgba(242,242,242,1));
   position: fixed;
-  bottom: -1px;
   padding: 5px 0;
+  bottom: -1px;
+  transition: all .5s linear;
 
+  /***人气款***/
   .plan_bottom_hold {
     width: 90%;
     margin: 0 auto;
@@ -266,6 +285,78 @@
   }
 
 }
+
+.my_bottom_button {
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(242,242,242,.5), rgba(242,242,242,1));
+  position: fixed;
+  padding: 5px 0;
+  bottom: -55px;
+  transition: all .5s linear;
+
+  /***我的报价***/
+  .my_bottom_plate {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    border-radius: 50px;
+    overflow: hidden;
+
+    .bottom_left_btn {
+      width: 50%;
+      padding: 12px 0;
+      font-size: 16px;
+      border: none;
+      position: relative;
+
+      &:last-child {
+
+        &:after {
+          display: none;
+        }
+
+      }
+
+      &:after {
+        position: absolute;
+        content: '';
+        width: 5px;
+        height: 100%;
+        right: 0;
+        top: 0;
+        border-right: 5px #DDDDDD solid;
+      }
+
+    }
+
+    .left_btn_color {
+      background: linear-gradient(to right, rgba(74,207,241,1), rgba(35,194,234,1));
+      color: #FFFFFF;
+    }
+
+    .right_btn_color {
+      background: linear-gradient(to right, rgba(35,179,236,1), rgba(17,128,199,1));
+      color: #FFFFFF;
+    }
+
+  }
+
+}
+/***按钮的切换***/
+.personal_my_plate {
+
+  .plan_bottom_plate {
+    bottom: -55px;
+    transition: all .5s linear;
+  }
+
+  .my_bottom_button {
+    bottom: -1px;
+    transition: all .5s linear;
+  }
+
+}
+
 
 
 

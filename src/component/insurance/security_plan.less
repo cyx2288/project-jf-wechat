@@ -10,10 +10,33 @@
 
   background-color: #fff;
 
-  @media screen and (max-width: 300px)!important; {
+  @media screen and (max-width: 300px) {
 
     padding: 0 5px;
 
+  }
+
+}
+
+
+.detail_button {
+  color: #10a6e2;
+  font-size: 14px;
+  position: relative;
+  display: block;
+  padding-right: 10px;
+  white-space: nowrap;
+
+  &:after{
+    position: absolute;
+    content: '';
+    width: 6px;
+    height: 6px;
+    right: 0;
+    top: 7px;
+    border-right: 1px #10a6e2 solid;
+    border-top: 1px #10a6e2 solid;
+    transform: rotate(45deg);
   }
 
 }
@@ -117,6 +140,10 @@
 
   line-height: 18px;
 
+  white-space: nowrap;
+
+  padding-right: 15px;
+
   .security_img {
 
     width: 18px;
@@ -211,15 +238,23 @@
 
   background-color: #fff;
 
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+
   .tittle_in{
 
     display: flex;
 
     justify-content: space-between;
 
+    align-items: center;
+
     padding: 0 15px 10px 15px;
 
     border-bottom: 1px solid #dddddd;
+
+    button {
+      outline: none;
+    }
 
     p{
 
@@ -244,6 +279,11 @@
       line-height: 26px;
 
       font-size: 16px;
+      background: none;
+
+      &:active {
+        opacity: .8;
+      }
 
     }
 
@@ -253,17 +293,23 @@
 
     padding: 10px 15px;
 
-    text-align: left;
+    display: flex;
 
-    p:first-child{
+    justify-content: flex-start;
 
-      color: #4a4a4a;
+    align-items: center;
 
-    }
+    .delete_person_information {
+      width: 100%;
 
-    p:last-child{
+      p {
+        color: #8a8a8a;
 
-      color: #808080;
+        &:first-child {
+          color: #4A4A4A;
+        }
+
+      }
 
     }
 
@@ -277,21 +323,44 @@
 
     padding: 10px 15px;
 
+    input {
+      outline: none;
+    }
+
     p:first-child{
 
       color: #808080;
 
     }
 
-    p:last-child{
-
-      color: #4a4a4a;
-
+    .edit_insured_input {
+      width: 80%;
+      color: #4A4A4A;
+      font-size: 14px;
+      text-align: right;
+      border: none;
+      background: none;
     }
 
   }
 
 }
+
+.right_short_btn {
+
+  .guarantee_plan_plate {
+    text-align: right;
+
+    .bottom_button_block {
+      width: 30%;
+    }
+
+  }
+
+}
+
+
+
 
 
 
