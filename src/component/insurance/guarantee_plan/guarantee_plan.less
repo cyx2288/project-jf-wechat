@@ -23,7 +23,6 @@
   background-image: url("../images/insurance/orange_banner.png");
   background-repeat: no-repeat;
   background-size: 100%;
-  margin-top: 10px;
   display: block;
 }
 
@@ -42,6 +41,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  width: 50%;
 }
 
 .plan_plate_line {
@@ -186,11 +186,8 @@
       padding-left: 15px;
       padding-right: 15px;
       line-height: 16px;
-      overflow:hidden;
-      text-overflow:ellipsis;
-      display: -webkit-box;
-      -webkit-line-clamp:3;
-      -webkit-box-orient: vertical;
+      max-height: 48px;
+      overflow: scroll;
 
       &:last-child {
         padding-top: 0;
@@ -224,14 +221,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
 
     span {
-      flex-grow: 1;
       color: #4A4A4A;
       font-size: 14px;
-      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
 
       &:nth-child(2) {
         text-align: center;
@@ -295,64 +295,48 @@ select {
     border-radius: 50px;
   }
 
-}
-
-.my_bottom_button {
-  width: 100%;
-  background: linear-gradient(to bottom, rgba(242,242,242,.5), rgba(242,242,242,1));
-  position: fixed;
-  padding: 5px 0;
-  bottom: -55px;
-  transition: all .5s linear;
-
   /***我的报价***/
   .my_bottom_plate {
     width: 90%;
     margin: 0 auto;
     display: flex;
     border-radius: 50px;
-    overflow: hidden;
-
-    .bottom_left_btn {
-      width: 50%;
-      padding: 12px 0;
-      font-size: 16px;
-      border: none;
-      position: relative;
-
-      &:last-child {
-
-        &:after {
-          display: none;
-        }
-
-      }
-
-      &:after {
-        position: absolute;
-        content: '';
-        width: 5px;
-        height: 100%;
-        right: 0;
-        top: 0;
-        border-right: 5px #DDDDDD solid;
-      }
-
-    }
-
-    .left_btn_color {
-      background: linear-gradient(to right, rgba(74,207,241,1), rgba(35,194,234,1));
-      color: #FFFFFF;
-    }
-
-    .right_btn_color {
-      background: linear-gradient(to right, rgba(35,179,236,1), rgba(17,128,199,1));
-      color: #FFFFFF;
-    }
-
   }
 
 }
+
+.right_two_botton {
+  display: flex;
+
+  .bottom_right {
+    padding: 6px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 50px;
+    margin: 0 2px;
+  }
+
+}
+
+.bottom_left_btn {
+  width: 50%;
+  padding: 12px 0;
+  font-size: 16px;
+  border: none;
+  border-radius: 50px;
+  margin: 0 2px;
+}
+
+.left_btn_color {
+  background: linear-gradient(to right, rgba(74,207,241,1), rgba(35,194,234,1));
+  color: #FFFFFF;
+}
+
+.right_btn_color {
+  background: linear-gradient(to right, rgba(35,179,236,1), rgba(17,128,199,1));
+  color: #FFFFFF;
+}
+
 /***按钮的切换***/
 .personal_my_plate {
 
