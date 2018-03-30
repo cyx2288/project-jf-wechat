@@ -1,0 +1,80 @@
+.insurance_tabbar{
+
+  width: 100%;
+
+  .weui_tab_bd{
+    padding-bottom: 50px;
+  }
+
+  .weui_tabbar{
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 3px 0;
+    z-index: 500;
+
+    .tabbar_item{
+      width: 50%;
+      display: inline-block;
+      flex: 1;
+      text-align: center;
+
+      &:active{
+        opacity: 0.5;
+      }
+
+      &.on{
+
+        .tabbar_icon{
+          img{
+
+            &:first-child{
+              display: block;
+            }
+            &:last-child{
+              display: none;
+            }
+          }
+
+        }
+
+        .tabbar_text{
+
+          color: #10A6E2;
+
+        }
+
+      }
+
+
+      .tabbar_icon{
+        img{
+          width: 28px;
+          height: 28px;
+
+          margin: 0 auto;
+          &:first-child{
+            display: none;
+          }
+          &:last-child{
+            display: block;
+          }
+        }
+
+
+
+      }
+
+      .tabbar_text{
+
+        color: #4a4a4a;
+        margin-top:2px;
+
+      }
+    }
+
+  }
+}
