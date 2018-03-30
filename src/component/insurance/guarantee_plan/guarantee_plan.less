@@ -1,3 +1,49 @@
+/**顶部banner**/
+.top_fixed_plate {
+  position: fixed;
+  margin-top: 0;
+  width: 100%;
+  z-index: 266;
+  background-color: #FFFFFF;
+}
+
+.top_banner_pich {
+  padding-top: 110px;
+}
+
+.cu_font {
+  font-size: 14px;
+  font-weight: bold;
+  color: #4A4A4A;
+}
+
+.personal_banner {
+  width: 100%;
+  height: calc(~"110*100vw/750");
+  background-image: url("../images/insurance/orange_banner.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-top: 10px;
+  display: block;
+}
+
+.question_icon {
+  width: 16px;
+  height: 16px;
+  background-color: #DDDDDD;
+  color: #FFFFFF;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 16px;
+  margin-left: 5px;
+}
+
+.left_width {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 .plan_plate_line {
   text-align: center;
   padding: 10px 0;
@@ -6,21 +52,8 @@
   /***人气款***/
   .fire_icon_font {
     display: flex;
-    justify-content: center;
+    padding-left: 15px;
     align-items: center;
-    padding-bottom: 5px;
-
-    .fire_icon_plate {
-      width: 10px;
-      height: 16px;
-      padding-right: 5px;
-
-      img {
-        width: 100%;
-        height: 100%;
-      }
-
-    }
 
     .person_icon_plate {
       width: 14px;
@@ -58,14 +91,7 @@
   }
 
   .icon_black_font {
-    color: #4A4A4A;
-  }
-
-  /***保项提示文字***/
-  .plan_things_tips {
     color: #10a6e2;
-    font-size: 12px;
-    opacity: .6;
   }
 
 }
@@ -110,7 +136,7 @@
 
 /***人身保障所有类型***/
 .all_plan_plate {
-  padding: 10px 15px;
+  padding: 0 15px;
   background-color: #FFFFFF;
   position: relative;
 
@@ -193,17 +219,6 @@
     transform: scaley(.3);
   }
 
-  &:before {
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 1px;
-    left: 0;
-    top: 0;
-    border-top: 1px #DDDDDD solid;
-    transform: scaley(.3);
-  }
-
   .all_plan_things {
     width: 100%;
     display: flex;
@@ -238,10 +253,6 @@
 
       }
 
-    }
-
-    .left_width {
-      width: 40%;
     }
 
   }
