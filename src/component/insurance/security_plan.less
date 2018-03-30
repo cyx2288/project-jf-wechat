@@ -10,10 +10,32 @@
 
   background-color: #fff;
 
-  @media screen and (max-width: 300px)!important; {
+  @media screen and (max-width: 300px) {
 
     padding: 0 5px;
 
+  }
+
+}
+
+
+.detail_button {
+  color: #10a6e2;
+  font-size: 14px;
+  position: relative;
+  display: block;
+  padding-right: 10px;
+
+  &:after{
+    position: absolute;
+    content: '';
+    width: 6px;
+    height: 6px;
+    right: 0;
+    top: 7px;
+    border-right: 1px #10a6e2 solid;
+    border-top: 1px #10a6e2 solid;
+    transform: rotate(45deg);
   }
 
 }
