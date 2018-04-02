@@ -3,7 +3,7 @@ var hideDetail= {
 
     blockDetail:function () {
 
-        var clickThings = document.getElementsByClassName('all_plan_things');
+        var clickThings = document.getElementsByClassName('left_width');
 
         var closeDetail = document.getElementsByClassName('none_things_detail');
 
@@ -14,7 +14,6 @@ var hideDetail= {
                 var thisEle=this;
 
                 var rightIndex = test();
-                console.log(rightIndex);
 
                 function test() {
 
