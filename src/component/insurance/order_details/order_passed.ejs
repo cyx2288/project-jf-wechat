@@ -4,6 +4,20 @@
 
 <!--提示-->
 
+<a class="jd_notice">
+
+    <div class="tab_bd"></div>
+
+    <div class="recharge_balance">
+
+        <img src="../../images/icon_warning.png">
+        <span>
+        <p>成功支付保费后生成保单</p>
+        </span>
+    </div>
+
+</a>
+
 <div class="security_step di_step">
 
 
@@ -193,8 +207,6 @@
 
         <p>被保人</p>
 
-        <!--<a class="radius_icon">+</a>-->
-
 
     </div>
 
@@ -238,5 +250,48 @@
     </div>
 
 </div>
+
+
+<div class="change_button_plate">
+
+    <div class="footer_pich"></div>
+
+
+    <!--右边一个按钮-->
+    <div class="details_bottom_plate right_one_btn">
+
+        <div class="bottom_text blue_text">待支付保费：<span>1255元</span></div>
+        <a class="cancle_insured">撤销投保</a>
+
+    </div>
+
+
+
+</div>
+
+
+<script>
+
+
+    document.getElementsByClassName('cancle_insured')[0].addEventListener('click',function () {
+
+
+        jfShowTips.dialogShow({
+
+            'mainText':'您确认要撤销投保吗？',
+
+            'minText':' ',
+
+            'checkFn':function () {//点击确认发生的脚本
+
+                jfShowTips.dialogRemove();
+
+            }
+
+
+        })
+
+    },false)
+</script>
 
 
