@@ -1,23 +1,171 @@
 /***底部按钮***/
-.plan_bottom_plate {
-  width: 100%;
-  background: linear-gradient(to bottom, rgba(242, 242, 242, .5), rgba(242, 242, 242, 1));
-  position: fixed;
-  padding: 5px 0;
-  bottom: -1px;
-  transition: all .5s linear;
 
-  /***人气款***/
-  .plan_bottom_hold {
-    width: 90%;
-    margin: 0 auto;
-    background: linear-gradient(to right, rgba(35, 179, 236, 1), rgba(17, 128, 199, 1));
-    display: block;
-    color: #FFFFFF;
-    font-size: 16px;
-    text-align: center;
-    padding: 10px 0;
-    border-radius: 50px;
+.change_button_plate{
+
+
+//单独一个按钮
+  .details_bottom_plate {
+
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    background:-webkit-linear-gradient(top,rgba(251, 251, 251, 0.09),rgba(251, 251, 251, 0.59),#fff);
+    transition: all 0.3s ease-in-out;
+
+    /***一个按钮***/
+    .plan_bottom_hold {
+      width: 95%;
+      margin: 0 auto;
+      background: linear-gradient(to right, rgba(35, 179, 236, 1), rgba(17, 128, 199, 1));
+      display: block;
+      color: #FFFFFF;
+      font-size: 16px;
+      text-align: center;
+      height: 45px;
+      line-height: 45px;
+      position: relative;
+      bottom: 7px;
+      border-radius: 50px;
+    }
+
+    &.move_btn{
+
+      transform:translateY(55px)
+
+    }
+
+
+
+
+
+
+
   }
 
+
+  //右边一个按钮
+  .details_bottom_plate.right_one_btn{
+    width: 100%;
+    background: #FFFFFF;
+    padding: 5px 15px;
+    text-align: right;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: flex-end;
+    display: flex;
+
+    .bottom_text{
+      display: inline-block;
+      font-size: 16px;
+      color: #4a4a4a;
+      width: 70%;
+      text-align: left;
+      white-space: nowrap;
+
+
+      @media screen and(max-width: 330px){
+        font-size: 14px;
+      }
+
+
+    }
+
+    .bottom_text.blue_text{
+      color: #10A6E2;
+    }
+
+
+    >a{
+      display: inline-block;
+      border-radius: 30px;
+      color: #FFFFFF;
+     min-width: 140px;
+      height: 45px;
+      line-height: 45px;
+      text-align: center;
+      font-size: 16px;
+      background: linear-gradient(to right, #23b3ec, #1180c7);
+    }
+
+  }
+
+
+  //右边两个按钮
+  .details_bottom_plate.right_two_btn{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5px 15px;
+    box-sizing: border-box;
+    background: #FFFFFF;
+
+    .bottom_text{
+      font-size: 16px;
+      color: #4a4a4a;
+      width: auto;
+      white-space: nowrap;
+
+      @media screen and(max-width: 330px){
+        font-size: 14px;
+      }
+    }
+
+    .bottom_text.blue_text{
+      color: #10A6E2;
+    }
+
+
+
+    .right_two_botton{
+      display: flex;
+      width: 100%;
+      flex-grow: 1;
+      justify-content: flex-end;
+
+
+      a{
+        display: inline-block;
+        height: 45px;
+        line-height: 45px;
+        padding: 0;
+        color: #FFFFFF;
+        text-align: center;
+
+        @media screen and(max-width: 330px){
+          font-size: 14px;
+        }
+
+        &:first-child{
+          background: linear-gradient(to right, #4acff1, #23c2ea);
+          width: 50%;
+        }
+        &:last-child{
+          background: linear-gradient(to right, #23b3ec, #1180c7);
+          width: 50%;
+        }
+      }
+    }
+
+    .bottom_text+.right_two_botton{
+
+
+      a{
+
+        &:first-child{
+
+          width: 40%;
+        }
+        &:last-child{
+
+          width: 35%;
+        }
+      }
+
+    }
+
+  }
 }
