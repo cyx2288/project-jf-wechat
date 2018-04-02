@@ -497,17 +497,52 @@
     //点击保项展开，收起
     hideDetail.blockDetail()
 
-    //下拉框改变时，标题变化
+    //下拉框改变时，标题变换，背景变换，按钮切换
+    var changeTwoBtn=document.getElementsByClassName('right_two_btn')[0];
+
+    changeTwoBtn.style.display = 'none';
+
     function selectChange() {
 
         document.getElementsByClassName('banner_font')[0].innerHTML = '我的方案';
 
+        var changeBtn=document.getElementsByClassName('plan_bottom_hold')[0].parentNode;
+
+        changeBtn.style.display = 'none';
+
+        changeTwoBtn.style.display = 'block';
+
+        document.getElementsByClassName('personal_banner')[0].style.backgroundImage = 'url("/images/insurance/red_banner.png")';
+
     }
 
-    //点击保存，弹出弹窗
+    //人气款点击保存，弹出弹窗
     var personalHold=document.getElementsByClassName('plan_bottom_hold')[0];
 
     personalHold.addEventListener('click',function () {
+
+        jfShowTips.dialogShow({
+            "mainText": "是否保存我的报价内容",
+            "minText": " ",
+            "hasCheck": true,
+            "hasCancel": true,
+            "checkFn": function () {
+
+                jfShowTips.dialogRemove();//弹出框消失
+
+            }
+        })
+
+        document.getElementsByClassName('dialog_check')[0].innerHTML = '保存';
+
+        document.getElementsByClassName('dialog_cancel')[0].innerHTML = '不保存';
+
+    },false)
+
+    //我的方案点击保存，弹出弹窗
+    var myHold=document.getElementsByClassName('right_btn_color')[0];
+
+    myHold.addEventListener('click',function () {
 
         jfShowTips.dialogShow({
             "mainText": "是否保存我的报价内容",
