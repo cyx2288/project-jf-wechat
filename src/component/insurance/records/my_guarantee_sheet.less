@@ -2,6 +2,7 @@
 .sheet_list_top {
   margin-top: 10px;
 }
+
 .sheet_list_white {
   background-color: #FFFFFF;
   padding: 10px 15px;
@@ -35,6 +36,11 @@
 
     &:first-child {
       font-size: 16px;
+
+      @media screen and(max-width: 320px) {
+        font-size: 14px;
+      }
+
     }
 
     span {
@@ -79,6 +85,11 @@
     p {
       font-size: 16px;
       padding-right: 20px;
+
+      @media screen and(max-width: 320px) {
+        font-size: 14px;
+      }
+
     }
 
   }

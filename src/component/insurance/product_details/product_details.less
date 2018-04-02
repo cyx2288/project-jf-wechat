@@ -133,22 +133,10 @@
 
   /**被保人**/
   .insured_plate {
-    padding: 10px 0;
+    padding-bottom: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
-
-    &:after {
-      position: absolute;
-      content: '';
-      width: 100%;
-      height: 1px;
-      left: 0;
-      bottom: 0;
-      border-bottom: 1px #DDDDDD solid;
-      transform: scaley(.3);
-    }
 
     .insured_font {
       color: #a0a0a0;
@@ -169,32 +157,28 @@
   }
 
   .insured_information_plate {
-    padding: 5px 0;
+    padding-top: 10px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    position: relative;
+
+    &:after {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 1px;
+      left: 0;
+      top: 0;
+      border-top: 1px #DDDDDD solid;
+      transform: scaley(.3);
+    }
 
     button {
       outline: none;
     }
 
-    .delete_icon {
-      width: 15px;
-      height: 15px;
-      border-radius: 50%;
-      border: 1px #8a8a8a solid;
-      background: none;
-      display: block;
-      line-height: 10px;
-
-      &:active {
-        opacity: .6;
-      }
-
-    }
-
     .insured_name_number {
-      padding-left: 10px;
 
       p {
         font-size: 14px;
@@ -286,35 +270,48 @@
   font-size: 16px;
 }
 
-.radius_icon {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  border: 1px #4A4A4A solid;
-  display: block;
-  text-align: center;
-  line-height: 16px;
-  font-size: 18px;
-  margin-right: 15px;
+.right_add_icon {
+  width: 42px;
+  text-align: right;
 
   &:active {
     opacity: .6;
   }
 
+  .radius_icon {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px #4A4A4A solid;
+    display: block;
+    text-align: center;
+    line-height: 16px;
+    font-size: 18px;
+    float: right;
+    color: #4A4A4A;
+  }
+
 }
 
-.delete_icon {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  border: 1px #8a8a8a solid;
-  background: none;
-  display: block;
-  line-height: 10px;
-  margin-right: 15px;
+.left_delete_icon {
+  width: 35px;
+  padding: 10px 0;
 
-  &:active {
-    opacity: .6;
+  .delete_icon {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    border: 1px #8a8a8a solid;
+    background: none;
+    display: block;
+    line-height: 13px;
+    text-align: center;
+    font-size: 12px;
+
+    &:active {
+      opacity: .6;
+    }
+
   }
 
 }
