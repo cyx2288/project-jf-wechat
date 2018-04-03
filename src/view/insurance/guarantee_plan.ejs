@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>团体保险</title>
+    <link rel="stylesheet" href="../../css/jf_insurance.css">
+
+</head>
+<body>
+
+<!--导航-->
+<%- include('../../component/basic/topNav.ejs',{
+"thisrighthref":"jfSwitch.goBack()",
+"navtitle":"保障计划",
+"thislefthref":"#",
+"thisimgsrc":" "
+})%>
+
+<%- include('../../component/insurance/guarantee_plan/guarantee_plan.ejs')%>
+
+
+<div class="change_button_plate">
+
+    <div class="footer_pich"></div>
+
+    <!--右边两个短按钮以及中间两个按钮-->
+    <div class="details_bottom_plate right_two_btn">
+
+        <div class="right_two_botton">
+
+            <a class="bottom_right left_btn_color" onclick="window.location.reload()">一键恢复人气方案</a>
+
+            <a class="bottom_right right_btn_color">保存</a>
+        </div>
+    </div>
+
+    <!--单独一个按钮-->
+    <div class="details_bottom_plate">
+
+        <a class="plan_bottom_hold">保存</a>
+
+    </div>
+
+</div>
+
+
+<script type="text/javascript" src="../../js/jf_insurance.js"></script>
+
+
+</body>
+</html>

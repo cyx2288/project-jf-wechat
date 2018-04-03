@@ -1,0 +1,297 @@
+
+
+
+
+<!--提示-->
+
+<a class="jd_notice">
+
+    <div class="tab_bd"></div>
+
+    <div class="recharge_balance">
+
+        <img src="../../images/icon_warning.png">
+        <span>
+        <p>成功支付保费后生成保单</p>
+        </span>
+    </div>
+
+</a>
+
+<div class="security_step di_step">
+
+
+    <!--如需切换，在下面的div中加入class值：now_didi_step ;-->
+
+    <div class="didi_step ">
+
+        <div class="didi_now_step"></div>
+
+        <span>已投保</span>
+
+    </div>
+
+    <div class="didi_step ">
+
+        <div class="didi_now_step"></div>
+
+        <span>审核中</span>
+
+    </div>
+
+
+    <div class="didi_step now_didi_step">
+
+        <div class="didi_now_step"></div>
+
+        <span>已通过审核</span>
+
+    </div>
+
+    <div class="didi_step ">
+
+        <div class="didi_now_step"></div>
+
+        <span>已支付</span>
+
+    </div>
+
+    <div class="didi_step ">
+
+        <div class="didi_now_step"></div>
+
+        <span>保障中</span>
+
+    </div>
+
+
+</div>
+
+
+
+
+<!--保障计划-->
+
+
+<div class="shadow_plate security_plate">
+
+    <div class="guarantee_plan_plate">
+
+        <div class="guarantee_plan_line">
+
+            <p class="plan_top_font"><span>保障计划:</span><span class="red_span_font">人气款</span><span class="red_span_font">36.00元</span><span>/人/年</span></p>
+
+        </div>
+
+    </div>
+
+    <div class="guarantee_plan_plate">
+
+        <div class="guarantee_plan_line">
+
+            <div class="security_img_box">
+
+                <img src="../../images/insurance/number_of.png" class="security_img">
+
+                <p>被保人数</p>
+
+            </div>
+
+            <p><span>3</span>人</p>
+
+        </div>
+
+        <div class="guarantee_plan_line">
+
+            <div class="security_img_box">
+
+                <img src="../../images/insurance/guarantee_period.png" class="security_img">
+
+                <p>保障期</p>
+
+            </div>
+
+            <p><span>2018-03-03</span>至<span>2019-03-03</span></p>
+
+        </div>
+
+        <div class="guarantee_plan_line">
+
+            <div class="security_img_box">
+
+                <img src="../../images/insurance/premium.png" class="security_img">
+
+                <p>保费</p>
+
+            </div>
+
+            <p><span>2345</span>元</p>
+
+        </div>
+
+        <div class="guarantee_plan_line">
+
+            <div class="security_img_box">
+
+                <img src="../../images/insurance/review_notes.png" class="security_img">
+
+                <p>审核备注</p>
+
+            </div>
+
+            <p><span>审核内容在这里！审核内容在这里！</span></p>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+<!--投保人、被投保人-->
+
+<div class="policy_holder">
+
+    <div class="tittle_in">
+
+        <p>投保人</p>
+    </div>
+
+    <div class="inf">
+
+        <p>企业/组织</p>
+
+        <input class="edit_insured_input" type="text" value="上海淘略数据有限公司" readonly>
+
+    </div>
+
+    <div class="inf">
+
+        <p>联系人员</p>
+
+        <input class="edit_insured_input" type="text" value="京晶婧" readonly>
+
+    </div>
+
+
+    <div class="inf">
+
+        <p>职位</p>
+
+        <input class="edit_insured_input" type="text" value="专员" readonly>
+
+    </div>
+
+
+    <div class="inf">
+
+        <p>手机号码</p>
+
+        <input class="edit_insured_input" type="text" value="13800001111" readonly>
+
+    </div>
+
+    <div class="inf">
+
+        <p>E-Mail</p>
+
+        <input class="edit_insured_input" type="text" value="jingjingjing@tao-lue.com" readonly>
+
+    </div>
+
+</div>
+
+<div class="policy_holder">
+
+    <div class="tittle_in">
+
+        <p>被保人</p>
+
+
+    </div>
+
+    <div class="bb_inf">
+
+
+        <div class="delete_person_information">
+
+            <p>京晶婧</p>
+
+            <p>123456199900001111</p>
+
+        </div>
+
+    </div>
+
+    <div class="bb_inf">
+
+
+        <div class="delete_person_information">
+
+            <p>张长章</p>
+
+            <p>123456199900001111</p>
+
+        </div>
+
+    </div>
+
+    <div class="bb_inf">
+
+
+        <div class="delete_person_information">
+
+            <p>梁亮亮</p>
+
+            <p>123456199900001111</p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="change_button_plate">
+
+    <div class="footer_pich"></div>
+
+
+    <!--右边一个按钮-->
+    <div class="details_bottom_plate right_one_btn">
+
+        <div class="bottom_text blue_text">待支付保费：<span>1255元</span></div>
+        <a class="cancle_insured">撤销投保</a>
+
+    </div>
+
+
+
+</div>
+
+
+<script>
+
+
+    document.getElementsByClassName('cancle_insured')[0].addEventListener('click',function () {
+
+
+        jfShowTips.dialogShow({
+
+            'mainText':'您确认要撤销投保吗？',
+
+            'minText':' ',
+
+            'checkFn':function () {//点击确认发生的脚本
+
+                jfShowTips.dialogRemove();
+
+            }
+
+
+        })
+
+    },false)
+</script>
+
+

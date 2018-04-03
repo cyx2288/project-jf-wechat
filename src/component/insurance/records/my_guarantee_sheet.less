@@ -1,0 +1,181 @@
+/***我的保障单***/
+.sheet_list_top {
+  margin-top: 10px;
+}
+
+.sheet_list_white {
+  background-color: #FFFFFF;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  box-shadow: 0 3px 5px 0 rgba(4,0,0,.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &:active {
+    opacity: .8;
+  }
+
+  .left_year_icon {
+    width: 20px;
+    height: 21px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+  }
+
+  p {
+    color: #4A4A4A;
+    font-size: 14px;
+    display: flex;
+    justify-content: flex-start;
+    padding: 5px 0;
+
+    &:first-child {
+      font-size: 16px;
+
+      @media screen and(max-width: 320px) {
+        font-size: 14px;
+      }
+
+    }
+
+    span {
+      padding-left: 10px;
+      display: block;
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+    }
+
+    .left_year_icon {
+      width: 20px;
+      height: 21px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+    }
+
+  }
+
+  .sheet_list_right {
+    position: relative;
+    white-space: nowrap;
+
+    &:after {
+      position: absolute;
+      content: '';
+      width: 6px;
+      height: 6px;
+      right: 0;
+      top: 14px;
+      border-right: 1px #4A4A4A solid;
+      border-top: 1px #4A4A4A solid;
+      transform: rotate(45deg);
+    }
+
+    p {
+      font-size: 16px;
+      padding-right: 20px;
+
+      @media screen and(max-width: 320px) {
+        font-size: 14px;
+      }
+
+    }
+
+  }
+
+  /**保障单蓝色字体**/
+  .span_blue_font {
+    color: #10a6e2;
+  }
+
+  /**保障单橙色字体**/
+  .span_orange_font {
+    color: #ff8a17;
+  }
+
+  /**保障单红色字体**/
+  .span_red_font {
+    color: #ff4646;
+  }
+
+  /**保障单灰色字体**/
+  .span_gray_font {
+    color: #888888;
+  }
+
+}
+
+/***查看失效保障单***/
+.href_font_plate {
+  width: 100%;
+  margin-bottom: 15px;
+  padding-top: 5px;
+  text-align: center;
+
+  .href_font {
+    display: block;
+    color: #666666;
+    font-size: 14px;
+    text-decoration: none;
+  }
+
+}
+
+/***底部菜单栏***/
+.footer_pich {
+  padding-bottom: 55px;
+}
+
+.insurance_footer {
+  width: 100%;
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+
+  .insurance_footer_part {
+    text-align: center;
+    flex-grow: 1;
+    padding: 3px 0;
+    display: block;
+
+    .footer_icon_img {
+      width: 26px;
+      height: 26px;
+      margin: 0 auto;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+    }
+
+    p {
+      font-size: 14px;
+      color: #4A4A4A;
+    }
+
+    .footer_blue_font {
+      color: #10a6e2;
+    }
+
+  }
+
+}
+
+
+

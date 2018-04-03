@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>团体保险</title>
+    <link rel="stylesheet" href="../../css/jf_insurance.css">
+
+</head>
+<body>
+
+<!--导航-->
+<%- include('../../component/basic/topNav.ejs',{
+"thisrighthref":"jfSwitch.goBack()",
+"navtitle":"我的保障单",
+"thislefthref":"#",
+"thisimgsrc":" "
+})%>
+
+<!--订单详情-->
+<%- include('../../component/insurance/records/my_guarantee_sheet.ejs')%>
+
+<!--底部菜单栏-->
+<div class="insurance_tabbar">
+
+    <div class="weui_tab_bd"></div>
+    <div class="weui_tabbar">
+
+        <a href="homepage.html" class="tabbar_item">
+            <div class="tabbar_icon">
+                <img src="../../images/insurance/insurance_blue_home.png" alt="">
+                <img src="../../images/insurance/insurance_black_home.png" alt="">
+            </div>
+            <p class="tabbar_text">团体保险</p>
+        </a>
+
+
+        <a href="#" class="tabbar_item on">
+            <div class="tabbar_icon">
+                <img src="../../images/insurance/insurance_blue_order.png" alt="">
+                <img src="../../images/insurance/insurance_black_order.png" alt="">
+            </div>
+            <p class="tabbar_text">保障订单</p>
+        </a>
+
+
+    </div>
+
+</div>
+
+</body>
+</html>
