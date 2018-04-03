@@ -17,9 +17,15 @@
     padding: 3px 0;
     z-index: 500;
 
+    &:after{
+      content: '';
+      display: block;
+      clear: both;
+    }
+
     .tabbar_item{
       width: 50%;
-      display: inline-block;
+      display: block;
       flex: 1;
       text-align: center;
 
@@ -28,6 +34,7 @@
       }
 
       &.on{
+
 
         .tabbar_icon{
           img{
@@ -53,8 +60,8 @@
 
       .tabbar_icon{
         img{
-          width: 28px;
-          height: 28px;
+          width: 26px;
+          height: 26px;
 
           margin: 0 auto;
           &:first-child{
@@ -73,6 +80,7 @@
 
         color: #4a4a4a;
         margin-top:2px;
+        font-size: 12px;
 
       }
     }
