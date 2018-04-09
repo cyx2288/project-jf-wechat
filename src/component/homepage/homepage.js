@@ -143,3 +143,11 @@ document.getElementsByClassName('h5_button')[0].addEventListener('click',functio
     document.getElementsByClassName('living_payment_block')[0].className = 'living_payment_block living_payment_none';
 
 },false)
+
+//首页罗森遮罩层
+
+document.getElementsByClassName('living_payment_block')[0].addEventListener('click',function () {
+
+    document.getElementsByClassName('living_payment_block')[0].className = 'living_payment_block living_payment_none';
+
+},false)

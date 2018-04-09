@@ -64,6 +64,12 @@ var orderStatuChange={
 
             document.getElementsByClassName('add_people')[0].style.display='none';
 
+            for(var j=0;j<allInput.length;j++){
+
+                allInput[j].setAttribute('readonly','readonly')
+
+            };
+
             for(var j=0;j<deleteBtn.length;j++){
 
                 deleteInfo[j].style.width='100%';
