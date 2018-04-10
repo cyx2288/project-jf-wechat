@@ -657,7 +657,7 @@
 
             </label>
 
-            <div class="delete_btn" onclick="window.location.href='give_friend.html'">确认</div>
+            <div class="delete_btn">确认</div>
 
         </div>
     </div>
@@ -673,6 +673,12 @@
 
     //全选
     document.getElementsByClassName('checkallbox')[0].addEventListener('click',couponTabChange.checkALL,false);
+
+
+    //单选（反选）
+    couponTabChange.singeCheck('couponcheck');
+
+    couponTabChange.singeCheck('coupon_box')
 
 
 
