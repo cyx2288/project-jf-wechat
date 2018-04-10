@@ -1,0 +1,113 @@
+
+.credit_bank_add {
+
+  margin: 10px 0;
+
+/*模块*/
+  .credit_add {
+    background-color: #FFFFFF;
+    width: 95%;
+    padding: 10px 2.5%;
+
+    .bank_add {
+
+      display: flex;
+      width: 95%;
+      align-items: center;
+      justify-content: space-between;
+      padding: 5px 2.5%;
+      position: relative;
+      flex-direction: row;
+
+      .bank_add_text {
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+
+        span {
+          font-size: 16px;
+          color: #4a4a4a;
+          width: 25%;
+        }
+
+        input {
+          width: 75%;
+          border: none;
+          outline: none;
+          font-size: 16px;
+          color: #4a4a4a;
+
+        }
+
+        div{
+          color: #dddddd;
+          font-size: 16px;
+        }
+
+        input::-webkit-input-placeholder {
+          color: #dddddd;
+          font-size: 16px;
+        }
+
+      }
+
+      .bank_add_text:after {
+        content: '';
+        width: 100%;
+        border-bottom: 1px solid #dddddd;
+        position: absolute;
+        right: 0;
+        bottom: -10px;
+      }
+
+      .bank_add_image {
+
+        width: 25px;
+        height: 25px;
+
+      }
+
+      .bank_add_image_card {
+        width: 18px;
+        height: 18px;
+      }
+
+
+    }
+
+    &:last-child{
+    .bank_add{
+    .bank_add_text:after {
+      border-bottom: none;
+    }
+    }
+  }
+
+
+}
+
+
+  p.bank_add_text {
+    font-size: 14px;
+    color: #4a4a4a;
+    margin-left: 10px;
+    padding: 10px 2.5%;
+
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
