@@ -64,6 +64,48 @@
         }
       }
     }
+
+    .add_num_area{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 20px;
+      background: #fff;
+
+      .num_area{
+        padding: 5px 0;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+
+        >button{
+          border: 0;
+          width: 40px;
+          text-align: center;
+          background-color: transparent;
+          font-size: 16px;
+
+          &:first-child{
+            border-right: 1px solid #ddd;
+          }
+
+          &:last-child{
+            border-left: 1px solid #ddd;
+          }
+        }
+
+
+
+        >input{
+          border: 0;
+          background-color: transparent;
+          text-align: center;
+          width: 80px;
+          font-size: 16px;
+        }
+      }
+    }
     .cards_tips{
       padding: 8px 15px;
       background: #fcf9e7;
