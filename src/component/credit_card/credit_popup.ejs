@@ -1,0 +1,153 @@
+
+<!--银行卡-->
+
+<div class="credit_card_refund">
+
+    <div class="credit_refund">
+
+        <img src="../../images/credit_card/icon_credit_card_1.png">
+
+        <div class="credit_refund_text">
+
+            <span>中国建设银行</span>
+
+            <span>储蓄卡 尾号9999</span>
+
+        </div>
+
+    </div>
+
+    <a href="#">
+        <img src="../../images/credit_card/icon_credit_card_2.png" class="right_card_but">
+    </a>
+
+</div>
+
+
+
+<!--输入-->
+
+<div class="credit_import">
+
+    <span class="credit_card_money">单笔金额范围1.00-50000元（收取1%服务费）</span>
+
+    <div class="credit_input">
+
+        <span>¥</span>
+
+        <input type="number" placeholder="">
+
+    </div>
+
+    <div class="credit_card_whole">
+
+
+        <div class="card_whole_text">
+
+            <p>您本次最高可提现<span>200.00</span>元</p>
+
+            <a class="credit_help" href="#">
+                <img src="../../images/credit_card/icon_credit_card_3.png" class="tips_ti_none">
+            </a>
+
+        </div>
+
+        <p class="whole_text">全部提现</p>
+
+    </div>
+
+
+</div>
+
+<!--按钮-->
+
+<button class="credit_card_button" onclick="creditDragUp.run()" id="credit_number">
+    立即还款
+</button>
+
+
+<!--确认订单弹出层-->
+
+<div class="frame_drag_up frame_checkorder">
+    <div class="frame-main">
+        <div class="public_popup">
+            <!--弹出窗口-->
+            <div class="weui_actionsheet_menu">
+                <div class="title_top">
+                    <div>确认订单</div>
+                </div>
+                <!--付款金额-->
+                <div class="payment_amount"> <span>支付金额</span>
+                    <p class="welfare_num">¥202.00</p>
+                </div>
+                <!--列表-->
+                <div class="list_bottom">
+                    <!--列表-->
+                    <div class="list_cell" style="padding: 15px">
+                        <div>
+                            <label>提现金额</label>
+                        </div>
+                        <div class="weui_cell_bd">
+                            <p style="color: #4a4a4a" class="buy_price">200.00元</p>
+                        </div>
+                    </div>
+                    <!--列表-->
+                    <div class="list_cell" style="padding: 15px">
+                        <div>
+                            <label>本次服务费</label>
+                        </div>
+                        <div class="weui_cell_bd">
+                            <p style="color: #4a4a4a" class="total_cost">2.00元</p>
+                        </div>
+                    </div>
+                </div>
+                <!--按钮-->
+                <a href="../pay/payStepone.html" class="list_btn btn_color">确认充值</a></div>
+        </div>
+    </div>
+    <div class="weui_mask_transition mask_drag"></div>
+</div>
+
+
+
+<script>
+
+
+    //确认订单上拉框
+
+    var creditDragUp=new jfFrameDrag.dragEleshow({
+
+        "targetButton":"credit_number",//点击的目标元素。ID选择器
+
+        "targetDragName":"frame_checkorder",//出现的目标元素，calss选择器
+
+        "hideButton":"title_top"//关闭按钮，class选择器
+
+    });
+
+
+    //弹出框
+
+    $('.credit_help').on("click", function (e) {
+
+        var e=event||window.event;
+
+        jfShowTips.dialogShow({
+            "mainText": "规则",
+            "minText": "<p>您当前余额：19.00元</p>\n" +
+            "            <p>当日剩余余额：5000.00元</p>\n" +
+            "            <p>当月剩余余额：5000.00元</p>",
+            "noCheck": false,
+            "noCancel": true,
+            "checkBtnText":"知道了",
+            "checkFn": function () {
+                jfShowTips.dialogRemove()
+            }
+        });
+
+        e.stopPropagation();
+        e.preventDefault()
+    })
+
+
+</script>

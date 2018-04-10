@@ -1,0 +1,168 @@
+
+
+<!--注释-->
+<a class="jd_notice">
+
+    <div class="tab_bd"></div>
+
+    <div class="recharge_balance">
+        <img src="../../images/icon_warning.png">
+        <span>
+        <p>仅能绑定本人的银行卡</p>
+        </span>
+    </div>
+
+</a>
+
+<!--模块一-->
+<div class="credit_bank_add">
+
+
+    <div class="credit_add">
+
+        <div class="bank_add">
+        
+        <div class="bank_add_text">
+
+            <span class="#">持卡人</span>
+
+            <span>李洪刚</span>
+
+
+        </div>
+
+            <a href="#" class="credit_add_help">
+                <img src="../../images/credit_card/icon_credit_card_6.png" class="bank_add_image" >
+            </a>
+
+    </div>
+
+    </div>
+
+    <div class="credit_add">
+
+        <div class="bank_add">
+
+            <div class="bank_add_text">
+
+                <span class="#">卡号</span>
+
+                <input type="number" placeholder="请输入银行卡号" pattern="[0-9]*"
+                  class="key_input" id="key_input" value="">
+
+
+            </div>
+
+            <a href="#">
+                <img src="../../images/credit_card/icon_credit_card_7.png" class="bank_add_image">
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="credit_add">
+
+        <div class="bank_add">
+
+            <div class="bank_add_text">
+
+                <span class="#">银行</span>
+
+                <div>请选择发卡银行</div>
+
+            </div>
+
+            <a href="#">
+                <img src="../../images/credit_card/icon_credit_card_2.png" class="bank_add_image_card">
+            </a>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+<!--模块二-->
+<div class="credit_bank_add">
+
+    <p class="bank_add_text">填写如下信息将增加您的到账速度</p>
+
+    <div class="credit_add">
+
+        <div class="bank_add">
+
+            <div class="bank_add_text">
+
+                <span >所在地区</span>
+
+                <div>请选择省市</div>
+
+
+            </div>
+
+            <a href="#">
+                <img src="../../images/credit_card/icon_credit_card_2.png" class="bank_add_image_card">
+            </a>
+        </div>
+
+    </div>
+
+    <div class="credit_add">
+
+        <div class="bank_add">
+
+            <div class="bank_add_text">
+
+                <span class="#">开户支行</span>
+
+                <input type="text" placeholder="请输入开户支行">
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+<!--按钮-->
+<button class="credit_card_button">
+    保存
+</button>
+
+<!--交互-->
+<script>
+
+//弹出框
+
+$('.credit_add_help').on("click", function (e) {
+
+var e=event||window.event;
+
+jfShowTips.dialogShow({
+
+    "mainText": "友情提示",
+    "minText": "<p>为保证资金安全，</p>\n" +
+    "            <p>只能添加本人名下的银行卡</p>",
+
+
+"noCheck": false,
+"noCancel": true,
+"checkBtnText":"知道了",
+"checkFn": function () {
+jfShowTips.dialogRemove()
+}
+});
+
+e.stopPropagation();
+e.preventDefault()
+})
+
+
+</script>
+
+
+
