@@ -1,7 +1,7 @@
 
 <!--银行卡-->
 
-<div class="credit_card_refund">
+<div class="credit_card_refund" onclick="window.location.href = './credit_choose_list.html'">
 
     <div class="credit_refund">
 
@@ -17,7 +17,7 @@
 
     </div>
 
-    <a href="#">
+    <a>
         <img src="../../images/credit_card/icon_credit_card_2.png" class="right_card_but">
     </a>
 
@@ -33,9 +33,14 @@
 
     <div class="credit_input">
 
-        <span>¥</span>
+        <div class="buy_icon">￥</div>
 
-        <input type="number" placeholder="">
+        <div class="buy_number" >
+            <div class="keyNumshow" id="creditsavekeyNum"></div>
+            <input readonly value="" class="credit_key_input" id="credit_key_input" placeholder="可提现1000元">
+        </div>
+
+        <div class="num_delete"><img src="../../images/credit_card/close.png"></div>
 
     </div>
 
@@ -60,12 +65,11 @@
 </div>
 
 <!--按钮-->
+<div class="btn_box">
 
-<button class="credit_card_button" onclick="creditDragUp.run()" id="credit_number">
-    立即还款
-</button>
+<button class="credit_card_button" disabled  id="credit_number">立即还款</button>
 
-
+</div>
 <!--确认订单弹出层-->
 
 <div class="frame_drag_up frame_checkorder">
@@ -113,6 +117,58 @@
 <script>
 
 
+    window.onload=function() {
+
+        creditjfkeybroad.run();//页面初始的时候，开启键盘；
+
+
+        document.getElementsByClassName('whole_text')[0].addEventListener('click',function(){
+
+            creditFn.showInitNum('1000');//显示提现金额；参数一为当前可以提现的全部金额,若没有就可以不用调用此方法
+
+            creditFn.valiateNextBtn();//判断下一步按钮
+
+            creditjfkeybroad.stop();//关闭键盘；
+
+        },false)
+
+
+        setTimeout(function () {
+
+            //判断下一步按钮是否可以点击（判断输入框里面有没有值）
+            $('body').on('touchstart', ".weui_grid", function () {
+
+                creditFn.valiateNextBtn();//判断下一步按钮
+
+            });
+
+            document.getElementsByClassName('num_delete')[0].addEventListener('click',creditFn.valiateNextBtn,false)
+
+        }, 300);
+
+    }
+
+    /*数字键盘*/
+    var creditjfkeybroad = new jfNumKeybroad.keyBroadShow({
+
+        "hideButton":"credit_card_button",//点击关闭键盘的按钮 class选择器
+
+        //"otherHideButton":"cash_list",//其他关闭按钮 class选择器
+
+        "showNumEle":"creditsavekeyNum",//点击出现键盘的元素，并且存储数字，ID选择器,与下面变量是同一元素
+
+        "saveNumEle":"keyNumshow",//显示当前金额的值的元素，用于判断光标，class选择器
+
+        "clearButton":"num_delete",//清除金额按钮，class选择器
+
+        "saveInput":"credit_key_input",//存入键盘的值，input元素的class选择器
+
+        "MaxNum":"10"//输入的最大位数
+
+    });
+
+
+
     //确认订单上拉框
 
     var creditDragUp=new jfFrameDrag.dragEleshow({
@@ -126,6 +182,8 @@
     });
 
 
+
+
     //弹出框
 
     $('.credit_help').on("click", function (e) {
@@ -134,14 +192,15 @@
 
         jfShowTips.dialogShow({
             "mainText": "规则",
-            "minText": "<p>您当前余额：19.00元</p>\n" +
-            "            <p>当日剩余余额：5000.00元</p>\n" +
-            "            <p>当月剩余余额：5000.00元</p>",
+            "minText": "<p>您当前余额：19.00元</p><p>当日剩余余额：5000.00元</p><p>当月剩余余额：5000.00元</p>",
             "noCheck": false,
             "noCancel": true,
             "checkBtnText":"知道了",
             "checkFn": function () {
-                jfShowTips.dialogRemove()
+                jfShowTips.dialogRemove();
+
+
+
             }
         });
 
