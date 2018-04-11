@@ -63,6 +63,15 @@
 
 /*输入*/
 
+.credit_input{
+
+  .buy_icon{
+    font-size:24px;
+    white-space: nowrap;
+    margin-top: 20px;
+  }
+}
+
 .credit_import{
 
   background-color: #fff;
@@ -73,34 +82,102 @@
   justify-content: space-between;
   flex-direction: column;
   text-align: left;
+  .focusing{
+    color: #000;
+  }
+  .focusing:after{
+    content: '▏';
+    display: inline-block;
+    transform: scaleX(0.5);
+    -webkit-transform: scaleX(0.5);
+    width: 0;
+    font-size: 40px;
+    font-weight: bold;
+    position: absolute;
+    top: 5px;
+    color: #ababab;
+    animation: fadeInInputKeybroad .6s infinite;
+    -webkit-animation: fadeInInputKeybroad .6s infinite;
+    animation-direction: alternate;
+    -webkit-animation-direction: alternate;
+    z-index: 10;
 
+    @media screen and(max-width: 350px) {
+
+      top: 4px;
+      font-size: 36px;
+
+    }
+  }
+
+  .buy_number{
+    width: calc(~'100% - 36px');
+    position: relative;
+    .keyNumshow{
+    width: 100%;
+    font-size: 46px;
+    color: #10A6E2;
+    padding-left: 2px;
+    height: 50px;
+    z-index: 10;
+    position: relative;
+    span{
+      color: #000;
+    }
+  }
+  }
+  .num_delete{
+    height: 20px;
+    width: 20px;
+    margin-top: 20px;
+    padding-right: 10px;
+    display: none;
+    img{
+      width: 100%;
+      vertical-align: top;
+    }
+  }
   .credit_card_money{
     font-size: 14px;
     color: #ababab;
   }
-
   .credit_input{
-    text-align: left;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    font-size: 24px;
+    padding: 10px 0;
     border-bottom: 1px solid #dddddd;
-    padding-top: 15px;
-
-    span{
-      font-size: 24px;
-      color: #10a6e2;
-    }
-
-    input{
-      width: 85%;
+    input.credit_key_input{
       border: none;
-      outline: none;
-      font-size: 32px;
-      color: #10a6e2;
-    }
+      position: absolute;
+      left: 10px;
+      bottom: -5px;
+      height: 40px;
+      color: white;
+      z-index: 1;
+      background: transparent;
+      font-size: 18px;
+      width: 100%;
 
-    input::-webkit-input-placeholder{
-      color: #10a6e2;
-      font-size: 28px;
-      padding-left: 10px;
+      &:-moz-placeholder{
+        color: #DDDDDD;
+      }
+
+      &::-webkit-input-placeholder{
+        color: #DDDDDD;
+      }
+
+
+      @media screen and(max-width: 350px) {
+        font-size: 16px;
+        height: 30px;
+        bottom: -5px;
+
+      }
     }
 
   }
@@ -137,25 +214,30 @@
 
 }
 
+.btn_box{
+  padding: 8px 15px;
+  margin-bottom: 15px;
+  margin-top: 30px;
+  /*按钮*/
+  button{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background:linear-gradient(left,#0ea6e9,#0773be);
+    transition: all 0.3s linear;
+    outline: none;
+    &:active{
+      opacity: .6;
+    }
+    &:disabled{
+      background: #DDDDDD;
+      color: #ABABAB;
+    }
 
-/*按钮*/
-button{
-  background:#10a6e2;
-  height:40px;
-  line-height: 40px;
-  width:92%;
-  border-radius:5px;
-  border:none;
-  display: block;
-  text-align: center;
-  margin:50px auto;
-  padding: 0 15px;
-  color: #FFFFFF;
-  font-size: 16px;
-
-  &:active{
-    opacity: .6;
   }
-
 }
+
 
