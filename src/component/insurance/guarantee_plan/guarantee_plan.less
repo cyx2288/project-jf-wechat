@@ -8,7 +8,16 @@
 }
 
 .top_banner_pich {
-  padding-top: 100px;
+  padding-top: 105px;
+
+  @media screen and(max-width: 320px) {
+    padding-top: 96px;
+  }
+
+  @media screen and(min-width: 414px) {
+    padding-top: 110px;
+  }
+
 }
 
 .cu_font {
@@ -21,9 +30,27 @@
   width: 100%;
   height: calc(~"110*100vw/750");
   background-image: url("../images/insurance/orange_banner.png");
-  background-repeat: no-repeat;
   background-size: 100%;
+  background-repeat: no-repeat;
   display: block;
+  margin-top: 5px;
+
+  .banner_font_plate {
+    line-height: 55px;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+  }
+
+  .banner_font {
+    font-size: 16px;
+    padding-right: 5px;
+  }
+
+  .banner_price_font {
+    font-size: 14px;
+  }
+
 }
 
 .question_icon {
@@ -35,9 +62,23 @@
   text-align: center;
   line-height: 16px;
   margin-left: 5px;
+  min-width: 16px;
 }
 
 .left_width {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 55%;
+}
+
+.left_thin_width{
+
+  width: 40%;
+
+}
+
+.bar_left_width {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -143,7 +184,7 @@
   .block_things_detail {
 
     .plan_things_detail {
-      height: 96px;
+      height: 110px;
       transition: all .5s linear;
     }
 
@@ -182,11 +223,11 @@
       font-size: 12px;
       color: #4A4A4A;
       padding-top: 10px;
-      padding-bottom: 10px;
+      margin-bottom: 10px;
       padding-left: 15px;
       padding-right: 15px;
       line-height: 16px;
-      max-height: 48px;
+      max-height: 65px;
       overflow: scroll;
 
       &:last-child {
@@ -245,7 +286,7 @@
           position: absolute;
           content: '▼';
           font-size: 12px;
-          opacity: .8;
+          opacity: .7;
           right: 0;
           top: 2px;
           background-color: #FFFFFF;

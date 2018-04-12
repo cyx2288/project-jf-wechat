@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>福豆兑换</title>
+    <link rel="stylesheet" href="../../css/jf_fudou.css">
+
+</head>
+<body>
+
+<!--导航-->
+<<nav class="Top_navigation">
+    <div class="weui_tab_bd"></div>
+    <div class="container_tab"><a onclick="jfSwitch.goBack()">
+            <div class="nav_left"><img src="../../images/icon_pay_return.png"></div>
+        </a>
+        <div class="nav_center">
+            <div>兑换福豆</div>
+        </div>
+        <a href="../fudou/fudou_exchange_record.html">
+            <div class="nav_right">兑换记录</div>
+        </a>
+    </div>
+</nav>
+
+<!-- 福豆详情 -->
+<%- include('../../component/fudou/fudou_exchange/fudou_exchange.ejs')%>
+
+</body>
+<script src="../../lib/js/JsBarcode.all.js"></script>
+</html>

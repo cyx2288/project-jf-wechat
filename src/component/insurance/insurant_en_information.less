@@ -18,6 +18,32 @@
     width: 90%;
     margin: 0 auto;
 
+    /******/
+    input {
+      outline: none;
+    }
+
+    input[type=date]::-webkit-clear-button { visibility: hidden; }
+
+    input[type=date] {
+      appearance: none;
+      background: none;
+      border: none;
+      font-size: 14px;
+      color: #4A4A4A;
+      position: relative;
+
+      &:after {
+        position: absolute;
+        content: '▼';
+        font-size: 12px;
+        opacity: 0.8;
+        right: 0;
+        top: 2px;
+      }
+
+    }
+
     &.showmore{
 
       &:before{
@@ -80,6 +106,7 @@
           background: #fff;
         }
       }
+
     }
 
     .input_form>input, .input_form>textarea{

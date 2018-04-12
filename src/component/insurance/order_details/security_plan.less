@@ -2,7 +2,7 @@
 
 .insurance_failed_tips{
    color:#fff;
-  padding:5px 0;
+  padding:8px 0;
   margin-bottom: 10px;
   width: 100%;
   text-align: center;
@@ -14,7 +14,7 @@
 .insurance_calcle_tips{
 
   color:#fff;
-  padding:5px 0;
+  padding:8px 0;
   margin-bottom: 10px;
   width: 100%;
   text-align: center;
@@ -273,6 +273,29 @@
 
     border-bottom: 1px solid #dddddd;
 
+    .add_people{
+      display: none;
+      position: relative;
+      padding-left: 20px;
+      border: none;
+
+      &:after{
+        content: '+';
+
+        color: #ff8a17;
+        border: 1px #ff8a17 solid;
+        margin-right: 0;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+
+        display: inline-block;
+        text-align: center;
+        border-radius: 50%;
+      }
+
+    }
+
     button {
       outline: none;
     }
@@ -296,7 +319,7 @@
       background: none;
 
       &:active {
-        opacity: 0.7;
+        opacity: 0.5;
       }
 
     }
@@ -304,6 +327,31 @@
   }
 
   .bb_inf{
+
+    .delete_btn{
+      width: 10%;
+      display: none;
+
+      &:active{
+        opacity: 0.5;
+      }
+
+      &:after{
+        content: '—';
+        width: 18px;
+        height: 18px;
+        font-size: 12px;
+        text-align: center;
+        line-height: 16px;
+        border-radius: 50%;
+        border: 1px #8a8a8a solid;
+        background: none;
+        display: block;
+        margin-right: 15px;
+      }
+
+
+    }
 
     padding: 8px 15px;
 
@@ -315,6 +363,7 @@
 
     .delete_person_information {
       width: 100%;
+      transition: all 0.3s linear;
 
       p {
         color: #8a8a8a;

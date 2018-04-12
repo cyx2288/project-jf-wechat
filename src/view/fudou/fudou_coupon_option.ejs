@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择我的优惠券</title>
+    <link rel="stylesheet" href="../../css/jf_fudou.css">
+
+</head>
+<body>
+
+<!--导航-->
+<%- include('../../component/basic/topNav.ejs',{
+"thisrighthref":"jfSwitch.goBack()",
+"navtitle":"选择我的优惠券",
+"thislefthref":"#",
+"thisimgsrc":" "
+})%>
+
+
+<!-- 福豆详情 -->
+<%- include('../../component/fudou/fudou_exchange/fudou_coupon_option.ejs')%>
+
+</body>
+<script type="text/javascript" src="../../js/jf_fudou.js"></script>
+
+</html>

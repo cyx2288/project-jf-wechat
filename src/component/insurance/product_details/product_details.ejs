@@ -1,6 +1,7 @@
-<!--banner-->
-<a class="product_details_banner"></a>
 
+<a class="product_details_banner top_banner">
+    <img src="../../images/insurance/product_details_banner.png">
+</a>
 <!--保障计划-->
 <div class="shadow_plate">
 
@@ -83,13 +84,17 @@
 
             <p class="insured_font">被保人（选填）</p>
 
-            <a class="radius_icon" href="add_insured.html">+</a>
+            <a class="right_add_icon" href="add_insured.html">
+                <div class="radius_icon">+</div>
+            </a>
 
         </div>
 
         <div class="insured_information_plate">
 
-            <button class="delete_icon">—</button>
+            <a class="left_delete_icon">
+                <div class="delete_icon">—</div>
+            </a>
 
             <div class="insured_name_number">
                 <p>张三</p>
@@ -184,7 +189,7 @@
                 <input class="bottom_text_radio" type="checkbox" name="radio">我已阅读并同意
             </label>
 
-            <a href="#" class="team_insurance_text">《嘉福团体保险条约》</a>
+            <a class="team_insurance_text">《嘉福团体保险条约》</a>
 
         </div>
 
@@ -194,7 +199,7 @@
 
                 <a href="tel:400-0000-0000" class="button_text_plate">
                     <div class="bottom_left_icon">
-                        <img src="../../../images/insurance/customer%20_service_icon.png">
+                        <img src="../../images/insurance/customer%20_service_icon.png">
                     </div>
 
                     <p>联系客服</p>
@@ -216,6 +221,27 @@
 
     //产品介绍，理赔说明，常见问题切换
     showText.textDetails();
+
+    //点击减号，弹出弹窗
+    var personalHold=document.getElementsByClassName('left_delete_icon')[0];
+
+    personalHold.addEventListener('click',function () {
+
+        jfShowTips.dialogShow({
+            "mainText": "确定要删除吗？",
+            "minText": " ",
+            "hasCheck": true,
+            "hasCancel": true,
+            "checkFn": function () {//确认后发生的脚本
+
+                jfShowTips.dialogRemove();//弹出框消失
+
+            }
+        })
+
+        document.getElementsByClassName('dialog_check')[0].innerHTML = '确定';
+
+    },false)
 
 </script>
 
