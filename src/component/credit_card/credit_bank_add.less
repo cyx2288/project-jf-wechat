@@ -1,16 +1,16 @@
 
+
+/*模块01*/
 .credit_bank_add {
 
   margin: 10px 0;
 
-/*模块*/
   .credit_add {
     background-color: #FFFFFF;
     width: 95%;
     padding: 10px 2.5%;
 
-    .bank_add {
-
+    .bank_add_m {
       display: flex;
       width: 95%;
       align-items: center;
@@ -74,22 +74,24 @@
         height: 18px;
       }
 
-
     }
 
     &:last-child{
-    .bank_add{
+    .bank_add_m{
     .bank_add_text:after {
       border-bottom: none;
     }
     }
   }
 
+  }
 
 }
 
 
-  p.bank_add_text {
+/*模块02*/
+
+  p.add_drop_text {
     font-size: 14px;
     color: #4a4a4a;
     margin-left: 10px;
@@ -97,8 +99,89 @@
 
   }
 
+  .add_drop {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 
-}
+    .bank_add {
+      padding: 16px 5%;
+      position: relative;
+      background-color: #FFFFFF;
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+
+      .drop_add_text {
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+
+        .drop_text {
+          font-size: 16px;
+          color: #4a4a4a;
+          width: 25%;
+        }
+
+        .credit_drop_city {
+          width: 75%;
+          border: 0;
+          outline: 0;
+          font-size: 16px;
+          color: #4a4a4a;
+          background-color: #FFFFFF;
+          -moz-appearance: none;
+          -webkit-appearance: none;
+
+        }
+
+        input {
+          width: 75%;
+          border: none;
+          outline: none;
+          font-size: 16px;
+          color: #4a4a4a;
+
+        }
+
+        input::-webkit-input-placeholder {
+          color: #dddddd;
+          font-size: 16px;
+        }
+
+      }
+
+      &:after {
+        content: '';
+        width: 95%;
+        border-bottom: 1px solid #dddddd;
+        position: absolute;
+        left: 2.5%;
+        bottom: 0;
+
+      }
+
+      &:last-child:after {
+        content: '';
+        border-bottom: none;
+      }
+
+      .drop_add_image {
+        width: 18px;
+        height: 18px;
+      }
+
+
+    }
+
+
+  }
+
+
 
 
 

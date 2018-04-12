@@ -11,62 +11,61 @@
     justify-content: space-between;
     position: relative;
 
-    .credit_refund {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #fff;
-      width: 90%;
-      padding: 15px 5%;
-
-      .credit_left_t {
+    label {
+      width: 100%;
+      z-index: 200;
+      .credit_refund {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        background-color: #fff;
+        width: 90%;
+        padding: 15px 5%;
 
-        .credit_left_shape{
-          width: 40px;
-          height: 40px;
-          margin-right: 10px;
-          border: 1px solid #dddddd;
-          border-radius: 50px;
+        .credit_left_al {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
 
-          img{
-            width: 35px;
-            height: 35px;
-            padding: 2px 0 0 2px;
+          .credit_left_shape {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            border: 1px solid #dddddd;
+            border-radius: 50px;
+
+            img {
+              width: 35px;
+              height: 35px;
+              padding: 2px 0 0 2px;
+            }
+
           }
 
-        }
-
-
-
-
-        .credit_refund_text {
+          .credit_refund_text {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             text-align: left;
             padding-left: 5px;
 
-
-
-          p:first-child {
+            p:first-child {
               font-size: 16px;
               color: #4a4a4a;
 
-          }
-          p:last-child {
+            }
+            p:last-child {
               font-size: 14px;
               color: #ababab;
+            }
           }
+
         }
 
-      }
+        &:active{
+          opacity: .6;
+        }
 
-      .choose_bank_img{
-        width: 25px;
-        height: 25px;
       }
 
     }
@@ -79,6 +78,7 @@
       bottom: 0;
       left: 2.5%;
     }
+
     &:last-child {
 
       &:after {
@@ -87,7 +87,67 @@
 
     }
 
+
   }
+
+    .checkbox_credit_font {
+
+      width: 30px;
+      height: 30px;
+      background-color: #fff;
+      margin-right: 5px;
+      padding: 0;
+      position: relative;
+      vertical-align: middle;
+      border: none;
+      outline:medium;
+      cursor: default;
+      -webkit-appearance: none;
+      -webkit-user-select: none;
+      user-select: none;
+      -webkit-transition: background-color ease 0.1s;
+      transition: background-color ease 0.1s;
+
+    }
+
+    .checkbox_credit_font:before {
+
+      content: '';
+      width: 18px;
+      height: 10px;
+      position: absolute;
+      top: 15%;
+      left: 20%;
+      background: 0;
+      border: 2px solid #ffffff;
+      border-top: 0;
+      border-right: 0;
+      z-index: 2;
+      border-radius: 0;
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+
+    }
+
+    .checkbox_credit_font:checked {
+
+      &:before {
+        border-top: 0;
+        border-right: 0;
+        border-bottom: 2px solid #03a9f4;
+        border-left: 2px solid #03a9f4;
+      }
+
+    }
+
+
+
+  }
+
+
+
+
+/*最后颜色调整*/
 
   .credit_img_text{
     font-size: 14px;
@@ -99,20 +159,20 @@
     }
   }
 
-}
-
-/*最后一行颜色调整*/
-.credit_list_all{
+  .credit_list_all{
 
   .credit_choose_list{
 
-    .credit_refund{
+    .checkbox_credit{
 
-      .credit_left_t{
+      .credit_refund {
+
+        .credit_left_al {
 
         .credit_refund_text {
 
           @media screen and (width: 320px) {
+
             p:first-child {
               font-size: 14px;
             }
@@ -124,33 +184,38 @@
         }
       }
 
-      .garyyy{
+        .garyyy{
 
-        .credit_refund_text{
+          .credit_refund_text{
 
-          p:first-child{
-            color: #dddddd;
+            p:first-child{
+              color: #dddddd;
+            }
+            p:last-child{
+              color: #dddddd;
+            }
+
           }
-          p:last-child{
-            color: #dddddd;
+
+          .credit_left_shape{
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            border: 1px solid #dddddd;
+            border-radius: 50px;
           }
 
         }
 
-        .credit_left_shape{
-          width: 40px;
-          height: 40px;
-          margin-right: 10px;
-          border: 1px solid #dddddd;
-          border-radius: 50px;
-        }
+    }
 
-      }
+
 
     }
 
   }
 
 }
+
 
 

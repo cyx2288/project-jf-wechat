@@ -3,58 +3,62 @@
 
 
     <div class="credit_choose_list">
-        <div class="credit_refund">
-            <div class="credit_left_t">
-                <div class="credit_left_shape">
-                    <img src="../../images/credit_card/icon_credit_card_12.png">
+        <label class="checkbox_credit" for="list_row" >
+            <div class="credit_refund">
+                <div class="credit_left_al">
+                    <div class="credit_left_shape">
+                        <img src="../../images/credit_card/icon_credit_card_12.png"></div>
+                    <div class="credit_refund_text">
+                        <p><span>中国建设银行<span>（李洪刚）</span></span></p>
+                        <p><span>储蓄卡</span>  <span>**** **** **** 2299</span></p>
+                    </div>
                 </div>
-                <div class="credit_refund_text">
-                    <p><span>中国建设银行<span>（李洪刚）</span></span></p>
-                    <p><span>储蓄卡</span>  <span>**** **** **** 2299</span></p>
-                </div>
+                <input class="checkbox_credit_font" type="radio" id="list_row" name="radio" >
             </div>
-        </div>
+        </label>
     </div>
 
 
     <div class="credit_choose_list">
-        <div class="credit_refund">
-            <div class="credit_left_t">
-                <div class="credit_left_shape">
-                    <img src="../../images/credit_card/icon_credit_card_12.png">
+       <label class="checkbox_credit" for="list_row1" >
+            <div class="credit_refund">
+                <div class="credit_left_al">
+                    <div class="credit_left_shape">
+                        <img src="../../images/credit_card/icon_credit_card_12.png"></div>
+                    <div class="credit_refund_text">
+                        <p><span>中国建设银行<span>（李洪刚）</span></span></p>
+                        <p><span>储蓄卡</span>  <span>**** **** **** 2299</span></p>
+                    </div>
                 </div>
-                <div class="credit_refund_text">
-                    <p><span>中国建设银行<span>（李洪刚）</span></span></p>
-                    <p><span>储蓄卡</span>  <span>**** **** **** 2299</span></p>
-                </div>
+                <input class="checkbox_credit_font" type="radio" id="list_row1" name="radio" >
             </div>
-            <img src="../../images/credit_card/icon_credit_card_4.png" class="choose_bank_img">
-        </div>
+       </label>
     </div>
 
 
     <div class="credit_choose_list">
-        <div class="credit_refund">
-            <div class="credit_left_t ">
-                <div class="credit_left_shape">
-                    <img src="../../images/credit_card/icon_credit_card_10.png">
+        <label class="checkbox_credit" for="list_row2" >
+            <div class="credit_refund">
+                <div class="credit_left_al">
+                    <div class="credit_left_shape">
+                        <img src="../../images/credit_card/icon_credit_card_12.png"></div>
+                    <div class="credit_refund_text">
+                        <p><span>中国建设银行<span>（李洪刚）</span></span></p>
+                        <p><span>储蓄卡</span>  <span>**** **** **** 2299</span></p>
+                    </div>
                 </div>
-                <div class="credit_refund_text">
-                    <p><span>交通银行<span>（李洪刚）</span></span></p>
-                    <p><span>储蓄卡</span>  <span>**** **** **** 2299</span></p>
-                </div>
+                <input class="checkbox_credit_font" type="radio" id="list_row2" name="radio"  >
             </div>
-        </div>
-
-
+        </label>
     </div>
 
 
     <div class="credit_choose_list">
-        <div class="credit_refund">
-            <div class="credit_left_t garyyy">
-                <div class="credit_left_shape">
-                    <img src="../../images/credit_card/icon_credit_card_13.png">
+        <label class="checkbox_credit">
+            <div class="credit_refund">
+                <div class="credit_left_al garyyy">
+                    <div class="credit_left_shape">
+                        <img src="../../images/credit_card/icon_credit_card_13.png">
                 </div>
                 <div class="credit_refund_text">
                     <p><span>中国建设银行<span>（李洪刚）</span></span></p>
@@ -63,6 +67,7 @@
             </div>
             <div class="credit_img_text">仅限储蓄卡</div>
         </div>
+        </label>
     </div>
 
 
@@ -71,8 +76,37 @@
 
 <!--按钮-->
 
-<button class="credit_card_button">
+<a href="../credit_card/credit_bank_add.html"><button class="credit_card_button">
     添加银行卡
-</button>
+    </button>
+</a>
 
 
+
+
+</label>
+
+<script>
+
+    addEventListener('load',function () {
+
+        var checkbox_credit=document.getElementsByClassName('checkbox_credit')
+
+        for(var i=0;i<checkbox_credit.length;i++){
+
+            checkbox_credit[i].addEventListener('click',function (e) {
+
+                e.preventDefault();
+
+                this.getElementsByClassName('checkbox_credit_font')[0].checked='checked'
+
+            },false)
+
+        }
+
+
+
+    },false)
+
+
+</script>
