@@ -4,8 +4,7 @@
   margin-top: 10px;
   width: 100%;
 
-  .credit_choose_bank {
-
+  label{
     display: flex;
     width: 100%;
     align-items: center;
@@ -13,7 +12,6 @@
     position: relative;
 
     .choose_bank_list {
-
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -22,61 +20,114 @@
       padding: 15px 5%;
 
       .choose_bank_list_a {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
 
-        .choose_bank_shape{
+          .choose_bank_shape {
 
-          width: 40px;
-          height: 40px;
-          margin-right: 10px;
-          border: 1px solid #dddddd;
-          border-radius: 50px;
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            border: 1px solid #dddddd;
+            border-radius: 50px;
 
-          img{
-            width: 35px;
-            height: 35px;
-            padding: 2px 0 0 2px;
+            img {
+              width: 35px;
+              height: 35px;
+              padding: 2px 0 0 2px;
+            }
+
+          }
+
+          .choose_bank_text {
+
+            padding-left: 5px;
+            font-size: 16px;
+            color: #4a4a4a;
+
           }
 
         }
 
-        .choose_bank_text {
+      &:active {
+          opacity: .6;
+        }
 
-          padding-left: 5px;
-          font-size: 16px;
-          color: #4a4a4a;
+    }
 
+
+    &:after {
+        content: '';
+        width: 95%;
+        border-bottom: 1px solid #dddddd;
+        position: absolute;
+        bottom: 0;
+        left: 2.5%;
+      }
+
+
+    &:last-child {
+
+        &:after {
+          display: none;
         }
 
       }
 
-      .choose_bank_img{
-        width: 25px;
-        height: 25px;
-      }
-
     }
 
-    &:after {
-      content: '';
-      width: 95%;
-      border-bottom: 1px solid #dddddd;
-      position: absolute;
-      bottom: 0;
-      left: 2.5%;
-    }
 
-    &:last-child {
 
-      &:after {
-        display: none;
-      }
+  .checkbox_credit_font{
 
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    margin-right: 5px;
+    padding: 0;
+    position: relative;
+    vertical-align: middle;
+    border: none;
+    cursor: default;
+    -webkit-appearance: none;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-transition: background-color ease 0.1s;
+    transition: background-color ease 0.1s;
+
+  }
+
+  .checkbox_credit_font:before {
+
+    content: '';
+    width: 18px;
+    height: 10px;
+    position: absolute;
+    top: 15%;
+    left: 20%;
+    background: 0;
+    border: 2px solid #ffffff;
+    border-top: 0;
+    border-right: 0;
+    z-index: 2;
+    border-radius: 0;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+
+  }
+
+  .checkbox_credit_font:checked{
+
+    &:before {
+      border-top: 0;
+      border-right: 0;
+      border-bottom: 2px solid #03a9f4;
+      border-left: 2px solid #03a9f4;
     }
 
   }
+
 
 
 }
