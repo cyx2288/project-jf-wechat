@@ -1,5 +1,3 @@
-
-
 <!--注释-->
 <a class="jd_notice">
 
@@ -24,15 +22,15 @@
 
             <div class="bank_add_text">
 
-            <span class="#">持卡人</span>
+                <span class="#">持卡人</span>
 
-            <span>李洪刚</span>
+                <span>李洪刚</span>
 
 
-        </div>
+            </div>
 
             <a href="#" class="credit_add_help">
-                <img src="../../images/credit_card/icon_credit_card_6.png" class="bank_add_image" >
+                <img src="../../images/credit_card/icon_credit_card_6.png" class="bank_add_image">
             </a>
 
         </div>
@@ -44,7 +42,7 @@
             <div class="bank_add_text">
                 <span class="#">卡号</span>
                 <input type="number" placeholder="请输入银行卡号" pattern="[0-9]*"
-                  class="key_input" id="key_input" value="">
+                       class="key_input" id="key_input" value="">
             </div>
             <a href="#">
                 <img src="../../images/credit_card/icon_credit_card_7.png" class="bank_add_image">
@@ -54,23 +52,23 @@
 
     <a href="../credit_card/credit_choose_bank.html">
 
-    <div class="credit_add">
+        <div class="credit_add input_add">
 
-        <div class="bank_add_m">
+            <div class="bank_add_m">
 
-            <div class="bank_add_text">
+                <div class="bank_add_text">
 
-                <span class="#">银行</span>
+                    <span class="#">银行</span>
 
-                <div>请选择发卡银行</div>
+                    <div>请选择发卡银行</div>
+
+                </div>
+
+                <img src="../../images/credit_card/icon_credit_card_2.png" class="bank_add_image_card">
 
             </div>
 
-            <img src="../../images/credit_card/icon_credit_card_2.png" class="bank_add_image_card">
-
         </div>
-
-    </div>
     </a>
 
 
@@ -82,63 +80,63 @@
 <p class="add_drop_text">填写如下信息将增加您的到账速度</p>
 
 <div class="add_drop">
-        <label class="bank_add">
-            <div class="drop_add_text">
-                <div class="drop_text">所在地区</div>
-                <select class="credit_drop_city">
-                    <option hidden="hidden">请选择省市</option>
-                    <option value="上海市">上海市</option>
-                    <option value="北京市">北京市</option>
-                    <option data-num="0" value="上海市">上海市</option>
-                    <option data-num="0" value="北京市">北京市</option>
-                </select>
-            </div>
-            <img src="../../images/credit_card/icon_credit_card_2.png" class="drop_add_image">
-        </label>
+    <label class="bank_add">
+        <div class="drop_add_text">
+            <div class="drop_text">所在地区</div>
+            <!-- 地区 -->
+            <div class="city_pc_select" id="credit_city_select"></div>
+            <input id="credit_input_city" type="text" class="jf_input" readonly="" placeholder="请选择所在地区" value="">
 
-
-
-
-        <div class="bank_add">
-            <div class="drop_add_text">
-                <div class="drop_text">开户支行</div>
-                <input type="text" placeholder="请输入开户支行" class="key_input" id="key_input" value="">
-            </div>
         </div>
+        <img src="../../images/credit_card/icon_credit_card_2.png" class="drop_add_image">
+    </label>
 
 
+    <div class="bank_add">
+        <div class="drop_add_text">
+            <div class="drop_text">开户支行</div>
+            <input type="text" placeholder="请输入开户支行" class="key_input" id="key_input" value="">
+        </div>
     </div>
 
-<!--按钮-->
-<button class="credit_card_button">
-    保存
-</button>
 
-<!--交互-->
+</div>
+
+
+<div class="cards_box">
+
+    <!--按钮-->
+    <button class="credit_card_button">保存</button>
+
+</div>
+
+
 <script>
 
-//弹出框
 
-$('.credit_add_help').on("click", function (e) {
+    selectAreaBank();
+    //弹出框
 
-var e=event||window.event;
+    $('.credit_add_help').on("click", function (e) {
 
-jfShowTips.dialogShow({
+        var e = event || window.event;
 
-    "mainText": "友情提示",
-    "minText": "为保证资金安全，只能添加本人名下的银行卡",
+        jfShowTips.dialogShow({
 
-"noCheck": false,
-"noCancel": true,
-"checkBtnText":"知道了",
-"checkFn": function () {
-jfShowTips.dialogRemove()
-}
-});
+            "mainText": "友情提示",
+            "minText": "为保证资金安全，只能添加本人名下的银行卡",
 
-e.stopPropagation();
-e.preventDefault()
-})
+            "noCheck": false,
+            "noCancel": true,
+            "checkBtnText": "知道了",
+            "checkFn": function () {
+                jfShowTips.dialogRemove()
+            }
+        });
+
+        e.stopPropagation();
+        e.preventDefault()
+    })
 
 
 </script>
