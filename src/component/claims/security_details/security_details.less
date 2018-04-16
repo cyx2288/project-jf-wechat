@@ -1,0 +1,242 @@
+
+/***底部固定按钮***/
+
+.foooooooot_pich{
+
+  padding-bottom: 90px;
+
+}
+
+.security_button_all{
+
+  background-color: #ffffff;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+
+  .bottom_button{
+
+    width: 100%;
+    background-color: #FFFFFF;
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    &:after {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 1px;
+      left: 0;
+      bottom: 0;
+      border-bottom: 1px #DDDDDD solid;
+      transform: scaley(.3);
+    }
+
+    .team_securuty_text{
+      color: #4A4A4A;
+      font-size: 14px;
+      text-decoration: none;
+
+    }
+    input{
+
+      outline: none;
+
+      margin-right: 4px;
+
+    }
+
+  }
+
+  .product_bottom_line{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 5px 15px;
+
+    .bottom_button_block {
+      width: 80%;
+      padding: 10px 0;
+      border-radius: 50px;
+      border: none;
+      display: block;
+      text-align: center;
+    }
+
+    .bottom_button_blue {
+      background: linear-gradient(to right, rgba(35,179,236,1), rgba(17,128,199,1));
+      color: #FFFFFF;
+      font-size: 16px;
+    }
+
+    .bottom_left_icon {
+      width: 16px;
+      height: 16px;
+      margin: 0 auto;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+    }
+
+    p {
+      font-size: 12px;
+      color: #808080;
+    }
+
+  }
+
+}
+
+
+/*保障详情*/
+
+.security_details{
+
+  .details_top{
+
+    height: 80px;
+
+    width: 100%;
+
+    background: linear-gradient(to bottom right, #23b3ec 45%, #1180c7);
+
+    padding: 10px 0;
+
+    color: #FFFFFF;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    box-shadow: 0 2px 4px 0 #1180c7;
+
+    .top_left{
+
+      padding-left: 15px;
+
+      p:first-child{
+
+        font-size: 18px;
+
+        margin-bottom: 8px;
+
+      }
+
+      p{
+
+        font-size: 14px;
+
+      }
+
+    }
+
+    .top_right{
+
+      margin-right: 15px;
+
+      height: 60px;
+
+      width: 60px;
+
+      font-size: 16px;
+
+      text-align: center;
+
+      line-height: 60px;
+
+      color: #FFFFFF;
+
+      border: 1px solid #FFFFFF;
+
+      border-radius: 100%;
+
+    }
+
+  }
+
+  .details_center,.details_inf{
+
+    background-color: #ffffff;
+
+    margin: 10px 0;
+
+    padding: 10px 15px;
+
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+
+    .list_text{
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+      padding: 10px 0;
+
+      color: #4A4A4A;
+
+      p:first-child{
+
+        color: #808080;
+
+      }
+
+
+    }
+
+  }
+
+  .details_bottom{
+
+    background-color: #ffffff;
+
+    margin: 10px 0;
+
+    padding: 10px 15px;
+
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+
+    p:first-child{
+
+      font-size: 16px;
+
+      margin-bottom: 10px;
+
+    }
+
+    .text_in{
+
+      text-indent:22px;
+
+    }
+
+    p{
+
+      font-size: 14px;
+
+      margin: 5px 0;
+
+    }
+
+  }
+
+}
+
+.security_details .details_top_lose{
+
+  background: linear-gradient(to bottom right, #ffb018 45%, #ff8a18);
+
+  box-shadow: 0 2px 4px 0 #ff8a18;
+
+}
