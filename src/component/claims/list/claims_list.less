@@ -10,6 +10,9 @@
 
   box-shadow: 0 2px 5px 0 rgba(0,0,0,.1);
 
+
+
+
   .tittle{
 
     text-align: center;
@@ -41,7 +44,11 @@
 
   }
 
+
+
   .list_line {
+
+
 
     .list_text {
 
@@ -53,6 +60,22 @@
 
       padding: 10px 15px;
 
+      position: relative;
+
+      &:after{
+        position: absolute;
+        content: '';
+        border-bottom: 2px solid #808080;
+        border-right: 2px solid #808080;
+        right: 20px;
+        bottom: 45%;
+        width: 10px;
+        height: 10px;
+        opacity: .8;
+        border-bottom-right-radius: 4px;
+        transform: rotate(45deg);
+      }
+
       p {
 
         font-size: 14px;
@@ -63,33 +86,29 @@
 
     }
 
+    .list_text_r {
+
+      &:after{
+
+        right: 20px;
+        top: 45%;
+
+        transform: rotate(225deg);
+      }
+    }
+
+
     /*展开内容*/
 
     .claims_things_detail {
 
+      transition: all .5s linear;
+
       position: relative;
 
-      &:after {
-        position: absolute;
-        content: '';
-        width: 95%;
-        height: 1px;
-        left: 2.5%;
-        bottom: 0;
-        border-bottom: 1px #dddddd solid;
-        transform: scaley(.3);
-      }
+      overflow: hidden;
 
-      &:before {
-        position: absolute;
-        content: '';
-        width: 95%;
-        height: 1px;
-        left: 2.5%;
-        top: 0;
-        border-bottom: 1px #dddddd solid;
-        transform: scaley(.3);
-      }
+      height: 0px;
 
     }
 
@@ -107,6 +126,8 @@
 
       position: relative;
 
+      background-color: #fbfbfb;
+
       &:after {
         position: absolute;
         content: '';
@@ -121,7 +142,10 @@
       &:last-child:after{
 
         border-bottom: none;
+
       }
+
+
 
       a{
 
@@ -220,6 +244,20 @@
 
 
   }
+
+  .block_claims_things_detail {
+
+    .claims_things_detail {
+
+      height: 226px;
+
+      overflow: auto;
+
+      transition: all .5s linear;
+    }
+
+  }
+
 
 
 }
