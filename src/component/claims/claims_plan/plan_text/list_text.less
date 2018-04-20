@@ -1,0 +1,200 @@
+.shop_order_list{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow:auto;
+  transform: translate3d(-100%,0,0);
+  transition: transform .3s .2s;
+
+  &.show{
+    transform: translate3d(0,0,0);
+  }
+  &.show ~ .shop_order_list{
+    transform: translate3d(100%,0,0);
+  }
+
+  a{
+    display: block;
+
+    position: relative;
+
+    &:after {
+      position: absolute;
+
+      content: '';
+
+      width: 100%;
+
+      height: 1px;
+
+      left: 0;
+
+      bottom: 0;
+
+      border-bottom: 1px #DDDDDD solid;
+
+      transform: scaley(.3);
+
+    }
+
+    &:last-child:after{
+
+      border-bottom: none;
+
+    }
+
+    .claims_plan_list{
+
+      background-color: #ffffff;
+
+      padding: 10px 15px;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+      box-shadow: 0 2px 5px 0 rgba(0,0,0,.1);
+
+      .left_plan{
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: space-between;
+
+        p{
+
+          font-size: 16px;
+
+          color: #4A4A4A;
+
+        }
+
+        div{
+
+          display: flex;
+
+          align-items: center;
+
+          margin-top: 10px;
+
+          p{
+
+            font-size: 14px;
+
+            color: #808080;
+
+          }
+
+          img{
+
+            width: 20px;
+
+            height: 20px;
+
+            margin-right: 4px;
+
+          }
+
+        }
+
+
+      }
+
+      .right_plan{
+
+        display: flex;
+
+        align-items: center;
+
+        .orange_colour{
+
+          font-size: 16px;
+
+          color: #ff8a17;
+
+          white-space: nowrap;
+
+        }
+
+        img{
+
+          margin-left: 10px;
+
+          width: 12px;
+
+          height: 12px;
+
+        }
+
+
+      }
+
+
+    }
+
+
+  }
+
+  .claims_plan_none{
+
+    padding-top: 80px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    img{
+
+      width: 120px;
+
+      height: 95px;
+
+      margin-bottom: 10px;
+
+    }
+
+
+
+  }
+
+}
+
+/*状态颜色*/
+
+.shop_order_list a .claims_plan_list .right_plan .red_colour{
+
+  font-size: 16px;
+
+  color: #ff6969;
+
+  white-space: nowrap;
+}
+
+.shop_order_list a .claims_plan_list .right_plan .blue_colour{
+
+  font-size: 16px;
+
+  color: #10a6e2;
+
+  white-space: nowrap;
+
+}
+
+.shop_order_list a .claims_plan_list .right_plan .gray_colour{
+
+  font-size: 14px;
+
+  color: #808080;
+
+  white-space: nowrap;
+}

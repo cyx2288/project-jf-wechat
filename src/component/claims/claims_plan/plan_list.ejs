@@ -1,0 +1,25 @@
+<!-- 切换tab-->
+<div class="shop_order_tab">
+    <div class="tab_box"></div>
+    <div class="tab_contain jdshop_shadow" id="orderTab">
+        <div class="tab choose_tab">理赔中</div>
+        <div class="tab">已完成</div>
+    </div>
+</div>
+<!-- shop_order_content -->
+<div class="shop_order_content">
+
+    <%- include('plan_text/list_text.ejs') %>
+
+</div>
+
+<script>
+
+    //tab 切换
+
+    jfProductDetails.clickTabChange(document.getElementById('orderTab'), 'choose_tab', 'tab');
+
+
+
+
+</script>

@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
 
-    <title>我要理赔</title>
+    <title>理赔进度</title>
     <link rel="stylesheet" href="../../css/jf_claims.css">
+
 
 </head>
 <body>
@@ -12,14 +13,15 @@
 <!--导航-->
 <%- include('../../component/basic/topNav.ejs',{
 "thisrighthref":"jfSwitch.goBack()",
-"navtitle":"我要理赔",
+"navtitle":"理赔进度",
 "thislefthref":"#",
 "thisimgsrc":" "
 })%>
 
 <!--订单详情-->
-<%- include('../../component/claims/list/claims_list.ejs')%>
+<%- include('../../component/claims/claims_plan/plan_list.ejs')%>
 
 <script type="text/javascript" src="../../js/jf_claims.js"></script>
+
 </body>
 </html>

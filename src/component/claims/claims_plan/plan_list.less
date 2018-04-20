@@ -1,0 +1,49 @@
+.shop_order_tab{
+  position: relative;
+  z-index: 500;
+  .tab_box{
+    box-sizing: border-box;
+    height: 100%;
+    padding-bottom: 42px;
+    overflow: auto;
+  }
+  .tab_contain{
+
+
+    position: fixed;
+    top: 45px;
+    left:0;
+    width: 100%;
+    z-index: 500;
+    background-color: #fff;
+    .tab{
+      float: left;
+      white-space: nowrap;
+      width: 50%;
+      text-align: center;
+      padding: 10px 0;
+      &.choose_tab{
+        position: relative;
+        color: #10a6e2;
+        &:after{
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: calc(~'(100% - 80px)/2');
+          height: 0px;
+          border-top: 2px solid #10a6e2;
+          color: #10a6e2;
+          width: 80px;
+        }
+      }
+    }
+
+  }
+
+}
+.shop_order_content{
+  position: relative;
+  height: calc(~'100vh - 142px');
+  width: 100%;
+  overflow: hidden;
+}
