@@ -8,24 +8,29 @@
 
     </div>
 
-    <div >
+    <label >
 
         <p>开户银行</p>
 
 
+        <select class="money_select" onchange="selectChange()">
+            <option value ="choose">请选择银行</option>
+            <option value ="bank_a">工商银行</option>
+            <option value="bank_b">交通银行</option>
+        </select>
 
-        <p>请选择银行<img class="choose_next" src="../../images/icon_pay_return_black.png"></p>
+        <!--<p>请选择银行<img class="choose_next" src="../../images/icon_pay_return_black.png"></p>-->
 
 
-    </div>
+    </label>
 
-    <div >
+    <label >
 
         <p>银行卡号</p>
 
-        <p class="choose_in_gray">请输入您的银行卡号</p>
+        <input type="number" class="choose_in_gray" placeholder="请输入您的银行卡号">
 
-    </div>
+    </label>
 
 
 </div>

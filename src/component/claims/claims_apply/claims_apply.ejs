@@ -1,0 +1,243 @@
+<!--状态-->
+<div class="stay_all">
+
+    <p class="title">正在申请<span>【急门诊】</span>理赔</p>
+
+</div>
+
+<!--步骤状态-->
+
+<!--
+
+需报案状态class值“claims_order_cp”；
+
+不需报案状态class值“claims_order”;
+
+不显示步骤部分class值“claims_order_none”
+
+-->
+
+<div class="claims_order apply">
+
+    <!--报案状态下致电部分-->
+
+    <a class="cop_step" href="tel:400-0000-0000">
+
+        <span class="step_icon blue_111"></span>
+
+        <div class="step_text">
+
+            <p class="st_text_up st_blue_text">向嘉福报案</p>
+
+        </div>
+
+    </a>
+
+
+    <div class="claims_step">
+
+        <span class="step_icon blue_1"></span>
+
+        <div class="step_text">
+
+            <p class="st_text_up st_blue_text">发起理赔</p>
+
+        </div>
+
+    </div>
+
+
+    <div class="claims_step ">
+
+        <span class="step_icon gray_2"></span>
+
+        <div class="step_text">
+
+            <p class="st_text_up ">通过审核</p>
+
+        </div>
+
+    </div>
+
+
+    <div class="claims_step">
+
+        <span class="step_icon gray_3"></span>
+
+        <div class="step_text">
+
+            <p class="st_text_up">打款到账</p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!--身份信息-->
+
+<div class="details_inf_ap">
+
+    <label class="inf_line">
+
+        <div class="inf_left">
+
+            <span>出险人姓名</span>
+
+        </div>
+
+        <input type="text" placeholder="请输入出险人姓名">
+
+    </label>
+
+    <label class="inf_line">
+
+        <div class="inf_left">
+
+            <span>证件类型</span>
+
+        </div>
+
+        <label class="inf_right">
+
+            <select class="money_select" onchange="selectChange()">
+                <option value ="choose">请选择证件类型</option>
+                <option value ="bank_a">身份证</option>
+                <option value="bank_b">身份证件？</option>
+            </select>
+
+            <!--<img src="../../images/icon_history_right.png">-->
+
+        </label>
+
+
+    </label>
+
+    <label class="inf_line">
+
+        <div class="inf_left">
+
+            <span>证件号码</span>
+
+        </div>
+
+        <input type="number" placeholder="请输入证件号码">
+
+    </label>
+
+    <label class="inf_line">
+
+        <div class="inf_left">
+
+            <span>联系人电话</span>
+
+        </div>
+
+        <input type="number" placeholder="请输入联系人电话">
+
+    </label>
+
+    <div class="inf_line">
+
+        <div class="inf_left">
+
+            <span>收款账户</span>
+
+        </div>
+
+        <a href="payment_choose.html">
+
+            <div class="inf_right">
+
+                <span>点击选择收款账户</span>
+
+                <img src="../../images/credit_card/icon_credit_card_2.png">
+
+            </div>
+
+        </a>
+
+    </div>
+
+
+
+</div>
+
+
+<!--上传照片-->
+
+<div class="refund_photo">
+    <div class="type_title">
+        <div class="title_a">
+            <p>上传单据资料照片</p>
+            <a href="claims_explain.html">
+                <div class="title_b">
+                    <img src="../../images/claims/q_icon.png">
+                    <p>上传单据资料说明</p>
+                </div>
+            </a>
+        </div>
+        <p class="font_middle_gary"><span id="image_length">0</span>/10</p>
+    </div>
+    <div class="photo_content">
+        <!-- 选择框-->
+        <!--<div class="choose_file">
+            &lt;!&ndash; 缩略图 &ndash;&gt;
+            <img src="../../images/banner_1.jpg" class="thumbnail_img">
+            &lt;!&ndash; 背景图&ndash;&gt;
+
+            &lt;!&ndash; 上传照片&ndash;&gt;
+
+            &lt;!&ndash; 删除按钮&ndash;&gt;
+            <div class="delete_img"></div>
+        </div>-->
+
+        <!-- 选择框-->
+        <label class="choose_file">
+            <img src="../../images/claims/in_up.png">
+            <input type="file" multiple="multiple" accept="image/*" readonly="">
+        </label>
+
+
+    </div>
+</div>
+
+<div class="none_apply"></div>
+
+
+<!--底部按钮-->
+
+
+
+<div class="security_button_all">
+
+    <div class="product_bottom_line">
+
+        <a href="tel:400-0000-0000" class="button_text_plate">
+
+            <div class="bottom_left_icon">
+
+                <img src="../../images/insurance/customer%20_service_icon.png">
+
+            </div>
+
+            <p>联系客服</p>
+
+        </a>
+
+        <button class="bottom_button_block bottom_button_blue">提交审核</button>
+
+    </div>
+
+</div>
+
+
+
+
+<script>
+
+
+    jfReturnService.addPhoto()
+
+
+</script>

@@ -1,0 +1,793 @@
+
+
+/********顶部tips提示********/
+
+/**超时、关闭状态**/
+
+
+.lood_style{
+
+  .recharge_balance{
+
+    padding: 8px 10px;
+
+    font-size: 12px;
+
+    margin-bottom: 10px;
+
+    background-color: #ffcb17;
+
+    span{
+
+      display: block;
+
+      width: 100%;
+
+      text-align: center;
+
+      color: #FFFFFF;
+
+    }
+
+    img{
+
+      display: none;
+
+    }
+
+  }
+
+}
+
+/**审核未通过状态**/
+
+.fail_style{
+
+  .recharge_balance{
+
+    padding: 8px 10px;
+
+    font-size: 12px;
+
+    margin-bottom: 10px;
+
+    background-color: #ff8a18;
+
+    span{
+
+      display: block;
+
+      width: 100%;
+
+      text-align: center;
+
+      color: #FFFFFF;
+
+    }
+
+    img{
+
+      display: none;
+
+    }
+
+  }
+
+}
+
+/**取消显示**/
+
+.claims_order_none{
+
+  display: none;
+
+}
+
+/********步骤状态==不需报案********/
+
+.claims_order{
+
+  background-color: #ffffff;
+
+  padding: 10px 15px;
+
+  margin-bottom: 10px;
+
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.1);
+
+  display: flex;
+
+  justify-content: space-around;
+
+  align-items: flex-start;
+
+  .cop_step{
+
+    display: none;
+
+  }
+
+  .claims_step{
+
+    display: flex;
+
+    justify-content:space-between;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    width: 33%;
+
+    position: relative;
+
+    &:first-of-type:after{
+
+      display: none;
+
+    }
+
+
+    &:after{
+      content: '';
+      width: 60%;
+      height: 2px;
+      background-color: #dddddd;
+      position: absolute;
+      right: 70%;
+      top: 26%;
+      opacity: .6;
+    }
+
+    /**流程icon**/
+
+    .step_icon{
+
+      width: 24px;
+
+      height: 24px;
+
+      background-size: 100%;
+      
+      margin-bottom: 6px;
+
+    }
+
+    /*发起理赔icon*/
+
+    .blue_1{
+
+      background-image: url("../../images/claims/step_01_blue.png");
+
+    }
+
+    /*通过审核icon*/
+
+    .gray_2{
+
+      background-image: url("../../images/claims/step_02_gray.png");
+
+    }
+
+    .blue_2{
+
+      background-image: url("../../images/claims/step_02_blue.png");
+
+    }
+
+    .red_2{
+
+      background-image: url("../../images/claims/step_02_red.png");
+
+    }
+
+    /*打款到账icon*/
+
+    .gray_3{
+
+
+      background-image: url("../../images/claims/step_03_gray.png");
+
+    }
+
+    .blue_3{
+
+      background-image: url("../../images/claims/step_03_blue.png");
+
+    }
+
+    .step_text{
+
+      .st_text_up{
+
+        font-size: 12px;
+
+        line-height: 16px;
+
+        color: #808080;
+
+      }
+
+      .st_text_down{
+
+        font-size: 10px;
+
+        line-height: 16px;
+
+        color: #808080;
+
+      }
+
+      .st_blue_text{
+
+        color: #10a6e2;
+
+      }
+
+      .st_red_text{
+
+        color: #ff4646;
+
+      }
+
+      /*文字隐藏*/
+
+      .st_none{
+
+        color: #FFFFFF;
+
+      }
+
+    }
+
+  }
+
+}
+
+/**蓝色步骤线**/
+
+.claims_order .blue_claims_step{
+
+  position: relative;
+
+  &:first-child:after{
+
+    content: '';
+
+    border:none;
+
+    display: none;
+
+  }
+
+  &:after{
+    content: '';
+    width: 60%;
+    height: 2px;
+    background-color: #10a6e2;
+    position: absolute;
+    right: 70%;
+    top: 26%;
+    opacity: .6;
+  }
+
+}
+
+
+/********步骤状态==需报案********/
+
+.claims_order_cp{
+
+  background-color: #ffffff;
+
+  padding: 10px 15px;
+
+  margin-bottom: 10px;
+
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.1);
+
+  display: flex;
+
+  justify-content: space-around;
+
+  align-items: flex-start;
+
+
+
+  .claims_step,.cop_step{
+
+    display: flex;
+
+    justify-content:space-between;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    width: 25%;
+
+    position: relative;
+
+    &:first-child:after{
+
+      content: '';
+
+      border:none;
+
+      display: none;
+
+    }
+
+    &:first-child:before{
+
+      content: '拨打';
+      width: 22px;
+      height: 11px;
+      font-size: 8px;
+      background-color: #14a7e2;
+      opacity: .34;
+      line-height: 11px;
+      border-radius: 2px;
+      box-shadow: 0 1px 1px 0 rgba(17,128,199,1);
+      color: #FFFFFF;
+      position: absolute;
+      right: 0;
+      top: 0;
+
+    }
+
+    &:after{
+      content: '';
+      width: 50%;
+      height: 2px;
+      background-color: #dddddd;
+      position: absolute;
+      right: 76%;
+      top: 26%;
+      opacity: .6;
+    }
+
+    /**流程icon**/
+
+    .step_icon{
+
+      width: 24px;
+
+      height: 24px;
+
+      background-size: 100%;
+
+      margin-bottom: 6px;
+
+    }
+
+    /*拨打电话*/
+
+
+    .blue_111{
+
+      background-image: url("../../images/claims/step_001.gif");
+
+    }
+
+
+    /*发起理赔icon*/
+
+    .blue_1{
+
+      background-image: url("../../images/claims/step_01_blue.png");
+
+    }
+
+    .red_1{
+
+      background-image: url("../../images/claims/step_01_red.png");
+
+    }
+
+    /*通过审核icon*/
+
+    .gray_2{
+
+      background-image: url("../../images/claims/step_02_gray.png");
+
+    }
+
+    .blue_2{
+
+      background-image: url("../../images/claims/step_02_blue.png");
+
+    }
+
+    .red_2{
+
+      background-image: url("../../images/claims/step_02_red.png");
+
+    }
+
+    /*打款到账icon*/
+
+    .gray_3{
+
+
+      background-image: url("../../images/claims/step_03_gray.png");
+
+    }
+
+    .blue_3{
+
+
+      background-image: url("../../images/claims/step_03_blue.png");
+
+    }
+
+    .step_text{
+
+      .st_text_up{
+
+        font-size: 12px;
+
+        line-height: 16px;
+
+        color: #808080;
+
+      }
+
+      .st_text_down{
+
+        font-size: 9px;
+
+        line-height: 16px;
+
+        color: #808080;
+
+      }
+
+      .st_blue_text{
+
+
+        color: #10a6e2;
+
+      }
+
+      .st_red_text{
+
+        color: #ff4646;
+
+      }
+
+      /*文字隐藏*/
+
+      .st_none{
+
+        font-size: 9px;
+
+        line-height: 16px;
+
+        color: #FFFFFF;
+
+      }
+
+    }
+
+  }
+
+}
+
+/**蓝色步骤线**/
+
+.claims_order .blue_claims_step{
+
+  position: relative;
+
+  &:first-child:after{
+
+    content: '';
+
+    border:none;
+
+    display: none;
+
+  }
+
+  &:after{
+    content: '';
+    width: 60%;
+    height: 2px;
+    background-color: #10a6e2;
+    position: absolute;
+    right: 70%;
+    top: 26%;
+    opacity: .6;
+  }
+
+}
+
+/********身份信息********/
+
+.details_inf{
+
+  background-color: #ffffff;
+
+  padding: 20px 15px;
+
+  margin-bottom: 10px;
+
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.1);
+
+  .inf_line{
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding-bottom: 15px;
+
+    &:last-child{
+
+      padding-bottom: 0;
+
+    }
+
+    .inf_left{
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      img{
+
+        width: 20px;
+
+        height: 20px;
+
+        margin-right: 4px;
+
+      }
+
+      span,p{
+
+        font-size: 14px;
+
+        color: #808080;
+
+      }
+
+    }
+
+
+
+    a,span{
+
+      font-size: 14px;
+
+      color: #4A4A4A;
+
+    }
+
+  }
+
+}
+
+/********上传照片********/
+
+.refund_photo{
+  background: #fff;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  .type_title{
+    margin-bottom: 10px;
+    .title_a{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .title_b{
+        display:flex;
+        justify-content: flex-end;
+        align-items: center;
+        img{
+          width: 16px;
+          height: 16px;
+          margin-right: 5px;
+        }
+        p{
+          font-size: 14px;
+          line-height: 16px;
+          color: #808080;
+        }
+      }
+
+    }
+
+  }
+  .photo_content{
+    padding: 10px 0;
+    overflow-y: scroll;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    img{
+      width: 71px;
+      height: 71px;
+      margin-right: 15px;
+    }
+    .choose_file{
+      position: relative;
+      width: 71px;
+      height: 71px;
+      margin-right: 15px;
+      .thumbnail_img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 101;
+
+      }
+      img{
+        width: 71px;
+        height: 71px;
+      }
+      input{
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 71px;
+        height: 71px;
+        opacity:0;
+        z-index: 100;
+        background:none;
+        outline:none;
+        border:0;
+        -webkit-tap-highlight-color: transparent;
+
+      }
+    }
+    .delete_img{
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      width: 20px;
+      height: 20px;
+      background: url("../images/claims/customer_service_2_delete.png");
+      background-size: 100%;
+      z-index: 102;
+    }
+
+  }
+}
+
+/********联系客服********/
+
+.kefu{
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  .icon{
+
+    width: 20px;
+
+    height: 20px;
+
+    border-radius: 50px;
+
+    margin-right: 5px;
+
+    background-size: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    img{
+
+      height: 16px;
+
+      width: 16px;
+
+    }
+
+  }
+
+  span{
+
+    color: #808080;
+
+  }
+}
+
+.none{
+
+  padding-bottom: 10px;
+
+}
+
+.claims_btn_fl{
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding-bottom: 10px;
+
+  .fl_left{
+
+    width: 45%;
+    margin: 0 2.5%;
+    border: 1px solid rgba(35, 179, 236, 1);
+    display: block;
+    color: rgba(35, 179, 236, 1);
+    font-size: 16px;
+    text-align: center;
+    height: 43px;
+    line-height: 45px;
+    border-radius: 50px;
+
+  }
+
+  .fl_right{
+
+    width: 45%;
+    margin: 0 2.5%;
+    background: linear-gradient(to right, rgba(35, 179, 236, 1), rgba(17, 128, 199, 1));
+    display: block;
+    color: #FFFFFF;
+    font-size: 16px;
+    text-align: center;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 50px;
+
+  }
+
+  .fl_all{
+
+    display: none;
+
+  }
+
+}
+
+.claims_btn_ov{
+
+  padding-bottom: 10px;
+
+  .fl_all{
+
+    width: 95%;
+    margin: 0 2.5%;
+    background: linear-gradient(to right, rgba(35, 179, 236, 1), rgba(17, 128, 199, 1));
+    display: block;
+    color: #FFFFFF;
+    font-size: 16px;
+    text-align: center;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 50px;
+
+
+  }
+
+  .fl_left,.fl_right{
+
+    display: none;
+
+  }
+
+}
