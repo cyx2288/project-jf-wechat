@@ -240,4 +240,18 @@
     jfReturnService.addPhoto()
 
 
+    //点击选分期，分期无法选中，弹出小提示
+    var clickTips=document.getElementsByClassName('bottom_button_block');
+
+    for (var i=0;i<clickTips.length;i++) {
+
+        clickTips[i].addEventListener('click',function () {
+
+            jfShowTips.toastShow({'text':'提交成功'})//totast提示
+
+        },false)
+
+    }
+
+
 </script>
