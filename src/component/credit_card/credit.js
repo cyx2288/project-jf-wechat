@@ -95,3 +95,34 @@ var creditFn={
 }
 
 
+
+
+
+//弹出框
+
+$('.credit_add_help').on("click", function (e) {
+
+    var e = event || window.event;
+
+    jfShowTips.dialogShow({
+
+        "mainText": "友情提示",
+        "minText": "为保证资金安全，只能添加本人名下的银行卡",
+
+        "noCheck": false,
+        "noCancel": true,
+        "checkBtnText": "知道了",
+        "checkFn": function () {
+            jfShowTips.dialogRemove()
+        }
+    });
+
+    e.stopPropagation();
+    e.preventDefault()
+})
+
+
+
+
+
+

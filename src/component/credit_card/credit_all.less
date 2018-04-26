@@ -1,0 +1,384 @@
+
+body{
+  background: #f5f5f9;
+  font-family: Arial, '微软雅黑', Helvetica Neue, Helvetica, sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  color: #4a4a4a;
+  -webkit-overflow-scrolling: touch;
+  line-height: 1.6;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  user-select: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.jf_input, .jf_lists {
+  line-height: 1.41176471;
+}
+
+.tip_bg {
+  position: fixed;
+  left: -100%;
+  top: -100%;
+  width: 300%;
+  height: 300%;
+  background: black;
+  opacity: .5;
+  z-index: 1000;
+  -webkit-animation: opacity_bg_change .5s;
+  animation: opacity_bg_change .5s;
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s;
+}
+
+
+/*上拉框*/
+.frame_drag_on {
+  z-index: 99;
+}
+.frame_drag_on .frame-main {
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  bottom: 0;
+  background-color: #fff;
+  display: none;
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+}
+.frame_drag_on .weui_mask_transition {
+  display: none;
+  background: transparent;
+  -webkit-transition: background .3s;
+  transition: background .3s;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+.frame_drag_on .mask_drag {
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+  background-color: #000;
+  opacity: 0;
+  z-index: 105;
+}
+
+.credit_notice .recharge_balance > span {
+  display: inline-block;
+  color: #fc6329;
+  padding-left: 8px;
+  line-height: 14px;
+  box-sizing: border-box;
+}
+.credit_notice .recharge_balance > img {
+  width: 18px;
+  height: 18px;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+
+#tip_dialog .text_dialog_container {
+  width: 80%;
+  width: calc(80vw);
+  position: fixed;
+  z-index: 1001;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  background-color: white;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-animation: showDialog .5s both;
+  animation: showDialog .5s both;
+}
+#tip_dialog .text_dialog_container .dialog_button {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+  overflow: hidden;
+}
+#tip_dialog .text_dialog_container .text_big {
+  color: #4a4a4a;
+  font-size: 24px;
+  text-align: center;
+  margin: 20px auto 10px;
+  width: 90%;
+}
+#tip_dialog .text_dialog_container .text_small {
+  font-size: 14px;
+  margin: 10px auto;
+  width: 80%;
+  color: #ababab;
+}
+#tip_dialog .text_dialog_container .dialog_button a {
+  width: 50%;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  text-decoration: none;
+  text-align: center;
+  font-size: 16px;
+  padding: 10px 0;
+  margin-top: 20px;
+  display: block;
+}
+
+
+.jf_num_keybroad .weui_grids_kj {
+  width: 75%;
+}
+.jf_num_keybroad .weui_actionsheet_check {
+  width: 25%;
+}
+.jf_num_keybroad .weui_actionsheet {
+  z-index: 20;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  box-shadow: 0 -1px 3px #e9e9e9;
+  -webkit-box-shadow: 0 -1px 3px #e9e9e9;
+  -moz-box-shadow: 0 -1px 3px #e9e9e9;
+  background: #fff;
+}
+.jf_num_keybroad .weui_grid {
+  padding: 10px;
+}
+.jf_num_keybroad .weui_grid.weui_grid_labelCheckAll {
+  background-color: #10a6e2;
+}
+.jf_num_keybroad .weui_actionsheet_check .weui_grid {
+  width: 100%;
+}
+.jf_num_keybroad .weui_grid {
+  padding: 10px;
+}
+.jf_num_keybroad .weui_actionsheet_check .weui_grids:before {
+  border: 0;
+  border-top: 1px solid #d9d9d9;
+}
+.jf_num_keybroad .weui_actionsheet_check .weui_grids:before {
+  border: 0;
+  border-top: 1px solid #d9d9d9;
+}
+.jf_num_keybroad .weui_actionsheet .weui_grid > p {
+  font-size: 20px;
+  font-family: arial, '微软雅黑';
+}
+.jf_num_keybroad .weui_actionsheet_check .actionsheet_delete_icon {
+  width: 20px;
+  height: 20px;
+  display: block;
+  background: url(../../images/credit_card/deleteVIP.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 auto;
+  padding: 6px 0;
+}
+.jf_num_keybroad .weui_actionsheet_check .actionsheet_cancel_icon {
+  width: 20px;
+  height: 20px;
+  display: block;
+  background: url(../../images/credit_card/keyboardVIP.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 auto;
+  padding: 6px 0;
+}
+.jf_num_keybroad .weui_grid_0 {
+  width: 66.66666%;
+}
+.jf_num_keybroad .weui_actionsheet_check .weui_grids:before {
+  border: 0;
+  border-top: 1px solid #d9d9d9;
+}
+.jf_num_keybroad .weui_actionsheet_check .weui_grid_labelCheck {
+  padding-top: 25px;
+  height: 59px;
+  color: #fff;
+}
+
+
+.weui_grids {
+  position: relative;
+  overflow: hidden;
+}
+.weui_grids:before {
+  content: '';
+  position: absolute;
+  box-sizing: border-box;
+  width: 200%;
+  height: 200%;
+  left: 0;
+  top: 0;
+  border: 1px solid #d9d9d9;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+}
+.weui_actionsheet_toggle {
+  -webkit-transform: translate(0);
+  transform: translate(0);
+}
+.weui_grid {
+  position: relative;
+  float: left;
+  padding: 20px 10px;
+  width: 33.33333333%;
+  box-sizing: border-box;
+}
+.weui_grid_label {
+  display: block;
+  text-align: center;
+  color: #000;
+  font-size: 14px;
+}
+.weui_actionsheet {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+
+}
+.weui_grid:nth-child(3n):before {
+  border-right-width: 0;
+}
+.weui_grid:before {
+  content: '';
+  position: absolute;
+  box-sizing: border-box;
+  width: 200%;
+  height: 200%;
+  left: 0;
+  top: 0;
+  border-bottom: 1px solid #d9d9d9;
+  border-right: 1px solid #d9d9d9;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+}
+
+
+.affirm_popup .weui_actionsheet_menu {
+  overflow: hidden;
+}
+.affirm_popup .title_top {
+  position: relative;
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: flex;
+  //-webkit-box-pack: space-between;
+  -moz-justify-content: space-between;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-pack: center;
+  -moz-justify-content: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  padding: 14px 15px;
+  overflow: hidden;
+}
+.affirm_popup .payment_amount {
+  padding: 15px 15px 5px 15px;
+  text-align: center;
+}
+.affirm_popup .list_bottom {
+  max-height: 188px;
+  overflow: auto;
+}
+.affirm_popup .btn_color {
+  background-color: #10a6e2;
+}
+.affirm_popup .list_btn {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 14px;
+  padding-right: 14px;
+  box-sizing: border-box;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  line-height: 3;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  overflow: hidden;
+}
+.affirm_popup .title_top:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 1px;
+  border-top: 1px solid #d9d9d9;
+  color: #d9d9d9;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+.affirm_popup .title_top:after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 20px;
+  right: 20px;
+  width: 0;
+  height: 0;
+  content: url(../../images/credit_card/icon_close.png);
+  -webkit-transform: scale(0.2, 0.2);
+  transform: scale(0.2, 0.2);
+}
+.affirm_popup .list_bottom .list_cell {
+  padding: 10px 15px;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  //-webkit-box-pack: space-between;
+  -moz-justify-content: space-between;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.affirm_popup .payment_amount p {
+  font-size: 40px;
+  color: #000000;
+}
+.affirm_popup .payment_amount span {
+  font-size: 12px;
+}
+
+
+
