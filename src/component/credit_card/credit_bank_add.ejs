@@ -1,40 +1,31 @@
 <!--注释-->
-<a class="jd_notice">
+<a class="credit_notice">
 
     <div class="tab_bd"></div>
 
     <div class="recharge_balance">
-        <img src="../../images/icon_warning.png">
+        <img src="../../images/credit_card/icon_warning.png">
         <span>
-        <p>仅能绑定本人的银行卡</p>
+            <p>仅能绑定本人的银行卡</p>
         </span>
     </div>
 
 </a>
 
+
 <!--模块(01)-->
 <div class="credit_bank_add">
 
-
     <div class="credit_add">
-
         <div class="bank_add_m">
-
             <div class="bank_add_text">
-
                 <span class="#">持卡人</span>
-
                 <span>李洪刚</span>
-
-
             </div>
-
             <a href="#" class="credit_add_help">
                 <img src="../../images/credit_card/icon_credit_card_6.png" class="bank_add_image">
             </a>
-
         </div>
-
     </div>
 
     <div class="credit_add">
@@ -50,7 +41,7 @@
         </div>
     </div>
 
-    <a href="../credit_card/credit_choose_bank.html">
+    <a class="bank_add_link" href="../credit_card/credit_choose_bank.html">
 
         <div class="credit_add input_add">
 
@@ -71,26 +62,22 @@
         </div>
     </a>
 
-
 </div>
 
 
 <!--模块(02)-->
-
 <p class="add_drop_text">填写如下信息将增加您的到账速度</p>
-
 <div class="add_drop">
+
     <label class="bank_add">
         <div class="drop_add_text">
             <div class="drop_text">所在地区</div>
             <!-- 地区 -->
             <div class="city_pc_select" id="credit_city_select"></div>
             <input id="credit_input_city" type="text" class="jf_input" readonly="" placeholder="请选择所在地区" value="">
-
         </div>
         <img src="../../images/credit_card/icon_credit_card_2.png" class="drop_add_image">
     </label>
-
 
     <div class="bank_add">
         <div class="drop_add_text">
@@ -99,47 +86,18 @@
         </div>
     </div>
 
-
 </div>
 
 
+<!--按钮-->
 <div class="cards_box">
 
-    <!--按钮-->
     <button class="credit_card_button">保存</button>
 
 </div>
 
 
-<script>
 
-
-    selectAreaBank();
-    //弹出框
-
-    $('.credit_add_help').on("click", function (e) {
-
-        var e = event || window.event;
-
-        jfShowTips.dialogShow({
-
-            "mainText": "友情提示",
-            "minText": "为保证资金安全，只能添加本人名下的银行卡",
-
-            "noCheck": false,
-            "noCancel": true,
-            "checkBtnText": "知道了",
-            "checkFn": function () {
-                jfShowTips.dialogRemove()
-            }
-        });
-
-        e.stopPropagation();
-        e.preventDefault()
-    })
-
-
-</script>
 
 
 
