@@ -210,19 +210,19 @@
         <p class="font_middle_gary"><span id="image_length">0</span>/10</p>
     </div>
     <div class="photo_content">
-        <!-- 选择框-->
+
         <!--<div class="choose_file">
-            &lt;!&ndash; 缩略图 &ndash;&gt;
-            <img src="../../images/banner_1.jpg" class="thumbnail_img">
-            &lt;!&ndash; 背景图&ndash;&gt;
+            <!-- 缩略图 -->
+            <!--<img src="../../images/banner_1.jpg" class="thumbnail_img">-->
+            <!-- 背景图-->
 
-            &lt;!&ndash; 上传照片&ndash;&gt;
+            <!-- 上传照片-->
 
-            &lt;!&ndash; 删除按钮&ndash;&gt;
-            <div class="delete_img"></div>
-        </div>-->
+            <!-- 删除按钮-->
+            <!--<div class="delete_img"></div>-->
+        <!--</div>-->
 
-        <!-- 选择框-->
+
         <label class="choose_file">
             <img src="../../images/claims/in_up.png">
             <input type="file" multiple="multiple" accept="image/*" readonly="">
@@ -231,6 +231,27 @@
 
     </div>
 </div>
+
+<!-- 弹出框-->
+
+<div class="service_pop_up" id="servicePopUp">
+
+    <!-- 背景-->
+
+    <div class="service_shadow" id="serviceShadow"></div>
+
+    <div class="delete_pic">X</div>
+
+    <!-- 内容 -->
+
+    <div class="service_show_content">
+        <div class="img_content"></div>
+    </div>
+
+
+
+</div>
+
 
 <div class="none_apply"></div>
 
@@ -269,8 +290,10 @@
 
     jfReturnService.addPhoto()
 
+    jfReturnService.chooseImgShow()
 
-    //点击选分期，分期无法选中，弹出小提示
+
+    //弹出小提示
     var clickTips=document.getElementsByClassName('bottom_button_block');
 
     for (var i=0;i<clickTips.length;i++) {

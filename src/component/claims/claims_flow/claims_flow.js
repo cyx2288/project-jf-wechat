@@ -150,7 +150,7 @@ var jfReturnService = {
 
     chooseImgShow:function () {
 
-        document.getElementsByClassName('images_content')[0].addEventListener('click', function (e) {
+        document.getElementsByClassName('photo_content')[0].addEventListener('click', function (e) {
 
 
             var evt = e || window.event;
