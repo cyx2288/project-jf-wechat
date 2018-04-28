@@ -145,6 +145,18 @@
 
       }
 
+      &:nth-child(n){
+
+        background-color: #fbfbfb;
+
+      }
+
+      &:nth-child(2n){
+
+        background-color: #f8f8f8;
+
+      }
+
 
 
       a{
@@ -249,11 +261,34 @@
 
     .claims_things_detail {
 
-      height: 226px;
+      height: 113px; // 5s尺寸；
 
       overflow: auto;
 
       transition: all .5s linear;
+
+      // 6、7、8尺寸；
+
+      @media screen and(max-width: 375px) {
+
+        height: 89px;
+
+        overflow: auto;
+
+        transition: all .5s linear;
+      }
+
+      // 6p、7p、8p尺寸；
+
+      @media screen and(max-width: 414px) {
+
+        height: 89px;
+
+        overflow: auto;
+
+        transition: all .5s linear;
+      }
+
     }
 
   }
