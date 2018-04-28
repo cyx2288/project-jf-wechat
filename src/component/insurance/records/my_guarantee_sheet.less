@@ -71,24 +71,47 @@
 
   .sheet_list_left{
 
-    p:first-child{
+    p:first-child {
 
+      // 6p、7p、8p尺寸；
 
-      width: 280px;
+      @media screen and(max-width: 414px) {
 
-      height: 25px;
+        width: 284px;
 
-      overflow: hidden;
+        height: 25px;
 
-      text-overflow: ellipsis;
+        overflow: hidden;
 
-      display: -webkit-box;
+        text-overflow: ellipsis;
 
-      -webkit-line-clamp: 1;
+        display: -webkit-box;
 
-      -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+
+        -webkit-box-orient: vertical;
 
       }
+
+      // 6、7、8尺寸；
+
+      @media screen and(max-width: 375px) {
+        width: 245px;
+
+      }
+
+      // 5s尺寸；
+
+      @media screen and(max-width: 320px) {
+
+        width: 195px;
+        padding-top: 8px;
+        padding-bottom: 2px;
+
+      }
+
+
+    }
 
   }
 
