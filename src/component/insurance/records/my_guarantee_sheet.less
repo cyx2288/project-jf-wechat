@@ -32,10 +32,13 @@
     font-size: 14px;
     display: flex;
     justify-content: flex-start;
-    padding: 5px 0;
+    //padding: 5px 0;
+    padding-top: 6px;
+    padding-bottom: 4px;
 
     &:first-child {
       font-size: 16px;
+
 
       @media screen and(max-width: 320px) {
         font-size: 14px;
@@ -43,9 +46,9 @@
 
     }
 
+
     span {
       padding-left: 10px;
-      display: block;
 
       &:first-child {
         padding-left: 0;
@@ -63,6 +66,29 @@
       }
 
     }
+
+  }
+
+  .sheet_list_left{
+
+    p:first-child{
+
+
+      width: 280px;
+
+      height: 25px;
+
+      overflow: hidden;
+
+      text-overflow: ellipsis;
+
+      display: -webkit-box;
+
+      -webkit-line-clamp: 1;
+
+      -webkit-box-orient: vertical;
+
+      }
 
   }
 
