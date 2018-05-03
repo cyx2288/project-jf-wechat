@@ -1,22 +1,21 @@
+
+<div class="tip_bg"></div>
+
+<div id="tip_dialog">
+    <div class="text_dialog_container">
+        <div class="text_big"></div>
+        <div class="text_small" style="color: rgb(74, 74, 74);"> 你有一笔订单未支付，需先完成支付，才能继续用车。</div>
+        <div class="dialog_button">
+
+            <a class="dialog_check" href="../pay/payStepone.html">立即支付</a>
+            <a class="dialog_cancel" href="didi_order.html">查看订单</a>
+
+        </div>
+
+
+    </div>
+</div>
+
 <div class="didi_popup"></div>
 
-<script>
-    
-    window.onload = function () {
 
-        jfShowTips.dialogShow({
-            "mainText": " ",
-            "minText": ' 你有一笔订单未支付，需先完成支付，才能继续用车。',
-            "noCheck": false,
-            "noCancel": false,
-            "checkBtnText":"立即支付",
-            "cancleBtnText":'查看订单',
-            "thisUrl": '../pay/payStepone.html',
-            "cancelUrl":'didi_order.html '
-        });
-
-        document.getElementsByClassName('text_small')[0].style.color='#4a4a4a';
-        
-    }
-
-</script>
