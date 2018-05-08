@@ -110,6 +110,7 @@
 
       height: 0px;
 
+
     }
 
 
@@ -127,6 +128,7 @@
       position: relative;
 
       background-color: #fbfbfb;
+
 
       &:after {
         position: absolute;
@@ -259,30 +261,33 @@
 
   .block_claims_things_detail {
 
+
+    // 6p、7p、8p尺寸
+
     .claims_things_detail {
 
-      height: 113px; // 5s尺寸；
+      height: 113px;
 
       overflow: auto;
 
-      transition: all .5s linear;
+      transition: height .5s linear;
 
       // 6、7、8尺寸；
 
       @media screen and(max-width: 375px) {
 
-        height: 89px;
+        height: 113px;
 
         overflow: auto;
 
         transition: all .5s linear;
       }
 
-      // 6p、7p、8p尺寸；
+      //5s尺寸；
 
-      @media screen and(max-width: 414px) {
+      @media screen and(max-width: 320px) {
 
-        height: 89px;
+        height: 140px;
 
         overflow: auto;
 
