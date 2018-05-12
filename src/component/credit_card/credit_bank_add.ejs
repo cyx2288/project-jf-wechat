@@ -41,7 +41,9 @@
         </div>
     </div>
 
-    <a class="bank_add_link" href="../credit_card/credit_choose_bank.html">
+
+
+    <div class="bank_add_link">
 
         <div class="credit_add input_add">
 
@@ -50,17 +52,19 @@
                 <div class="bank_add_text">
 
                     <span class="#">银行</span>
-
-                    <div>请选择发卡银行</div>
-
+                                    <select class="bank_add_text" id="bankSelect" placeholder="请选择银行">
+                                        <option v-for=" info in bankList">12</option>
+                                        <option v-for=" info in bankList">12</option>
+                                        <option v-for=" info in bankList">12</option>
+                                    </select>
                 </div>
 
-                <img src="../../images/credit_card/icon_credit_card_2.png" class="bank_add_image_card">
+
 
             </div>
 
         </div>
-    </a>
+    </div>
 
 </div>
 
