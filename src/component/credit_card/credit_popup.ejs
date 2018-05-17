@@ -117,32 +117,37 @@
 
     window.onload=function() {
 
-        creditjfkeybroad.run();//页面初始的时候，开启键盘；
-
-
-        document.getElementsByClassName('whole_text')[0].addEventListener('click',function(){
-
-            creditFn.showInitNum('1000');//显示提现金额；参数一为当前可以提现的全部金额,若没有就可以不用调用此方法
-
-            creditFn.valiateNextBtn();//判断下一步按钮
-
-            creditjfkeybroad.stop();//关闭键盘；
-
-        },false)
-
-
         setTimeout(function () {
 
-            //判断下一步按钮是否可以点击（判断输入框里面有没有值）
-            $('body').on('touchstart', ".weui_grid", function () {
+            creditjfkeybroad.run();//页面初始的时候，开启键盘
 
-                creditFn.valiateNextBtn();//判断下一步按钮
 
-            });
+            //判断下一步是否可以点击
+            if(browser.os.android||browser.os.iOS){
+                $('body').on('touchstart',".weui_grid",creditFn.valiateNextBtn);
+            }else {
+                $('body').on('click',".weui_grid",creditFn.valiateNextBtn);
+            }
+
+
 
             document.getElementsByClassName('num_delete')[0].addEventListener('click',creditFn.valiateNextBtn,false)
 
-        }, 300);
+
+            document.getElementsByClassName('whole_text')[0].addEventListener('click',function(){
+
+                creditFn.showInitNum('1000');//显示提现金额；参数一为当前可以提现的全部金额,若没有就可以不用调用此方法
+
+                //creditFn.valiateNextBtn();//判断下一步按钮
+
+                creditjfkeybroad.stop();//关闭键盘；
+
+            },false)
+
+
+        },300)
+
+
 
     }
 
