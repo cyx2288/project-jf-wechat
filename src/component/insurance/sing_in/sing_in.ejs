@@ -1,0 +1,74 @@
+<div class="sing_all">
+
+
+    <!--登陆LOGO-->
+
+    <div class="sing_logo">
+
+        <img src="../../images/insurance/sing_in/sing_in_logo.png" class="">
+
+    </div>
+
+    <!--登陆输入-->
+
+    <div class="sing_input">
+        
+        <div class="sing_phone">
+
+            <img src="../../images/insurance/sing_in/sing_in_phone.png">
+
+            <span>手机号</span>
+
+            <input class="phone_with" type="number" pattern="[0-9]*" oninput="if(value.length>11)value=value.slice(0,11)" placeholder="请输入手机号">
+
+        </div>
+
+        <div class="sing_code password">
+
+            <img class="big_img" src="../../images/insurance/sing_in/sing_in_code.png">
+
+            <span>验证码</span>
+
+            <input type="number" pattern="[0-9]*" oninput="if(value.length>6)value=value.slice(0,6)" placeholder="请输入验证码">
+
+            <span class="little">获取验证码</span>
+
+        </div>
+
+        <div class="tit">
+
+            <span>没有短信，请尝试获取 →</span>
+
+            <a class="">语音验证码</a>
+
+        </div>
+
+        
+    </div>
+
+    <!--按钮-->
+
+    <div class="sing_in_bottom">
+
+        <a href="../insurance/my_guarantee_sheet.html" class="plan_bottom_hold">确定</a>
+
+    </div>
+</div>
+
+
+<script>
+
+    //弹出小提示
+  /*  var clickTips=document.getElementsByClassName('little');
+
+    for (var i=0;i<clickTips.length;i++) {
+
+        clickTips[i].addEventListener('click',function () {
+
+            jfShowTips.toastShow({'text':'验证码已发送'})//totast提示
+
+        },false)
+
+    }  */
+
+</script>

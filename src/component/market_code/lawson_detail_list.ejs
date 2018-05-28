@@ -1,0 +1,133 @@
+<div class="lawson_detail_list_all">
+
+    <div class="top">
+
+        <div class="top_cop">
+
+            <span class="img_box"><img src="../../images/market_code/LS_LS.png"></span>
+
+            <P>罗森杨南南路门店</P>
+
+        </div>
+
+        <p>-19.00</p>
+
+        <span>交易成功</span>
+
+    </div>
+
+    <div class="bottom">
+
+        <div class="bottom_line">
+
+            <span>订单金额</span>
+
+            <span>20.00</span>
+
+        </div>
+
+        <div class="bottom_line">
+
+            <span>福豆抵扣</span>
+
+            <span>-2.00</span>
+
+        </div>
+
+        <div class="bottom_line">
+
+            <span>优惠券抵扣</span>
+
+            <span>-2.00</span>
+
+        </div>
+
+        <div class="bottom_line">
+
+            <span>付款方式</span>
+
+            <span>福利额度</span>
+
+        </div>
+
+        <div class="bottom_line">
+
+            <span>消费说明</span>
+
+            <span>好乐迪中山公园店消费600元</span>
+
+        </div>
+
+        <div class="bottom_line">
+
+            <span>创建时间</span>
+
+            <span>2018-05-05 09:12:21</span>
+
+        </div>
+
+        <div class="bottom_line">
+
+            <span>消费说明</span>
+
+            <span>1234567</span>
+
+        </div>
+
+        <div class="bottom_line">
+
+            <span>消费说明</span>
+
+            <span>XXXXXXX</span>
+
+        </div>
+
+
+        <div class="code">
+
+            <span>可扫码退款</span>
+
+            <canvas id="oneCodeDetail"></canvas>
+
+
+        </div>
+
+    </div>
+
+    <a href="#">对此订单有疑问？</a>
+
+
+
+
+
+</div>
+
+<script>
+    //一维码
+    JsBarcode('#oneCodeDetail','1234 5678 9012 3456 78',{//输入18位数字
+        font:"Microsoft Yahei",//设置文本的字体
+        height:'120',//高度
+        fontSize:32,//设置文本的大小
+        margin:15//设置条形码周围的空白边距
+
+    });
+
+
+    /*    JsBarcode("#imgcode", "123", {
+            format: "CODE39",//选择要使用的条形码类型
+            width:3,//设置条之间的宽度
+            height:100,//高度
+            displayValue:true,//是否在条形码下方显示文字
+            text:"456",//覆盖显示的文本
+            fontOptions:"bold italic",//使文字加粗体或变斜体
+            font:"fantasy",//设置文本的字体
+            textAlign:"left",//设置文本的水平对齐方式
+            textPosition:"top",//设置文本的垂直位置
+            textMargin:5,//设置条形码和文本之间的间距
+            fontSize:15,//设置文本的大小
+            background:"#eee",//设置条形码的背景
+            lineColor:"#2196f3",//设置条和文本的颜色。
+            margin:15//设置条形码周围的空白边距
+        });*/
+
+</script>

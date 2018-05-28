@@ -1,0 +1,167 @@
+.code_list_all{
+
+  width: 100%;
+
+  .code_line{
+
+    width: 95%;
+
+    padding: 10px 2.5%;
+
+    background-color: #FFFFFF;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    position: relative;
+
+    &:after {
+
+      content: '';
+
+      position: absolute;
+
+      left: 0;
+
+      bottom: 0;
+
+      width: 100%;
+
+      border-bottom: solid 1px #e5e5e5;
+
+      transform: scaleY(0.4);
+
+    }
+
+
+    &:last-child:after{
+
+      border-bottom: none;
+
+    }
+
+    .left{
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+      .img_box{
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        img{
+
+          width: 30px;
+
+          height: 30px;
+
+          padding: 0 10px;
+
+        }
+
+      }
+
+
+      .right1{
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: space-around;
+
+        align-items: flex-start;
+
+        white-space: nowrap;
+
+        p:first-child{
+
+          font-size: 14px;
+
+        }
+
+        p:last-child{
+
+          font-size: 12px;
+
+        }
+
+      }
+
+    }
+
+    .right{
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: space-around;
+
+      align-items: flex-end;
+
+      white-space: nowrap;
+
+      margin-right: 15px;
+
+      p:first-child{
+
+        font-size: 14px;
+
+      }
+
+      p:last-child{
+
+        font-size: 12px;
+
+      }
+
+    }
+
+  }
+
+}
+
+
+/**颜色**/
+
+.black_code_pay{
+
+  color: #4A4A4A;
+
+}
+
+.gary_code_pay{
+
+  color: #C0C0C0;
+
+}
+
+.red_code_pay{
+
+   color: #ff6c3f;
+
+}
+
+
+.blue_code_pay{
+
+  color: #10a6e2;
+
+}
+
+.none_code_pay{
+
+  color: #FFFFFF;
+
+}

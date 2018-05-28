@@ -1,0 +1,124 @@
+<div class="wal_mart_content">
+
+    <!-- 购买付款码-->
+    <div class="wal_mart_list show">
+
+        <div class="wal_mart_import">
+
+            <span class="wal_mart_money">请输入金额</span>
+
+            <div class="wal_mart_input">
+
+                <div class="buy_icon">￥</div>
+
+                <div class="buy_number">
+                    <input type="text" pattern="[0-9]*" class="wal_mart_1input">
+                </div>
+
+                <div class="num_delete"><img src="../../images/credit_card/close.png"></div>
+
+            </div>
+
+            <div class="wal_mart_whole">
+
+
+                <div class="wal_mart_text">
+
+                    <p>单笔最高5000元</p>
+
+                    <a class="wal_mart_help" href="#">
+                        <img src="../../images/credit_card/icon_credit_card_3.png" class="tips_ti_none">
+                    </a>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+        <!--按钮-->
+        <div class="btn_box">
+
+            <button class="credit_card_button" >立即购买</button>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+<!--底部按钮-->
+
+
+<div class="bottom_tab">
+
+    <a class="market_code style" href="../market_code/lawson_code.html">
+
+        <div class="style">
+
+            <img src="../../images/market_code/LS_1.png">
+
+            <img src="../../images/market_code/LS_2.png">
+
+        </div>
+
+        <p>罗森便利店</p>
+
+    </a>
+
+    <a class="market_code choose" href="../market_code/YL_code.html">
+
+        <div class="style">
+
+            <img src="../../images/market_code/YL_1.png">
+
+            <img src="../../images/market_code/YL_2.png">
+
+        </div>
+
+        <p>银联付款码</p>
+
+    </a>
+
+    <a class="market_code style" href="#">
+
+        <div class="style">
+
+            <img src="../../images/market_code/WRM_1.png">
+
+            <img src="../../images/market_code/WRM_2.png">
+
+        </div>
+
+        <p>沃尔玛付款码</p>
+
+    </a>
+
+
+</div>
+
+<script>
+
+
+    /*弹框*/
+    document.getElementsByClassName('wal_mart_help')[0].addEventListener('click',function(){
+
+        jfShowTips.dialogShow({
+            "mainText": "弹框标题",
+            "minText": "弹框文案",
+            "noCheck": false,
+            "noCancel": true,
+            "checkBtnText":"知道了",
+            "checkFn": function () {
+                jfShowTips.dialogRemove()
+            }
+        });
+
+    },false)
+
+</script>
