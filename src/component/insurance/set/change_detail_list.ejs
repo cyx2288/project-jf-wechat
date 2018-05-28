@@ -1,0 +1,46 @@
+
+
+
+<div class="change_detail_list">
+
+    <div class="change_phone">
+
+        <p>转移至手机号</p>
+
+
+        <input type="number" pattern="[0-9]*" oninput="if(value.length>11)value=value.slice(0,11)" placeholder="请输入手机号">
+
+
+    </div>
+
+    <p class="text_change">保单转移至新手机号后，当前手机号账户下保单将被清空；新手机号需先在嘉福平台微信公众号中绑定团体保险业务。</p>
+    <p class="text_change">当前手机号：<span>13099996666</span></p>
+
+    <div class="sing_in_bottom change_lis">
+
+        <a href="success_change.html" class="plan_bottom_hold">确认转移保单</a>
+
+    </div>
+
+
+</div>
+
+
+<script>
+
+    addEventListener('load',function () {
+
+        jfShowTips.dialogShow({
+            "mainText": "友情提示",
+            "minText": "转移后的手机号未绑定，绑定后可转移；（可通过嘉福平台公众号-团体保险-保障订单路径绑定）",
+            "noCheck": false,
+            "noCancel": true,
+            "checkBtnText":"知道了",
+            "checkFn": function () {
+                jfShowTips.dialogRemove()
+            }
+        });
+
+    },false)
+
+</script>

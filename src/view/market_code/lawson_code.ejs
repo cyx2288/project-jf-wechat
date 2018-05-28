@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>付款码</title>
+    <link rel="stylesheet" href="../../css/jf_market_code.css">
+
+</head>
+<body>
+
+<!--导航-->
+<%- include('../../component/basic/topNav.ejs',{
+"thisrighthref":"jfSwitch.goBack()",
+"navtitle":"付款码",
+"thislefthref":"#",
+"thisimgsrc":" "
+})%>
+
+
+<!--罗森-付款码-->
+
+<%- include('../../component/market_code/lawson_code.ejs')%>
+
+<!--<script type="text/javascript" src="../../js/jf_market_code.js"></script>-->
+
+<script src="../../js/jf_lawson_card.js"></script>
+<script src="../../lib/js/JsBarcode.all.js"></script>
+
+</body>
+</html>

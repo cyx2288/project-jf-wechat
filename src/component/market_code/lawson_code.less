@@ -1,0 +1,286 @@
+/*背景颜色*/
+.code_all{
+  width: 100%;
+  height: 100%;
+  background:rgb(52,167,248);
+  padding-top: 20px;
+}
+
+/*扫码支付*/
+.lawson_code{
+  position: relative;
+  margin: 0 15px;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 10px;
+  line-height: 0.8;
+  overflow: hidden;
+  box-shadow:0 6px 10px #1965a9;/*opera或ie9*/
+
+  #QR_code {
+    position: relative;
+    width: 10rem;
+    height: 10rem;
+    margin: 0 calc(~'(100% - 10rem)/2') .5rem;
+    background: #f5f5f5;
+    @media screen and (max-width: 360px) {
+      width: 9.5rem;
+      height: 9.5rem;
+      margin: 0 calc(~'(100% - 9.5rem)/2') .2rem;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  #QR_code[title]{
+    background: transparent;
+  }
+
+  #QR_code[title] + .jf_QR_loading {
+    display: none;
+  }
+  .jf_QR_loading {
+    position: absolute;
+    top: calc(~'(100% - 55px)/2');
+    left: calc(~'(100% - 45px)/2');
+
+    .k-spinner {
+      position: relative;
+      width: 45px;
+      height: 45px;
+      margin: 0 auto;
+
+      animation: k-loadingI 2s linear infinite;
+      @keyframes k-loadingI {
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .k-bubble-1,.k-bubble-2 {
+        position: absolute;
+        top: 0;
+        width: 25px;
+        height: 25px;
+        border-radius: 100%;
+        animation: k-loadingIb 2s ease-in-out infinite;
+        background-color: #10a6e2;
+      }
+      .k-bubble-2{
+        top: auto;
+        bottom: 0;
+        animation-delay: -1.0s;
+      }
+      @keyframes k-loadingIb{
+
+        0%,100%{
+          transform: scale(0);
+        }
+        50%{
+          transform: scale(1);
+        }
+      }
+    }
+  }
+}
+.lawson_shape_code{
+  canvas{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+}
+
+/*刷新*/
+.refresh{
+  margin: 10px;
+  img{
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+  }
+  p{
+    color: #999999;
+    display: inline;
+  }
+}
+
+.remaining_sum{
+  padding: 15px 0;
+  background-color: #eeeeee;
+  margin-top: 10px;
+  @media screen and (max-width: 360px){
+    margin-top:0;
+  }
+  img{
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+  }
+  a{
+    color: #000000;
+  }
+  .pay_arrow{
+    width: 12px;
+    height: 12px;
+    margin-left: 5px;
+    vertical-align: middle;
+  }
+}
+
+
+/*支付方式*/
+.frame_lawson_pay {
+  .lawson_title {
+    text-align: center;
+    p + p {
+      margin-top: 6px;
+      color: #ababab;
+    }
+  }
+  .public_popup {
+    .list_bottom {
+      .list_cell {
+
+        &:first-of-type:before {
+          border-top: none;
+        }
+        .weui_cell {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          box-sizing: border-box;
+          .pay_icon {
+            width: 25px;
+            margin-right: 10px;
+          }
+
+          p {
+            color: #4a4a4a;
+            font-size: 16px;
+          }
+          p + p {
+            color: #7a7a7a;
+            font-size: 14px;
+          }
+        }
+        .lawson_selected{
+          position: relative;
+          width: 25px;
+          height: 25px;
+          &:before{
+            content: '';
+            width: .5rem;
+            height: .3rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -0.25rem;
+            margin-top: -0.25rem;
+            background: transparent;
+            border: 1px solid #10a6e2;
+            border-top: 0;
+            border-right: 0;
+            z-index: 2;
+            border-radius: 0;
+            transform: rotate(-45deg);
+
+          }
+        }
+        &:active {
+          background-color: #ececec;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+/**底部按钮**/
+
+.lawson_tab {
+
+  position: fixed;
+
+  bottom: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 80px;
+
+  background-color: #34a7f8;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  .market_code {
+
+    width: 32%;
+
+    height: 80%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-around;
+
+    align-items: center;
+
+    font-size: 14px;
+
+    div, img {
+
+      width: 35px;
+
+      height: 35px;
+
+    }
+
+  }
+
+  .style {
+
+    color: #fff;
+
+    opacity: .4;
+
+    &:active {
+
+      color: #fff;
+
+      opacity: .4;
+
+    }
+
+
+  }
+
+  .choose {
+
+    color: #fff;
+
+    opacity: 1;
+
+    &:active {
+
+      color: #fff;
+
+      opacity: 1;
+
+    }
+
+
+
+  }
+
+}
