@@ -178,6 +178,26 @@
 
 }
 
+.right_arrow{
+
+  padding-bottom: 18px;
+
+  position: relative;
+
+  &:after{
+    position: absolute;
+    content: '';
+    width: 6px;
+    height: 6px;
+    right: 0;
+    top: 7px;
+    border-right: 1px #808080 solid;
+    border-top: 1px #808080 solid;
+    transform: rotate(45deg);
+  }
+
+}
+
 
 
 .now_didi_step+.didi_step+.didi_step+.didi_step+.didi_step,
@@ -476,13 +496,6 @@
 
   }
 
-
-
-  /**
-
-  原被保人信息
-
-
   .bb_inf{
 
     .delete_btn{
@@ -520,7 +533,7 @@
 
     display: flex;
 
-    justify-content: space-between;
+    //justify-content: space-between;
 
     align-items: center;
 
@@ -580,7 +593,7 @@
 
     }
 
-  } **/
+  }
 
   .fail_gary{
     .detail{

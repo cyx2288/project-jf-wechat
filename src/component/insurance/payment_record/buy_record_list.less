@@ -1,0 +1,231 @@
+
+/**提示**/
+
+.ban_tips .recharge_balance{
+
+  margin-bottom: 0px;
+
+}
+
+/**信息**/
+
+.ban_box{
+
+  width: 100%;
+
+  background-color: #10a6e2;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  .right{
+    position: relative;
+    &:after {
+      position: absolute;
+      content: '';
+      width: 1px;
+      height: 80%;
+      left:0;
+      top: 10%;
+      border-left: 1px #dddddd solid;
+      transform: scaleX(.7);
+      opacity: .6;
+    }
+
+  }
+
+  .left,.right{
+
+    width: 50%;
+
+    padding: 20px 0;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    color: #FFFFFF;
+
+    p{
+
+      text-align: center;
+
+      width: 100%;
+
+    }
+
+    p:first-child{
+
+      font-size: 14px;
+
+    }
+
+    p:last-child{
+
+      font-size: 20px;
+
+    }
+
+  }
+
+}
+
+/**增减记录**/
+
+.add_record{
+
+  color: #4A4A4A;
+
+  &:active{
+
+    color: #4A4A4A;
+
+  }
+
+  background-color: #FFFFFF;
+
+  padding: 10px 15px;
+
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+
+  display: flex;
+
+  align-items: center;
+
+  position: relative;
+
+  &:after{
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 10px;
+    right: 15px;
+    top: 18px;
+    border-right: 1px #808080 solid;
+    border-top: 1px #808080 solid;
+    transform: rotate(45deg);
+  }
+
+  span{
+
+    font-size: 14px;
+
+    padding-left: 5px;
+
+  }
+
+  img{
+
+    width: 20px;
+
+    height: 22px;
+
+  }
+}
+
+/**列表**/
+
+.record_list{
+
+  margin-top: 10px;
+
+  .record_box{
+
+    margin-bottom: 5px;
+
+    background-color: #FFFFFF;
+
+    padding: 0 15px;
+
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+
+    .orange{
+      color: #ff8a17;
+    }
+    .blue{
+      color: #10a6e2;
+    }
+    .gray{
+      color: #808080;
+    }
+    .up{
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+      padding: 10px 0;
+
+      position: relative;
+      &:after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 1px;
+        left:0;
+        bottom: 0;
+        border-bottom: 1px #dddddd solid;
+        transform: scaley(.7);
+        opacity: .6;
+      }
+
+    }
+
+    .down,.bottom{
+
+      padding: 10px 0;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+      .left{
+
+        display: flex;
+
+        justify-content: flex-start;
+
+        align-items: center;
+
+        img{
+
+          width: 23px;
+          height: 21px;
+
+        }
+
+        p{
+
+          margin-left: 5px;
+
+        }
+
+      }
+
+      .bottom_right{
+
+        width: 100%;
+
+        text-align: right;
+
+      }
+
+    }
+
+  }
+
+
+
+}
+
