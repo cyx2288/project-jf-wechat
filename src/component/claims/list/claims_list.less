@@ -1,3 +1,75 @@
+
+.people_list{
+
+  //margin-top: 10px;
+
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.1);
+
+  background: #ffffff;
+
+  width: 100%;
+
+  display: flex;
+
+  justify-content: flex-start;
+
+  align-items: center;
+
+
+  overflow: auto;
+
+  .red_choose_name{
+
+    color: red;
+
+  }
+
+  .style_name_color{
+
+    color: #4a4a4a;
+
+  }
+
+  .people_name{
+
+    min-width: 25%;
+
+    padding: 10px 0;
+
+    position: relative;
+
+    text-align: center;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    flex-direction: column;
+
+    flex: 1;
+
+    font-size: 14px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      height: 85%;
+      border-left: 1px solid #808080;
+      left: 1px;
+      top: 7.5%;
+      opacity: .2;
+    }
+    &:first-child:after{
+      content: none;
+    }
+
+  }
+
+}
+
+
 .list_box{
 
   background: #ffffff;
