@@ -136,6 +136,8 @@ var newLazyLoad={
     }
 }
 
+/*
+
 //首页生活缴费遮罩层
 
 document.getElementsByClassName('h5_button')[0].addEventListener('click',function () {
@@ -146,8 +148,11 @@ document.getElementsByClassName('h5_button')[0].addEventListener('click',functio
 
 //首页罗森遮罩层
 
+
+
+
 document.getElementsByClassName('living_payment_block')[0].addEventListener('click',function () {
 
     document.getElementsByClassName('living_payment_block')[0].className = 'living_payment_block living_payment_none';
 
-},false)
+},false)*/

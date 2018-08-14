@@ -3,23 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>嘉福平台</title>
-<link rel="stylesheet" href="../../css/jf_homepage.css">
+    <link rel="stylesheet" href="../../css/jf_homepage.css">
 </head>
 <body>
 
-<div class="living_payment_block">
+
+
+<!--首屏弹窗-->
+
+<!--<div class="living_payment_block">
 
     <div class="living_payment_popup">
-        <!--<img src="../../images/homepage/living_payment_h5.png">-->
-
-        <img src="../../images/lawson_card/lawson_homepage.jpg">
+        &lt;!&ndash;<img src="../../images/homepage/living_payment_h5.png">&ndash;&gt;
+    <img src="../../images/lawson_card/lawson_homepage.jpg">
 
         <div class="ikonw_button" style="display: none">
             <button class="h5_button">我知道了</button>
         </div>
     </div>
 
-</div>
+</div>-->
 
 <!--顶部导航-->
 <%- include('../../component/homepage/nav.ejs')%>
@@ -31,15 +34,16 @@
 <%- include('../../component/homepage/service.ejs')%>
 
 
-<!--专项抢购-->
-<%- include('../../component/homepage/special_sale.ejs')%>
+<!--专项抢购--新-->
+<%- include('../../component/homepage/special_sale_new.ejs')%>
 
-<!--京东秒杀-->
-<%- include('../../component/homepage/seckill.ejs')%>
+<!--京东秒杀--新-->
+<%- include('../../component/homepage/seckill_new.ejs')%>
 
 
-<!--产品列表-->
-<%- include('../../component/homepage/product.ejs')%>
+<!--产品列表--新-->
+
+<%- include('../../component/homepage/produck_show.ejs')%>
 
 
 <!--固定底部-->
@@ -47,6 +51,5 @@
 
 
 <script src="../../js/jf_homepage.js"></script>
-
 </body>
 </html>
