@@ -1,0 +1,116 @@
+.grey-background{
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  opacity: 0.2;
+  z-index: 2;
+}
+.records-of-consumption{
+  position: fixed;
+  background: #FFFFFF;
+  width: 95%;
+  left: 2.5%;
+  top: 18%;
+  box-sizing: border-box;
+  border-radius: 6px;
+  overflow: hidden;
+  opacity: 1;
+  z-index: 2;
+  .three-function{
+    padding: 15px ;
+    .records-name{
+      text-align: center;
+      font-size: 17px;
+      color: #4A4A4A;
+      position: relative;
+      margin-bottom: 16px;
+      &:after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        bottom:-15px;
+        left: 0px;
+        height: 1px;
+        border-bottom: 1px solid #ababab;
+        transform: scaleY(0.8);
+      }
+    }
+    .records-function-white{
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      height:43px ;
+      line-height: 43px;
+      align-items: center;
+      font-size: 15px;
+      &:after{
+        content: '';
+        width: 100%;
+        left: 0;
+        position: absolute;
+        bottom: 0px;
+        height: 1px;
+        border-bottom: 1px dotted#e5e5e5;
+      }
+
+      .card-number{
+        color: #4A4A4A;
+      }
+      .card-number-one{
+        color: #4A4A4A;
+      }
+    }
+    .consumption-list{
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      height:43px ;
+      line-height: 43px;
+      align-items: center;
+      font-size: 15px;
+      &:after{
+        content: '';
+        width: 100%;
+        left: 0;
+        position: absolute;
+        bottom: 0px;
+        height: 1px;
+        border-bottom: 1px dotted#e5e5e5;
+      }
+
+      .consumption-list-left{
+        color: #4A4A4A;
+      }
+      .consumption-list-right{
+        color: #4A4A4A;
+        opacity: 0;
+      }
+    }
+    .order-light{
+      padding-top: 6px;
+       .order-function{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+         height: 25px;
+         line-height: 25px;
+       .order-one{
+         color: #8a8a8a;
+       }
+         .order-two{
+           color: #4A4A4A;
+         }
+     }
+    }
+  }
+  .i-know{
+    background: #10a6e2;
+    text-align: center;
+    height: 45px;
+    line-height: 45px;
+    color: #FFFFFF;
+  }
+}
