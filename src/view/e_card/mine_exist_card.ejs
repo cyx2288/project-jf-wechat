@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>我的嘉福E卡</title>
+    <link rel="stylesheet" href="../../css/jf_e_card.css">
+
+</head>
+<body>
+
+<!--导航-->
+<nav class="Top_navigation">
+    <div class="weui_tab_bd"></div>
+    <div class="container_tab"> <a onclick="jfSwitch.goBack()">
+            <div class="nav_left" id="nav_left"><img src="../../images/icon_pay_return.png"></div>
+        </a>
+        <div class="nav_center">
+            <div>我的嘉福E卡</div>
+        </div>
+        <a href="#">
+            <div class="nav_right">帮助说明</div>
+        </a>
+    </div>
+</nav>
+
+<!--我的嘉福E卡-->
+<%- include('../../component/e_card/mine_exist_card.ejs')%>
+
+</body>
+</html>
