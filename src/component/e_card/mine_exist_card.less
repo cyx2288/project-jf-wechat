@@ -1,0 +1,165 @@
+
+.mine_face_value{
+
+  .face_value{
+    background: linear-gradient(#2198e9, #1381c5 );
+    width: 95%;
+    margin: 10px 2.5% 0 2.5%;
+    border-radius: 10px 10px 0 0;
+    color: #fff;
+
+    .face_details{
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 10px;
+      /**左**/
+      .details_img{
+        width: 30%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        div{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img{
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+          }
+          div{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+
+            span:first-child{
+              font-size: 14px;
+              font-weight: bold;
+            }
+            span:nth-child(2){
+              font-size: 12px;
+              line-height: 16px;
+            }
+          }
+        }
+      }
+      /**中**/
+      .details_number{
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        height: 100%;
+        box-sizing: border-box;
+        padding-top: 25px;
+        span{
+          display: inline-block;
+          font-size: 12px;
+          span{
+            font-size: 40px;
+            line-height: 40px;
+          }
+        }
+      }
+      /*右*/
+      .details_record{
+        width: 30%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        height: 100%;
+        span{
+          display: block;
+          border-radius: 5px;
+          border: 1px solid #ffffff;
+          color: #fff;
+          font-size: 12px;
+          line-height: 12px;
+          padding: 4px;
+        }
+      }
+
+    }
+
+    .face_time{
+      background-color: #0b72b8;
+      padding: 5px 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1;
+      span{
+        font-size:12px;
+        color: #fff;
+      }
+    }
+
+  }
+
+  .past_due{
+    background: linear-gradient(#dadada, #dadada);
+    position: relative;
+    .face_time{
+      background-color: #d2d2d2;
+    }
+    .face_details>.details_img>div>img{
+      filter: grayscale(1);
+      opacity: .6;
+    }
+    &:after{
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 80px;
+      height: 80px;
+      background: url("../../images/mine_past_due.png")no-repeat;
+      background-size: 100%;
+    }
+  }
+
+  .face_past_due{
+    width: 95%;
+    display: block;
+    margin: 10px 2.5%;
+    font-size: 12px;
+    color: #8a8a8a;
+    text-align: right;
+  }
+
+  .mine_floor_btn{
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #dddddd;
+    align-items: center;
+    padding: 5px 0;
+    bottom: 0;
+    left: 0;
+    .buy_card{
+      width: 50%;
+      display: block;
+      text-align: center;
+      height: 40px;
+      line-height: 40px;
+      font-size: 16px;
+      color: #4a4a4a;
+      border-right: 1px solid #dddddd;
+    }
+    .bound_card{
+      width: 50%;
+      display: block;
+      text-align: center;
+      height: 40px;
+      line-height: 40px;
+      font-size: 16px;
+      color: #4a4a4a;
+    }
+  }
+
+}
+

@@ -1,6 +1,12 @@
+body{
+  margin: 0;
+  font-family:  Arial, '微软雅黑', Helvetica Neue, Helvetica, sans-serif;
+}
+
 .shop_find_more_cue{
   position: fixed;
-  top: 45px;
+  top: 0;
+  left: 0;
   z-index: 101;
 
   &:before{
@@ -14,21 +20,18 @@
     clear: both;
   }
 
-
   .shop_name{
 
     float: left;
-
     vertical-align: middle;
+    line-height: 48px;
 
     img{
 
       width: 22px;
-
       height: 22px;
-
       vertical-align: middle;
-
+      border-radius: 2px;
       margin-right: 10px;
 
     }
@@ -36,21 +39,13 @@
     span{
 
       font-size: 14px;
-
-      line-height: 22px;
-
+      //line-height: 48px;
       vertical-align: middle;
-
       color: #fff;
-
       display: inline-block;
-
       max-width: 100px;
-
       white-space: nowrap;
-
       overflow: hidden;
-
       text-overflow: ellipsis;
 
     }
@@ -60,7 +55,6 @@
   .time_line{
 
     float: right;
-
     vertical-align: middle;
 
   }
@@ -69,15 +63,18 @@
 .time_boarder{
   width: 100%;
   text-align: center;
-  padding: 13px 15px;
+  padding: 0 15px;
   box-sizing: border-box;
   font-size: 0;
-  background: url("../images/homepage_jd_show/time_board_s.png") no-repeat;
+  line-height: 15px;
+  background: url("../../images/homepage_jd_show/time_board_s.png") no-repeat;
   .time_line{
     position: relative;
     color: #FFFFFF;
     font-size: 14px;
-    line-height: 20px;
+    //line-height: 18px;
+    //vertical-align: middle;
+    //float: right;
     .time_hr,.time_min,.time_sec{
       font-size: 16px;
       margin: 0 4px;
@@ -97,7 +94,8 @@
   background-color: #fff;
   font-size: 14px;
   position: fixed;
-  top: 93px;
+  top: 48px;
+  left: 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -145,6 +143,7 @@
     }
   }
 }
+
 .void{
   width: 100%;
   height: 88px;
@@ -268,8 +267,10 @@
           color: #ff5040;
           font-size: 14px;
           border-radius: 20px;
+
           a{
             color: #ff5040;
+            text-decoration: none;
           }
         }
       }
@@ -281,6 +282,7 @@
 
   .shop_find_more_cue{
     .shop_name{
+
       img{
         margin-right: 6px;
       }
@@ -336,6 +338,7 @@
     }
   }
 }
+
 .shop_content+.shop_content:before{
   content: '';
   width: 100%;
@@ -365,7 +368,8 @@
     width: 100%;
     background-color: #fff;
     position: fixed;
-    top: 133px;
+    top: 89px;
+    left: 0;
     z-index: 100;
     transform: translateY(-200%);
     transition: all 0.5s;
@@ -400,6 +404,7 @@
         justify-content: center;
         a{
           color: #4A4A4A;
+          text-decoration: none;
         }
       }
       .enter_button{
@@ -412,6 +417,7 @@
         background-color: #ff0000;
         a{
           color: #fff;
+          text-decoration: none;
         }
       }
     }
