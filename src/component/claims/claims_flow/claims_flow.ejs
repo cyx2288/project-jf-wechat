@@ -226,7 +226,12 @@
         </div>
         <p class="font_middle_gary"><span id="image_length">0</span>/10</p>
     </div>
+
+    <span class="img_left_corner"></span>
+    <span class="img_right_corner"></span>
+
     <div class="photo_content">
+
         <!-- 选择框-->
         <!--<div class="choose_file">
             &lt;!&ndash; 缩略图 &ndash;&gt;
@@ -303,9 +308,27 @@
 <script>
 
 
-   jfReturnService.addPhoto()
+   jfReturnService.addPhoto();
 
-   jfReturnService.chooseImgShow()
+   jfReturnService.chooseImgShow();
+
+
+
+   //上传照片-两侧箭头
+   document.getElementsByClassName('photo_content')[0].addEventListener('scroll',function () {
+       var dom = document.getElementsByClassName('photo_content')[0];
+       if(dom.scrollLeft == 0){
+           document.getElementsByClassName('img_left_corner')[0].style.display = 'none';
+           document.getElementsByClassName('img_right_corner')[0].style.display = 'block';
+       }else if(dom.scrollLeft == dom.scrollWidth - parseFloat(dom.offsetWidth)){
+           document.getElementsByClassName('img_right_corner')[0].style.display = 'none';
+           document.getElementsByClassName('img_left_corner')[0].style.display = 'block';
+       }else{
+           document.getElementsByClassName('img_right_corner')[0].style.display = 'block';
+           document.getElementsByClassName('img_left_corner')[0].style.display = 'block';
+       }
+   });
+
 
 
 </script>

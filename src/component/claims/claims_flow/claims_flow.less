@@ -595,8 +595,10 @@
   background: #fff;
   padding: 10px 15px;
   margin-bottom: 10px;
+  position: relative;
   .type_title{
     margin-bottom: 10px;
+    //padding: 0 15px;
     .title_a{
       display: flex;
       justify-content: space-between;
@@ -620,12 +622,35 @@
     }
 
   }
+  .img_left_corner{
+    position: absolute;
+    left: 6px;
+    bottom: 50px;
+    width: 7px;
+    height: 7px;
+    border-left: 1px solid #8a8a8a;
+    border-bottom: 1px solid #8a8a8a;
+    transform: rotate(45deg);
+    display: none;
+  }
+  .img_right_corner{
+    position: absolute;
+    right: 6px;
+    bottom: 50px;
+    width: 7px;
+    height: 7px;
+    border-left: 1px solid #8a8a8a;
+    border-bottom: 1px solid #8a8a8a;
+    transform: rotate(-135deg);
+    display: none;
+  }
   .photo_content{
     padding: 10px 0;
     overflow-y: scroll;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+
     img{
       width: 71px;
       height: 71px;
