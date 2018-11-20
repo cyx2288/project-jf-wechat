@@ -104,6 +104,14 @@ var jfReturnService = {
 
                                 document.getElementById('image_length').innerHTML= num;
 
+                                if((parseFloat( document.getElementsByClassName('photo_content')[0].offsetWidth) / 86 )- 1 > num) {
+                                    document.getElementsByClassName('img_left_corner')[0].style.display = 'none';
+                                    document.getElementsByClassName('img_right_corner')[0].style.display = 'none';
+                                }else{
+                                    document.getElementsByClassName('img_left_corner')[0].style.display = 'block';
+                                    document.getElementsByClassName('img_right_corner')[0].style.display = 'block';
+                                }
+
                             }
 
 
